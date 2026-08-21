@@ -6,7 +6,7 @@
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
-  "files": ["index.js", "index.d.ts", "default_attrs.js", "emoji"],
+  "files": ["index.js", "index.d.ts", "default_attrs.js", "emoji", "NOTICE"],
   "scripts": {
     "build": "bun run build/build.js",
     "prebuild": "rm -rf emoji index.js index.d.ts && mkdir -p emoji",
