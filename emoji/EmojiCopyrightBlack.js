@@ -1,0 +1,17 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "copyright" (black) [00A9]. */
+const EmojiCopyrightBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="8.693" d="m43.02 48.48c-1.917 1.7-4.442 2.734-7.212 2.734-5.999 0-10.87-4.865-10.87-10.87v-8.693 8.693-8.693c0-6.003 4.869-10.87 10.87-10.87 2.769 0 5.295 1.035 7.212 2.734" clip-rule="evenodd"/>
+    <circle cx="36" cy="36" r="26.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.74" paint-order="normal"/>
+  </g>
+`)
+  )
+}
+export default EmojiCopyrightBlack

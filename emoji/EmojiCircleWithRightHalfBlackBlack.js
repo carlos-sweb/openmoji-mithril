@@ -1,0 +1,20 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "circle with right half black" (black) [25D1]. */
+const EmojiCircleWithRightHalfBlackBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line-supplement">
+    <path fill="#000" d="M35 44.2857V7C42.9565 7 50.5871 10.0553 56.2132 15.4939C61.8393 20.9325 65 28.3087 65 36C65 43.6913 61.8393 51.0675 56.2132 56.5061C50.5871 61.9447 42.9565 65 35 65V44.2857Z"/>
+  </g>
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M36 64C51.464 64 64 51.464 64 36C64 20.536 51.464 8 36 8C20.536 8 8 20.536 8 36C8 51.464 20.536 64 36 64Z"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M36 8V61"/>
+  </g>
+`)
+  )
+}
+export default EmojiCircleWithRightHalfBlackBlack

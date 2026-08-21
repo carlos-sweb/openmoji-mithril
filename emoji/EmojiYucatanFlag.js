@@ -1,0 +1,32 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "yucatan flag" (color) [1F3F4-E006D-E0078-E0079-E0075-E0063-E007F]. */
+const EmojiYucatanFlag = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color" transform="matrix(1.263 0 0 1.263 -9.462 -11.43)">
+    <g>
+      <rect x="11.452" y="22.51" width="49.098" height="30.092" fill="#d22f27" stroke-width="0.7919"/>
+      <rect x="11.451" y="32.565" width="49.098" height="9.9762" fill="#fff" stroke-width="0.456"/>
+      <g>
+        <rect x="12.229" y="22.51" width="15.781" height="30.092" fill="#186648" stroke-width="0.449"/>
+        <g transform="translate(5.8401 -10.372)">
+          <circle cx="10.65" cy="38.634" r="2.3854" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4076"/>
+          <circle cx="17.908" cy="38.635" r="2.3854" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4076"/>
+          <circle cx="10.65" cy="57.222" r="2.3854" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4076"/>
+          <circle cx="17.908" cy="57.222" r="2.3854" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4076"/>
+          <circle cx="14.279" cy="48.009" r="2.3854" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4076"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="line">
+    <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiYucatanFlag

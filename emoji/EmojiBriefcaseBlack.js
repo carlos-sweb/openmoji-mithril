@@ -1,0 +1,19 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "briefcase" (black) [1F4BC]. */
+const EmojiBriefcaseBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="31.4557 15.8909 31.4557 12.0523 41.7807 12.0523 41.7807 15.8909"/>
+    <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="59.4326 42.6877 59.4326 58.8503 12.5037 58.8503 12.5037 42.668"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.9512,38.6643h14.9225c1.6569,0,3-1.3431,3-3v-15.7434H12.0084v15.7434c0,1.6569,1.3431,3,3,3h15.6115"/>
+    <rect x="31.167" y="36.3172" width="10.325" height="5.8279" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiBriefcaseBlack

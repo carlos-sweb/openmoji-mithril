@@ -1,0 +1,24 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "stick figure with dress and arms raised" (black) [1FBC6-200D-1F457]. */
+const EmojiStickFigureWithDressAndArmsRaisedBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.5,63.5l3-28.5"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m29.5,63.5h11.5"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41,63.5l-3-28.5"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m32.5,35l-2.5-16"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m38,35l2-16"/>
+    <circle cx="35" cy="11" r="3" fill="none" stroke="#000" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m23,5l-1,10.5,8,4"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47,5l1,10.5-8,4"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m30,19.5h10.5"/>
+  </g>
+`)
+  )
+}
+export default EmojiStickFigureWithDressAndArmsRaisedBlack

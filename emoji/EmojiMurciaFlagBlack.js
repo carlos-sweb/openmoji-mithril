@@ -1,0 +1,85 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "murcia flag" (black) [1F3F4-E0065-E0073-E006D-E0063-E007F]. */
+const EmojiMurciaFlagBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line-supplement" fill="none" stroke="#000" stroke-linecap="round">
+    <g transform="translate(5.2)" stroke-width="0.75">
+      <g transform="translate(-.9004)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+      <g transform="translate(-6.169,2.403)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+      <g transform="translate(-.9544 2.403)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+      <g transform="translate(-.8852 7.151)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+      <g transform="translate(-3.792,4.853)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+      <g transform="translate(4.26,2.403)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+      <g transform="translate(1.922,4.853)">
+        <path d="m50.89 44.14 0.4246 1.381h3.504l0.336-1.381"/>
+        <path d="m52.99 44.27v1.229"/>
+      </g>
+    </g>
+    <g transform="translate(0,1)">
+      <g>
+        <path stroke-width="1" d="m8.613 25.61s1.511-7.361 3.138 7.6e-5"/>
+        <path stroke-width="0.9992" d="m10.18 18.58 0.0049 2.448"/>
+        <path stroke-width="0.9238" d="m8.909 19.01v2.077"/>
+        <path stroke-width="0.9285" d="m11.46 19v2.099"/>
+        <path stroke-width="1" d="m8.544 21.09h3.286"/>
+      </g>
+      <g transform="translate(5.509 -.1145)">
+        <path stroke-width="1" d="m8.613 25.61s1.511-7.361 3.138 7.6e-5"/>
+        <path stroke-width="0.9992" d="m10.18 18.58 0.0049 2.448"/>
+        <path stroke-width="0.9238" d="m8.909 19.01v2.077"/>
+        <path stroke-width="0.9285" d="m11.46 19v2.099"/>
+        <path stroke-width="1" d="m8.544 21.09h3.286"/>
+      </g>
+      <g transform="translate(5.509 -.1145)">
+        <path stroke-width="1" d="m8.613 25.61s1.511-7.361 3.138 7.6e-5"/>
+        <path stroke-width="0.9992" d="m10.18 18.58 0.0049 2.448"/>
+        <path stroke-width="0.9238" d="m8.909 19.01v2.077"/>
+        <path stroke-width="0.9285" d="m11.46 19v2.099"/>
+        <path stroke-width="1" d="m8.544 21.09h3.286"/>
+      </g>
+      <g transform="translate(.0215 8.033)">
+        <path stroke-width="1" d="m8.613 25.61s1.511-7.361 3.138 7.6e-5"/>
+        <path stroke-width="0.9992" d="m10.18 18.58 0.0049 2.448"/>
+        <path stroke-width="0.9238" d="m8.909 19.01v2.077"/>
+        <path stroke-width="0.9285" d="m11.46 19v2.099"/>
+        <path stroke-width="1" d="m8.544 21.09h3.286"/>
+      </g>
+      <g transform="translate(5.509,7.919)">
+        <path stroke-width="1" d="m8.613 25.61s1.511-7.361 3.138 7.6e-5"/>
+        <path stroke-width="0.9992" d="m10.18 18.58 0.0049 2.448"/>
+        <path stroke-width="0.9238" d="m8.909 19.01v2.077"/>
+        <path stroke-width="0.9285" d="m11.46 19v2.099"/>
+        <path stroke-width="1" d="m8.544 21.09h3.286"/>
+      </g>
+    </g>
+  </g>
+  <g id="line">
+    <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiMurciaFlagBlack

@@ -1,0 +1,17 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "brown mushroom" (black) [1F344-200D-1F7EB]. */
+const EmojiBrownMushroomBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.5405,40.5s1,4,0,6-2.5,7.5,2,9c3.9115,1.3038,12.5,1.5,14.5-1.5s0-5,0-8"/>
+    <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M36.2058,14.5058c-5.7532.1508-17.7639,1.7182-20,12.275-2,9.4423,6,13.2192,11,13.2192h17s14,0,12-12.275c-1.7001-10.434-14.0389-13.3754-20-13.2192Z"/>
+  </g>
+`)
+  )
+}
+export default EmojiBrownMushroomBlack

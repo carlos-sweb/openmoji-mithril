@@ -1,0 +1,17 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "floating ice" (black) [E2C1]. */
+const EmojiFloatingIceBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="19.705 25.833 9.551 32.48 13.726 40.833 21.917 46.965 41.627 46.965 54.854 42.387 61.417 30.808 48.417 22.833 30.167 28.583 19.705 25.833"/>
+    <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="9.551 32.48 9.551 39.48 13.726 47.833 21.917 53.965 41.627 53.965 54.854 49.387 61.417 37.808 61.417 30.808"/>
+  </g>
+`)
+  )
+}
+export default EmojiFloatingIceBlack

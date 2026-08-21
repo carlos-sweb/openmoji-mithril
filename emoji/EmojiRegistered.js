@@ -1,0 +1,24 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "registered" (color) [00AE]. */
+const EmojiRegistered = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <circle cx="36" cy="36" r="26.68" fill="#fff" fill-rule="evenodd" paint-order="normal"/>
+  </g>
+  <g id="hair"/>
+  <g id="skin"/>
+  <g id="skin-shadow"/>
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="7.752" d="m27.45 49.57v-27.13h10.35c3.733 0 6.76 3.027 6.76 6.76s-3.027 6.756-6.76 6.756h-10.35" clip-rule="evenodd"/>
+    <circle cx="36" cy="36" r="26.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.74" paint-order="normal"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="7.752" d="m38.03 35.95 5.884 13.62" clip-rule="evenodd"/>
+  </g>
+`)
+  )
+}
+export default EmojiRegistered

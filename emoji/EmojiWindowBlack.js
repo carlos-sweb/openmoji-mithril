@@ -1,0 +1,21 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "window" (black) [1FA9F]. */
+const EmojiWindowBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line-supplement">
+    <line x1="35.9004" x2="35.9004" y1="14.7127" y2="57.1676" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0249"/>
+    <line x1="14.7206" x2="57.2826" y1="35.9583" y2="35.9583" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0249"/>
+  </g>
+  <g id="line">
+    <line x1="61" x2="10.9583" y1="61" y2="61" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="10.958 57.168 10.958 10.958 61 10.958 61 57.168"/>
+  </g>
+`)
+  )
+}
+export default EmojiWindowBlack

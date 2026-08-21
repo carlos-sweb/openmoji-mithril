@@ -1,0 +1,21 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "circled anticlockwise arrow" (color) [1F10E]. */
+const EmojiCircledAnticlockwiseArrow = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <circle cx="36" cy="36" r="26.68" fill="#fff" fill-rule="evenodd" paint-order="normal"/>
+  </g>
+  <g id="line">
+    <circle cx="36" cy="36" r="26.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.74" paint-order="normal"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="7" stroke-width="7" d="m20.66 30.58 5.421 5.421 5.424-5.424"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="7" stroke-width="7" d="m25.13 31.65c0-6.003 4.869-10.87 10.87-10.87 5.999 0 10.87 4.865 10.87 10.87v8.693-8.693 8.693c0 6.003-4.869 10.87-10.87 10.87-4.264 0-7.957-2.457-9.739-6.034" clip-rule="evenodd"/>
+  </g>
+`)
+  )
+}
+export default EmojiCircledAnticlockwiseArrow

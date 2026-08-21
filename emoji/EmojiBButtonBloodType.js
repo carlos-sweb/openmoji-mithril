@@ -1,0 +1,25 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "B button (blood type)" (color) [1F171]. */
+const EmojiBButtonBloodType = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line-supplement" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6.746" clip-rule="evenodd">
+    <path d="m38.16 35.99h-9.003v-11.76h9.003c3.248 0 5.883 2.634 5.883 5.883s-2.634 5.879-5.883 5.879z"/>
+    <path d="m38.16 47.77h-9.003v-11.76h9.003c3.248 0 5.883 2.631 5.883 5.879s-2.634 5.883-5.883 5.883z"/>
+  </g>
+  <g id="color">
+    <rect x="12" y="12" width="48" height="47.83" fill="#d22f27"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.73" d="m38.16 35.99h-9.003v-11.76h9.003c3.248 0 5.883 2.634 5.883 5.883s-2.634 5.879-5.883 5.879z"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.73" d="m38.16 47.77h-9.003v-11.76h9.003c3.248 0 5.883 2.631 5.883 5.879s-2.634 5.883-5.883 5.883z"/>
+  </g>
+  <g id="line">
+    <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiBButtonBloodType

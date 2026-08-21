@@ -1,0 +1,22 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "down-left arrow" (color) [2199]. */
+const EmojiDownLeftArrow = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <polygon fill="#3F3F3F" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="14.5044,34.702 13.6073,58.9309 37.8362,58.0338 37.6303,52.4758 23.4704,53.0004 59.3629,17.1079 55.4303,13.1753 19.5378,49.0678 20.0624,34.9079"/>
+  </g>
+  <g id="hair"/>
+  <g id="skin"/>
+  <g id="skin-shadow"/>
+  <g id="line">
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="14.5044,34.702 13.6073,58.9309 37.8362,58.0338 37.6303,52.4758 23.4704,53.0004 59.3629,17.1079 55.4303,13.1753 19.5378,49.0678 20.0624,34.9079"/>
+  </g>
+`)
+  )
+}
+export default EmojiDownLeftArrow

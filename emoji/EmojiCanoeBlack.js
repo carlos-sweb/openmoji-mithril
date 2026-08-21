@@ -1,0 +1,22 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "canoe" (black) [1F6F6]. */
+const EmojiCanoeBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <g>
+      <line x1="40.3505" x2="40.4845" y1="20.5365" y2="18.3045" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="41.083 23.269 29.583 43.187 30.315 45.919 24.815 55.446 19.618 52.446 25.118 42.919 26.484 42.553"/>
+      <line x1="40.4845" x2="43.9486" y1="18.3045" y2="20.3045" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.45,39.1484H55.0625c9.5313,0,11.4375-14.2968,11.4375-14.2968s-3.229,2.409-24.4141,2.8034"/>
+      <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.8578,27.7037C9.1127,27.5551,5.5,24.8516,5.5,24.8516S7.4062,39.1484,16.9375,39.1484H27.25"/>
+    </g>
+  </g>
+`)
+  )
+}
+export default EmojiCanoeBlack

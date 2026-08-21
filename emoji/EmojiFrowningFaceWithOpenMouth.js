@@ -1,0 +1,25 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "frowning face with open mouth" (color) [1F626]. */
+const EmojiFrowningFaceWithOpenMouth = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <path fill="#FCEA2B" d="M36,13c-12.6823,0-23,10.3177-23,23c0,12.6822,10.3177,23,23,23c12.6822,0,23-10.3178,23-23 C59,23.3177,48.6822,13,36,13z"/>
+  </g>
+  <g id="hair"/>
+  <g id="skin"/>
+  <g id="skin-shadow"/>
+  <g id="line">
+    <circle cx="36" cy="36" r="23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m42.87 45.7c0-2.592-3.834-4.694-6.869-4.694-3.035 0-6.869 2.101-6.869 4.694s3.659 0.9248 6.694 0.9248 7.044 1.667 7.044-0.9248z"/>
+    <path d="m30 31c0 1.657-1.345 3-3 3-1.655 0-3-1.343-3-3 0-1.655 1.345-3 3-3 1.655 0 3 1.345 3 3"/>
+    <path d="m48 31c0 1.657-1.345 3-3 3s-3-1.343-3-3c0-1.655 1.345-3 3-3s3 1.345 3 3"/>
+  </g>
+`)
+  )
+}
+export default EmojiFrowningFaceWithOpenMouth

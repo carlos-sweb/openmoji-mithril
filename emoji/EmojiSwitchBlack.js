@@ -1,0 +1,18 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "switch" (black) [E1C3]. */
+const EmojiSwitchBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <line x1="10" x2="58" y1="60" y2="60" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M51.5385,60 C49.7175,51.9868,42.5643,46,34,46s-15.7175,5.9868-17.5385,14H51.5385z"/>
+    <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="39.9375,46.8438 57.9497,34.3934 63.6066,40.0503 51.0938,58.0625"/>
+  </g>
+`)
+  )
+}
+export default EmojiSwitchBlack

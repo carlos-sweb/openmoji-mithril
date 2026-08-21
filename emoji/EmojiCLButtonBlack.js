@@ -1,0 +1,20 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "CL button" (black) [1F191]. */
+const EmojiCLButtonBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line-supplement" transform="translate(-.005724 -.00219)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4.741" clip-rule="evenodd">
+    <path d="m41.12 27.7v16.59h7.111"/>
+    <path d="m33.83 42.81c-1.045 0.9268-2.422 1.491-3.932 1.491-3.271 0-5.926-2.652-5.926-5.926v-4.741 4.741-4.741c0-3.273 2.655-5.926 5.926-5.926 1.51 0 2.887 0.5641 3.932 1.491"/>
+  </g>
+  <g id="line">
+    <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiCLButtonBlack

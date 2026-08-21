@@ -1,0 +1,23 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "stick figure with dress" (black) [1FBC9]. */
+const EmojiStickFigureWithDressBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.5,63.5l3-28.5"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41,63.5l-3-28.5"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m38,35l2.5-17"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m32.5,35l-2.5-17"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35,18h5.5l2.5,24"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35,18h-5l-2,24"/>
+    <circle cx="35" cy="11" r="3" fill="none" stroke="#000" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m29.5,63.5h11.5"/>
+  </g>
+`)
+  )
+}
+export default EmojiStickFigureWithDressBlack

@@ -1,0 +1,20 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "drop of blood" (color) [1FA78]. */
+const EmojiDropOfBlood = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <path fill="#ea5a47" d="M56,46.7065C56,58.4814,47.0458,68.003,36,68.003s-20-9.5455-20-21.32c0,0-.2191-14.3086,16.6559-40.1878,0,0,3.1666-5.37,6.3541-.3523C55.8851,32.0216,56,46.7065,56,46.7065"/>
+    <path fill="#d22f27" d="M36,3.9991C48.875,14.375,55.875,44.8744,55.875,44.8744c0,15.0006-8.8293,23.1265-19.875,23.1265,0,0,22-18.1265,0-64.0018"/>
+  </g>
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M56,46.7065C56,58.4814,47.0458,68.003,36,68.003s-20-9.5455-20-21.32c0,0-.2191-14.3086,16.6559-40.1878,0,0,3.1666-5.37,6.3541-.3523C55.8851,32.0216,56,46.7065,56,46.7065"/>
+  </g>
+`)
+  )
+}
+export default EmojiDropOfBlood

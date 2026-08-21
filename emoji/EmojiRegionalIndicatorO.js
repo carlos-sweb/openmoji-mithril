@@ -1,0 +1,23 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "regional indicator O" (color) [1F1F4]. */
+const EmojiRegionalIndicatorO = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <circle cx="36" cy="36" r="27.5" fill="#fff"/>
+    <path d="m36,21.0122c-6.0654,0-11,4.9346-11,11v8c0,6.0654,4.9346,11,11,11s11-4.9346,11-11v-8c0-6.0654-4.9346-11-11-11Zm9,19c0,4.9624-4.0371,9-9,9s-9-4.0376-9-9v-8c0-4.9624,4.0371-9,9-9s9,4.0376,9,9v8Z"/>
+  </g>
+  <g id="line">
+    <g id="line-2">
+      <circle cx="36" cy="36" r="28" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="m36,21.0122c-6.0654,0-11,4.9346-11,11v8c0,6.0654,4.9346,11,11,11s11-4.9346,11-11v-8c0-6.0654-4.9346-11-11-11Zm9,19c0,4.9624-4.0371,9-9,9s-9-4.0376-9-9v-8c0-4.9624,4.0371-9,9-9s9,4.0376,9,9v8Z"/>
+  </g>
+`)
+  )
+}
+export default EmojiRegionalIndicatorO

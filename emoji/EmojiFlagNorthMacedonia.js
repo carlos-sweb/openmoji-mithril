@@ -1,0 +1,28 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "flag: North Macedonia" (color) [1F1F2-1F1F0]. */
+const EmojiFlagNorthMacedonia = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <rect x="5" y="17" width="62" height="38" fill="#d22f27"/>
+    <polygon fill="#f1b31c" points="15 17 5 17 36 36 36 34 15 17"/>
+    <polygon fill="#f1b31c" points="15 55 5 55 36 36 36 38 15 55"/>
+    <polygon fill="#f1b31c" points="57 17 67 17 36 36 36 34 57 17"/>
+    <polygon fill="#f1b31c" points="57 55 67 55 36 36 36 38 57 55"/>
+    <polygon fill="#f1b31c" points="33 55 39 55 37 36 35 36 33 55"/>
+    <polygon fill="#f1b31c" points="67 39 67 33 36 35 36 37 67 39"/>
+    <polygon fill="#f1b31c" points="5 39 5 33 36 35 36 37 5 39"/>
+    <polygon fill="#f1b31c" points="33 17 39 17 37 36 35 36 33 17"/>
+    <circle cx="36" cy="36" r="7" fill="#f1b31c" stroke="#d22f27" stroke-miterlimit="10"/>
+  </g>
+  <g id="line">
+    <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiFlagNorthMacedonia

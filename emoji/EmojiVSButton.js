@@ -1,0 +1,25 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "VS button" (color) [1F19A]. */
+const EmojiVSButton = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line-supplement" transform="translate(-.005724 -.00219)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4.81" clip-rule="evenodd">
+    <path d="m49.15 30.93c-0.493-1.919-2.624-3.36-5.178-3.36-2.92 0-5.286 1.883-5.286 4.209 0 2.323 2.367 4.209 5.286 4.209l-0.1082 0.01443c2.92 0 5.286 1.886 5.286 4.209 0 2.326-2.367 4.209-5.286 4.209-2.554 0-4.685-1.443-5.178-3.362"/>
+    <path d="m32.48 27.6-4.81 16.84-4.81-16.84"/>
+  </g>
+  <g id="color" transform="translate(-.005724 -.00219)">
+    <rect x="12" y="12" width="48" height="47.83" transform="translate(.005724 .00219)" fill="#5c9e31"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.81" d="m49.15 30.93c-0.493-1.919-2.624-3.36-5.178-3.36-2.92 0-5.286 1.883-5.286 4.209 0 2.323 2.367 4.209 5.286 4.209l-0.1082 0.01443c2.92 0 5.286 1.886 5.286 4.209 0 2.326-2.367 4.209-5.286 4.209-2.554 0-4.685-1.443-5.178-3.362"/>
+    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.81" d="m32.48 27.6-4.81 16.84-4.81-16.84"/>
+  </g>
+  <g id="line">
+    <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiVSButton

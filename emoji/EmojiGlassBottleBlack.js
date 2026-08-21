@@ -1,0 +1,26 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "glass bottle" (black) [E0CB]. */
+const EmojiGlassBottleBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <circle cx="36" cy="31" r="1"/>
+    <circle cx="36" cy="35" r="1"/>
+    <ellipse cx="38.5" cy="33" rx="0.9" ry="1"/>
+    <ellipse cx="33.5" cy="33" rx="0.9" ry="1"/>
+    <ellipse cx="40.5" cy="31" rx="0.75" ry="1"/>
+    <ellipse cx="40.5" cy="35" rx="0.75" ry="1"/>
+    <ellipse cx="31.5" cy="31" rx="0.75" ry="1"/>
+    <ellipse cx="31.5" cy="35" rx="0.75" ry="1"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.5 7.5h5"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.5 43.5h9"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38 11v1.5c0 4.5 5.5 16 5.5 19.5 0 2-1 3-1 5s1.5 3 1.5 6v24h-16v-24c0-3 1.5-4 1.5-6s-1-3-1-5c0-3.5 5.5-15 5.5-19.5v-1.5"/>
+  </g>
+`)
+  )
+}
+export default EmojiGlassBottleBlack

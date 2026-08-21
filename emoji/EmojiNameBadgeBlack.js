@@ -1,0 +1,17 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "name badge" (black) [1F4DB]. */
+const EmojiNameBadgeBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.1576,7.41l-7.652,17.1477L36.1566,7,27.9337,24.5572,19.45,7.4744S6.6522,23.6645,6.6522,38.8005,22.32,65,35.8392,65H36.6c13.52,0,27.9646-11.0636,27.9646-26.1995S52.1576,7.41,52.1576,7.41Z"/>
+    <rect x="19.0221" y="31.7258" rx="2.9184" ry="2.9184" width="33.071" height="19.7312" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiNameBadgeBlack

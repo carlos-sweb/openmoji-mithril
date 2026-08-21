@@ -1,0 +1,24 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "barber pole" (black) [1F488]. */
+const EmojiBarberPoleBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48.5,16h-23c-1.1046,0-2-0.8954-2-2l0,0c0-1.1046,0.8954-2,2-2h23c1.1046,0,2,0.8954,2,2l0,0C50.5,15.1046,49.6046,16,48.5,16z"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48.5,60h-23c-1.1046,0-2-0.8954-2-2l0,0c0-1.1046,0.8954-2,2-2h23c1.1046,0,2,0.8954,2,2l0,0C50.5,59.1046,49.6046,60,48.5,60z"/>
+    <rect x="26" y="16" width="22" height="40" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="41.8225,16 26,25 26,21 34.4615,16"/>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="26,37 48,24 48,20 26,33"/>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="48,32 26,45 26,49 48,36"/>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="48,44 27.6922,56 34.4615,56 48,48"/>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="48,16 41.8225,16 26,25 26,33 48,20"/>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="48,44 27.6922,56 26,56 26,49 48,36"/>
+  </g>
+`)
+  )
+}
+export default EmojiBarberPoleBlack

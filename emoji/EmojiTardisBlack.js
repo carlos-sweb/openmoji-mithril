@@ -1,0 +1,27 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "tardis" (black) [E149]. */
+const EmojiTardisBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="line">
+    <rect x="26" y="18.5" rx="1" ry="1" width="20" height="3"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38 54.01v5.986h6.986"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27 54.01v5.986h6.986"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38 44v6h7"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27 44.01v5.986h6.986"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38 34.01v5.986h6.986"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27 34.01v5.986h6.986"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38 24.01v5.986h6.986"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27 24.01v5.986h6.986"/>
+    <rect x="23" y="16" rx="1" width="26" height="48" fill="none" stroke="#000" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m34 12v-2.4c0-0.8837 0.8954-1.6 2-1.6s2 0.7163 2 1.6v2.4"/>
+    <path fill="none" stroke="#000" stroke-width="2" d="m25 16v-3c0-0.5523 0.4477-1 1-1h19c0.5523 0 1 0.4477 1 1v3"/>
+  </g>
+`)
+  )
+}
+export default EmojiTardisBlack

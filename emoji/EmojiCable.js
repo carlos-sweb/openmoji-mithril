@@ -1,0 +1,25 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril'
+
+/** Mithril component for the OpenMoji "cable" (color) [E1CB]. */
+const EmojiCable = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}) },
+    m.trust(`
+  <g id="color">
+    <rect x="10.25" y="50.8568" width="10.625" height="4.2312" fill="#9B9B9A"/>
+    <rect x="51" y="17.0845" width="10.625" height="4.2312" fill="#D0CFCE"/>
+  </g>
+  <g id="hair"/>
+  <g id="skin"/>
+  <g id="skin-shadow"/>
+  <g id="line">
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M21,53.2763h35.5642c0,0,6.4358,0,6.4358-9.1931S56.8847,34.89,56.8847,34.89H17.5768c0,0-5.8499,0-5.8499-8.3035 s5.8499-7.3535,5.8499-7.3535H50.796"/>
+    <rect x="10.25" y="50.8568" width="10.625" height="4.2312" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <rect x="51" y="17.0845" width="10.625" height="4.2312" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+`)
+  )
+}
+export default EmojiCable
