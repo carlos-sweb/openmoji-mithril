@@ -1,0 +1,25 @@
+{
+  "name": "openmoji-mithril",
+  "version": "1.0.0",
+  "description": "OpenMoji as Mithril.js components — thousands of emoji components generated from the official openmoji package.",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "files": ["index.js", "index.d.ts", "default_attrs.js", "emoji"],
+  "scripts": {
+    "build": "bun run build/build.js",
+    "prebuild": "rm -rf emoji index.js index.d.ts && mkdir -p emoji",
+    "test": "bun test"
+  },
+  "dependencies": { "mithril": "^2.3.8" },
+  "peerDependencies": { "mithril": "^2" },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/mithril": "^2.2.9",
+    "openmoji": "^17.0.0",
+    "typescript": "^5"
+  },
+  "engines": { "bun": ">=1.1.0" },
+  "license": "MIT"
+}
