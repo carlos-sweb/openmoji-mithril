@@ -41,6 +41,18 @@ Skin-tone ZWJ sequences are included as flat PascalCase names (`...LightSkinTone
 
 All 8,990 glyphs from the official OpenMoji release are available (4,485 color + 4,505 black).
 
+### Deep imports
+
+For maximum tree-shaking — when you use a single emoji — import the component file directly instead of the package root:
+
+```js
+import EmojiGrinningFace from 'openmoji-mithril/emoji/EmojiGrinningFace.js'
+
+m(EmojiGrinningFace, { size: 48 })
+```
+
+Both `openmoji-mithril/emoji/EmojiGrinningFace` (no extension) and `openmoji-mithril/emoji/EmojiGrinningFace.js` resolve, with TypeScript declarations included. This loads exactly one component module with no bundler magic; the named import from the package root achieves the same result via `sideEffects: false` + tree-shaking, since every component lives in its own file.
+
 ## Build
 
 To regenerate the components from the latest version of OpenMoji:
@@ -50,7 +62,7 @@ bun install
 bun run build
 ```
 
-The build script reads SVGs and CLDR data directly from the official `openmoji` npm package in devDependencies (`node_modules/openmoji/`), so no manual cloning is needed. It regenerates `emoji/`, `index.js`, `index.d.ts` and `default_attrs.js` deterministically — identical inputs always produce byte-identical outputs.
+The build script reads SVGs and CLDR data directly from the official `openmoji` npm package in devDependencies (`node_modules/openmoji/`), so no manual cloning is needed. It regenerates `emoji/*.js`, `emoji/*.d.ts`, `index.js`, `index.d.ts`, `default_attrs.js` and `default_attrs.d.ts` deterministically — identical inputs always produce byte-identical outputs.
 
 ## Project structure
 
@@ -58,14 +70,14 @@ The build script reads SVGs and CLDR data directly from the official `openmoji` 
 openmoji-mithril/
 ├── build/
 │   └── build.js          # Build script
-├── emoji/                # Generated emoji components (~9k files)
+├── emoji/                # Generated emoji components (~18k files: .js + .d.ts)
 │   ├── EmojiGrinningFace.js
+│   ├── EmojiGrinningFace.d.ts
 │   ├── EmojiGrinningFaceBlack.js
 │   └── ...
-├── tests/
-│   └── fixtures/
-│       └── mini-openmoji/ # Tiny OpenMoji subset for the test suite
+├── test/                 # Manual browser demo
 ├── default_attrs.js      # Default SVG attributes (size, viewBox)
+├── default_attrs.d.ts    # TypeScript declarations for default_attrs
 ├── index.js              # Generated entry point (all exports)
 ├── index.d.ts            # Generated TypeScript declarations
 ├── LICENSE               # MIT (code)

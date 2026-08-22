@@ -2,39 +2,71 @@
   "name": "openmoji-mithril",
   "version": "1.0.0",
   "description": "OpenMoji as Mithril.js components — thousands of emoji components generated from the official openmoji package.",
+  "keywords": [
+    "openmoji",
+    "emoji",
+    "emojis",
+    "emoticon",
+    "mithril",
+    "mithril.js",
+    "mithril-component",
+    "components",
+    "icons",
+    "svg",
+    "svg-icons",
+    "ui",
+    "frontend"
+  ],
   "type": "module",
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
-    "exports": {
+  "exports": {
     ".": {
       "types": "./index.d.ts",
       "import": "./index.js"
     },
-    "./icons/*": {
-      "types": "./icons/*.d.ts",
-      "import": "./icons/*.js"
+    "./emoji/*": {
+      "types": "./emoji/*.d.ts",
+      "import": "./emoji/*.js"
+    },
+    "./emoji/*.js": {
+      "types": "./emoji/*.d.ts",
+      "import": "./emoji/*.js"
     },
     "./default_attrs": {
       "types": "./default_attrs.d.ts",
       "import": "./default_attrs.js"
     }
   },
-  "files": ["index.js", "index.d.ts", "default_attrs.js", "emoji", "NOTICE"],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "default_attrs.js",
+    "default_attrs.d.ts",
+    "emoji",
+    "NOTICE"
+  ],
   "scripts": {
     "build": "bun run build/build.js",
     "prebuild": "rm -rf emoji index.js index.d.ts && mkdir -p emoji",
     "test": "bun test"
   },
-  "dependencies": { "mithril": "^2.3.8" },
-  "peerDependencies": { "mithril": "^2" },
+  "dependencies": {
+    "mithril": "^2.3.8"
+  },
+  "peerDependencies": {
+    "mithril": "^2"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/mithril": "^2.2.9",
     "openmoji": "^17.0.0",
     "typescript": "^5"
   },
-  "engines": { "bun": ">=1.1.0" },
+  "engines": {
+    "bun": ">=1.1.0"
+  },
   "license": "MIT"
 }

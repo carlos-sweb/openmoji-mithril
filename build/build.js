@@ -93,6 +93,16 @@ await Bun.write(
 }
 `
 )
+await Bun.write(
+  join(outDir, 'default_attrs.d.ts'),
+  `export default function (size?: number): {
+  xmlns: string
+  viewBox: string
+  width: number
+  height: number
+}
+`
+)
 
 // Global dedupe state — deterministic because color is processed fully before black,
 // each list in byte-wise basename order.
@@ -152,6 +162,10 @@ export default ${name}
 `
 
   await Bun.write(join(outDir, 'emoji', `${name}.js`), componentCode)
+  await Bun.write(
+    join(outDir, 'emoji', `${name}.d.ts`),
+    `import type { Vnode } from 'mithril'\n\ndeclare const ${name}: { view: (vnode: Vnode<{ size?: number; [key: string]: any }>) => any }\nexport default ${name}\n`
+  )
   counts[variant]++
 }
 
@@ -179,4 +193,4 @@ console.log(`color components: ${counts.color}`)
 console.log(`black components: ${counts.black}`)
 console.log(`total components: ${names.length}`)
 console.log(`name collisions resolved by fallback: ${collisions}`)
-console.log(`output written to ${outDir} (emoji/, index.js, index.d.ts, default_attrs.js)`)
+console.log(`output written to ${outDir} (emoji/*.js, emoji/*.d.ts, index.js, index.d.ts, default_attrs.js, default_attrs.d.ts)`)
