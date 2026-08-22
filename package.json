@@ -6,6 +6,21 @@
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+    "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./icons/*": {
+      "types": "./icons/*.d.ts",
+      "import": "./icons/*.js"
+    },
+    "./default_attrs": {
+      "types": "./default_attrs.d.ts",
+      "import": "./default_attrs.js"
+    }
+  },
   "files": ["index.js", "index.d.ts", "default_attrs.js", "emoji", "NOTICE"],
   "scripts": {
     "build": "bun run build/build.js",
