@@ -1,0 +1,30 @@
+/* style.css - OpenMoji Mithril Components */
+.emoji-container {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.emoji {
+  margin: 20px 0;
+}
+
+.emoji-name {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+#emoji1, #emoji2 {
+  width: 64px;
+  height: 64px;
+}
+
+.demo-box {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
