@@ -1,0 +1,19 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "flag: Switzerland" (color) [1F1E8-1F1ED]. */
+const EmojiFlagSwitzerland = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="color">
+    <rect x="17" y="17" width="38" height="38" fill="#d22f27"/>
+    <polygon fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="2" points="47 32.462 39.538 32.462 39.538 25 32.462 25 32.462 32.462 25 32.462 25 39.538 32.462 39.538 32.462 47 39.538 47 39.538 39.538 47 39.538 47 32.462"/>
+  </g>
+  <g id="line">
+    <rect x="17" y="17" width="38" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+` }
+  )
+}
+export default EmojiFlagSwitzerland

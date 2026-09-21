@@ -1,0 +1,28 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "orthodox cross" (color) [2626]. */
+const EmojiOrthodoxCross = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line-supplement" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <line x1="36" x2="36" y1="53" y2="19"/>
+    <line x1="47" x2="25" y1="28.5" y2="28.5"/>
+    <line x1="40.54" x2="31.46" y1="22.74" y2="22.74"/>
+    <line x1="40.74" x2="31.26" y1="49.63" y2="46.04"/>
+  </g>
+  <g id="color">
+    <rect x="12" y="12" width="48" height="47.83" fill="#8967aa"/>
+    <line x1="36" x2="36" y1="53" y2="19" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    <line x1="47" x2="25" y1="28.5" y2="28.5" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    <line x1="40.54" x2="31.46" y1="22.74" y2="22.74" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    <line x1="40.74" x2="31.26" y1="49.63" y2="46.04" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+  </g>
+  <g id="line">
+    <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+` }
+  )
+}
+export default EmojiOrthodoxCross

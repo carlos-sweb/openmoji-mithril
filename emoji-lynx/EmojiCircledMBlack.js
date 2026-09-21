@@ -1,0 +1,16 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "circled M" (black) [24C2]. */
+const EmojiCircledMBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line" transform="matrix(1.09,0,0,1.09,-3.216,-3.216)" fill="none" stroke="#000" stroke-linejoin="round">
+    <path transform="matrix(0 -2.795 -2.795 0 45.66 27.65)" stroke-linecap="round" stroke-width="2" d="m-6.5 0.5h7l-6 3 6 3h-7"/>
+    <circle cx="-3.505" cy="2.983" r="9.189" transform="matrix(2.795 0 0 2.795 45.78 27.64)" stroke-width="0.6564"/>
+  </g>
+` }
+  )
+}
+export default EmojiCircledMBlack

@@ -1,0 +1,24 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "solar cell" (color) [E1D6]. */
+const EmojiSolarCell = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="color">
+    <polygon fill="#92D3F5" stroke="none" points="51,53 5,53 17,19 63,19"/>
+    <polygon fill="#61B2E4" stroke="none" points="15.25,53 51,53 58.92,30.56"/>
+  </g>
+  <g id="hair"/>
+  <g id="skin"/>
+  <g id="skin-shadow"/>
+  <g id="line">
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="51,53 5,53 17,19 63,19"/>
+    <line x1="40" x2="28" y1="19" y2="53" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="58.5022" x2="66" y1="31.7562" y2="53" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+` }
+  )
+}
+export default EmojiSolarCell

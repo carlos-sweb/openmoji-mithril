@@ -1,0 +1,20 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "Sagittarius" (black) [2650]. */
+const EmojiSagittariusBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line-supplement" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="m37.81 24.19h9.996v9.996"/>
+    <line x1="24.19" x2="47.81" y1="47.81" y2="24.19"/>
+    <line x1="38.41" x2="28.42" y1="43.44" y2="33.46"/>
+  </g>
+  <g id="line">
+    <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+` }
+  )
+}
+export default EmojiSagittariusBlack

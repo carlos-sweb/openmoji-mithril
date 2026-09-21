@@ -80,6 +80,7 @@ const colorFiles = await listSvg(COLOR_DIR)
 const blackFiles = await listSvg(BLACK_DIR)
 
 mkdirSync(join(outDir, 'emoji'), { recursive: true })
+mkdirSync(join(outDir, 'emoji-lynx'), { recursive: true })
 
 await Bun.write(
   join(outDir, 'default_attrs.js'),
@@ -147,6 +148,8 @@ async function emit(dirPath, file, variant) {
   const viewboxOverride = viewBox === '0 0 72 72' ? '' : `, viewBox: '${viewBox}'`
   const label = ann || hexcode
 
+  const dts = `import type { Vnode } from 'mithril'\n\ndeclare const ${name}: { view: (vnode: Vnode<{ size?: number; [key: string]: any }>) => any }\nexport default ${name}\n`
+
   const componentCode = `import _attrs from '../default_attrs.js'
 import m from 'mithril'
 
@@ -161,11 +164,24 @@ const ${name} = {
 export default ${name}
 `
 
-  await Bun.write(join(outDir, 'emoji', `${name}.js`), componentCode)
-  await Bun.write(
-    join(outDir, 'emoji', `${name}.d.ts`),
-    `import type { Vnode } from 'mithril'\n\ndeclare const ${name}: { view: (vnode: Vnode<{ size?: number; [key: string]: any }>) => any }\nexport default ${name}\n`
+  // mithril-lynx / Lynx: no m.trust — SVG children go in the `content` attr.
+  const lynxComponentCode = `import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "${label}" (${variant}) [${hexcode}]. */
+const ${name} = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size)${viewboxOverride}, ...(vnode.attrs || {}), content: \`${escaped}\` }
   )
+}
+export default ${name}
+`
+
+  await Bun.write(join(outDir, 'emoji', `${name}.js`), componentCode)
+  await Bun.write(join(outDir, 'emoji', `${name}.d.ts`), dts)
+  await Bun.write(join(outDir, 'emoji-lynx', `${name}.js`), lynxComponentCode)
+  await Bun.write(join(outDir, 'emoji-lynx', `${name}.d.ts`), dts)
   counts[variant]++
 }
 
@@ -193,4 +209,4 @@ console.log(`color components: ${counts.color}`)
 console.log(`black components: ${counts.black}`)
 console.log(`total components: ${names.length}`)
 console.log(`name collisions resolved by fallback: ${collisions}`)
-console.log(`output written to ${outDir} (emoji/*.js, emoji/*.d.ts, index.js, index.d.ts, default_attrs.js, default_attrs.d.ts)`)
+console.log(`output written to ${outDir} (emoji/*.js, emoji/*.d.ts, emoji-lynx/*.js, emoji-lynx/*.d.ts, index.js, index.d.ts, default_attrs.js, default_attrs.d.ts)`)

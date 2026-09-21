@@ -1,0 +1,17 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "Edge" (black) [E057]. */
+const EmojiEdgeBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28 36C28 48 40 53.5 48 53.5C54.4 53.5 58.6667 51.8333 60 51C57 55.5 48 64.4 36 64C31.5 62.3333 22.5 56.4 22.5 46C22.5 33 32 28 36 28"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.5C15 16.3333 23 8 36 8C52.5076 8 65 19 64.5 30.5C64 42 55 45 48.5 45C43.3 45 41.1831 42 40.7747 40.5C41.7974 39.0684 42.5 37.3874 42.5 35.5C42.5 29 34.5 21.5 24 21.5C16.5 21.5 8 23.5 8 35.5"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 36C8 52 21 62 29 63"/>
+  </g>
+` }
+  )
+}
+export default EmojiEdgeBlack

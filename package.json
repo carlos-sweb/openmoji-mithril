@@ -1,6 +1,6 @@
 {
   "name": "openmoji-mithril",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "OpenMoji as Mithril.js components — thousands of emoji components generated from the official openmoji package.",
   "keywords": [
     "openmoji",
@@ -10,6 +10,8 @@
     "mithril",
     "mithril.js",
     "mithril-component",
+    "mithril-lynx",
+    "lynx",
     "components",
     "icons",
     "svg",
@@ -35,6 +37,14 @@
       "types": "./emoji/*.d.ts",
       "import": "./emoji/*.js"
     },
+    "./emoji-lynx/*": {
+      "types": "./emoji-lynx/*.d.ts",
+      "import": "./emoji-lynx/*.js"
+    },
+    "./emoji-lynx/*.js": {
+      "types": "./emoji-lynx/*.d.ts",
+      "import": "./emoji-lynx/*.js"
+    },
     "./default_attrs": {
       "types": "./default_attrs.d.ts",
       "import": "./default_attrs.js"
@@ -46,18 +56,25 @@
     "default_attrs.js",
     "default_attrs.d.ts",
     "emoji",
+    "emoji-lynx",
     "NOTICE"
   ],
   "scripts": {
     "build": "bun run build/build.js",
-    "prebuild": "rm -rf emoji index.js index.d.ts && mkdir -p emoji",
+    "prebuild": "rm -rf emoji emoji-lynx index.js index.d.ts && mkdir -p emoji emoji-lynx",
     "test": "bun test"
   },
   "dependencies": {
     "mithril": "^2.3.8"
   },
   "peerDependencies": {
-    "mithril": "^2"
+    "mithril": "^2",
+    "mithril-runtime": "^1.1.0"
+  },
+  "peerDependenciesMeta": {
+    "mithril-runtime": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/bun": "latest",

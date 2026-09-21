@@ -1,0 +1,20 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "page move" (black) [E107]. */
+const EmojiPageMoveBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line">
+    <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,15.9159 52,32.0335 52,56.0007 20,56.0007 20,15.9159 36,15.9159"/>
+    <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,15.9159 35.9661,32.0335 46.5393,32.0335"/>
+    <line x1="59.4865" x2="64.7021" y1="31.0472" y2="36.2629" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="59.4865" x2="64.7021" y1="41.521" y2="36.3054" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.7021" x2="7.4865" y1="41.521" y2="36.3054" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.7021" x2="7.4865" y1="31.0472" y2="36.2629" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+` }
+  )
+}
+export default EmojiPageMoveBlack

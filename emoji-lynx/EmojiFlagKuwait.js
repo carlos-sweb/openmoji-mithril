@@ -1,0 +1,21 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "flag: Kuwait" (color) [1F1F0-1F1FC]. */
+const EmojiFlagKuwait = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="color">
+    <rect x="5" y="17" width="62" height="38" fill="#d22f27"/>
+    <rect x="5" y="30" width="62" height="12" fill="#fff"/>
+    <rect x="5" y="17" width="62" height="13" fill="#b1cc33"/>
+    <path d="m19.368,42l-13.0441,11.8022c-.5094.4609-1.3239.0994-1.3239-.5875V18.0804c0-.4157.4929-.6345.8012-.3556l13.5688,12.2762-.002,11.999Z"/>
+  </g>
+  <g id="line">
+    <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+` }
+  )
+}
+export default EmojiFlagKuwait

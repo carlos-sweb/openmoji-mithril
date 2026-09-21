@@ -53,6 +53,23 @@ m(EmojiGrinningFace, { size: 48 })
 
 Both `openmoji-mithril/emoji/EmojiGrinningFace` (no extension) and `openmoji-mithril/emoji/EmojiGrinningFace.js` resolve, with TypeScript declarations included. This loads exactly one component module with no bundler magic; the named import from the package root achieves the same result via `sideEffects: false` + tree-shaking, since every component lives in its own file.
 
+## mithril-lynx (Lynx)
+
+[mithril-lynx](https://www.npmjs.com/package/mithril-lynx) does not support `m.trust`. On Lynx, SVG markup is passed through the native `<svg>` `content` attribute instead.
+
+Use the parallel `emoji-lynx/` components, which import `mithril-runtime` and set `content`:
+
+```js
+import m from 'mithril-runtime'
+import EmojiGrinningFace from 'openmoji-mithril/emoji-lynx/EmojiGrinningFace.js'
+
+m(EmojiGrinningFace, { size: 48 })
+```
+
+The web entry (`openmoji-mithril` / `emoji/*`) is unchanged and still uses `m.trust`.
+
+`mithril-runtime` is an optional peer dependency: install it when you use `emoji-lynx/*`.
+
 ## Build
 
 To regenerate the components from the latest version of OpenMoji:
@@ -62,7 +79,7 @@ bun install
 bun run build
 ```
 
-The build script reads SVGs and CLDR data directly from the official `openmoji` npm package in devDependencies (`node_modules/openmoji/`), so no manual cloning is needed. It regenerates `emoji/*.js`, `emoji/*.d.ts`, `index.js`, `index.d.ts`, `default_attrs.js` and `default_attrs.d.ts` deterministically — identical inputs always produce byte-identical outputs.
+The build script reads SVGs and CLDR data directly from the official `openmoji` npm package in devDependencies (`node_modules/openmoji/`), so no manual cloning is needed. It regenerates `emoji/*.js`, `emoji/*.d.ts`, `emoji-lynx/*.js`, `emoji-lynx/*.d.ts`, `index.js`, `index.d.ts`, `default_attrs.js` and `default_attrs.d.ts` deterministically — identical inputs always produce byte-identical outputs.
 
 ## Project structure
 
@@ -70,10 +87,14 @@ The build script reads SVGs and CLDR data directly from the official `openmoji` 
 openmoji-mithril/
 ├── build/
 │   └── build.js          # Build script
-├── emoji/                # Generated emoji components (~18k files: .js + .d.ts)
+├── emoji/                # Generated web emoji components (~18k files: .js + .d.ts)
 │   ├── EmojiGrinningFace.js
 │   ├── EmojiGrinningFace.d.ts
 │   ├── EmojiGrinningFaceBlack.js
+│   └── ...
+├── emoji-lynx/           # Generated mithril-lynx emoji components (content attr)
+│   ├── EmojiGrinningFace.js
+│   ├── EmojiGrinningFace.d.ts
 │   └── ...
 ├── test/                 # Manual browser demo
 ├── default_attrs.js      # Default SVG attributes (size, viewBox)

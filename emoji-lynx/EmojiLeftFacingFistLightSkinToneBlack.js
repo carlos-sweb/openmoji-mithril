@@ -1,0 +1,18 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "left-facing fist: light skin tone" (black) [1F91B-1F3FB]. */
+const EmojiLeftFacingFistLightSkinToneBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line" transform="matrix(.9826 0 0 .9823 .2663 1.018)" stroke-miterlimit="10" stroke-width="1.018">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.036" d="m43.88 47.41 8.469-9.812c1.281-1.594 2.281-1.906 3.344-2.156l9.04-1.92c4.59-5.084 4.19-12.93-0.8941-17.52l-51.33 2.083c-3.292 0.3333-7.099 2.364-7.682 6.622l0.0156 20.46c-0.3021 3.771 3.823 5.115 8.167 3.458-1 8.438 3 9.562 7.438 8.438l20.91-7.739"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.036" d="m15.31 29.17c0 4.062 4.892 4.344 10.94 4.344-0.5 4.031-2.594 8.625-10.03 13"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.036" d="m43.88 47.41 8.469-9.812c1.281-1.594 2.281-1.906 3.344-2.156l9.04-1.92c4.59-5.084 4.19-12.93-0.8941-17.52l-51.33 2.083c-3.292 0.3333-7.099 2.364-7.682 6.622l0.0156 20.46c-0.3021 3.771 3.823 5.115 8.167 3.458-1 8.438 3 9.562 7.438 8.438l20.91-7.739c1.296-0.6802 1.853-1.293 2.531-1.917z"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.036" d="m15.31 29.17c0 4.062 4.892 4.344 10.94 4.344-0.5 4.031-2.594 8.625-10.03 13"/>
+  </g>
+` }
+  )
+}
+export default EmojiLeftFacingFistLightSkinToneBlack

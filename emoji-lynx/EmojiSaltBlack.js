@@ -1,0 +1,15 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "salt" (black) [1F9C2]. */
+const EmojiSaltBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.005,23.6808q-.0165-.1244-.0344-.2486c-.6379-4.42-3.0608-8.2535-7.464-9.6336-4.6024-1.4424-10.3.3264-12.82,4.5724-1.69,2.847-1.5438,6.097-1.7552,9.2756-.1392,2.0924-.2538,4.1868-.3806,6.28l-.91,15.01C23.61,49.45,23.1764,58,23.0915,58h26c-.65-10.7276-1.2233-21.46-1.8875-32.1728C47.16,25.11,47.1,24.3934,47.005,23.6808Z"/>
+  </g>
+` }
+  )
+}
+export default EmojiSaltBlack

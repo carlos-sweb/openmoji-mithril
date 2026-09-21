@@ -1,0 +1,15 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "down-right arrow" (black) [2198]. */
+const EmojiDownRightArrowBlack = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="line">
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="57.4658,34.702 58.3629,58.9309 34.134,58.0338 34.3399,52.4758 48.4998,53.0004 12.6073,17.1079 16.5399,13.1753 52.4325,49.0678 51.9078,34.9079"/>
+  </g>
+` }
+  )
+}
+export default EmojiDownRightArrowBlack

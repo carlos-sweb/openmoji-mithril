@@ -1,0 +1,30 @@
+import _attrs from '../default_attrs.js'
+import m from 'mithril-runtime'
+
+/** Mithril-lynx component for the OpenMoji "family: adult, child, child" (color) [1F9D1-200D-1F9D2-200D-1F9D2]. */
+const EmojiFamilyAdultChildChild = {
+  view: (vnode) => m(
+    'svg',
+    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+  <g id="color">
+    <path fill="#fcea2b" stroke="#fcea2b" stroke-miterlimit="10" stroke-width="2" d="M24,61v-27c0-4.4183,3.5817-8,8-8h8c4.4183,0,8,3.5817,8,8v27h-24Z"/>
+    <circle cx="36" cy="15" r="6" fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g>
+      <circle cx="25" cy="43" r="5" fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle cx="47" cy="43" r="5" fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16,61v-3c0-3.3137,2.6863-6,6-6h6c3.3137,0,6,2.6863,6,6v3H16Z"/>
+      <path fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38,61v-3c0-3.3137,2.6863-6,6-6h6c3.3137,0,6,2.6863,6,6v3h-18Z"/>
+    </g>
+  </g>
+  <g id="line">
+    <circle cx="36" cy="15" r="6" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle cx="25" cy="43" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle cx="47" cy="43" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16,61v-3c0-3.3137,2.6863-6,6-6h6c3.3137,0,6,2.6863,6,6v3"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38,61v-3c0-3.3137,2.6863-6,6-6h6c3.3137,0,6,2.6863,6,6v3"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24,34c0-4.4183,3.5817-8,8-8h8c4.4183,0,8,3.5817,8,8"/>
+  </g>
+` }
+  )
+}
+export default EmojiFamilyAdultChildChild
