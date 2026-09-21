@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "half orange fruit" (color) [E0C0]. */
-const EmojiHalfOrangeFruit = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHalfOrangeFruit = lynxIcon(`
   <g id="line-supplement">
     <circle cx="36" cy="36" r="2.403" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="m28.46 17.87 15.07 36.39"/>
@@ -27,7 +24,5 @@ const EmojiHalfOrangeFruit = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m62 36a26 26 0 0 1-26 26 26 26 0 0 1-26-26 26 26 0 0 1 26-26 26 26 0 0 1 26 26"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m55.63 36a19.63 19.63 0 0 1-19.63 19.63 19.63 19.63 0 0 1-19.63-19.63 19.63 19.63 0 0 1 19.63-19.63 19.63 19.63 0 0 1 19.63 19.63"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHalfOrangeFruit

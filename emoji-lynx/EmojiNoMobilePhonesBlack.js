@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no mobile phones" (black) [1F4F5]. */
-const EmojiNoMobilePhonesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoMobilePhonesBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
     <path stroke-miterlimit="10" d="m26.98 29.58 0.02 20.42h12.52"/>
     <path stroke-miterlimit="10" d="m45.02 47.56-0.04817 2.882"/>
@@ -18,7 +15,5 @@ const EmojiNoMobilePhonesBlack = {
     <path stroke-linecap="round" stroke-miterlimit="10" d="m43.5 20h-13.52c-1.104 0-2 0.8955-2 2h14.02z"/>
     <path stroke-linecap="round" stroke-miterlimit="10" d="m34.26 52h8.76c1.104 0 2-0.8955 2-2h-15.02z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoMobilePhonesBlack

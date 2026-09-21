@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fracture leg" (color) [E31F]. */
-const EmojiFractureLeg = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFractureLeg = lynxIcon(`
   <g id="color">
     <path id="Leg_Skin_1-2" fill="#d0cfce" stroke="#d0cfce" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m58.9318,8.7773c-2.87,6.6957-11.9928,11.43-11.9566,13.87.04,2.701,1.2377,8.168,1.4348,11,.5262,6.366.5262,12.7647,0,19.1307-.1385,1.9079,2.1351,4.877,0,8.6087-1.1692.8368-5.7392-1.913-13.3914,0-2.3902.4753-4.8405.5692-7.26.278-.9416-.1331-1.597-1.0043-1.4639-1.9458.0811-.5739.4455-1.0685.9697-1.316,2.131-.9925,4.9607-1.8741,6.7972-2.7556,2.8229-1.355,4.5793-2.71,5.5716-4.4676.1142-.2052.1851-.4317.2082-.6654.8149-7.6618-2.4679-19.3382-4.8232-24.52-.6445-1.1711-.9741-2.4895-.9566-3.8261,0-1.9131.9566-2.87,1.9131-4.7827,2.1454-4.2908,2.7235-6.8638,3.7575-9.0221.3408-.5882.9672-.9523,1.647-.9573,4.6803-.4371,9.3987-.2176,14.0182.652l3.5344.7192Z"/>
     <path fill="#fff" d="m47.0307,27.514h-9.7737c-1.4028,0-2.54,1.1372-2.54,2.54h0v21.4916c-7.1223,0-12.8961,0-12.8961,5.8813,0,5.2772,5.7738,5.8813,12.8961,5.8813h10.6924c2.2981,0,4.1611-1.863,4.1611-4.1611v-29.0934c-.0002-1.4026-1.1372-2.5396-2.5398-2.5397Z"/>
@@ -39,7 +36,5 @@ const EmojiFractureLeg = {
     <polyline fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="9.765 62.244 14.143 61.214 13.766 64.146 19.266 62.852"/>
     <polyline fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="19.275 52.668 14.943 51.459 15.199 54.404 9.756 52.885"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFractureLeg

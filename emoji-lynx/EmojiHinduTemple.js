@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hindu temple" (color) [1F6D5]. */
-const EmojiHinduTemple = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHinduTemple = lynxIcon(`
   <g id="color">
     <rect x="17" y="52.7586" width="38" height="10.6997" fill="#f4aa41"/>
     <rect x="17" y="43.4583" width="38" height="9.3003" fill="#f4aa41"/>
@@ -48,7 +45,5 @@ const EmojiHinduTemple = {
     <circle cx="36.0625" cy="12.3806" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="36.0625" x2="36.0625" y1="17.6693" y2="20.0553" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHinduTemple

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mosque" (black) [1F54C]. */
-const EmojiMosqueBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMosqueBlack = lynxIcon(`
   <g id="line">
     <rect x="41.9667" y="15.0079" height="3" fill="none" stroke="#000" stroke-miterlimit="10"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.4746,32a8.2793,8.2793,0,0,1-1.04,4h-22.92a8.2793,8.2793,0,0,1-1.04-4c0-5.52,5.6-10,12.5-10S54.4746,26.48,54.4746,32Z"/>
@@ -24,7 +21,5 @@ const EmojiMosqueBlack = {
     <line x1="16.4746" x2="16.4746" y1="27.1926" y2="35.5287" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="21.4746" x2="21.4746" y1="27.1926" y2="35.5287" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMosqueBlack

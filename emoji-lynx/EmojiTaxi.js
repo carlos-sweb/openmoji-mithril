@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "taxi" (color) [1F695]. */
-const EmojiTaxi = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTaxi = lynxIcon(`
   <g id="color">
     <path fill="#F1B31C" d="M42.5,30.1L39,27.7c-0.5-0.3-1.2-0.2-1.5,0.4l-1.1,2"/>
     <path fill="#FCEA2B" d="M64.8,44.7l-1.1-0.6c-0.4-0.2-0.6-0.6-0.5-1c0.3-1.9,0.5-8.5-9.7-11.5c-0.2-0.1-0.4-0.1-0.6-0.1l-19.6,0.1 c-0.4,0-0.8,0.1-1.1,0.3l-10.3,6.9c-0.2,0.1-0.4,0.2-0.6,0.2c-1.9-0.1-3.7,0.1-5.6,0.4c-5.4,1.1-7.6,4-8.4,5.5 c-0.2,0.3-0.2,0.7-0.2,1C7.2,48.3,5.6,51,8,53.2l19.4-0.1l20.4-0.5l16.1-0.2c0.9-0.1,2.4-1.4,2.8-2.2C68.4,47.5,65,44.8,64.8,44.7z"/>
@@ -30,7 +27,5 @@ const EmojiTaxi = {
   <g id="color-foreground">
     <line id="xx" x1="24.1" x2="50.1" y1="44.1" y2="44.1" fill="none" stroke="#F1B31C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTaxi

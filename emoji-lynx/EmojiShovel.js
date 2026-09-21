@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shovel" (color) [1FA8F]. */
-const EmojiShovel = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShovel = lynxIcon(`
   <g id="color">
     <path fill="#9b9b9a" d="M13.8017,58.1983c6.2518,3.251,13.2956.9586,17.9845-3.7303l1.8964-1.8964c.8287-.8287.7914-2.2095-.0834-3.0842l-5.5433-5.5433s-5.5433-5.5433-5.5433-5.5433c-.8747-.8747-2.2556-.912-3.0842-.0834l-1.8964,1.8964c-4.6889,4.6889-6.9812,11.7326-3.7303,17.9845Z"/>
     <path fill="#d0cfce" d="M22.5127,43.7056c-.8747-.8747-2.2556-.912-3.0843-.0833l-1.8963,1.8964c-2.5246,2.5245-4.2998,8.1047-3.7303,12.6796,6.2519,3.2509,13.2956.9586,17.9845-3.7303l.7444-.7444-4.4747-4.4746-5.5433-5.5433Z"/>
@@ -19,7 +16,5 @@ const EmojiShovel = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M56.2785,24.9139l-1.0607,1.0607c-1.5621,1.5621-4.0948,1.5621-5.6569,0l-3.5355-3.5355c-1.5621-1.5621-1.5621-4.0948,0-5.6569l1.0607-1.0607"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="26.2871 42.1774 46.0254 22.4391 49.5609 25.9746 29.8226 45.7129 26.2871 42.1774"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShovel

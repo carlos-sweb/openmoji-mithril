@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "money with wings" (color) [1F4B8]. */
-const EmojiMoneyWithWings = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMoneyWithWings = lynxIcon(`
   <g id="color">
     <rect x="29.1445" y="23.3544" width="17.9998" height="28.5812" transform="translate(-15.4468 37.9981) rotate(-45)" fill="#fff"/>
     <path fill="#fff" d="m13.9792,56.7778c.3645.3645.8533.5189,1.325.4674,0,0,8.9017.0515,13.9615-4.8025.0643-.0557.1243-.1157.1843-.1758,1.8352-1.8352,1.8309-4.8068,0-6.6377-1.831-1.831-4.8025-1.8352-6.6377,0l-8.8331,8.8331c-.6389.639-.6389,1.6766,0,2.3155Z"/>
@@ -37,7 +34,5 @@ const EmojiMoneyWithWings = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m53.4268,21.7387c.81.12,1.98-.36,2.98-1.31.3-.29.56-.59.76-.9"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m56.0668,17.5587c.58-.08,1.11-.36,1.49-.8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMoneyWithWings

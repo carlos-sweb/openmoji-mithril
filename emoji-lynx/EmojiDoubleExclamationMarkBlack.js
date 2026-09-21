@@ -1,18 +1,13 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "double exclamation mark" (black) [203C]. */
-const EmojiDoubleExclamationMarkBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDoubleExclamationMarkBlack = lynxIcon(`
   <g id="line">
     <ellipse cx="26.6691" cy="60.081" rx="3" ry="3.0228" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <ellipse cx="45.3309" cy="60.081" rx="3" ry="3.0228" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.6691,49.964a2.4852,2.4852,0,0,1-2.5-2.519V11.9773a2.5,2.5,0,1,1,5,0V47.445A2.4852,2.4852,0,0,1,26.6691,49.964Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M45.3309,49.964a2.4852,2.4852,0,0,1-2.5-2.519V11.9773a2.5,2.5,0,1,1,5,0V47.445A2.4852,2.4852,0,0,1,45.3309,49.964Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDoubleExclamationMarkBlack

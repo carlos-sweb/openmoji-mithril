@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "grinning cat with smiling eyes" (black) [1F638]. */
-const EmojiGrinningCatWithSmilingEyesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGrinningCatWithSmilingEyesBlack = lynxIcon(`
   <g id="line">
     <line x1="62" x2="52.64" y1="54.1278" y2="48.9278" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="57.84" x2="48.48" y1="59.3278" y2="54.1278" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiGrinningCatWithSmilingEyesBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M55.203,37.7585c-3.1139-4.1519-9.3418-4.1519-11.4177,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M16.798,37.7585c3.1139-4.1519,9.3418-4.1519,11.4177,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGrinningCatWithSmilingEyesBlack

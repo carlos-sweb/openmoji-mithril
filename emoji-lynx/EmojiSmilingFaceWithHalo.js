@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "smiling face with halo" (color) [1F607]. */
-const EmojiSmilingFaceWithHalo = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmilingFaceWithHalo = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="M36,60A24,24,0,0,0,54.157,20.3047q-.1309-.1515-.2646-.3008A24,24,0,1,0,36,60Z"/>
   </g>
@@ -23,7 +20,5 @@ const EmojiSmilingFaceWithHalo = {
   <g id="color-foreground">
     <ellipse cx="36" cy="14.8" rx="25" ry="5.25" fill="none" stroke="#61b2e4" stroke-miterlimit="10" stroke-width="2.1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmilingFaceWithHalo

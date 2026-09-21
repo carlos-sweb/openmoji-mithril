@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "soft ice cream" (black) [1F366]. */
-const EmojiSoftIceCreamBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSoftIceCreamBlack = lynxIcon(`
   <g id="line">
     <rect x="17" y="40" width="38" height="10" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M53,36c0-1.6562-1.3428-3-3-3l-2.2187-0.0156"/>
@@ -17,7 +14,5 @@ const EmojiSoftIceCreamBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9999" d="M34,5c2,2-0.1455,6.6875-2.167,7.1665"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M52,50l-4,12c-0.873,2.6191-2.2393,5-5,5H29c-2.7607,0-4.127-2.3809-5-5l-4-12"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSoftIceCreamBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "couple with heart: man, man, medium-light skin tone, medium skin tone" (color) [1F468-1F3FC-200D-2764-FE0F-200D-1F468-1F3FD]. */
-const EmojiCoupleWithHeartManManMediumLightSkinToneMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCoupleWithHeartManManMediumLightSkinToneMediumSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M6,61v-3.3C6,54,9.7,51,13.4,51c4.4,3.7,8.8,3.7,13.3,0c3.7,0,7.4,3,7.4,6.7V61"/>
     <path fill="#92D3F5" d="M38,61v-3.3c0-3.7,3.7-6.7,7.4-6.7c4.4,3.7,8.8,3.7,13.3,0c3.7,0,7.4,3,7.4,6.7V61"/>
@@ -43,7 +40,5 @@ const EmojiCoupleWithHeartManManMediumLightSkinToneMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.9,43.4 c1.3,0.7,2.9,0.7,4.2,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38,60v-2.3 c0-3.7,3.7-6.7,7.4-6.7c4.4,3.7,8.8,3.7,13.3,0c3.7,0,7.4,3,7.4,6.7V60"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCoupleWithHeartManManMediumLightSkinToneMediumSkinTone

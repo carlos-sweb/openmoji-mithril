@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “not free of charge” button" (color) [1F236]. */
-const EmojiJapaneseNotFreeOfChargeButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapaneseNotFreeOfChargeButton = lynxIcon(`
   <g id="line-supplement" transform="matrix(.2609 0 0 .2609 -91.17 -3.172)" fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="9.774" clip-rule="evenodd">
     <path transform="matrix(.9804 0 0 .9804 -649.2 -.9503)" d="m1206 161.5s-52.68-0.01-77.67 0"/>
     <path transform="matrix(.9804 0 0 .9804 -648.3 -2.212)" stroke-linecap="round" stroke-width="9.774" d="m1127 222.9-0.096-87.05 81.06-0.166s-0.013 56.26-0.019 78.34c-1e-3 4.83-3.916 8.744-8.746 8.744h-19.26"/>
@@ -24,7 +21,5 @@ const EmojiJapaneseNotFreeOfChargeButton = {
   <g id="line" transform="matrix(.279 0 0 .279 -287.3 -.1919)">
     <rect x="12" y="12" width="48" height="48" transform="matrix(3.584 0 0 3.584 1030 .6878)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapaneseNotFreeOfChargeButton

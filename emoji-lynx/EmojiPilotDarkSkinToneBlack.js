@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pilot: dark skin tone" (black) [1F9D1-1F3FF-200D-2708-FE0F]. */
-const EmojiPilotDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPilotDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <path d="M42.0234,26.8773c0,1.1045-0.8965,2-2,2s-2-0.8955-2-2c0-1.1035,0.8965-2,2-2S42.0234,25.7738,42.0234,26.8773"/>
     <path d="M34.0234,26.8773c0,1.1045-0.8965,2-2,2s-2-0.8955-2-2c0-1.1035,0.8965-2,2-2S34.0234,25.7738,34.0234,26.8773"/>
@@ -29,7 +26,5 @@ const EmojiPilotDarkSkinToneBlack = {
     <path d="M54.5625,48.2715c-0.5527,0-1-0.4473-1-1v-1.9522c0-0.5527,0.4473-1,1-1s1,0.4473,1,1v1.9522 C55.5625,47.8242,55.1152,48.2715,54.5625,48.2715z"/>
     <path d="M36.3428,23.5176c-4.6983,0-9.208-1.5288-11.6699-3.9951c-0.2852-0.2862-0.3702-0.7163-0.2159-1.0899 c0.1553-0.373,0.5196-0.6167,0.9239-0.6167h21.0683c0.3897,0,0.7442,0.2266,0.9072,0.5801c0.1641,0.3535,0.1075,0.77-0.1455,1.0674 c-2.0312,2.3921-5.6777,3.8633-10.0048,4.0371C36.918,23.5122,36.6299,23.5176,36.3428,23.5176z M28.5176,19.8159 c2.333,1.1797,5.4336,1.8174,8.6084,1.6861c2.5635-0.1031,4.8261-0.6978,6.5381-1.6861H28.5176z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPilotDarkSkinToneBlack

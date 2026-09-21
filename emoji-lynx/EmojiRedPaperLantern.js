@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "red paper lantern" (color) [1F3EE]. */
-const EmojiRedPaperLantern = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRedPaperLantern = lynxIcon(`
   <g id="color">
     <rect x="19.125" y="9.871" rx="11" width="32.7367" height="52.2643" fill="#ea5a47"/>
     <g>
@@ -26,7 +23,5 @@ const EmojiRedPaperLantern = {
       <rect x="31.3396" y="20.8397" width="8.3074" height="8.9339" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRedPaperLantern

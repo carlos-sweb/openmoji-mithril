@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "diving mask" (color) [1F93F]. */
-const EmojiDivingMask = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDivingMask = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m45.7108,46.9071l.3911,6.0624s6.5513,5.0846,12.5159-4.2046l.7822-6.1602-.7822-1.7601s-7.0402,9.2892-12.9071,6.0624Z"/>
     <g>
@@ -23,7 +20,5 @@ const EmojiDivingMask = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.9546,27.8015c2.0036-.993,4.2085-1.5125,6.4447-1.5183h8.9545c2.2064.0065,3.9935,1.7936,4,4v7.5668c-.0065,2.2064-1.7936,3.9935-4,4h-7.7713c-2.4532-.1391-4.7119-1.3802-6.1448-3.3763l-1.7829-2.8064c-1.18-1.8569-3.1338-1.8723-4.3424-.034l-1.89,2.8745c-1.468,1.978-3.7383,3.2024-6.1976,3.3422h-7.5587c-2.2064-.0065-3.9935-1.7936-4-4v-7.5668c.0065-2.2064,1.7936-3.9935,4-4h8.6975c2.2762.0155,4.5208.534,6.5732,1.5183,1.5683.8352,3.4495.8352,5.0178,0Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m63.0361,5c1.1046,0,2,.8954,2,2h0v38.0742c.0111,1.2622-.1549,2.5197-.4931,3.7358-.9636,3.683-3.3177,6.8489-6.5674,8.832-2.1253,1.2153-4.5376,1.8384-6.9856,1.8043-.3056,0-.6135-.0088-.9238-.0264-4.7773-.2685-8.1924-1.5967-10.1523-3.9482-.6559-.7785-1.1379-1.6881-1.4139-2.668l-1.5225-.0166c-1.0998-.0127-1.9831-.9108-1.9775-2.0107"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDivingMask

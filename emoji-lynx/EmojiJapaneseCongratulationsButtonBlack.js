@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “congratulations” button" (black) [3297]. */
-const EmojiJapaneseCongratulationsButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapaneseCongratulationsButtonBlack = lynxIcon(`
   <g id="line-supplement" transform="matrix(.3004 0 0 .3004 -521.6 -12.27)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="7.98" clip-rule="evenodd">
     <path transform="matrix(1.043 0 0 1.043 -77.1 -5.928)" fill="none" d="m1861 157.3s3.157 40.12-23.02 52.17"/>
     <path transform="matrix(1.043 0 0 1.043 -77.1 -5.928)" fill="none" d="m1880 155.8s0.1427 38.03 0.1867 49.66c0.01 1.848 1.507 3.341 3.354 3.341h12.83c1.746 0 4.438-1.11 5.663-2.828 2.756-3.866 2.391-9.376 1.859-14.12"/>
@@ -18,7 +15,5 @@ const EmojiJapaneseCongratulationsButtonBlack = {
   <g id="line" transform="matrix(1.087 0 0 1.087 -3.13 -3.172)">
     <circle cx="36" cy="36.04" r="25.76" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="1.84"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapaneseCongratulationsButtonBlack

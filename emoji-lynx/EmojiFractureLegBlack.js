@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fracture leg" (black) [E31F]. */
-const EmojiFractureLegBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFractureLegBlack = lynxIcon(`
   <g id="line">
     <g id="line-2">
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55.3981,8.06c-4.62-.8706-9.3392-1.0894-14.02-.65-.6785.0056-1.3045.3661-1.65.95-1.03,2.16-1.61,4.74-3.75,9.03-.96,1.91-1.92,2.87-1.92,4.78-.011,1.3344.3195,2.6494.96,3.82.26.58.54,1.23.82,1.95v.01"/>
@@ -25,7 +22,5 @@ const EmojiFractureLegBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="9.765 62.244 14.143 61.214 13.766 64.146 19.266 62.852"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="19.275 52.668 14.943 51.459 15.199 54.404 9.756 52.885"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFractureLegBlack

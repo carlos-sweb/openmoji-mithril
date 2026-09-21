@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man mountain biking: medium-light skin tone" (color) [1F6B5-1F3FC-200D-2642-FE0F]. */
-const EmojiManMountainBikingMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManMountainBikingMediumLightSkinTone = lynxIcon(`
   <g id="skin">
     <circle cx="45.532" cy="8.013" r="2.9992" fill="#debb90"/>
     <path fill="#debb90" d="M45.4415,14.8705l3.3818-.6646,1.65,1.9544,3.7617,12.5246L51.0592,31.339,47.9758,32.7l-6.614,8.887-5.33,4.7839-1.4442-2.6046,3.2461-6.0006-.966-7.5311,1.2258-2.8987,8.6932-2.49-1.22-6.8035"/>
@@ -25,7 +22,5 @@ const EmojiManMountainBikingMediumLightSkinTone = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M40.2029,42.4667l-1.9568,2.4109a2.6608,2.6608,0,0,1-2.7878.8619,1.6222,1.6222,0,0,1-.7331-2.3289l3.1082-5.6451"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M48.9715,31.45,41.81,40.4313"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManMountainBikingMediumLightSkinTone

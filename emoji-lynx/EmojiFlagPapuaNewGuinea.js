@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Papua New Guinea" (color) [1F1F5-1F1EC]. */
-const EmojiFlagPapuaNewGuinea = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagPapuaNewGuinea = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" rx="2.0922" ry="2.0922" width="62" height="38" fill="#d22f27"/>
     <path d="m5,54.3703V17.3118c0-.2641.2894-.4262.5146-.2882l60.4639,37.0585c.2908.1782.1645.6261-.1766.6261H5.338c-.1867,0-.338-.1513-.338-.338Z"/>
@@ -23,7 +20,5 @@ const EmojiFlagPapuaNewGuinea = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagPapuaNewGuinea

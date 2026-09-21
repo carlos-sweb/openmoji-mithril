@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "smiling face" (color) [263A]. */
-const EmojiSmilingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmilingFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#FCEA2B"/>
   </g>
@@ -20,7 +17,5 @@ const EmojiSmilingFace = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.7343,34.2452c0,0,3.9322-2.1695,8,0"/>
     <ellipse cx="36" cy="36" rx="23.0001" ry="23.0001" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmilingFace

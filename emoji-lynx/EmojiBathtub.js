@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bathtub" (color) [1F6C1]. */
-const EmojiBathtub = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBathtub = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M22.7591,54.4599h-5.4412l-2.5565,7.3286c-0.336,0.9633,0.3791,1.9701,1.3993,1.9701h3.3547 L22.7591,54.4599z"/>
     <path fill="#9B9B9A" stroke="none" d="M47.124,54.4599h5.4412l2.5565,7.3286c0.336,0.9633-0.3791,1.9701-1.3993,1.9701h-3.3547L47.124,54.4599z"/>
@@ -26,7 +23,5 @@ const EmojiBathtub = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.5342,59.5982 15.3913,63.128 18.9152,63.128 19.5818,61.0744"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M11.0074,34.2178v9.4286c0,6.9143,5.4,12.5714,12,12.5714h26c6.6,0,12-5.6571,12-12.5714v-9.4286 C61.0074,34.2178,38.0074,36.313,11.0074,34.2178z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBathtub

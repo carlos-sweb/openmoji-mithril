@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "structural fire" (black) [E089]. */
-const EmojiStructuralFireBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStructuralFireBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.23,58.6988a17.3009,17.3009,0,0,0,12.3839,4.8651c4.5112,0,9.7947-1.4392,12.8907-4.5352"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.7288,7.7674S48.838,17.2766,48.3073,33.0218c0,1.15.5178,2.0344,1.7673,2.0344a5.2949,5.2949,0,0,0,4.2929-2.3442A22.0076,22.0076,0,0,1,56.66,42.5394a19.31,19.31,0,0,1-4.1736,12.5043"/>
@@ -15,7 +12,5 @@ const EmojiStructuralFireBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="31.479 62.565 31.479 50.664 39.595 50.664"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.8191,54.7a20.0775,20.0775,0,0,1-3.9255-11.8309A33.5841,33.5841,0,0,1,19.7928,27.778c.4652,7.3054,3.5815,9.257,5.292,9.257,1.2778,0,2.4529-1.3022,2.4529-3.4259.0885-2.7422.5066-6.1174,4.1743-12.9048"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStructuralFireBlack

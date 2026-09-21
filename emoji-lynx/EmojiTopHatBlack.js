@@ -1,16 +1,11 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "top hat" (black) [1F3A9]. */
-const EmojiTopHatBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTopHatBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="55.355 32.3764 54.6817 47.2519 56.5 7.0833 16.5 7.0833 18.3184 47.2519 17.645 32.3764 55.355 32.3764"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m54.5,51.262s-11.2908,1.7703-17.5,1.7703-18.5-1.7703-18.5-1.7703c-7.3129-1.1586-14-2.0756-14-.04,0,3.5608,14.3269,6.4474,32,6.4474s32-2.8866,32-6.4474c0-2.0356-6.6871-1.1186-14,.04Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTopHatBlack

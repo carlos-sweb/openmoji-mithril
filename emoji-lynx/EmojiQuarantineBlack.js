@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "quarantine" (black) [E0AF]. */
-const EmojiQuarantineBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiQuarantineBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2237" points="13.902 14.702 35.007 17.003 35.362 61.053 39.106 61.053 38.873 13.552 13.902 11"/>
     <g id="line-2">
@@ -34,7 +31,5 @@ const EmojiQuarantineBlack = {
     <circle cx="22.8264" cy="20" r="2"/>
     <circle cx="28.1125" cy="23.7843" r="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiQuarantineBlack

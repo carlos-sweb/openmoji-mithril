@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "exploding head" (black) [1F92F]. */
-const EmojiExplodingHeadBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiExplodingHeadBlack = lynxIcon(`
   <g id="line-supplement">
     <path d="M36.2846,57.9425c2.897,0,5.245-2.927,5.245-6.538s-2.348-6.538-5.245-6.538-5.245,2.927-5.245,6.538S33.3876,57.9425,36.2846,57.9425Z"/>
   </g>
@@ -19,7 +16,5 @@ const EmojiExplodingHeadBlack = {
     <path fill="none" stroke="#000" stroke-width="2" d="M48.2846,23.5925a19.3387,19.3387,0,0,1,7,2.5"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M23.9046,23.4825c2.064.59,6.546,1.062,7.962-1.769,2.1231,2.123,7.077,1.474,8.846,0,.8847,1.769,4.423,3.185,7.962,1.769"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiExplodingHeadBlack

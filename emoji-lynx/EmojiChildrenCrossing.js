@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "children crossing" (color) [1F6B8]. */
-const EmojiChildrenCrossing = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChildrenCrossing = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="M59.474,32.4733a5.0709,5.0709,0,0,1,0,7.1632L39.427,59.6835a5.0709,5.0709,0,0,1-7.1632,0L12.2169,39.6365a5.0709,5.0709,0,0,1,0-7.1632l20.0469-20.047a5.071,5.071,0,0,1,7.1633,0L59.474,32.4733"/>
   </g>
@@ -20,7 +17,5 @@ const EmojiChildrenCrossing = {
     <line x1="45.2749" x2="44.3227" y1="46.4207" y2="41.3261" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="40.8806" x2="37.8226" y1="33.2442" y2="36.1371" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChildrenCrossing

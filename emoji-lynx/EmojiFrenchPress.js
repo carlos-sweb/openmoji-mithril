@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "french press" (color) [E151]. */
-const EmojiFrenchPress = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFrenchPress = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m47.281,29.927h.3973c4.5794,0,8.2973,3.7179,8.2973,8.2973v.2584c0,4.7263-3.8371,8.5634-8.5634,8.5634h-.1313v-17.1192h0Z"/>
     <path fill="#fff" d="m20.6878,19.7845h25.9889v5.5691h-25.0607l-4.6409-3.7127,3.7127-1.8564Z"/>
@@ -29,7 +26,5 @@ const EmojiFrenchPress = {
     <line x1="21.616" x2="29.0414" y1="25.3535" y2="25.3535" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="m37.395,25.3535h9.2818"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFrenchPress

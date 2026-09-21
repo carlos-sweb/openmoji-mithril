@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "facebook" (color) [E042]. */
-const EmojiFacebook = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFacebook = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="m57,12H15c-2.2091,0-4,1.7909-4,4v42c0,2.2091,1.7909,4,4,4h42c2.2091,0,4-1.7909,4-4V16c0-2.2091-1.7909-4-4-4Z"/>
     <line x1="36.9347" x2="46.4346" y1="62.0086" y2="62.0086" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiFacebook = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m45.6188,62h12.1554c1.7816,0,3.2258-1.4442,3.2258-3.2258V15.2258c0-1.7816-1.4442-3.2258-3.2258-3.2258H14.2258c-1.7816,0-3.2258,1.4442-3.2258,3.2258v43.5484c0,1.7816,1.4442,3.2258,3.2258,3.2258h23.4761"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.6183,62v-19.792h7.1251l.7917-7.9168h-7.9168v-4.7501c0-3.1667,2.375-3.1667,3.1667-3.1667h4.7501v-7.1251c-3.1997-.3243-15.8336-3.1667-15.8336,10.2918v4.7501h-6.3334v7.9168h6.3334v19.792"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFacebook

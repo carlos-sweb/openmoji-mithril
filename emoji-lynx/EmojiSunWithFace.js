@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sun with face" (color) [1F31E]. */
-const EmojiSunWithFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSunWithFace = lynxIcon(`
   <g id="color">
     <polygon fill="#FCEA2B" stroke="none" points="36,10 31.4483,4.3216 28.6708,11.0465 22.7014,6.8864 21.9435,14.1231 15.0427,11.817 16.3488,18.9749 9.0779,18.6961 12.3422,25.1984 5.2887,26.9833 10.2616,32.295 4,36 10.2616,39.7051 5.2889,45.0172 12.3426,46.8026 9.0787,53.3052 16.3497,53.0261 15.044,60.1842 21.9445,57.8775 22.7026,65.1141 28.6713,60.9536 31.4484,67.6784 36,62 40.5517,67.6784 43.3292,60.9535 49.2986,65.1135 50.0565,57.8769 56.9573,60.183 55.6512,53.0251 62.9221,53.3039 59.6578,46.8016 66.7113,45.0167 61.7384,39.705 68,36 61.7384,32.2949 66.7111,26.9828 59.6573,25.1974 62.9213,18.6948 55.6503,18.9739 56.956,11.8158 50.0555,14.1225 49.2974,6.8859 43.3287,11.0464 40.5516,4.3216"/>
   </g>
@@ -20,7 +17,5 @@ const EmojiSunWithFace = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31.7748,23.0042c0,0-4.7748-2.6003-9.5496,1.6523"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.2252,23.0042c0,0,4.7748-2.6003,9.5496,1.6523"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSunWithFace

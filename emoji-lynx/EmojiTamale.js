@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tamale" (color) [1FAD4]. */
-const EmojiTamale = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTamale = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="M43.5,39.3372A49.359,49.359,0,0,1,45.6921,51.93a3.5779,3.5779,0,0,1-2.9713,3.6183,41.7747,41.7747,0,0,1-13.4416.0317,3.5806,3.5806,0,0,1-2.9713-3.6183,53.1249,53.1249,0,0,1,1.93-12.057L28.5,32.88a49.3636,49.3636,0,0,1-2.1924-12.5929,3.5779,3.5779,0,0,1,2.9713-3.6183,41.7747,41.7747,0,0,1,13.4416-.0317,3.5806,3.5806,0,0,1,2.9713,3.6183A51.9888,51.9888,0,0,1,43.4326,33.4Z"/>
     <path fill="#f1b31c" d="M38.53,16.1691A73.9661,73.9661,0,0,1,36,34.8579l2.9519.6275L43.4326,33.4l2.0733-10.4947v-4.6l-3.3634-1.94Z"/>
@@ -24,7 +21,5 @@ const EmojiTamale = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.7154,51.1569A55.1427,55.1427,0,0,0,38.3893,38.22"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.6258,51.1569a43.6505,43.6505,0,0,1,.8446-6.7476"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTamale

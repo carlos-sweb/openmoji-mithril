@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "black nib" (black) [2712]. */
-const EmojiBlackNibBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlackNibBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8691" d="M15.1,56.8458c5.9849-5.9849,5.3187-23.441,5.3187-23.441s10.0435-2.446,16.0946-6.7283"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8691" d="M15.1,56.8458c5.9849-5.9849,23.441-5.3187,23.441-5.3187s2.446-10.0435,6.7283-16.0946"/>
@@ -13,7 +10,5 @@ const EmojiBlackNibBlack = {
     <line x1="15.1" x2="33.951" y1="56.8458" y2="37.9948" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.9721,10.28l-9.5573,9.5573a1.7446,1.7446,0,0,0-.155,2.29l-1.1337,1.1307a.7948.7948,0,0,0,.03,1.123L47.565,33.79a.7948.7948,0,0,0,1.123.03l1.1291-1.1349a1.7446,1.7446,0,0,0,2.2911-.1539l9.5573-9.5572"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlackNibBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "openstreetmap" (color) [E04A]. */
-const EmojiOpenstreetmap = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOpenstreetmap = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13L19 18L24 20L26 29L21 34L23 37L20 39V40L25 47L29 45M34.5 56L36 53L39 51L46 55L51 54V50L49 48L50.5 44.5"/>
   </g>
@@ -35,7 +32,5 @@ const EmojiOpenstreetmap = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.777 41.444L39.1406 44.153L28.7451 60.006C28.0024 61.1386 26.4235 61.4502 25.2186 60.7022C24.0136 59.9541 23.6388 58.4296 24.3815 57.2969L34.777 41.444Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40 12.3333L36 12L25 13L12 12V24L12.9967 35.04L12 47V59L21 59.6923M54.2656 12.4779L60 12V16.5M59.375 39.5L60 47V59L48 60L36 59L32.5 59.3182"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOpenstreetmap

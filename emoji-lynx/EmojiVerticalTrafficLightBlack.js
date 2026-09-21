@@ -1,18 +1,13 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "vertical traffic light" (black) [1F6A6]. */
-const EmojiVerticalTrafficLightBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVerticalTrafficLightBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M47,16v36c0,3.85-3.15,7-7,7h-8c-3.85,0-7-3.15-7-7V16c0-3.85,3.15-7,7-7h8C43.85,9,47,12.15,47,16z"/>
     <circle cx="36" cy="48.4723" r="5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="36" cy="34.4723" r="5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="36" cy="19.4723" r="5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVerticalTrafficLightBlack

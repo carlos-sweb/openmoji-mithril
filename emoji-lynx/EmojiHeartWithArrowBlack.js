@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "heart with arrow" (black) [1F498]. */
-const EmojiHeartWithArrowBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeartWithArrowBlack = lynxIcon(`
   <g id="line">
     <g id="line_1_">
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m28.26 48.95 7.737 9.589 20.73-25.7-0.0043-0.0034c1.73-2.145 2.77-4.869 2.77-7.839 0-6.904-5.596-12.5-12.5-12.5-4.753 0-8.886 2.654-11 6.56-2.114-3.906-6.247-6.56-11-6.56-6.904 0-12.5 5.596-12.5 12.5 0 2.97 1.04 5.694 2.77 7.839l-0.0043 0.0034 7.853 9.733"/>
@@ -15,7 +12,5 @@ const EmojiHeartWithArrowBlack = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="20.6 51.45 13.65 51.45 7.193 57.91 14.14 57.91 14.14 64.86 20.6 58.4"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="68.18 3.628 66.92 8.48 65.67 13.33 62.07 9.735 58.48 6.139 63.33 4.884"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeartWithArrowBlack

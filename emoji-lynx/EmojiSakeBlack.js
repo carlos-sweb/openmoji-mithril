@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sake" (black) [1F376]. */
-const EmojiSakeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSakeBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.0002,66.6361C44,67,63.7002,66.6361,65,66.6361C64,52,64,37,58,24"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M37.5475,38.2484c1.1488-5.8127,2.6403-10.8064,4.3783-14.6625l0.2072-0.3738"/>
@@ -14,7 +11,5 @@ const EmojiSakeBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M64.3702,8c0,6.7783-2.1735,12.4834-6.7586,15.4563"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.9775,23.1016C37.747,20.0434,35.7374,14.5178,35.7374,8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSakeBlack

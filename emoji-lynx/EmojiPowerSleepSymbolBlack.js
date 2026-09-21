@@ -1,15 +1,10 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "power sleep symbol" (black) [23FE]. */
-const EmojiPowerSleepSymbolBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPowerSleepSymbolBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="m53.5366,45.6237c-7.807,5.5256-18.6871,4.7925-25.6787-2.1991-6.4354-6.4354-7.5684-16.1653-3.399-23.7607-5.1179,3.6223-8.4589,9.589-8.4589,16.3361,0,11.0457,8.9543,20,20,20,7.5571,0,14.1353-4.1914,17.5366-10.3763Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPowerSleepSymbolBlack

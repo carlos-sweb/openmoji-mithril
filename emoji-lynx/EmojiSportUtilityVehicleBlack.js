@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sport utility vehicle" (black) [1F699]. */
-const EmojiSportUtilityVehicleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSportUtilityVehicleBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M63.1239,49.9898h1c0.5523,0,1-0.4477,1-1v-2c0-0.0954-0.0706-0.1761-0.1652-0.1887l-1.7098-0.228 c0-1.717,0.4975-13.863-0.9281-19.3795c-0.1094-0.4233-0.4944-0.7148-0.9313-0.731l-26.8087,0.0071 c-0.3597-0.0133-0.6988,0.1677-0.8879,0.4739l-4.4024,9.1295L12.5558,37.69c-0.3231,0.0313-0.611,0.2174-0.7721,0.4993 l-3.0765,6.3838H7.5405c-0.5522,0-1,0.4478-1,1v1.5834c0,0.5523,0.4478,1,1,1h1.0834"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M23.6656,48.1565h0.7083l1.5755,2.1707c0.1881,0.2592,0.489,0.4126,0.8093,0.4126h19.653"/>
@@ -16,7 +13,5 @@ const EmojiSportUtilityVehicleBlack = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="14.3739,41.6565 21.5822,41.6565 23.4919,44.6343"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M63.4786,31.969c0.0833,0,1.375,0.0833,1.375,0.0833s1.6666,0.9792,1.6041,5.8125c-0.0625,4.8334-1.6666,5.6875-1.6666,5.6875 h-0.7917"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSportUtilityVehicleBlack

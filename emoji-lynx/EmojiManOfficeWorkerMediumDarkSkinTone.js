@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man office worker: medium-dark skin tone" (color) [1F468-1F3FE-200D-1F4BC]. */
-const EmojiManOfficeWorkerMediumDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManOfficeWorkerMediumDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" d="M17.298,58.8535c0,0-2-13.8,10-13.8c3.1918,2.1279,5.9264,3.5984,9,3.5921h-0.125 c3.0736,0.0063,5.3081-2.6642,8.5-4.7921c13.3136,0,10.9,15,10.9,15"/>
     <polyline fill="#D0CFCE" points="36.6129,54.2067 39.0281,58.7515 45.4,44.1365 51.8574,53.9202 40.6996,58.0515"/>
@@ -41,7 +38,5 @@ const EmojiManOfficeWorkerMediumDarkSkinTone = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="34.9121,54.5563 32.4969,57.8011 26.825,44.8861 22.8676,53.3698 32.3254,57.8011"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="44.7,44.8861 39.0281,57.8011 36.6129,54.5563"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManOfficeWorkerMediumDarkSkinTone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "takeout box" (color) [1F961]. */
-const EmojiTakeoutBox = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTakeoutBox = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="21.034 22.2869 51.6288 22.7558 51 29 53.4409 28.9432 51.2771 47.255 20.7996 47.255 18.6805 29.8624 21.7073 29.9668 21.034 22.2869"/>
     <polygon fill="#d22f27" points="51 27 53.8816 26.9791 53.4409 28.9432 51 29 51 27"/>
@@ -31,7 +28,5 @@ const EmojiTakeoutBox = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42,22l12.7087-11.2762c.3681-.3824.3565-.9908-.0259-1.359-.3721-.3582-.9606-.3583-1.3328-.0002l-11.35,12.6354Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38,22l11.32-15.451c.2996-.434.1906-1.0287-.2435-1.3283-.0155-.0107-.0313-.0209-.0474-.0307-.4572-.287-1.0598-.1578-1.3592.2913l-9.6699,16.5187Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTakeoutBox

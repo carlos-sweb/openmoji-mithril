@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hot pepper" (black) [1F336]. */
-const EmojiHotPepperBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHotPepperBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M55.2323,24.3359 c0,0,2.1769-13.0859-9.9082-13.0859"/>
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31.02,57.7 c-0.05,0.01-0.09,0.01-0.14,0.02"/>
@@ -13,7 +10,5 @@ const EmojiHotPepperBlack = {
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48.6055,28.4323 c-0.4282,0.8332,0.3404,1.7472,1.2376,1.4778c1.5002-0.4505,3.4108-0.6393,4.297,0.8565c1.2368,2.0876,5.3387,0.5293,7.0383-0.2337 c0.4606-0.2067,0.7127-0.708,0.5864-1.1968c-0.4177-1.6163-1.8591-5.0003-6.6064-5.0003 C51.464,24.3359,49.5511,26.5926,48.6055,28.4323z"/>
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M61.18,30.53 c-0.07,0.03-0.14,0.06-0.21,0.1c-1.36,0.59-3.8799,1.51-5.54,1.06c-0.54-0.14-1-0.43-1.29-0.92c-0.89-1.5-2.8-1.31-4.3-0.86 c-0.2,0.06-0.4,0.06-0.57,0.02c-0.61-0.16-0.99-0.85-0.66-1.5c0.89-1.74,2.64-3.84,5.95-4.06c0.19-0.02,0.39-0.03,0.6-0.03 c0.19,0,0.38,0.01,0.56,0.03c4.3,0.24,5.65,3.42,6.04,4.97C61.89,29.82,61.64,30.33,61.18,30.53z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHotPepperBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "diya lamp" (color) [1FA94]. */
-const EmojiDiyaLamp = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDiyaLamp = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M6.5,34.5s4,2.5,4.35,4.1815C12.2991,43.0449,17.7225,56,37.6875,56,61.0625,56,64.5,35.5,64.5,35.5H11Z"/>
     <path fill="#6a462f" d="M50.21,37.0055S49.5,51.5,44.5,54.5s18-2,20-19Z"/>
@@ -18,7 +15,5 @@ const EmojiDiyaLamp = {
     <line x1="7.5" x2="7.5" y1="34.5" y2="32" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M5.8287,30.5s0-11.6991,1.6713-13.37S9.1713,30.5,9.1713,30.5Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDiyaLamp

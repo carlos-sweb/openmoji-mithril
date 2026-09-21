@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "oncoming police car" (black) [1F694]. */
-const EmojiOncomingPoliceCarBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOncomingPoliceCarBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="24.095 37.443 48.756 37.443 45.878 28.852"/>
     <line x1="32" x2="41" y1="42.1606" y2="42.1606" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiOncomingPoliceCarBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.2624,52.49H19.9134a2.9458,2.9458,0,0,1-2.9267-2.9474V42.5053c0-1.5965.89-4.0754,2.4927-4.0754"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.6851,52.49h16.349a2.9458,2.9458,0,0,0,2.9267-2.9474V42.5053c0-1.5965-.89-4.0754-2.4927-4.0754"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOncomingPoliceCarBlack

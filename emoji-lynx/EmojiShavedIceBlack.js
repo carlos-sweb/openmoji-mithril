@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shaved ice" (black) [1F367]. */
-const EmojiShavedIceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShavedIceBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.9972,22.0491C51.0516,22.5496,55,26.8137,55,32c0,2.4632-0.8905,4.7183-2.367,6.4609"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36.9674,32.8136c-0.1814,2.2526-1.1093,4.2945-2.5361,5.878"/>
@@ -14,7 +11,5 @@ const EmojiShavedIceBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9467" d="M33,60v-6c0-2.7617-2.2393-5-5-5h-4h-3c-2.7607,0-5-2.2383-5-5v-3c0-1.1045,0.8955-2,2-2h36c1.1045,0,2,0.8955,2,2v3 c0,2.7617-2.2393,5-5,5h-3h-4c-2.7607,0-5,2.2383-5,5v6"/>
     <line x1="29" x2="43" y1="60" y2="60" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9467"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShavedIceBlack

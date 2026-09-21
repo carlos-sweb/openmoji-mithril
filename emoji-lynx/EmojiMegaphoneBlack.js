@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "megaphone" (black) [1F4E3]. */
-const EmojiMegaphoneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMegaphoneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.64,25.98s24.79,1.289,40-9.142"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.64,44.88s24.79-1.289,40,9.142"/>
@@ -17,7 +14,5 @@ const EmojiMegaphoneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.85,28.79h-2.485c-1.1046,0-2,.8954-2,2v8.922c0,1.1046.8954,2,2,2h2.485"/>
     <line x1="13.64" x2="16.64" y1="41" y2="41" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMegaphoneBlack

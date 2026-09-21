@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man shrugging: dark skin tone" (color) [1F937-1F3FF-200D-2642-FE0F]. */
-const EmojiManShruggingDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManShruggingDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M23,38.9583s-4,1-4,3l2,2a35.36,35.36,0,0,1,1,6c0,2-1,11-1,11H51s-2-15-1-16l3-3c0-2-4-3-4-3"/>
   </g>
@@ -32,7 +29,5 @@ const EmojiManShruggingDarkSkinTone = {
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M24.9507,30.9623c-.1015,7.999,4.9365,14,11,14,5.9365,0,11.0635-6,11.0635-14,0-5-3-11-3-11-8,0-10,3-16,1C28.0142,20.9623,25.0142,25.9623,24.9507,30.9623Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.0142,37.9623c-3,0-4-7-4-14,0-6,5-12,14-12s14,6,14,12c0,7-1,14-4,14"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManShruggingDarkSkinTone

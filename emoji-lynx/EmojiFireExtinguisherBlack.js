@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fire extinguisher" (black) [1F9EF]. */
-const EmojiFireExtinguisherBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFireExtinguisherBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.611,19.0521h0a9.14,9.14,0,0,1,9.14,9.14V63.1053a.8909.8909,0,0,1-.8909.8909H27.3624a.8909.8909,0,0,1-.8909-.8909V28.1916A9.14,9.14,0,0,1,35.611,19.0521Z"/>
     <rect x="33.518" y="9.9768" width="4.186" height="8.704" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiFireExtinguisherBlack = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="44.751 12.412 44.751 14.243 44.751 14.415 44.751 16.245 56.844 18.864 56.844 14.415 56.844 14.243 56.844 9.793 44.751 12.412"/>
     <rect x="30.9133" y="29.2839" width="9.3953" height="5.6744" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFireExtinguisherBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "save" (color) [E25C]. */
-const EmojiSave = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSave = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M58.2314,54.8086H14.1252c-0.8922,0-1.6222-0.73-1.6222-1.6222V43.1805c0-0.8922,0.73-1.6222,1.6222-1.6222 h44.1062c0.8922,0,1.6222,0.73,1.6222,1.6222v10.0059C59.8536,54.0786,59.1236,54.8086,58.2314,54.8086z"/>
     <circle cx="19.0173" cy="48.2886" r="1.9337" fill="#92D3F5" stroke="none"/>
@@ -20,7 +17,5 @@ const EmojiSave = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M56.8961,54.9782H15.0768c-1.65,0-3-1.35-3-3V44.402c0-1.65,1.35-3,3-3h41.8194c1.65,0,3,1.35,3,3v7.5762 C59.8961,53.6282,58.5461,54.9782,56.8961,54.9782z"/>
     <circle cx="19.0173" cy="48.2886" r="2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSave

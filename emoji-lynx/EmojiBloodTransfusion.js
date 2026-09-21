@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "blood transfusion" (color) [E30D]. */
-const EmojiBloodTransfusion = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBloodTransfusion = lynxIcon(`
   <g id="color">
     <rect x="23.6057" y="44.0261" width="9.3598" height="4.777" fill="#d0cfce"/>
     <path fill="#d22f27" d="m16,19.3085h25.0008v12.4959c0,3.8273-2.5211,6.93-5.6311,6.93h-1.3647c-3.13.5662-3,5.2918-3,5.2918h-5.66s.13-4.7256-3-5.2918h-.7139c-3.11,0-5.6311-3.1026-5.6311-6.93v-12.4959Z"/>
@@ -23,7 +20,5 @@ const EmojiBloodTransfusion = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m16,19.3085h25.0008v12.4959c0,3.8273-2.5211,6.93-5.6311,6.93h-1.3647c-3.13.5662-3,5.2918-3,5.2918h-5.66s.13-4.7256-3-5.2918h-.7139c-3.11,0-5.6311-3.1026-5.6311-6.93v-12.4959Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m32.0065,30.8364c.1213,1.9364-1.3502,3.6045-3.2866,3.7258s-3.6045-1.3502-3.7258-3.2866c-.0092-.1476-.0092-.2957.0003-.4433,0,0-.0384-2.5084,2.92-7.0452,0,0,.5551-.9414,1.1139-.0618,2.9582,4.5367,2.9783,7.1111,2.9782,7.1111"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBloodTransfusion

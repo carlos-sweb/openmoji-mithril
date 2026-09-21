@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with tears of joy" (black) [1F602]. */
-const EmojiFaceWithTearsOfJoyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithTearsOfJoyBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M58.8479,33.3406q-.01-.0839-.02-.1675A23.0031,23.0031,0,0,0,13.2041,32.92c-.0148.1069-.0386.3127-.052.42"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.1832,49.229A23.5314,23.5314,0,0,0,36,59a23.3428,23.3428,0,0,0,18.7572-9.6871"/>
@@ -18,7 +15,5 @@ const EmojiFaceWithTearsOfJoyBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.6941,35.1642a4.7263,4.7263,0,0,0-8.6382,0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M48.9441,35.1642a4.7263,4.7263,0,0,0-8.6382,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithTearsOfJoyBlack

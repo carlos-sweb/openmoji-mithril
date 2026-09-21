@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "harp" (color) [1FA89]. */
-const EmojiHarp = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHarp = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#f1b31c" d="M30.2471,10.762s.038.0423.096.1069c.0365.0384.0768.0731.1123.1124l-.2083-.2194Z"/>
@@ -22,7 +19,5 @@ const EmojiHarp = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34,62l21.0742-33.7966c.5864-.9269.9258-2.0255.9258-3.2034,0-3.3137-2.6863-6-6-6-1.1821,0-2.2844.3419-3.2134.9322l.0006.001c-2.4471,1.4644-6.4171,1.6624-8.4171-.3376s-8.123-8.8335-8.123-8.8335l.2084.2194c-1.0981-1.2167-2.6875-1.9814-4.4555-1.9814-3.3137,0-6,2.6863-6,6,0,2.6124,1.6696,4.8349,4,5.6586v35.3414c-1.6569,0-3,1.3431-3,3v3h13"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24,56h6"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHarp

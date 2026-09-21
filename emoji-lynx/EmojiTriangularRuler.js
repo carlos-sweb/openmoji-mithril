@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "triangular ruler" (color) [1F4D0]. */
-const EmojiTriangularRuler = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTriangularRuler = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M17.1601,15.9546l0.252,39.4373l38.6183-39.4373H17.1601z M22.4104,32.3907V22.1629 c0-0.208,0.0871-0.4079,0.2418-0.555c0.0773-0.0733,0.1686-0.1306,0.2678-0.1697c0.0992-0.039,0.2064-0.0597,0.3156-0.0597 c0,0,0.0001,0,0.0008,0l0,0l10.4243,0.0065c0.0828,0.0001,0.1636,0.0119,0.2402,0.0342c0.2298,0.0668,0.4223,0.2271,0.5189,0.4445 c0.0323,0.0726,0.0523,0.1479,0.0607,0.2238c0.025,0.2273-0.0554,0.4583-0.2283,0.628L23.8279,32.9369l0,0l0,0 c-0.1579,0.1555-0.3731,0.2382-0.5923,0.2382c-0.1048,0-0.2095-0.0184-0.3103-0.0574c-0.2332-0.0902-0.4063-0.2743-0.4782-0.4955 C22.4231,32.5484,22.4104,32.4706,22.4104,32.3907L22.4104,32.3907z"/>
     <polygon fill="#9B9B9A" stroke="none" points="55.5612,16.2148 48.7852,16.3821 17.2476,48.8119 17.1744,55.7579"/>
@@ -33,7 +30,5 @@ const EmojiTriangularRuler = {
     <line x1="26.7191" x2="24.5194" y1="40.4944" y2="38.3734" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="40.6012" x2="38.4013" y1="26.0969" y2="23.9758" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTriangularRuler

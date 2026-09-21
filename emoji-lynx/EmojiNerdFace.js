@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nerd face" (color) [1F913]. */
-const EmojiNerdFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNerdFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#FCEA2B"/>
     <path fill="#FFFFFF" d="M32.1434,47.3742c-0.282,1.7234-0.4344,5.4883,3.8566,4.64v-4.3697"/>
@@ -29,7 +26,5 @@ const EmojiNerdFace = {
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M39.8566,47.3742 c0.282,1.7234,0.4344,5.4883-3.8566,4.64v-4.3697"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.8148,44.8055c-6.574,3.5248-14.0454,3.6576-19.6295,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNerdFace

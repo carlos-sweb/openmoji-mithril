@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "microbe" (color) [1F9A0]. */
-const EmojiMicrobe = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMicrobe = lynxIcon(`
   <g id="line-supplement">
     <line x1="41.8399" x2="39.4284" y1="16.6916" y2="24.2091" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="28.6898" x2="31.1575" y1="15.8364" y2="23.8356" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -70,7 +67,5 @@ const EmojiMicrobe = {
     <line x1="53.9311" x2="48.8702" y1="35.7785" y2="35.7954" fill="none" stroke="#d22f27" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="50.5516" x2="46.1941" y1="25.4148" y2="28.4683" fill="none" stroke="#d22f27" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMicrobe

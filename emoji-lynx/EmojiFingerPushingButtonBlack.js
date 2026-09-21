@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "finger pushing button" (black) [E10C]. */
-const EmojiFingerPushingButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFingerPushingButtonBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.0039,21.4353c0-7.4632,6.0501-13.5133,13.5133-13.5133s13.5133,6.0501,13.5133,13.5133"/>
     <line x1="16.0039" x2="16.0039" y1="22.1527" y2="32.007" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -26,7 +23,5 @@ const EmojiFingerPushingButtonBlack = {
     <line x1="41" x2="41" y1="65" y2="60" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="30" x2="42" y1="60" y2="60" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFingerPushingButtonBlack

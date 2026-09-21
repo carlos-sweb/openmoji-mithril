@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "joint pain" (color) [E322]. */
-const EmojiJointPain = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJointPain = lynxIcon(`
   <g id="color">
     <path id="Bone_Color_1" fill="#FFFFFF" d="M38.137,39.97c-0.6467-0.3526-1.4121-0.4164-2.1082-0.1756l0.0012-0.002 c-1.7358,0.219-2.14-2.6337-3.04-3.649c-0.693-0.7657-1.713-1.1496-2.7389-1.0309c-1.9186,0.2874-2.6773,2.6665-2.778,2.9822 c-0.2995,0.973-0.3027,2.0131-0.0093,2.988c0.2686,0.9195,0.2107,1.9036-0.164,2.7852c-2.1602,4.7734-5.4337,8.9592-9.5459,12.2061 c-1.2173-0.0531-2.4207,0.2755-3.442,0.94c-0.6667,0.4385-1.9653,1.2924-2.014,2.7091c0.0331,0.8798,0.4422,1.7031,1.1233,2.261 c0.6485,0.3531,1.4158,0.4165,2.1135,0.1747l-0.0065,0.0028c1.7357-0.219,2.14,2.6335,3.04,3.6491 c0.6931,0.7656,1.7131,1.1496,2.739,1.0309c1.9185-0.2874,2.6773-2.6666,2.778-2.9823c0.2995-0.973,0.3027-2.0131,0.0092-2.9879 c-0.1974-0.6259-0.1954-1.2978,0.0058-1.9225l0.2113-0.0779l4.9385-8.025l0.1924-0.3138c1.2792-1.7001,2.7263-3.2671,4.3194-4.6774 c1.2285,0.0661,2.4469-0.2538,3.4845-0.9149c0.6666-0.4385,1.9653-1.2924,2.0139-2.7092C39.227,41.351,38.818,40.5278,38.137,39.97 z"/>
     <polyline fill="none" stroke="#FFA7C0" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" points="31.6087,33.7075 33.4684,34.5652 35.8683,37.6087 36.913,38.194 38.7391,38.5652"/>
@@ -27,7 +24,5 @@ const EmojiJointPain = {
     <polyline fill="none" stroke="#D22F27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="24.521,35.066 20.027,35.245 21.174,37.969 15.528,38.194"/>
     <polyline fill="none" stroke="#D22F27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="25.661,30.553 21.806,28.237 21.27,31.143 16.427,28.233"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJointPain

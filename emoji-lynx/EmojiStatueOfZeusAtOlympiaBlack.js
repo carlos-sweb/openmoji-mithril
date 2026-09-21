@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "statue of zeus at olympia" (black) [E214]. */
-const EmojiStatueOfZeusAtOlympiaBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStatueOfZeusAtOlympiaBlack = lynxIcon(`
   <g id="line">
     <circle cx="44.3317" cy="11.4161" r="2.8709" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="43.551 22.011 41.461 34.982 32.501 26.129"/>
@@ -21,7 +18,5 @@ const EmojiStatueOfZeusAtOlympiaBlack = {
     <line x1="24.633" x2="24.633" y1="23.368" y2="26.2236" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="24.633" cy="17.2251" r="0.6535" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStatueOfZeusAtOlympiaBlack

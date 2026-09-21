@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wheelbarrow" (color) [E344]. */
-const EmojiWheelbarrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWheelbarrow = lynxIcon(`
   <g id="color">
     <polygon transform="translate(-14.66 -27.73) scale(1.444)" fill="#5c9e31" stroke-width="0.6925" points="24.74 38.44 25.9 38.71 25.93 46.23 42.45 53.93 54.88 42.11 24.74 37.1"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiWheelbarrow = {
     <path stroke="#000" d="m59.66 54.71a5.302 5.392 0 0 1-5.302 5.392 5.302 5.392 0 0 1-5.302-5.392 5.302 5.392 0 0 1 5.302-5.392 5.302 5.392 0 0 1 5.302 5.392"/>
     <path stroke="#000" d="m64.05 33.49-42.22-7.064v1.892l1.628 0.379 0.03923 10.6 23.14 10.85z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWheelbarrow

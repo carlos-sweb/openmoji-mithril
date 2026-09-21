@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with head-bandage" (black) [1F915]. */
-const EmojiFaceWithHeadBandageBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithHeadBandageBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.9164,27.1091c0.56,0.97,1.38,1.78,2.38,2.34c1.29,0.89,2.87,1.27,4.43,1.07"/>
     <path d="M48,35c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,33.3448,48,35"/>
@@ -17,7 +14,5 @@ const EmojiFaceWithHeadBandageBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M57.8857,28.9077C54.8961,19.6755,46.2274,13,36,13c-12.7031,0-23,10.2969-23,23c0,2.8816,0.5299,5.6395,1.4977,8.1814"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M16.0847,47.5135C20.0633,54.3807,27.4919,59,35.9999,59c12.7022,0,23-10.2978,23-23c0-1.243-0.0986-2.4629-0.2884-3.6525"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithHeadBandageBlack

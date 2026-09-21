@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "custard" (color) [1F36E]. */
-const EmojiCustard = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCustard = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="M54.2432,41.1414l.6255,3.79a1.0217,1.0217,0,0,1,.0136.1631c0,3.9355-9.4287,5.9941-18.7422,5.9941S17.397,49.03,17.397,45.094a1.0217,1.0217,0,0,1,.0136-.1631l.6416-3.8871C12.8572,42.7519,10,45.1494,10,47.8328c0,6.0048,13.3955,9.2451,26,9.2451s26-3.24,26-9.2451C62,45.1652,59.3164,42.86,54.2432,41.1414Z"/>
     <path fill="#a57939" d="M54.5487,42.2325l-36.5442-.1381c-2.362,1.1686-3.5952,2.57-3.5952,4.136,0,4.721,11.1966,7.2684,21.7305,7.2684S57.87,50.9514,57.87,46.23C57.87,44.7265,56.7328,43.373,54.5487,42.2325Z"/>
@@ -19,7 +16,5 @@ const EmojiCustard = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.8819,45.094,50.691,25.76"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.3545,41.8986C58.0682,43.3981,61,45.5027,61,47.8332c0,4.5534-11.1929,8.2446-25,8.2446s-25-3.6912-25-8.2446c0-2.3786,3.0543-4.522,7.94-6.0268"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCustard

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "atom symbol" (color) [269B]. */
-const EmojiAtomSymbol = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAtomSymbol = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" stroke="#92D3F5" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M28.1271,22.7636 c-0.3952,2.3126-0.6857,4.7995-0.8483,7.4259c-3.3469,1.871-6.3451,3.8466-8.8669,5.8105 c-6.1591-4.7995-9.4596-9.5293-8.0767-12.4346C11.9041,20.2651,19.0277,20.1604,28.1271,22.7636z"/>
     <path fill="#92D3F5" stroke="#92D3F5" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M62.6417,48.4346 c-1.5688,3.3004-8.6926,3.405-17.8035,0.8019c-2.638-0.7554-5.4504-1.7432-8.344-2.9518 c-1.3363-0.5462-2.6844-1.1388-4.0441-1.7896c-1.8013-0.8599-3.5329-1.7548-5.1713-2.6728 c-0.128-1.8826-0.1976-3.8233-0.1976-5.8222c0-1.9872,0.0697-3.9396,0.1976-5.8105c1.6385-0.918,3.37-1.8129,5.1713-2.6728 c1.3597-0.6508,2.7078-1.2551,4.0441-1.8013c1.325,0.5578,2.6729,1.1505,4.0325,1.8013c1.8013,0.8483,3.5212,1.7432,5.1598,2.6612 c0.1278,1.8826,0.1976,3.8234,0.1976,5.8222c0,1.9989-0.0698,3.9512-0.1976,5.8338c3.3585-1.8826,6.3568-3.8582,8.8785-5.8338 C60.7243,40.7995,64.0247,45.5293,62.6417,48.4346z"/>
@@ -50,7 +47,5 @@ const EmojiAtomSymbol = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M22.2214,32.7675c0,0,0.2273-0.2384,0.8141-0.5891"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M39.7525,23.2019c0,0,1.6145-0.5904,1.9449-0.6609"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAtomSymbol

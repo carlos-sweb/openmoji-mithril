@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "roasted coffee bean" (color) [E0C6]. */
-const EmojiRoastedCoffeeBean = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRoastedCoffeeBean = lynxIcon(`
   <g id="color">
     <ellipse cx="36" cy="36" rx="19" ry="28" fill="#a57939"/>
     <path fill="#6a462f" fill-rule="evenodd" d="m36.3126,64c-.0151,0-.0187-.0215-.0043-.0264,8.3256-2.8339,14.553-14.2593,14.553-27.9228,0-13.6712-6.2343-25.1017-14.567-27.9276-.0669-.0227-.0522-.1232.0183-.1232,10.3208,0,18.6874,12.536,18.6874,28s-8.3667,28-18.6874,28Z"/>
@@ -19,7 +16,5 @@ const EmojiRoastedCoffeeBean = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36,36s-3-5.5964-3-12.5,3-12.5,3-12.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36,36s3,5.5964,3,12.5-3,12.5-3,12.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRoastedCoffeeBean

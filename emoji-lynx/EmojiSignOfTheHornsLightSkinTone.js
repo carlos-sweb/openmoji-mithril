@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sign of the horns: light skin tone" (color) [1F918-1F3FB]. */
-const EmojiSignOfTheHornsLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSignOfTheHornsLightSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin">
@@ -26,7 +23,5 @@ const EmojiSignOfTheHornsLightSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.3179,40.6385 c-3.322,1.2271-4.997-1.9342-4.8744-4v-7c-0.2578-1.933,1.1001-3.709,3.0331-3.9669c1.933-0.2578,3.709,1.1001,3.9669,3.0331 c0.0413,0.3099,0.0413,0.6239,0,0.9337"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.5059,34.0036v-5.3175 c-0.2578-1.933,1.1001-3.709,3.0331-3.9669c1.933-0.2578,3.709,1.1001,3.9669,3.0331c0.0413,0.3099,0.0413,0.6239,0,0.9337 l0.031,3.5043"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSignOfTheHornsLightSkinTone

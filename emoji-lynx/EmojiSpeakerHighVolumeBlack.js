@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "speaker high volume" (black) [1F50A]. */
-const EmojiSpeakerHighVolumeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpeakerHighVolumeBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43.2188,11.3752 l-16.435,13.346h-12.712c-1.6548,0.005-2.995,1.3452-3,3v16.692c0.005,1.6548,1.3452,2.995,3,3h12.712l16.436,13.128 L43.2188,11.3752z"/>
     <line x1="26.7838" x2="26.7838" y1="25.3332" y2="46.5832" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -13,7 +10,5 @@ const EmojiSpeakerHighVolumeBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M50.3689,28.7825 c3.1892,4.2523,3.1892,10.0991,0,14.3514"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M58.8689,19.7825 c7.1892,9.5856,7.1892,22.7658,0,32.3514"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpeakerHighVolumeBlack

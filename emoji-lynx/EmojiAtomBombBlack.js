@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "atom bomb" (black) [E2DA]. */
-const EmojiAtomBombBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAtomBombBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m46,57c0,5.5228-4.4772,10-10,10s-10-4.4772-10-10"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="46 57 46 38 26 38 26 57"/>
@@ -22,7 +19,5 @@ const EmojiAtomBombBlack = {
       <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m37.7665,49.2418c.9409.5429,1.5204,1.5468,1.52,2.6331h3.04c.0009-2.1725-1.1578-4.1803-3.0394-5.2663l-1.5206,2.6332Z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAtomBombBlack

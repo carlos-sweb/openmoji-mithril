@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "biohazard" (color) [2623]. */
-const EmojiBiohazard = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBiohazard = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#f4aa41"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiBiohazard = {
     <path d="M40.9458,29.9513a8.4742,8.4742,0,0,0-9.9093-.0437l.8148,1.3462a6.9741,6.9741,0,0,1,8.3346.0062Z"/>
     <path d="M44.3944,36.0006H42.9356a7.0563,7.0563,0,0,1,.0508.8463,6.974,6.974,0,0,1-4.25,6.4208l.8291,1.2011a8.4718,8.4718,0,0,0,4.8664-7.6679Q44.4317,36.3961,44.3944,36.0006Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBiohazard

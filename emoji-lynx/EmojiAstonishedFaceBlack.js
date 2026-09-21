@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "astonished face" (black) [1F632]. */
-const EmojiAstonishedFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAstonishedFaceBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m20.695 27.2c0.7207-1.3857 1.9278-2.4541 3.3907-3 1.4052-0.7002 3.0205-0.8486 4.5302-0.4209"/>
@@ -14,7 +11,5 @@ const EmojiAstonishedFaceBlack = {
     <path d="m48 35c0 1.6568-1.3447 3-3 3s-3-1.3433-3-3c0-1.6552 1.3447-3 3-3s3 1.3448 3 3"/>
     <circle cx="36" cy="46.6" r="4.759" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAstonishedFaceBlack

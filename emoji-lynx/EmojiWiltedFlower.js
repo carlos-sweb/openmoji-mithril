@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wilted flower" (color) [1F940]. */
-const EmojiWiltedFlower = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWiltedFlower = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" stroke="none" d="M55.0652,36.2595c0,0,4.0331-3.3068,1.9928-6.298c-2.0402-2.9912-5.8371-3.3523-6.7789-2.6335 c0,0-2.643-6.2579-8.1784-5.5303c-5.5354,0.7276-7.3202,5.6356-6.2605,9.2608c0,0-6.4001,5.0333-1.4014,10.534 c0,0,5.2241,3.8607,8.5972,0.3025c0,0,3.9688,5.8969,8.7463,3.233C56.5597,42.464,55.0652,36.2595,55.0652,36.2595z"/>
     <path fill="#D22F27" stroke="none" d="M35.8681,25.7396c-2.0403-0.754-3.9535-1.3032-5.6994-0.754c-1.8369,0.5778-3.0824,2.1267-3.5372,3.7146 c-0.4807,1.6782-0.1027,3.6523,1.3417,5.1561c1.2212,1.2714,3.2734,1.7098,5.3399,2.3017l1.8414-5.2814L35.8681,25.7396z"/>
@@ -33,7 +30,5 @@ const EmojiWiltedFlower = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.3745,37.4322 c1.542-3.1814,5.6727-4.3649,5.6727-4.3649s1.6302,3.9753,0.0885,7.1572c-1.5417,3.1819-5.6727,4.3649-5.6727,4.3649 S8.8345,40.6127,10.3745,37.4322z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.4402,17.1482 c-2.6414-6.3782-9.9533-9.4076-16.3315-6.7661s-9.4076,9.9533-6.7661,16.3315c0,0,10.6575,22.1929,9.6575,32.1929"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWiltedFlower

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “no vacancy” button" (black) [1F235]. */
-const EmojiJapaneseNoVacancyButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapaneseNoVacancyButtonBlack = lynxIcon(`
   <g id="line-supplement" transform="matrix(.2609 0 0 .2609 -91.17 -3.172)" fill="none" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="9.946" clip-rule="evenodd">
     <path transform="matrix(.9634 0 0 .9634 -958 -643)" stroke-linecap="round" d="m1475 893.4s0.214-47.42 0.285-63.29c0.013-2.822 2.303-5.102 5.125-5.102h75.1c1.365 0 2.673 0.544 3.635 1.512s1.498 2.279 1.49 3.644c-0.068 11.32-0.231 38.5-0.32 53.25-0.033 5.494-4.495 9.929-9.989 9.929h-9.667"/>
     <path transform="matrix(.9634 0 0 .9634 -958 -643)" d="m1518 804.8v64.84"/>
@@ -23,7 +20,5 @@ const EmojiJapaneseNoVacancyButtonBlack = {
   <g id="line" transform="matrix(.2545 0 0 .2545 -345.6 -173.5)" fill-rule="evenodd" stroke-miterlimit="10" clip-rule="evenodd">
     <rect x="1405" y="728.9" width="188.6" height="188.6" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.859"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapaneseNoVacancyButtonBlack

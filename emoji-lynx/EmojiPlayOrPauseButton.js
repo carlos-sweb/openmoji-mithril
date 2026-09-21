@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "play or pause button" (color) [23EF]. */
-const EmojiPlayOrPauseButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPlayOrPauseButton = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m14.736,54.1869c.4103.1658.8719.2763,1.3336.2763.7181,0,1.4362-.2763,2.0518-.7185l25.39-14.8661.2565-.2763c.6668-.7184,1.0258-1.6027,1.0258-2.5974s-.359-1.9342-1.0258-2.5974l-.2565-.2763-25.39-14.9767c-.9233-.7737-2.2569-.9395-3.3854-.4422-1.2823.5527-2.103,1.9343-2.103,3.4264v29.6217c0,1.4922.8207,2.8738,2.103,3.4265Z"/>
   </g>
@@ -14,7 +11,5 @@ const EmojiPlayOrPauseButton = {
     <line x1="60" x2="60" y1="17" y2="55" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="52" x2="52" y1="17" y2="55" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPlayOrPauseButton

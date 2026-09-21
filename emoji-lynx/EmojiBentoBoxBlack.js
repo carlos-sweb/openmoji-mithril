@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bento box" (black) [1F371]. */
-const EmojiBentoBoxBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBentoBoxBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M5,19c0-1.1045,0.8955-2,2-2h58c1.1045,0,2,0.8955,2,2v34c0,1.1045-0.8955,2-2,2H7c-1.1045,0-2-0.8955-2-2V19z"/>
     <line x1="27" x2="27" y1="17" y2="55" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -25,7 +22,5 @@ const EmojiBentoBoxBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M63,44.334c0,1.1035-0.8955,2-2,2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M63,40c0,1.1045-0.8955,2-2,2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBentoBoxBlack

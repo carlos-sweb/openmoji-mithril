@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "black chess bishop" (color) [265D]. */
-const EmojiBlackChessBishop = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlackChessBishop = lynxIcon(`
   <g id="line-supplement" transform="matrix(.8974 0 0 .8974 3.693 6.164)">
     <polygon stroke="#000" points="53.53 60.1 16.93 60.1 27.58 48.16 30.8 35.36 41.15 37.08 44.99 48.08"/>
     <rect x="20.66" y="29.34" width="32.26" height="3.726" stroke="#000"/>
@@ -34,7 +31,5 @@ const EmojiBlackChessBishop = {
     <line x1="21.53" x2="52.05" y1="33.34" y2="33.34"/>
     <ellipse cx="36" cy="4.5" rx="2.5" ry="2.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlackChessBishop

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "t-shirt" (black) [1F455]. */
-const EmojiTShirtBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTShirtBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="48.3057 15.2396 51.1774 16.0208 51.1774 56 20.8226 56 20.8226 16.0208 23.5126 15.1598"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="61 31.3289 51.1774 28.3289 51.1774 16.0208 64 22.0208 61 31.3289"/>
@@ -15,7 +12,5 @@ const EmojiTShirtBlack = {
     <circle cx="35.8866" cy="24.9416" r="0.8529"/>
     <circle cx="35.8866" cy="28.2084" r="0.8529"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTShirtBlack

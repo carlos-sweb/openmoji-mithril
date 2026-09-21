@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "church" (color) [26EA]. */
-const EmojiChurch = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChurch = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M44,36V20.9009v-0.4092l-7.2941-5.2706c-0.4081-0.2948-1.0039-0.2948-1.412,0L28,20.4917v0.4092V36"/>
     <polygon fill="#FFFFFF" stroke="none" points="18.9473,66 19,42.1016 36.0449,26.9849 53.0078,42.1133 53,66"/>
@@ -23,7 +20,5 @@ const EmojiChurch = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M41,57.943 c0-3.8509-3.3484-6.1256-4.5649-6.8249c-0.274-0.1575-0.5962-0.1575-0.8702,0C34.3483,51.8174,31,54.0921,31,57.943v7.0894 C31,65.5668,31.4092,66,31.914,66h8.172C40.5908,66,41,65.5668,41,65.0324V57.943z"/>
     <circle cx="36" cy="42" r="5" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChurch

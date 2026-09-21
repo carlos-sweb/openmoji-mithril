@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "partying face" (color) [1F973]. */
-const EmojiPartyingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPartyingFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#FCEA2B"/>
     <polygon fill="#F4AA41" points="15.0628,6.4465 17.0628,21.4465 33.0628,15.4465"/>
@@ -49,7 +46,5 @@ const EmojiPartyingFace = {
     <path fill="#D22F27" d="M20.2115,48.457c0.8284-0.0287,1.4767-0.7235,1.448-1.552c-0.0273-0.7881-0.6599-1.4207-1.448-1.448 c-0.8284,0.0287-1.4767,0.7235-1.448,1.552C18.7908,47.7971,19.4234,48.4297,20.2115,48.457z"/>
     <path fill="#D22F27" d="M62.2115,50.457c0.8284-0.0287,1.4767-0.7235,1.448-1.552c-0.0273-0.7881-0.6599-1.4207-1.448-1.448 c-0.8284,0.0287-1.4767,0.7235-1.448,1.552C60.7908,49.7971,61.4234,50.4297,62.2115,50.457z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPartyingFace

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "accordion" (black) [1FA97]. */
-const EmojiAccordionBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAccordionBlack = lynxIcon(`
   <g id="line-supplement">
     <circle cx="56.8815" cy="44.306" r="1"/>
     <circle cx="60.7016" cy="38.7196" r="1"/>
@@ -34,7 +31,5 @@ const EmojiAccordionBlack = {
     <line x1="14.5573" x2="11.7836" y1="45.0317" y2="46.3251" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="16.1167" x2="13.3431" y1="48.1973" y2="49.4908" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAccordionBlack

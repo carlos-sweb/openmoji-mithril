@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clinking glasses" (black) [1F942]. */
-const EmojiClinkingGlassesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClinkingGlassesBlack = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9431" d="M26.51,14.13h-23"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9742" d="M57.4035,12.0455L34.4427,17.485"/>
@@ -18,7 +15,5 @@ const EmojiClinkingGlassesBlack = {
     <line x1="47.4743" x2="68.8773" y1="68.6882" y2="63.5977" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9742" d="M32.1972,8.5922c0.1926,0.9215,0.3957,1.8481,0.6179,2.7825c4.4918,18.886,13.3599,32.953,19.8074,31.4195 s8.033-18.0867,3.5413-36.9727c-0.2222-0.9344-0.4581-1.8532-0.7009-2.7628"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClinkingGlassesBlack

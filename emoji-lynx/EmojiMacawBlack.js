@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "macaw" (black) [E010]. */
-const EmojiMacawBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMacawBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m34.98 24.01c1.763-0.7317 3.744-0.7332 5.507-0.0042 5.245 2.136 10.97 20.55 9.796 26.09-3.318-0.2344-8.878-4.857-11.38-6.965-2.392-1.88-4.31-4.295-5.599-7.051-1.473-4.584-1.456-10.68 1.68-12.07z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.85 16.86-4.768 1.915a7.48 7.48 0 0 1-0.08-1.038 6.646 6.646 0 0 1 5.725-6.822"/>
@@ -18,7 +15,5 @@ const EmojiMacawBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.7 20.78c-0.0874 0.0469-0.1714 0.1034-0.2575 0.1544 4.347-0.8279 5.867-2.954 7.147-6.93-0.3762-0.7827-3.251-3.376-7.587-4.006-0.1248-0.0181-0.2732-0.02-0.4079-0.0312"/>
     <line x1="40.7" x2="40.7" y1="48" y2="52" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMacawBlack

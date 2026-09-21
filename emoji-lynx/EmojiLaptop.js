@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "laptop" (color) [1F4BB]. */
-const EmojiLaptop = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLaptop = lynxIcon(`
   <g id="color">
     <polygon fill="#9B9B9A" stroke="none" points="63.738,40.9795 63.738,68.0462 11.8119,68.0462 11.8119,40.9795 11.8119,35.9583 63.738,35.9583"/>
     <rect x="12.625" y="3.8917" width="50" height="32.0667" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 75.25 39.85)" fill="#9B9B9A" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -23,7 +20,5 @@ const EmojiLaptop = {
     <rect x="30.7171" y="56.1856" width="13.5062" height="8.1037" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="12.625" y="3.8917" width="50" height="32.0667" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 75.25 39.85)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLaptop

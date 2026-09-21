@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bandage change" (black) [E31B]. */
-const EmojiBandageChangeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBandageChangeBlack = lynxIcon(`
   <g id="line">
     <ellipse cx="35.1693" cy="26.1013" rx="9.5873" ry="4.6806" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m25.5821,45.118c0,1.7658,4.2926,3.1908,9.5852,3.1908,5.3,0,8.1386-1.0336,10.4642-2.5249"/>
@@ -18,7 +15,5 @@ const EmojiBandageChangeBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m37.656,12.7662c12.5012.7606,22.0188,11.5115,21.2582,24.0127-.5656,9.295-6.7561,17.2995-15.6102,20.1844"/>
     <path d="m42.9437,53.2979l-4.6293,4.14c-.2099.1878-.2279.5102-.0402.7201.0596.0667.1358.1165.2208.1445l5.8993,1.94c.2676.088.5558-.0577.6438-.3252.0279-.085.033-.1759.0147-.2635l-1.27-6.08c-.0576-.2757-.3278-.4525-.6035-.3949-.0876.0183-.1688.0593-.2355.119Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBandageChangeBlack

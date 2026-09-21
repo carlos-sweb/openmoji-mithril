@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "movie camera" (color) [1F3A5]. */
-const EmojiMovieCamera = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMovieCamera = lynxIcon(`
   <g id="color">
     <circle cx="22.2578" cy="26.1104" r="3" fill="#d0cfce"/>
     <circle cx="46.1533" cy="26.1104" r="3" fill="#d0cfce"/>
@@ -25,7 +22,5 @@ const EmojiMovieCamera = {
     <circle cx="22.2579" cy="26.1104" r="3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="52.0534 53.0676 60.9446 55.1814 60.9446 41.3615 52.0534 43.7729"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMovieCamera

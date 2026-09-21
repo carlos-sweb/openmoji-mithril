@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "film projector" (black) [1F4FD]. */
-const EmojiFilmProjectorBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFilmProjectorBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.3461,29.1377l.3297-.5876c.6377-1.0595.444-2.2743-.3788-2.879-.8227-.6047-2.2838-.09-2.9215.9694l-1.1633,1.7874"/>
     <line x1="48.6081" x2="47.6392" y1="21.4277" y2="22.4536" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -30,7 +27,5 @@ const EmojiFilmProjectorBlack = {
     <line x1="24.522" x2="23.3482" y1="28.2297" y2="28.9201" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.0768,35.6781c.6124-.1736,1.3634-.466,2.4997-1.1004,1.9943-1.1134,2.9915-2.7252,2.9915-2.7252,2.0117-2.8624,2.46-6.6986.8411-10.0784-2.3858-4.9809-8.3577-7.0847-13.3387-4.6989-4.2707,2.0456-6.4262,6.7276-5.4503,11.1608"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFilmProjectorBlack

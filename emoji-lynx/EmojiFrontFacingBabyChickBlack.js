@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "front-facing baby chick" (black) [1F425]. */
-const EmojiFrontFacingBabyChickBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFrontFacingBabyChickBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m23,49s4.7974,5.0246,13.48,5.0122c8.52-.0122,12.52-5.0122,12.52-5.0122"/>
     <line x1="33.625" x2="31.125" y1="13.5" y2="11.625" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiFrontFacingBabyChickBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.3719,26.6032s5.9132-.2907,0,5.2324c0,0-5.9132-5.2324,0-5.2324Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42,36c2,9,9,9,9,9,2-6-6-11-6-11,7-6,1-10,1-10,0-10-10.375-11-10.375-11-10.375,2-9.625,11-9.625,11-6,4,.625,9.75.625,9.75,0,0-7.625,4.25-5.625,11.25,0,0,8,0,8-9"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFrontFacingBabyChickBlack

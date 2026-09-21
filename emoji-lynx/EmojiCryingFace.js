@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "crying face" (color) [1F622]. */
-const EmojiCryingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCryingFace = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36.2002,13.3163c-12.5719,0-22.7998,10.2279-22.7998,22.7998c0,12.5718,10.2279,22.7998,22.7998,22.7998 C48.772,58.9159,59,48.6879,59,36.1161C59,23.5442,48.772,13.3163,36.2002,13.3163z"/>
     <path fill="#92D3F5" d="M22.7747,33.8245c-1.0767,1.1019-3.115,3.4878-3.2924,5.9164c-0.1111,1.521,1.1185,2.9431,2.6365,3.0534 c1.5693,0.1143,2.9388-1.0681,3.0546-2.6364l0,0C25.3503,37.7287,23.6798,35.0718,22.7747,33.8245z"/>
@@ -20,7 +17,5 @@ const EmojiCryingFace = {
     <path d="M30,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,28,30,29.3448,30,31"/>
     <path d="M48,31c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,29.3448,48,31"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCryingFace

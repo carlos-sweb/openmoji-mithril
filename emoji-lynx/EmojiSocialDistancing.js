@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "social distancing" (color) [E0B0]. */
-const EmojiSocialDistancing = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSocialDistancing = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="m18.3219,26.6717c-.062-1.5893-1.3517-2.8551-2.9419-2.8874h-4.193c-1.5901.0325-2.8795,1.2982-2.9416,2.8874l-.5535,13.5857c-.0048.1069-.0337.2113-.0845.3054l2.05-1.4637-.4985,15.4685c-.0226.2196.0399.4395.1748.6143.0262.0336.0641.0561.1062.0629.1495,0,.4585-.2982.5137-.7865l2.0257-15.7271c.0579-.2886.1525-.5687.2815-.8333l.5065-.5627h1.1356l.6877.4355c.1258.2993.2086.6149.246.9374l1.7765,15.7488c.0552.4876.3648.7865.5144.7865.0421-.0068.08-.0293.1062-.0629.1344-.1735.3421-.4089.3193-.629l-.6515-15.4522,2.4456,1.6981"/>
     <circle cx="13.3395" cy="18.5388" r="2.075" fill="#fcea2b"/>
@@ -37,7 +34,5 @@ const EmojiSocialDistancing = {
     <line x1="45.9663" x2="40.6911" y1="35.628" y2="40.9032" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="27.116" x2="32.3561" y1="35.628" y2="40.8681" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSocialDistancing

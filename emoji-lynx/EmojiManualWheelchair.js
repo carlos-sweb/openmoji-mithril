@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "manual wheelchair" (color) [1F9BD]. */
-const EmojiManualWheelchair = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManualWheelchair = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m26.307,29.4551s-2.6641-.6524-4.0777.5981-3.0991,10.2758-3.2622,11.2545,2.3923,3.534,2.3923,3.534l2.9903-1.1961s.2718-11.472,1.9573-14.1905Z"/>
     <path fill="#ea5a47" d="m50.33,11.0293c.9038-.1443,1.4512.6169,1.2165,1.6916l-3.5293,16.16c-.2482,1.0838-1.2989,1.7857-2.3952,1.6l-21.1332-3.8018c-.6015.001-1.09-.4859-1.091-1.0874-.0005-.3166.1368-.6178.3761-.8251l.073-.0908c.8156-.9055,2.0157-1.3653,3.2275-1.2367l15.6617,2.5533c1.1146.1582,2.1753-.5295,2.4857-1.6116l2.9532-11.1557c.2783-1.0622,1.0982-1.8976,2.155-2.1958Z"/>
@@ -20,7 +17,5 @@ const EmojiManualWheelchair = {
     <circle cx="22.5204" cy="50.1301" r="3.8971" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
     <line x1="17.1822" x2="20.2143" y1="43.0317" y2="46.233" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManualWheelchair

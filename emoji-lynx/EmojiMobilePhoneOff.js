@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mobile phone off" (color) [1F4F4]. */
-const EmojiMobilePhoneOff = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMobilePhoneOff = lynxIcon(`
   <g id="color">
     <rect x="44.0696" y="25" width="3" height="26" fill="#9b9b9a"/>
     <path fill="#9b9b9a" d="m47.1249,46.3066v12.8577c0,.4616-.3741.8357-.8357.8357h-27.5784c-.4616,0-.8357-.3741-.8357-.8357V12.3645c0-.4616.3741-.8357.8357-.8357h27.5784c.4616,0,.8357.3741.8357.8357v14.0542"/>
@@ -21,7 +18,5 @@ const EmojiMobilePhoneOff = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="51.8296 36.4699 48.8296 36.4699 48.8296 39.9699 48.8296 32.9699 52.8296 32.9699"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.5,39.9699h0c-1.3807,0-2.5-1.1193-2.5-2.5v-2c0-1.3807,1.1193-2.5,2.5-2.5h0c1.3807,0,2.5,1.1193,2.5,2.5v2c0,1.3807-1.1193,2.5-2.5,2.5Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMobilePhoneOff

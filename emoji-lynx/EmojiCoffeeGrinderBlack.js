@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "coffee grinder" (black) [E156]. */
-const EmojiCoffeeGrinderBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCoffeeGrinderBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41,53.7941l11-2.5882"/>
     <path fill="none" stroke="#000" stroke-width="2" d="m38,21c0-1.1046.8954-2,2-2h13c1.1046,0,2,.8954,2,2v37c0,1.1046-.8954,2-2,2h-13c-1.1046,0-2-.8954-2-2V21Z"/>
@@ -14,7 +11,5 @@ const EmojiCoffeeGrinderBlack = {
     <path fill="none" stroke="#000" stroke-width="2" d="m22,13.5283c0,3.0274-2.2386,8.4717-5,8.4717s-5-5.4443-5-8.4717,2.2386-2.4917,5-2.4917,5-.5358,5,2.4917Z"/>
     <line x1="39" x2="52" y1="41" y2="41" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCoffeeGrinderBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "manual wheelchair" (black) [1F9BD]. */
-const EmojiManualWheelchairBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManualWheelchairBlack = lynxIcon(`
   <g id="line">
     <line x1="19.2468" x2="13.9409" y1="45.2892" y2="45.2892" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="51.759" x2="48.7419" y1="11.7483" y2="25.5634" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiManualWheelchairBlack = {
     <circle cx="22.5204" cy="50.1301" r="3.8971" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/>
     <line x1="17.1822" x2="20.2143" y1="43.0317" y2="46.233" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManualWheelchairBlack

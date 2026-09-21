@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "leaf fluttering in wind" (black) [1F343]. */
-const EmojiLeafFlutteringInWindBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLeafFlutteringInWindBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.63,27.91c8.1523-6.8285,20.7734-4.925,20.7734-4.925S49.804,35.8214,41.7789,42.44s-20.7734,4.9249-20.7734,4.9249S21.4778,34.738,29.63,27.91Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.0855,38.5427a10.2458,10.2458,0,0,1-1.58,4.7407,11.317,11.317,0,0,1-7.901,4.7406"/>
@@ -14,7 +11,5 @@ const EmojiLeafFlutteringInWindBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13,27.4813a10.2451,10.2451,0,0,1,1.58-4.7407A11.3173,11.3173,0,0,1,22.4813,18"/>
     <line x1="18" x2="20.901" y1="50" y2="47.024" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLeafFlutteringInWindBlack

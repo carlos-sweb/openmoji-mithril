@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman bouncing ball" (black) [26F9-FE0F-200D-2640-FE0F]. */
-const EmojiWomanBouncingBallBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanBouncingBallBlack = lynxIcon(`
   <g id="line">
     <circle cx="17.5063" cy="40.286" r="4.7664" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="27.2475" cy="13.3236" r="3" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiWomanBouncingBallBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.9207,21.9484s-1.5142,6.3832-1.7977,6.6967c-.2415.2663-7.2937,3.9028-7.2937,3.9028"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.2475,10.4518s.4242-.5033.8732-.3851c.5281.1382,1.3355,1.1982,2.0238,1.4995a3.3634,3.3634,0,0,0,2.1611.2154"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanBouncingBallBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "folding hand fan" (color) [1FAAD]. */
-const EmojiFoldingHandFan = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFoldingHandFan = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" d="m24.1,46.2c-.4.8-.7,1.6-1,2.4l-18.1-4.8c.7-2.4,1.7-4.9,2.8-7,0,0,16.3,9.4,16.3,9.4Z"/>
     <path fill="#ea5a47" d="m28.7,41c-.6.4-1.2.9-1.7,1.4l-13.2-13.4c1.7-1.7,3.6-3.1,5.7-4.4l9.2,16.4Z"/>
@@ -36,7 +33,5 @@ const EmojiFoldingHandFan = {
     <line x1="58.8" x2="46.5" y1="30.6" y2="43" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="62.7" x2="47.8" y1="36.2" y2="45" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFoldingHandFan

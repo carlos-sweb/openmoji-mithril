@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "floppy disk" (color) [1F4BE]. */
-const EmojiFloppyDisk = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFloppyDisk = lynxIcon(`
   <g id="color">
     <rect x="11.1359" y="11" width="50" height="50" fill="#3F3F3F" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="56.1359,60 56.1359,35.1616 16.1359,35.1616 16.1359,60"/>
@@ -21,7 +18,5 @@ const EmojiFloppyDisk = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.1359,12 16.1359,29.6067 47.0488,29.6067 47.0488,12"/>
     <rect x="19.9563" y="38.96" width="32.0306" height="5.7713" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFloppyDisk

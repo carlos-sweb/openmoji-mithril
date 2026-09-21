@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "merman" (color) [1F9DC-200D-2642-FE0F]. */
-const EmojiMerman = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMerman = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="M33.8921,59.4666l10.4571-8.4561,8.0469,3.77S43.5777,65.9442,33.8921,59.4666Z"/>
     <path fill="#92d3f5" d="M26.8566,51.72a3.3641,3.3641,0,0,0,2.6313-2.9073c.4863-2.61,3.8554,2.7655,4.9433-1.6475,0,0,6.9443,1.4932,6.043-2.1972l4.1064,5.1758s-1.6572,4.1552-5.8935,3.1132c0,0,1.43,5.9-3.4453,4.23,0,0,.6464,1.8926-3.5469.1289Z"/>
@@ -37,7 +34,5 @@ const EmojiMerman = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M39.5327,40.86c0,1.4443-4.0068,2.624-8.5947,2.624-4.5918,0-6.5859-1.0635-6.5859-2.5078"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M36.1942,16.6437a4.6655,4.6655,0,1,1-4.6659-4.6651h.0009A4.6657,4.6657,0,0,1,36.1942,16.6437Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMerman

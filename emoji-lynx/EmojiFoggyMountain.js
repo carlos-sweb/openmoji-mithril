@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "foggy mountain" (color) [E20E]. */
-const EmojiFoggyMountain = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFoggyMountain = lynxIcon(`
   <g id="line-supplement">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="27 31 30 30 32 32 35 30 37 31 39 30 41 32 42 31"/>
   </g>
@@ -27,7 +24,5 @@ const EmojiFoggyMountain = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.88,40.23s3.864-1.932,6.763-.9661c3.6388,1.3022,5.9943,4.8352,5.797,8.695.0171,2.845-1.0146,5.5966-2.898,7.729"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m57.34,35.4c1.932-1.932-.9661-8.695-6.763-8.695-2.3589-.0768-4.6778.6234-6.6,1.993"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFoggyMountain

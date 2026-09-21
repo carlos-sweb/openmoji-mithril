@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Tokyo tower" (color) [1F5FC]. */
-const EmojiTokyoTower = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTokyoTower = lynxIcon(`
   <g id="color">
     <rect x="36.1184" y="7" width="0.9994" height="9.498" fill="#d22f27"/>
     <rect x="35.0681" y="7" width="1.0503" height="9.498" fill="#ea5a47"/>
@@ -29,7 +26,5 @@ const EmojiTokyoTower = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.182 17.5 30.745 17.5 30.202 23.386 42.162 23.386 41.619 17.5 36.182 17.5"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="34.444 17 34.444 6 37.792 6 37.792 17"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTokyoTower

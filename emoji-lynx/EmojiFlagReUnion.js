@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Réunion" (color) [1F1F7-1F1EA]. */
-const EmojiFlagReUnion = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagReUnion = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#1e50a0"/>
     <polygon fill="#f1b31c" stroke="#f1b31c" stroke-linecap="round" stroke-linejoin="round" points="15 17 5 17 36 36 36 36 15 17"/>
@@ -18,7 +15,5 @@ const EmojiFlagReUnion = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagReUnion

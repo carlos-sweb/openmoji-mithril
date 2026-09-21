@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bubble tea" (black) [1F9CB]. */
-const EmojiBubbleTeaBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBubbleTeaBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.55,34.1934,45.9024,58.3491A3.0671,3.0671,0,0,1,42.87,60.9583h-15.62A3.0672,3.0672,0,0,1,24.2164,58.35L20.5626,34.1934"/>
     <circle cx="28.8063" cy="55.7315" r="2"/>
@@ -23,7 +20,5 @@ const EmojiBubbleTeaBlack = {
     <line x1="32.9397" x2="32.0967" y1="34.1934" y2="46.8749" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="37.8713" x2="36.7104" y1="34.1934" y2="46.9802" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBubbleTeaBlack

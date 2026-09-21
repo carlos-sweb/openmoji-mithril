@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "see-no-evil monkey" (black) [1F648]. */
-const EmojiSeeNoEvilMonkeyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSeeNoEvilMonkeyBlack = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M19.7452,30.3698c0.7351-1.4356,1.8465-2.6723,3.2355-3.5099c4.2321-2.5519,10.5282-1.0889,13.4909,3.8371 c3.0375-4.9167,9.313-6.349,13.4909-3.8371c1.4555,0.8751,2.5525,2.1665,3.2519,3.6508"/>
   </g>
@@ -20,7 +17,5 @@ const EmojiSeeNoEvilMonkeyBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M59.2838,52.2733c-1.8841-3.9279,0.2803,0.5844-1.6038-3.3435c0.5664-1.6119,1.2604-4.0223,1.5384-7.0087 c0.425-4.5648-0.1233-10.4598-1.5384-10.6624c-0.555-0.0795-1.4734,0.6838-3.0324,4.7202 c-2.6006-3.0933-8.3652-6.2699-8.999-5.4998c-0.6228,0.7568,0.0903,2.5375,0.0098,3.503 c-2.6552-1.2069-3.9497-1.4041-4.2664-1.0505c-0.3186,0.3557,0.0824,1.6942,1.7721,4.3494 c-3.1158-0.7429-4.1039,0.1181-3.9426,0.8046c0.6076,2.5859,2.7004,5.9308,6.4366,9.6067c2.0968,2.0629,4.741,2.5726,6.3992,2.9133 c0.6095,5.022,0.347,2.8686,0.9565,7.8906"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M12.3926,51.9829c1.8841-3.9279-0.4196,0.8747,1.4645-3.0531c-0.5664-1.6119-1.2604-4.0223-1.5384-7.0087 c-0.425-4.5648,0.1233-10.4598,1.5384-10.6624c0.555-0.0795,1.4734,0.6838,3.0324,4.7202c2.6006-3.0933,8.3652-6.2699,8.999-5.4998 c0.6228,0.7568-0.0903,2.5375-0.0098,3.503c2.6552-1.2069,3.9497-1.4041,4.2664-1.0505c0.3186,0.3557-0.0824,1.6942-1.7721,4.3494 c3.1158-0.7429,4.1039,0.1181,3.9426,0.8046c-0.6076,2.5859-2.7004,5.9308-6.4366,9.6067 c-2.0968,2.0629-4.741,2.5726-6.3992,2.9133c-0.6095,5.022-0.3481,2.8686-0.9576,7.8906"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSeeNoEvilMonkeyBlack

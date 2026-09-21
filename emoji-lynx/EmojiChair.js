@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "chair" (color) [1FA91]. */
-const EmojiChair = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChair = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M17.5,8.5c4,11,10,31,5,49l-2,8h2s7-16,7-21h19l3,21h2v-21s1.2367-2.0532,0-7c-1-4-1.75-4.03-3-4-5.2545.125-21,1-21,1s-2.4645-22.4645-6-26C20.5,5.5,17.5,8.5,17.5,8.5Z"/>
     <path fill="#fcea2b" d="M24.587,44H54s.5339-1.07-1-7.2056c-1-4-.1437-3.53-8.5718-3.265S29.5,34.5,29.5,34.5s-1.8546-15.2833-4.5637-23.0281C24.3662,9.8423,21.8424,5.4021,18,8a2.4561,2.4561,0,0,0,0,1C23.8665,25.8218,24.587,44,24.587,44Z"/>
@@ -16,7 +13,5 @@ const EmojiChair = {
     <line x1="30" x2="24.5" y1="44.5" y2="44.5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="54" x2="47" y1="44.5" y2="44.5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChair

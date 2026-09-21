@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "HAL 9000" (color) [25C9-FE0F-200D-1F534-200D-25AE-FE0F]. */
-const EmojiHAL9000 = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHAL9000 = lynxIcon(`
   <g id="line-supplement">
     <circle cx="36" cy="40" r="1" fill="#000"/>
   </g>
@@ -26,7 +23,5 @@ const EmojiHAL9000 = {
     <rect x="28" y="7" width="16" height="4" fill="none" stroke="#000" stroke-linejoin="round"/>
     <rect x="26" y="5" width="20" height="62" fill="none" stroke="#000" stroke-linejoin="round"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHAL9000

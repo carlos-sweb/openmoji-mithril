@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "octopus" (color) [1F419]. */
-const EmojiOctopus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOctopus = lynxIcon(`
   <g id="color">
     <path fill="#D22F27" stroke="none" d="M60,30.3783c2-6.1193-3-6.1193-3-6.1193c-7,1.0199-2,7.1391-2,7.1391s6,11.2186-4.5833,10.8251 S43,31.3982,43,31.3982c6.0698-5.1987,4-11.2186,4-11.2186c-3-10.1988-11-9.1789-11-9.1789s-8-1.0199-11,8.159 c0,0-3,9.1789,4,12.2385c0,0,4,11.2186-8,11.2186c0,0-10,0-4-13.2584c0,0,2-7.1391-4-5.0994c0,0-3,1.0199-2,6.1193 c0,0-5,21.4174,14,16.318c0,0,16-3.0596,22,0c6,3.0596,14,1.0199,14-9.1789L60,30.3783z"/>
     <path fill="#EA5A47" stroke="none" d="M33,32c0,0,4,11.4491-7,14.5715c0,0-7-1.0408-7,5.2041s4,6.2449,6,5.2041c2-1.0408,3-4.1633,3-4.1633 S28,49.8775,24,53s-3-3.306,4-4.3468C35,47.6124,38,36.1633,36,32H33z"/>
@@ -23,7 +20,5 @@ const EmojiOctopus = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M19.1157,45c0,0-2,1-4-1s-4-1-4-1s-4,1-1,5c0,0,1,2,4,1"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54,45c0,0,2,1,4-1s4-1,4-1s4,1,1,5c0,0-1,2-4,1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOctopus

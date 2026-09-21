@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "headphone" (black) [1F3A7]. */
-const EmojiHeadphoneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeadphoneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.1611,40.6344c.9756.5038,1.643,1.5194,1.643,2.6874l-.0002,15.5047c-.0651,1.2243.0944,1.6453-1.8007,2.7478"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.5419,39.6241s-6.354,1.7853-7.0674,11.4887,6.9726,11.424,6.9726,11.424c0,0,.0948-22.9127.0948-22.9127Z"/>
@@ -14,7 +11,5 @@ const EmojiHeadphoneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m58.0474,53.8081c3.209-5.0583,5.0887-11.1701,5.0887-18.1887,0-15.7593-11.3519-28.5359-27.1053-28.5525v-.0007c-.0053,0-.0102.0002-.0154.0002-.0051,0-.0102-.0002-.0153-.0002v.0007c-15.7534.0166-27.1053,12.7932-27.1053,28.5525,0,7.0186,1.8794,13.1304,5.0884,18.1887"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m50.2136,20.1939c-3.1322-4.4436-8.1665-7.3121-14.1882-7.3184v-.0005c-.0034,0-.0066.0001-.01.0001-.0033,0-.0066-.0001-.0099-.0001v.0005c-5.9961.0063-11.0132,2.8504-14.1482,7.2618"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeadphoneBlack

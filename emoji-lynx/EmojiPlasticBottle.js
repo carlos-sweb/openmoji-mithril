@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "plastic bottle" (color) [E0CC]. */
-const EmojiPlasticBottle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPlasticBottle = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m30 8.5v6.5l-5 7 2 4-2 3 2 3-2 3 2 3-2 3 2 3-2 3 2 3-2 3 2 3-2 3 2 3-2 4 2 1h18l2-1-2-4 2-3-2-3 2-3-2-3 2-3-2-3 2-3-2-3 2-3-2-3 2-3-2-3 2-4-5-7v-6.5z"/>
     <rect x="29" y="4" rx="1" width="14" height="6.5" fill="#9b9b9a"/>
@@ -24,7 +21,5 @@ const EmojiPlasticBottle = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.5 56h9"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.5 62h9"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPlasticBottle

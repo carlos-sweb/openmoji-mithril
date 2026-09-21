@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "male doctor" (color) [E301]. */
-const EmojiMaleDoctor = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMaleDoctor = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="M16.9509,60.8806s-2.1-14.9,9.9-14.9c3.1919,2.1279,6.0264,3.7984,9.1,3.7921l.2749.1c3.0737.0063,5.9081-1.8642,9.1-3.9921,11.5646-.0346,9.509,14.9,9.74,15"/>
     <circle cx="24.9167" cy="56.8051" r="3" fill="#9b9b9a"/>
@@ -39,7 +36,5 @@ const EmojiMaleDoctor = {
       <path d="M35.9121,60.9229a1,1,0,0,1-.8867-1.461L40.6826,48.56a1,1,0,0,1,1.7754.9218L36.8008,60.3838A1,1,0,0,1,35.9121,60.9229Z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMaleDoctor

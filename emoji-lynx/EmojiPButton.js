@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "P button" (color) [1F17F]. */
-const EmojiPButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPButton = lynxIcon(`
   <g id="line-supplement" transform="translate(-.0006922 -.01378)" fill="none" stroke="#000">
     <rect x="12" y="12.01" ry="5" width="48" height="47.83" stroke-width="2"/>
     <path transform="matrix(3.365 0 0 3.365 29.24 24.38)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m0 7v-7h2.669c0.963 0 1.744 0.781 1.744 1.744s-0.781 1.743-1.744 1.743h-2.669" clip-rule="evenodd"/>
@@ -16,7 +13,5 @@ const EmojiPButton = {
     <rect x="12" y="12.01" ry="5" width="48" height="47.83" fill="none" stroke="#d22f27" stroke-width="2"/>
   </g>
   <g id="line"/>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPButton

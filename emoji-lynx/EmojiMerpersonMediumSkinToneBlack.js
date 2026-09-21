@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "merperson: medium skin tone" (black) [1F9DC-1F3FD]. */
-const EmojiMerpersonMediumSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMerpersonMediumSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M33.16,12.0137a4.6631,4.6631,0,1,1-6.1231,3.0382"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.1013,11.9935c-1.5565-.0258-2.5552,2.905-6.0126,2.958"/>
@@ -23,7 +20,5 @@ const EmojiMerpersonMediumSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M65.8472,52.22s-4.753,5.31-11.27,1.7158"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M39.54,40.903c0,1.4443-4.0068,2.624-8.5947,2.624-4.5918,0-6.5859-1.0635-6.5859-2.5078"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMerpersonMediumSkinToneBlack

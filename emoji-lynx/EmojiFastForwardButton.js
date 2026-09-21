@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fast-forward button" (color) [23E9]. */
-const EmojiFastForwardButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFastForwardButton = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin"/>
@@ -14,7 +11,5 @@ const EmojiFastForwardButton = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31,17l18.7948,9.1111l15.817,7.6675c1.8509,0.8972,1.8509,3.5456,0,4.4428l-15.817,7.6675L31,55"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M5,17l18.8824,9.1111l15.8908,7.6675c1.8595,0.8972,1.8595,3.5456,0,4.4428L23.8824,45.889L5,55"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFastForwardButton

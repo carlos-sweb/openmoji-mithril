@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "exit" (color) [E10D]. */
-const EmojiExit = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiExit = lynxIcon(`
   <g id="color">
     <rect x="35.8822" y="20.2791" width="16.8225" height="16.9264" fill="#fff"/>
     <rect x="40.8542" y="21.2753" width="10.8497" height="10.8497" fill="#9b9b9a"/>
@@ -17,7 +14,5 @@ const EmojiExit = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="46.2791 26.7001 59.4317 13.5475 59.9896 12.9896 59.9896 21"/>
     <line x1="52" x2="60" y1="13" y2="13" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiExit

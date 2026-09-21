@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nuclear protection" (color) [E2D9]. */
-const EmojiNuclearProtection = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNuclearProtection = lynxIcon(`
   <g id="color">
     <g id="skin">
       <ellipse cx="35.5934" cy="28.2772" rx="11.281" ry="14.3576" fill="#f4aa41"/>
@@ -33,7 +30,5 @@ const EmojiNuclearProtection = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.0369,35.6641A17.2426,17.2426,0,0,1,24.44,28.2772c0-3.369.9753-7.5655,3.0766-10.2554a9.755,9.755,0,0,1,.8615-.968,10.8875,10.8875,0,0,1,7.3428-2.8778h.0652a10.8875,10.8875,0,0,1,7.3428,2.8778,9.755,9.755,0,0,1,.8615.968c2.1013,2.69,3.0766,6.8864,3.0766,10.2554a17.2452,17.2452,0,0,1-1.5935,7.379"/>
     <circle cx="47.0666" cy="51.5579" r="2.1001"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNuclearProtection

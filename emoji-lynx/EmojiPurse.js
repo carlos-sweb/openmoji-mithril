@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "purse" (color) [1F45B]. */
-const EmojiPurse = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPurse = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m14.5371,29.8485v-5.2545s11.7262-1.1745,21.4627-1.1745,21.4784,1.1745,21.4784,1.1745v5.2545"/>
     <path fill="#8967aa" d="m36,27.8933h-17.7056c0,10.9469-7.2944,14.0424-7.2944,21.1057s11.1929,12.2992,25,12.2992,25-5.2359,25-12.2992-7.2944-10.1588-7.2944-21.1057c0,0-17.7056,0-17.7056,0Z"/>
@@ -23,7 +20,5 @@ const EmojiPurse = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38.5215,12.0002c1.5921.4585,2.5111,2.1209,2.0526,3.7131-.4585,1.5922-2.1209,2.5111-3.7131,2.0526"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36,27.8933h-17.7056c0,10.9469-7.2944,14.0424-7.2944,21.1057s11.1929,12.2992,25,12.2992,25-5.2359,25-12.2992-7.2944-10.1588-7.2944-21.1057c0,0-17.7056,0-17.7056,0Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPurse

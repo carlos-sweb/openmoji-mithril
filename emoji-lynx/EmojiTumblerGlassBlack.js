@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tumbler glass" (black) [1F943]. */
-const EmojiTumblerGlassBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTumblerGlassBlack = lynxIcon(`
   <g id="line-supplement">
     <line id="xx" x1="36.8" x2="58.4" y1="37" y2="37" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
@@ -14,7 +11,5 @@ const EmojiTumblerGlassBlack = {
     <rect x="38.214" y="48.5136" width="13.3" height="13.6" transform="matrix(0.157 -0.9876 0.9876 0.157 -16.8073 90.937)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.7923"/>
     <rect x="18.808" y="35.8905" width="14.5005" height="12.7004" transform="matrix(0.9535 -0.3015 0.3015 0.9535 -11.5227 9.8218)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8081"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTumblerGlassBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "viennese coffee house" (black) [E20C]. */
-const EmojiVienneseCoffeeHouseBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVienneseCoffeeHouseBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="m18,54h14"/>
     <path d="m15,27v-1c-.5523,0-1,.4477-1,1h1Zm20,0h1c0-.5523-.4477-1-1-1v1Zm-15,11c0-.5523-.4477-1-1-1s-1,.4477-1,1h2Zm4,0c0-.5523-.4477-1-1-1s-1,.4477-1,1h2Zm4,0c0-.5523-.4477-1-1-1s-1,.4477-1,1h2Zm4,0c0-.5523-.4477-1-1-1s-1,.4477-1,1h2Zm-17-10h20v-2H15v2Zm1,10v-11h-2v11h2Zm1,1c-.5523,0-1-.4477-1-1h-2c0,1.6569,1.3431,3,3,3v-2Zm1-1c0,.5523-.4477,1-1,1v2c1.6569,0,3-1.3431,3-3h-2Zm3,1c-.5523,0-1-.4477-1-1h-2c0,1.6569,1.3431,3,3,3v-2Zm1-1c0,.5523-.4477,1-1,1v2c1.6569,0,3-1.3431,3-3h-2Zm3,1c-.5523,0-1-.4477-1-1h-2c0,1.6569,1.3431,3,3,3v-2Zm1-1c0,.5523-.4477,1-1,1v2c1.6569,0,3-1.3431,3-3h-2Zm3,1c-.5523,0-1-.4477-1-1h-2c0,1.6569,1.3431,3,3,3v-2Zm1-1c0,.5523-.4477,1-1,1v2c1.6569,0,3-1.3431,3-3h-2Zm3,1c-.5523,0-1-.4477-1-1h-2c0,1.6569,1.3431,3,3,3v-2Zm1-1c0,.5523-.4477,1-1,1v2c1.6569,0,3-1.3431,3-3h-2Zm0-11v11h2v-11h-2Z"/>
@@ -33,7 +30,5 @@ const EmojiVienneseCoffeeHouseBlack = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17.9862,18.357l2.3965,4.6466"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVienneseCoffeeHouseBlack

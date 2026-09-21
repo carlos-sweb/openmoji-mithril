@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bowl with spoon" (color) [1F963]. */
-const EmojiBowlWithSpoon = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBowlWithSpoon = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M45.9934,66H26.2541a2.6628,2.6628,0,0,1-2.6591-2.6592V60.91a1,1,0,0,1,1-1h.0019l23.0576.0429a1,1,0,0,1,.9981,1v2.3877A2.6628,2.6628,0,0,1,45.9934,66Z"/>
     <path id="_" fill="#d0cfce" d="M51.2973,28.8323c5.0582,0,9.1586-2.6112,9.1586-5.8323s-4.1-5.8323-9.1586-5.8323c-4.6982,0-8.5665,1.3551-9.0938,4.257h0l-28.4123-.8108a2,2,0,0,0,0,4l28.4181-.0285h0C42.744,27.4821,46.6047,28.8323,51.2973,28.8323Z"/>
@@ -17,7 +14,5 @@ const EmojiBowlWithSpoon = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.595,60.91v2.4312A1.6587,1.6587,0,0,0,26.2537,65h19.74a1.6587,1.6587,0,0,0,1.6587-1.6587V60.9531"/>
     <path id="_2" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51.2973,28.8323c5.0582,0,9.1586-2.6112,9.1586-5.8323s-4.1-5.8323-9.1586-5.8323c-4.6982,0-8.5665,1.3551-9.0938,4.257h0l-28.4123-.8108a2,2,0,0,0,0,4l28.4181-.0285h0C42.744,27.4821,46.6047,28.8323,51.2973,28.8323Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBowlWithSpoon

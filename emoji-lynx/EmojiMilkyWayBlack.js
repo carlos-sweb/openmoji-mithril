@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "milky way" (black) [1F30C]. */
-const EmojiMilkyWayBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMilkyWayBlack = lynxIcon(`
   <g id="line-supplement">
     <g>
       <polygon stroke="#000" stroke-linejoin="round" points="53.75 17.19 54.677 17.853 54.333 16.767 55.25 16.09 54.11 15.991 53.75 15 53.39 16.081 52.25 16.09 53.167 16.767 52.823 17.853 53.75 17.19"/>
@@ -26,7 +23,5 @@ const EmojiMilkyWayBlack = {
   <g id="line">
     <rect x="12" y="12" rx="1" width="48" height="48" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMilkyWayBlack

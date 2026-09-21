@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "guard: medium skin tone" (color) [1F482-1F3FD]. */
-const EmojiGuardMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGuardMediumSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" d="M54.9199,58.9415c0,0,4.011-14.0016-10.3-14.8974c-3.1919,2.1193-5.9264,3.5838-9,3.5775h0.125 c-3.0736,0.0063-5.8082-1.4582-9-3.5775c-12,0-10,14.8974-10,14.8974"/>
     <path fill="#D22F27" d="M45.3616,44.0895c-3.1127,2.0751-4.9834,3.2404-8.9725,3.8183 c12.8266,0.404,12.8266,7.1094,13.5749,11.0371c4.1614,0,5.0206,0,5.0206,0S57.1448,44.0895,45.3616,44.0895z"/>
@@ -34,7 +31,5 @@ const EmojiGuardMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M17.7153,44.4632c1.5814-1.107,3.6505-1.9636,6.3522-2.3986"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.2847,44.4632c-1.5814-1.107-3.6505-1.9636-6.3522-2.3986"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGuardMediumSkinTone

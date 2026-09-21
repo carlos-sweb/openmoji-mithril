@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flushed face" (black) [1F633]. */
-const EmojiFlushedFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlushedFaceBlack = lynxIcon(`
   <g id="line-supplement">
     <line x1="18" x2="20" y1="39.8839" y2="37.8839" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="20" x2="24" y1="43.8839" y2="39.8839" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiFlushedFaceBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.43,20.97c0.464-0.2717,2.509-1.4,5.111-0.8103c2.111,0.4781,3.359,1.808,3.768,2.284"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M42.5,46.5c-1.2841,0.6376-11.8318,0.5835-13,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlushedFaceBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "OK button" (color) [1F197]. */
-const EmojiOKButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOKButton = lynxIcon(`
   <g id="line-supplement" transform="translate(-.005724 -.00219)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" clip-rule="evenodd">
     <path transform="matrix(0 2.392 2.392 0 48.74 36.12)" d="m-3.5-3.5h7"/>
     <path transform="matrix(1.582 -1.795 -1.795 -1.582 46.1 40.35)" d="m-1.025 2.27h6.05"/>
@@ -22,7 +19,5 @@ const EmojiOKButton = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOKButton

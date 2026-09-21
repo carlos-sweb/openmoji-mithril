@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "geiger counter" (black) [E2D6]. */
-const EmojiGeigerCounterBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGeigerCounterBlack = lynxIcon(`
   <g id="line">
     <g>
       <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M24.7536,45.1329a.6288.6288,0,1,1-.3145-.5449A.6289.6289,0,0,1,24.7536,45.1329Z"/>
@@ -20,7 +17,5 @@ const EmojiGeigerCounterBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32,50.5547a4,4,0,1,0,4,0"/>
     <rect x="32" y="31" rx="1" width="4" height="25" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGeigerCounterBlack

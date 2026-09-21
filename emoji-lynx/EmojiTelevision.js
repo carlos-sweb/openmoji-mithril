@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "television" (color) [1F4FA]. */
-const EmojiTelevision = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTelevision = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M5.2629,15.7371L4.5,56.0004h62.1729L67,16L5.2629,15.7371z"/>
     <rect x="9" y="20" width="54" height="26" fill="#3F3F3F" stroke="none"/>
@@ -23,7 +20,5 @@ const EmojiTelevision = {
     <line x1="38.5" x2="38.5" y1="59.9683" y2="66.3538" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="34.5" x2="34.5" y1="59.9683" y2="66.3538" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTelevision

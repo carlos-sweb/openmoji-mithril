@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "kangaroo" (black) [1F998]. */
-const EmojiKangarooBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiKangarooBlack = lynxIcon(`
   <g id="line">
     <line x1="34.0489" x2="34.0489" y1="32.7943" y2="32.8034" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="14.725" x2="14.3664" y1="35.105" y2="37.3322" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -17,7 +14,5 @@ const EmojiKangarooBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.2281,22.2784a1.5987,1.5987,0,0,1-1.08-1.4,1.4665,1.4665,0,0,1,.49-1.33l1.58-.9777v-.7a1.0654,1.0654,0,0,1,.38-.82l.66-.56-1.88-2.5a.3811.3811,0,0,1,.43-.59l2.25.76,2.31,1.46,2.5-1.31a3.7236,3.7236,0,0,1,1.76-.43h.66a.48.48,0,0,1,.28.87l-2.91,2.14a1.7813,1.7813,0,0,0-.68,1.91c.08.29.16.58.26.86a8.01,8.01,0,0,0,6.1,5.14,20.78,20.78,0,0,1,6.01,2.18,21.034,21.034,0,0,1,6.7,5.81v.01c.1.12.19.27.29.41,0,.01.01.01.01.02a11.3212,11.3212,0,0,1,1.13,2.22,12.21,12.21,0,0,1,.75,4.8c-.01.14-.01.27-.01.39a20.3073,20.3073,0,0,0,.3,3.52,19.4649,19.4649,0,0,0,1.03,3.81,3.4226,3.4226,0,0,0,.13.34,4.4066,4.4066,0,0,0,.23.56l.01.02a5.546,5.546,0,0,0,1.04,1.87,5.3634,5.3634,0,0,0,2.65,1.76,36.5639,36.5639,0,0,0,4.51.81l18.51,2.78"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.0585,48.0307c-.47.47.59,3.74.7,4.42l.76,3.43a2.0609,2.0609,0,0,1-.15,1.15l-.15.37a1.977,1.977,0,0,1-1.82,1.2h-3.48"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiKangarooBlack

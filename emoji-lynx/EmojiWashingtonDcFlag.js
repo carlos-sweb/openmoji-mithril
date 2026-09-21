@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "washington dc flag" (color) [1F3F4-E0075-E0073-E0064-E0063-E007F]. */
-const EmojiWashingtonDcFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWashingtonDcFlag = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#fff"/>
     <rect x="5" y="29" width="62" height="7" fill="#d22f27"/>
@@ -17,7 +14,5 @@ const EmojiWashingtonDcFlag = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWashingtonDcFlag

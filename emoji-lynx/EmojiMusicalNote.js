@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "musical note" (color) [1F3B5]. */
-const EmojiMusicalNote = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMusicalNote = lynxIcon(`
   <g id="color">
     <polygon fill="#3F3F3F" stroke="none" points="26.324,22.8117 51.6188,17.5516 51.5493,12.875 26.105,18.5407"/>
     <circle cx="20.7561" cy="51.59" r="5.7867" fill="#3F3F3F" stroke="none"/>
@@ -21,7 +18,5 @@ const EmojiMusicalNote = {
     <circle cx="46.2063" cy="46.0129" r="5.7868" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="51.555" x2="51.9931" y1="12.9635" y2="46.0129" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMusicalNote

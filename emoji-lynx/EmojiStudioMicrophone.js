@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "studio microphone" (color) [1F399]. */
-const EmojiStudioMicrophone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStudioMicrophone = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" d="M48.11,28.5397l-4.38,4.39l-4.35,4.35l-5.81,5.47c0,0-1.2755,1.3938-3.19,1.92 c-1.9145,0.5262-4.79-0.15-6.5699-1.92l-3.58-3.58c-2.77-2.78-2.77-7.32,0-10.1l4.31-4.3l5.51-5.5099l4.39-4.39 c2.78-2.78,7.3199-2.78,10.09,0l0.6,0.6l2.98,2.98C50.89,21.2197,50.89,25.7697,48.11,28.5397z"/>
     <path fill="#9B9B9A" d="M43.8321,24.2619c0,0-3.4544,3.4623-4.3799,4.39c-0.9256,0.9277-4.35,2.4561-5.2784,3.3301 c-0.9283,0.874-3.2698,5.1874-4.8817,6.4899c-1.6118,1.3025-1.0722,1.4146-3.19,1.92s-4.79-0.15-6.57-1.92l-0.6-0.6 c-2.77-2.78-2.77-7.32,0-10.1l4.31-4.3l5.51-5.5099l4.39-4.39c2.78-2.78,7.3199-2.78,10.09,0l0.6,0.6 C46.6121,16.9519,46.6121,21.4918,43.8321,24.2619z"/>
@@ -28,7 +25,5 @@ const EmojiStudioMicrophone = {
     <line x1="41.6359" x2="42.1701" y1="36.304" y2="36.8383" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="24.8226" x2="32.4197" y1="19.4908" y2="27.0879" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStudioMicrophone

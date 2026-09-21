@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with tongue" (black) [1F61B]. */
-const EmojiFaceWithTongueBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithTongueBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M30.7517,46.7908c-2.199-1.0742-3.9778-2.8081-4.9168-4.9729 M46.165,41.818c-0.8692,2.0234-2.4789,3.6854-4.4969,4.7746 M26.0734,41.818c1.8055,0.9018,5.4625,1.4962,9.5171,1.5426c4.4161,0.0505,8.5899-0.5572,10.5745-1.5426"/>
@@ -13,7 +10,5 @@ const EmojiFaceWithTongueBlack = {
     <path d="M30,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,28,30,29.3448,30,31"/>
     <path d="M48,31c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,29.3448,48,31"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithTongueBlack

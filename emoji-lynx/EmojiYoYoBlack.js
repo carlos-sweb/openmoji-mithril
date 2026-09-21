@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "yo-yo" (black) [1FA80]. */
-const EmojiYoYoBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiYoYoBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="24.969 54.8 21.735 49.822 15.801 49.665 19.535 45.051 17.851 39.359 23.393 41.485 28.286 38.124 27.977 44.052 32.685 47.667 26.952 49.205 24.969 54.8"/>
     <circle cx="24.3282" cy="45.6616" r="13.3282" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiYoYoBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M15.8011,35.5411A13.3293,13.3293,0,1,1,33.5071,54.8"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M15.0074,36.3346A13.3293,13.3293,0,1,1,32.7135,55.5931"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiYoYoBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person with white cane: light skin tone" (color) [1F9D1-1F3FB-200D-1F9AF]. */
-const EmojiPersonWithWhiteCaneLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonWithWhiteCaneLightSkinTone = lynxIcon(`
   <g id="color">
     <g id="skin">
       <circle cx="41.2264" cy="10.1266" r="3" fill="#fadcbc"/>
@@ -30,7 +27,5 @@ const EmojiPersonWithWhiteCaneLightSkinTone = {
       <line x1="22.3616" x2="21.5721" y1="21.6975" y2="28.5561" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonWithWhiteCaneLightSkinTone

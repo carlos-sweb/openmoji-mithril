@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "boomerang" (color) [1FA83]. */
-const EmojiBoomerang = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBoomerang = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M56.2572,56.5079a3.6438,3.6438,0,0,1-1.8248-.12,4.12,4.12,0,0,1-2.537-2.5472c-.1745-.4688-.8453-2.3951-1.7366-4.9545-2.0524-5.8964-5.8741-16.8724-6.4614-18.0656a7.6229,7.6229,0,0,0-7.3731-4.3817c-5.2377-.0228-20.3535.0763-22.8461.1041a4.2774,4.2774,0,0,1-3.3968-1.4521,3.8181,3.8181,0,0,1-.7478-3.2645,4.1547,4.1547,0,0,1,.3579-.9635c.0462-.0968.0925-.1935.1336-.2913l.0955-.1776a4.2413,4.2413,0,0,1,2.9806-1.72c1.904-.3271,4.4137-.7626,7.1784-1.2426,12.1-2.1007,22.2222-3.8469,23.5236-3.9344a10.0771,10.0771,0,0,1,10.7184,8.48c1.42,8.1167,4.853,28.01,5.1405,29.7239a3.9712,3.9712,0,0,1-1.7366,4.2A4.0343,4.0343,0,0,1,56.2572,56.5079Z"/>
     <polygon fill="#fcea2b" points="18.108 25.507 15.424 19.771 19.499 19.042 22.382 25.205 18.108 25.507"/>
@@ -21,7 +18,5 @@ const EmojiBoomerang = {
     <line x1="51.5331" x2="55.2764" y1="49.83" y2="50.4963" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="49.3472" x2="53.0906" y1="43.5116" y2="44.1779" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBoomerang

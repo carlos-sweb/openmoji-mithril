@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rounded symbol for shuangxi" (black) [1F264]. */
-const EmojiRoundedSymbolForShuangxiBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRoundedSymbolForShuangxiBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="28" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39,36 H58.8 a23,23,0,0,0,-1,-6 H39z"/>
@@ -15,7 +12,5 @@ const EmojiRoundedSymbolForShuangxiBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33,48 H16.5 A23,23,0,0,0,33,58.8z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39,48 H55.5 A23,23,0,0,1,39,58.8z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRoundedSymbolForShuangxiBlack

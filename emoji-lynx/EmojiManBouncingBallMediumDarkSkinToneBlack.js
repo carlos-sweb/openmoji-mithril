@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man bouncing ball: medium-dark skin tone" (black) [26F9-1F3FE-200D-2642-FE0F]. */
-const EmojiManBouncingBallMediumDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManBouncingBallMediumDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <circle cx="17.5064" cy="40.286" r="4.7664" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="27.2476" cy="13.3236" r="3" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiManBouncingBallMediumDarkSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.6868,21.9479c-1.9065-3.8131-4.2893-4.0441-5.8145-3.4722a2.24,2.24,0,0,0-1.17,1.9012"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.9208,21.9484s-1.5142,6.3832-1.7977,6.6967c-.2415.2663-7.2937,3.9028-7.2937,3.9028"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManBouncingBallMediumDarkSkinToneBlack

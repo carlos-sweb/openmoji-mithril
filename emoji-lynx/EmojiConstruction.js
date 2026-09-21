@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "construction" (color) [1F6A7]. */
-const EmojiConstruction = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiConstruction = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m15.35,59.08h-1.779c-.6839,0-1.238-.578-1.238-1.291V22.959c0-.713.5544-1.291,1.238-1.291h1.779c.6839,0,1.238.578,1.238,1.291v34.83c0,.713-.5545,1.291-1.238,1.291Z"/>
     <path fill="#fff" d="m58.46,59.08h-1.779c-.6839,0-1.238-.7131-1.238-1.593V24.517c0-.8796.5544-1.593,1.238-1.593h1.779c.6839,0,1.238.7131,1.238,1.593v32.97c0,.8796-.5545,1.593-1.238,1.593Z"/>
@@ -40,7 +37,5 @@ const EmojiConstruction = {
     <circle cx="14.835" cy="17.966" r="4.594" fill="#f4aa41" stroke="#e27022" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="57.185" cy="17.966" r="4.594" fill="#f4aa41" stroke="#e27022" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiConstruction

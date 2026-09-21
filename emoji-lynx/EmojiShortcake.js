@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shortcake" (color) [1F370]. */
-const EmojiShortcake = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShortcake = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m57.5367,18.0513l-16.5406,2.5102-2.0738.4311-31.9223,5.0074c-1.1045,0-2,.8965-2,2v12h1c2.7617,0,5-2.2383,5-4.999s2.2383-5.001,5-5.001,5,2.2393,5,5.001,2.2383,4.999,5,4.999,5-2.2383,5-4.999,2.2383-5.001,5-5.001,5,2.2393,5,5.001,2.2383,4.999,5,4.999,5-2.2383,5-4.999,2.2383-5.001,5-5.001,5,2.2393,5,5.001,2.2383,4.999,5,4.999h1v-12c0-4.7112-3.2599-8.6632-7.647-9.7215-.4344-.1048-1.3618-.1812-1.8163-.2272"/>
     <circle cx="49.5" cy="18.0005" r="5" fill="#ea5a47"/>
@@ -21,7 +18,5 @@ const EmojiShortcake = {
     <circle cx="49.5" cy="18.0005" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m49.5,16c0-5.5229,4.4766-10,10-10"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShortcake

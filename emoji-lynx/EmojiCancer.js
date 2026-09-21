@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Cancer" (color) [264B]. */
-const EmojiCancer = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCancer = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3">
     <path d="m33.61 30.26a5.559 5.559 0 1 1-5.559-5.558 5.56 5.56 0 0 1 5.559 5.558z"/>
     <path stroke-linecap="round" d="m25.7 25.26s10.84-4.787 23.81 3.012"/>
@@ -22,7 +19,5 @@ const EmojiCancer = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCancer

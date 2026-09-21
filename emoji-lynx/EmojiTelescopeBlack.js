@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "telescope" (black) [1F52D]. */
-const EmojiTelescopeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTelescopeBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="16.0186 56.6623 29.1491 36.039 31.624 36.039 43.8948 56.6564"/>
     <line x1="30.4618" x2="30.4618" y1="36.741" y2="60.257" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -16,7 +13,5 @@ const EmojiTelescopeBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="25.028 28.5329 16.1973 31.7319 14.6585 28.1744 23.5457 23.5568"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="30.9216 19.7807 42.1281 14.0815 45.2549 21.3103 32.6562 25.8289"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTelescopeBlack

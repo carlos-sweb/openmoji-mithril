@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "arduino" (color) [E1D3]. */
-const EmojiArduino = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiArduino = lynxIcon(`
   <g id="color">
     <polygon fill="#5C9E31" stroke="none" points="8,56 63,56 63,51 67,46.9042 67,28.0005 63,24 63,16 8,16"/>
     <polyline fill="#5C9E31" stroke="none" points="63,56 63,51 67,46.9042 67,28.0005 63,24 63,16 56.1671,16"/>
@@ -24,7 +21,5 @@ const EmojiArduino = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="18,30 18,22 5,22 5,31 11.1252,31"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="14,50 18,50 18,46 14,46"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiArduino

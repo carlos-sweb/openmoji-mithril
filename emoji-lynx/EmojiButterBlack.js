@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "butter" (black) [1F9C8]. */
-const EmojiButterBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiButterBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19,33a3.416,3.416,0,0,0-3.3141,2.9835l-1.3718,13.033A2.65,2.65,0,0,0,17,52H55a2.65,2.65,0,0,0,2.6859-2.9835l-1.3718-13.033A3.416,3.416,0,0,0,53,33Z"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="11.38 52 14.448 52 36 52"/>
@@ -13,7 +10,5 @@ const EmojiButterBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="60.62 52 57.552 52 36 52"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36,56H57a2.4394,2.4394,0,0,0,1.82-.5833l.2389-.2381,3.934-8.0083,4.1271-.0189"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiButterBlack

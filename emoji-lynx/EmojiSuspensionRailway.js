@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "suspension railway" (color) [1F69F]. */
-const EmojiSuspensionRailway = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSuspensionRailway = lynxIcon(`
   <g id="color">
     <rect x="13.5" y="28.5" width="43" height="24" fill="#fcea2b" stroke="#fcea2b" stroke-linejoin="round"/>
     <line x1="14" x2="56" y1="47.5" y2="47.5" fill="none" stroke="#61b2e4" stroke-linejoin="round" stroke-width="2"/>
@@ -39,7 +36,5 @@ const EmojiSuspensionRailway = {
     <line x1="30" x2="30" y1="43" y2="51" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="40" x2="40" y1="43" y2="51" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSuspensionRailway

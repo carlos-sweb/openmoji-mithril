@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bucket" (color) [1FAA3]. */
-const EmojiBucket = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBucket = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m44.01,60.96h-16.57c-1.9631-.0096-3.6058-1.4922-3.816-3.444l-2.695-23.7h29.83l-2.936,23.74c-.2307,1.9334-1.864,3.393-3.811,3.406l-.002-.002Z"/>
     <path fill="#61b2e4" d="m45.04,33.81l-2.937,23.74c-.2307,1.9334-1.864,3.393-3.811,3.406h5.716c1.947-.013,3.5803-1.4726,3.811-3.406l2.936-23.74h-5.715Z"/>
@@ -21,7 +18,5 @@ const EmojiBucket = {
     <line x1="16.0077" x2="17.0921" y1="31.8233" y2="31.8233" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="54.9174" x2="56.0017" y1="31.8967" y2="31.8967" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBucket

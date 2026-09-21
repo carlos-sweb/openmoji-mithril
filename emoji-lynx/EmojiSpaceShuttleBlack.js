@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "space shuttle" (black) [E20B]. */
-const EmojiSpaceShuttleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpaceShuttleBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9493" points="45.43,17.2598 47.7,13.1398 50.11,17.8098 50.11,49.9798"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9493" points="21.75,50.0898 21.75,17.6798 24.17,13.0098 26.44,17.1298"/>
@@ -16,7 +13,5 @@ const EmojiSpaceShuttleBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9493" d="M28.83,42.9998c-0.73,1.16-2.61,3.61-7.08,7.09c-0.64,0.5-1.34,1.03-2.09,1.57c0,0-3.45,3.78-3.27,6.96l15.44,1.19"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9493" d="M40.03,65.7798c-0.01,0.06-0.01,0.1-0.01,0.1h-8.11c0,0,0-0.04-0.0099-0.11c-0.05-0.68-0.27-4.18,0.53-5.93v-2.4 c-0.02-5.92-0.01-16.68,0.17-24.21v-0.0099c0.07-3.32,0.1801-6.01,0.34-7.39c0.66-5.91,3.02-6.79,3.02-6.79s2.37,0.88,3.04,6.79 c0.15,1.36,0.26,3.99,0.34,7.23c0.18,7.54,0.19,18.41,0.17,24.38v2.43C40.29,61.6298,40.07,65.1198,40.03,65.7798z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpaceShuttleBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "snowman without snow" (color) [26C4]. */
-const EmojiSnowmanWithoutSnow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSnowmanWithoutSnow = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="28.11" r="10.75" fill="#fff"/>
     <circle cx="36" cy="51.44" r="13.86" fill="#fff"/>
@@ -32,7 +29,5 @@ const EmojiSnowmanWithoutSnow = {
     <line x1="14.04" x2="11.3" y1="34.96" y2="27.67" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.757"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.757" d="m45.82 42.67c2.086 2.33 3.354 5.407 3.354 8.781 0 7.276-5.899 13.17-13.17 13.17s-13.17-5.899-13.17-13.17c0-3.373 1.268-6.45 3.353-8.781"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSnowmanWithoutSnow

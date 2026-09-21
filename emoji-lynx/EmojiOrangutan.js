@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "orangutan" (color) [1F9A7]. */
-const EmojiOrangutan = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOrangutan = lynxIcon(`
   <g id="color">
     <g>
       <g>
@@ -37,7 +34,5 @@ const EmojiOrangutan = {
       </g>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOrangutan

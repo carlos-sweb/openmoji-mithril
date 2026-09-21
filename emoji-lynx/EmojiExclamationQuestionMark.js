@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "exclamation question mark" (color) [2049]. */
-const EmojiExclamationQuestionMark = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiExclamationQuestionMark = lynxIcon(`
   <g id="color">
     <ellipse cx="43.8235" cy="58.3802" rx="3.1473" ry="3.1533" fill="#d22f27"/>
     <path fill="#d22f27" d="M43.7127,49.3165a1.4758,1.4758,0,0,1-1.4757-1.4641c-.0005-.0819-.0607-2.5611.0044-8.4158.0358-3.2309,3.63-6.1269,8.385-10.8752C52.8045,26.3867,53.1,23.8446,53.1,21.4338c0-3.2818-2.9648-7.5869-8.9835-7.5869-5.3383,0-8.4993,3.4672-8.4993,9.5524a1.4344,1.4344,0,0,1-1.3947,1.5866,1.5517,1.5517,0,0,1-1.5048-1.7588c0-9.8821,7.2907-12.2688,11.3649-12.2688,6.57,0,12.0283,3.4313,12.0283,10.207,0,3.671-.48,6.5255-3.71,9.7549-3.9558,3.9557-7.1838,6.3462-7.208,8.5487-.0651,5.8264-.005,8.278-.0044,8.36a1.4759,1.4759,0,0,1-1.4641,1.4872Z"/>
@@ -18,7 +15,5 @@ const EmojiExclamationQuestionMark = {
     <ellipse cx="22.4214" cy="58.8953" rx="3" ry="3.0228" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.4214,50.7783a2.4852,2.4852,0,0,1-2.5-2.519V12.7916a2.5,2.5,0,1,1,5,0V48.2593A2.4852,2.4852,0,0,1,22.4214,50.7783Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiExclamationQuestionMark

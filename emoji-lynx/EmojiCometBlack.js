@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "comet" (black) [2604]. */
-const EmojiCometBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCometBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.49" d="M28.0542,44.3144l1.0332,2.7421.3112,2.0492-1.0159,2.793L27.4042,53.07l-1.6.7034-1.0825.5953-2.4946.6928-.7573-.165-1.9634-.025-2.03-.9106-1.6125-2.0421-.7486-2.0038-.974-2.0116.448-1.2854.3246-1.2306.5009-2.3322,3.8089-2.0374L21.56,41s.9362.4209,1.2579.56c.1121.0485,1.0541.38,1.1731.4077Z"/>
     <line x1="26.8412" x2="46.2765" y1="36.7588" y2="17.3235" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiCometBlack = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="28 20 30 20 30.75 17.75 31.5 20 33.5 20 32 21.25 32.5 23.25 30.75 22 29 23.25 29.75 21.25 28 20"/>
     <path fill="#000000" d="M53.6083,28.4963a1.1257,1.1257,0,0,0,0-2.25,1.1257,1.1257,0,0,0,0,2.25Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCometBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "playground slide" (color) [1F6DD]. */
-const EmojiPlaygroundSlide = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPlaygroundSlide = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="17.4191 28.499 9.9308 52.6028 19.8146 52.539 25.1865 34.3586 21.7457 27.0308 17.4191 28.499"/>
     <path fill="#d22f27" d="m29.2434,22.9412l1.7632-6.88.0151-.07c.2801-1.3514,1.154-2.5048,2.3793-3.14,1.9853-.88,4.13.52,4.8041,3.14l1.8186,7.09,13.8743,22.58c1.3552,2.4993,3.919,4.1076,6.759,4.24h2.3641c1.018.1605,1.7273,1.0966,1.6065,2.12l-.0753,4.7872c0,1.1046-.6589,2.4829-1.7635,2.4829h-2.8241l-.0793-4.7948h-.5164c-3.7218,0-7.1777-1.9292-9.1309-5.0973l-13.791-22.3684h-9.2884l1.1244-4.373.9603.2834Z"/>
@@ -24,7 +21,5 @@ const EmojiPlaygroundSlide = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.2434,22.9412l1.7632-6.88.0151-.07c.2801-1.3514,1.154-2.5048,2.3793-3.14,1.9853-.88,4.13.52,4.8041,3.14l1.8186,7.09,13.8743,22.58c1.3552,2.4993,3.919,4.1076,6.759,4.24h1.9706c1.1046,0,2,.8954,2,2v4.4018c0,1.1046-.8954,2-2,2h-2.7422"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.7457,27.0308h-8.2518l2.8112-10.97.0152-.07c.2801-1.3514,1.154-2.5048,2.3793-3.14,1.9853-.88,4.13.52,4.8041,3.14l1.8186,7.09,13.8743,22.58c1.3552,2.4993,3.919,4.1076,6.759,4.24h1.9706c1.1046,0,2,.8954,2,2v4.4018c0,1.1046-.8954,2-2,2h-6.9044l-19.2761-31.2718Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPlaygroundSlide

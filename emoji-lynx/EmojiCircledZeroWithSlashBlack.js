@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "circled zero with slash" (black) [1F10D]. */
-const EmojiCircledZeroWithSlashBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCircledZeroWithSlashBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="26.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.74" paint-order="normal"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="4.74" d="m43.24 22.41-15.01 26-0.3267-0.1886"/>
@@ -13,7 +10,5 @@ const EmojiCircledZeroWithSlashBlack = {
       <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.84" d="m0 7c-1.058 0-1.916-0.857-1.916-1.916v-3.168c0-1.058 0.858-1.916 1.916-1.916s1.916 0.858 1.916 1.916v3.168c0 1.059-0.858 1.916-1.916 1.916z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCircledZeroWithSlashBlack

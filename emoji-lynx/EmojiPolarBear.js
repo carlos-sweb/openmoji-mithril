@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "polar bear" (color) [1F43B-200D-2744-FE0F]. */
-const EmojiPolarBear = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPolarBear = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m50.6975,53.9417h-6.8075s-.3683-3.9115,2.5783-4.2258,2.0717-4.5681,2.0717-4.5681h7.327v8.7939h-5.1695Z"/>
     <path d="m7.3036,29.26s1.6438.8078.69,1.945c-.2746.4704-.8786.629-1.3489.3544-.1506-.0879-.2752-.2142-.3611-.366,0,0-1.0958-.3741,1.02-1.9334Z"/>
@@ -20,7 +17,5 @@ const EmojiPolarBear = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55.8671,50.631s-6.6033.4392-5.0148,4.2254h9.3464s2.3113-.1064,1.3994-5.8564c0,0,3.5266-9.125,1.3985-15.8437"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17.1768,26.1842s2.3021-.38,1.3813,3.0754"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPolarBear

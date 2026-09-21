@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with steam from nose" (black) [1F624]. */
-const EmojiFaceWithSteamFromNoseBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithSteamFromNoseBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.7165,56.3562 c-6.7467,3.5446-14.8098,3.5235-21.5379-0.0562"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.4511,55.9513 c-0.2421,0.1393-0.4869,0.2743-0.7346,0.4049"/>
@@ -18,7 +15,5 @@ const EmojiFaceWithSteamFromNoseBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.4596,37.4966 L16.7127,43.81c0,0-3.8107-4.3777-7.3934-0.753c-1.8042,1.6892-1.8974,4.5211-0.2082,6.3253c0,0,0,0.0001,0.0001,0.0001 c0.0219,0.0235,0.0441,0.0468,0.0666,0.07c0.0338,0.0348-3.46,3.3212-0.3024,6.4791c1.6137,1.6749,4.2498,1.8118,6.0283,0.313 c0,0,2.5218,3.7566,6.0858-0.2148s-0.8088-7.42-0.8088-7.42L30.4596,37.4966z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.5405,37.4966 L55.2873,43.81c0,0,3.8107-4.3777,7.3934-0.753c1.8042,1.6892,1.8974,4.5211,0.2082,6.3253c0,0,0,0.0001-0.0001,0.0001 c-0.0219,0.0235-0.0441,0.0468-0.0666,0.07c-0.0338,0.0348,3.46,3.3212,0.3024,6.4791c-1.6137,1.6749-4.2497,1.8118-6.0282,0.313 c0,0-2.5219,3.7564-6.086-0.2145s0.8088-7.42,0.8088-7.42L41.5405,37.4966z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithSteamFromNoseBlack

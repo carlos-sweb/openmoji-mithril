@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "auto rickshaw" (black) [1F6FA]. */
-const EmojiAutoRickshawBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAutoRickshawBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="23.718 37 27.588 37 28.389 29.575"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0875" d="m64.22,44.5631H19l-1.5978-2.9631c-.9203-1.7066-1.4022-3.6152-1.4022-5.5542v-.7653c-.0462-1.5163.1564-3.0298.6-4.4805l2.4-8.8c0-1.4712,1.5288-4,3-4l39.5557.3893c1.4712-.0003,2.664,1.1921,2.6643,2.6633v23.5105Z"/>
@@ -21,7 +18,5 @@ const EmojiAutoRickshawBlack = {
     <path d="m60.072,44.5631h0c0-.5795.4697-1.0492,1.0492-1.0492h4.1967c.5794,0,1.0491.4698,1.0492,1.0492h0c0,.5795-.4697,1.0492-1.0492,1.0492h-4.1967c-.5794,0-1.0491-.4696-1.0492-1.049v-.0002Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18,42.5319c-2.4819-1.901-4.8514.3691-5,.4681"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAutoRickshawBlack

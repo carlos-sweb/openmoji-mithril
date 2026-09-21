@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person frowning" (black) [1F64D]. */
-const EmojiPersonFrowningBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonFrowningBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26,38.9583c-4,0-4-6-4-13s4-14,14-14,14,7,14,14,0,13-4,13"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17,59.9583v-3c0-4.9941,5.0078-9,10-9q9,7.5,18,0c4.9941,0,10,4.0059,10,9v3"/>
@@ -14,7 +11,5 @@ const EmojiPersonFrowningBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38,38.7083a3.0417,3.0417,0,0,0-4,0"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M24.9365,30.9583c0,9,4.9365,14,11,14,5.9365,0,11.0635-5,11.0635-14,0-3-1-4-1-4a76.84,76.84,0,0,0-7-6c-4,3-9,5-13,5C26,25.9583,24.9365,25.9583,24.9365,30.9583Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonFrowningBlack

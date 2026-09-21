@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "augmented reality" (color) [E1C6]. */
-const EmojiAugmentedReality = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAugmentedReality = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m12.1186,17.9475h48.0051c3.7466,0,6.7883,3.0418,6.7883,6.7883v23.6569H4.8447v-23.1712c0-4.0146,3.2594-7.274,7.274-7.274Z"/>
     <polygon fill="#9b9b9a" points="6.8082 55.1577 22.0693 33.4118 30.6599 42.0024 46.6415 26.0208 65.7188 55.875 6.2812 55.875 6.8082 55.1577"/>
@@ -28,7 +25,5 @@ const EmojiAugmentedReality = {
     <line x1="67.8585" x2="62.8374" y1="45.3255" y2="45.3255" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="46.5707" x2="46.5707" y1="49.2352" y2="20.0597" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAugmentedReality

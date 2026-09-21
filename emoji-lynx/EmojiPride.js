@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pride" (color) [E420]. */
-const EmojiPride = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPride = lynxIcon(`
   <g id="color">
     <path fill="#b399c8" d="m6 54h60v-36h-60z"/>
     <path fill="#92d3f5" d="m6 48.01h60v-30.01h-60z"/>
@@ -24,7 +21,5 @@ const EmojiPride = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPride

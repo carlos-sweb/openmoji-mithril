@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sponge" (color) [1F9FD]. */
-const EmojiSponge = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSponge = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="M38.5633,46.7536a4.5586,4.5586,0,0,1-4.56,4.56,4.2818,4.2818,0,0,1-1.71-.342,4.5462,4.5462,0,0,1,0-8.4358,4.28,4.28,0,0,1,1.71-.342A4.5586,4.5586,0,0,1,38.5633,46.7536Z"/>
     <ellipse cx="33.4334" cy="46.7536" rx="2.8499" ry="4.2179" fill="#92d3f5"/>
@@ -26,7 +23,5 @@ const EmojiSponge = {
     <circle cx="35.4253" cy="37.4517" r="1.9458" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.4032,38.6779a5.6221,5.6221,0,0,0-.6279.2322,4.5039,4.5039,0,0,0-.0337-.5787,4.56,4.56,0,1,0-3.7829,5.2226c.08-.0127.1506-.0439.2285-.0605a5.6937,5.6937,0,1,0,4.216-4.8156Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSponge

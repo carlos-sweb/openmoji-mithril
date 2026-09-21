@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man in motorized wheelchair: dark skin tone, facing right" (color) [1F468-1F3FF-200D-1F9BC-200D-27A1-FE0F]. */
-const EmojiManInMotorizedWheelchairDarkSkinToneFacingRight = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManInMotorizedWheelchairDarkSkinToneFacingRight = lynxIcon(`
   <g id="color" transform="scale(-1, 1) translate(-72, 0)">
     <circle cx="46.0647" cy="55.4408" r="5" fill="#d0cfce"/>
     <circle cx="19.7647" cy="55.4408" r="5" fill="#d0cfce"/>
@@ -29,7 +26,5 @@ const EmojiManInMotorizedWheelchairDarkSkinToneFacingRight = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="22.108 46.682 29.508 29.182 32.508 29.182 34.808 29.282"/>
     <line x1="32.5081" x2="32.5081" y1="27.5818" y2="29.1818" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManInMotorizedWheelchairDarkSkinToneFacingRight

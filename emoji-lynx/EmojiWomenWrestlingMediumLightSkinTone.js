@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "women wrestling: medium-light skin tone" (color) [1F93C-1F3FC-200D-2640-FE0F]. */
-const EmojiWomenWrestlingMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomenWrestlingMediumLightSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="skin">
     <g id="skin-a">
@@ -32,7 +29,5 @@ const EmojiWomenWrestlingMediumLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.2852,12.8225s-.4585-.4723-.8981-.3229c-.5171.1749-1.2482,1.289-1.9136,1.6377a3.3624,3.3624,0,0,1-2.1406.3665"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.2383,11.1353s.4585-.4724.8981-.323c.5171.1749,1.2482,1.289,1.9136,1.6378a3.3628,3.3628,0,0,0,2.1406.3664"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomenWrestlingMediumLightSkinTone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "balance scale" (color) [2696]. */
-const EmojiBalanceScale = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBalanceScale = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M48.0626,62.92c0-3.3137-5.5964-6-12.5-6s-12.5,2.6863-12.5,6H48.0626z"/>
     <path fill="#D0CFCE" stroke="none" d="M24.9006,46.9656c0,2.1938-2.1985,3.9723-4.9106,3.9723s-4.9106-1.7785-4.9106-3.9723H24.9006z"/>
@@ -26,7 +23,5 @@ const EmojiBalanceScale = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="53,27.9064 48,45.9064 58,45.9064"/>
     <line x1="53" x2="53" y1="27.9064" y2="45.9064" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBalanceScale

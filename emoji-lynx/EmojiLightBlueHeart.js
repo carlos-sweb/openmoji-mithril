@@ -1,18 +1,13 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "light blue heart" (color) [1FA75]. */
-const EmojiLightBlueHeart = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLightBlueHeart = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m59.5,25.4802c0-6.9036-5.5964-12.5-12.5-12.5-4.7533,0-8.8861,2.6536-11,6.5598-2.1139-3.9062-6.2467-6.5598-11-6.5598-6.9036,0-12.5,5.5964-12.5,12.5,0,2.9699,1.0403,5.6942,2.7703,7.8387l-.0043.0034,20.734,25.6976,20.7339-25.6975-.0043-.0034c1.7301-2.1446,2.7704-4.8689,2.7704-7.8388Z"/>
   </g>
   <g id="line">
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="m59.5,25.4802c0-6.9036-5.5964-12.5-12.5-12.5-4.7533,0-8.8861,2.6536-11,6.5598-2.1139-3.9062-6.2467-6.5598-11-6.5598-6.9036,0-12.5,5.5964-12.5,12.5,0,2.9699,1.0403,5.6942,2.7703,7.8387l-.0043.0034,20.734,25.6976,20.7339-25.6975-.0043-.0034c1.7301-2.1446,2.7704-4.8689,2.7704-7.8388Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLightBlueHeart

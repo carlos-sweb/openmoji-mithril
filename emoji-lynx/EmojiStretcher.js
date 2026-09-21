@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stretcher" (color) [E328]. */
-const EmojiStretcher = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStretcher = lynxIcon(`
   <g id="color">
     <polygon fill="#92d3f5" points="46.894 34.519 16 34.519 16 40.484 56.286 40.484 56.286 34.519 56.286 30.072 46.894 34.519"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiStretcher = {
     <line x1="28.6986" x2="45.0096" y1="40.6516" y2="51.9883" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="27.2612" x2="45.2503" y1="53.0785" y2="53.0785" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStretcher

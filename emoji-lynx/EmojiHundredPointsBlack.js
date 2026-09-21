@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hundred points" (black) [1F4AF]. */
-const EmojiHundredPointsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHundredPointsBlack = lynxIcon(`
   <g id="line">
     <line x1="59.1829" x2="13.1829" y1="46.059" y2="46.059" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
     <line x1="59.1829" x2="13.1829" y1="54.059" y2="54.059" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
@@ -13,7 +10,5 @@ const EmojiHundredPointsBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4" d="M52.9092,37.0046L52.9092,37.0046c-3.4677,0-6.2789-2.8112-6.2789-6.2789V20.3382c0-3.4677,2.8112-6.2792,6.2789-6.2792l0,0 c3.4681,0,6.2792,2.8115,6.2792,6.2792v10.3875C59.1884,34.1934,56.3773,37.0046,52.9092,37.0046z"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4" points="12.9843,18.8851 19.3366,14.1262 19.3366,37.0718"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHundredPointsBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person juggling" (color) [1F939]. */
-const EmojiPersonJuggling = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonJuggling = lynxIcon(`
   <g id="color">
     <circle cx="19.9688" cy="18.0938" r="2" fill="#EA5A47" stroke="none"/>
     <circle cx="40.9688" cy="6.0938" r="2" fill="#92D3F5" stroke="none"/>
@@ -22,7 +19,5 @@ const EmojiPersonJuggling = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41,26l2.5684,39.0039C43.6406,66.1016,42.958,67,42.0508,67c-0.9082,0-1.7715-0.8916-1.9199-1.9814l-2.8614-21.0372 C37.1211,42.8916,36.5498,42,36,42c-0.5498,0-1.1211,0.8916-1.2695,1.9814l-2.8614,21.0372C31.7207,66.1084,30.8574,67,29.9492,67 c-0.9072,0-1.5898-0.8984-1.5176-1.9961L31,26"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M19,25l3.707,4.2373c1.8116,2.0693,3.6631,1.543,4.1153-1.1694l0.3554-2.1358C27.6299,23.2192,29.7998,20.7749,32,20.5 c2.2002-0.2749,5.7998-0.2749,8,0c2.2002,0.2749,4.3701,2.7192,4.8223,5.4321l0.3554,2.1358 C45.6299,30.7803,47.7998,32.5498,50,32c2.2002-0.5498,4-1,4-1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonJuggling

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "zipper-mouth face" (color) [1F910]. */
-const EmojiZipperMouthFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiZipperMouthFace = lynxIcon(`
   <g id="color">
     <ellipse cx="36" cy="35.6432" rx="23" ry="23" fill="#FCEA2B"/>
     <path fill="#9B9B9A" d="M58.2965,54.1981l-1.9462,1.9462c-0.9381,0.9381-2.459,0.9381-3.397,0l-4.8606-4.8606 c-0.9381-0.9381-0.9381-2.459,0-3.397l1.9462-1.9462c0.9381-0.9381,2.459-0.9381,3.397,0l4.8606,4.8606 C59.2345,51.7391,59.2345,53.26,58.2965,54.1981z"/>
@@ -33,7 +30,5 @@ const EmojiZipperMouthFace = {
     <path d="M30,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,28,30,29.3448,30,31"/>
     <path d="M48,31c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,29.3448,48,31"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiZipperMouthFace

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "love hotel" (color) [1F3E9]. */
-const EmojiLoveHotel = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLoveHotel = lynxIcon(`
   <g id="color">
     <rect x="22.5" y="10" width="27" height="52" fill="#FFA7C0" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="27" y="52" width="10" height="10" fill="#92D3F5" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -34,7 +31,5 @@ const EmojiLoveHotel = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="45,47 43,47 43,42"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="45,58 43,58 43,53"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLoveHotel

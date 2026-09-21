@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “secret” button" (black) [3299]. */
-const EmojiJapaneseSecretButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapaneseSecretButtonBlack = lynxIcon(`
   <g id="line-supplement" transform="matrix(.3004 0 0 .3004 -521.6 -12.27)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="9.119" clip-rule="evenodd">
     <path transform="matrix(.9127 0 0 .9127 1102 -590.9)" d="m876.9 810.7s13.52 23.31 13.82 36.63"/>
     <path transform="matrix(.9127 0 0 .9127 1102 -590.9)" d="m835.8 788.9s0.345 70.2 0.443 90.06c0.014 2.9 2.317 5.272 5.216 5.37 6.51 0.2185 17.7 0.5158 24.97 0.2811 3.445-0.1111 2.958 0 6.785-0.7561 6.811-1.345 4.055-20.43 4.055-20.43"/>
@@ -21,7 +18,5 @@ const EmojiJapaneseSecretButtonBlack = {
   <g id="line" transform="matrix(.2603 0 0 .2603 -179 -178.8)">
     <circle cx="826" cy="825.2" r="107.6" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="7.683"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapaneseSecretButtonBlack

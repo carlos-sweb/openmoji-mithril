@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wheel chair" (black) [E327]. */
-const EmojiWheelChairBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWheelChairBlack = lynxIcon(`
   <g id="line">
     <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.3636,27.2 c0,0,20.1457-0.0658,21.6081,0c0.0628,1.2046,0.0842,1.4174,0.0842,2.2887c-0.7851,0.0127-18.0857,0.131-21.3081,0.1488 C25.566,28.8344,25.4376,28.0201,25.3636,27.2z"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="12.329,17.361 23.159,17.361 25.938,32.451"/>
@@ -21,7 +18,5 @@ const EmojiWheelChairBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.9415,32.5385 l17.0555-0.0874l1.7694,11.2745h-8.7913C39.9751,43.7256,39.2786,33.7,29.9415,32.5385z"/>
     <path d="M52.049,45.2603h3.4144c0.4006,0,0.7254,0.3248,0.7254,0.7254v0.3801c0,0.4006-0.3248,0.7254-0.7254,0.7254H52.049 c-0.4006,0-0.7254-0.3248-0.7254-0.7254v-0.3801C51.3236,45.5851,51.6484,45.2603,52.049,45.2603z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWheelChairBlack

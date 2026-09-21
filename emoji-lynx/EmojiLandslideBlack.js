@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "landslide" (black) [1F6D8]. */
-const EmojiLandslideBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLandslideBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="49.452 47.493 52.085 47.654 61.412 55.916"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" points="9.08 58.591 13.016 25.362 14.297 19.248 20.701 13.427 26.348 18.902 28.209 25.424"/>
@@ -24,7 +21,5 @@ const EmojiLandslideBlack = {
     <circle cx="29.857" cy="19.7384" r="1.2785"/>
     <circle cx="33.105" cy="30.4585" r="1.2785"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLandslideBlack

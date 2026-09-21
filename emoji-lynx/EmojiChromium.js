@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Chromium" (color) [E053]. */
-const EmojiChromium = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChromium = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="28" fill="#92D3F5"/>
     <path fill="#92D3F5" fill-rule="evenodd" d="M34.3116 27.1581L34.3196 27.2048C36.3227 26.8575 38.4542 27.1834 40.3524 28.2793C44.6571 30.7646 46.1319 36.2689 43.6467 40.5735L30.3856 63.5424C41.8282 65.8209 53.9433 60.7391 60.1011 50.0735C64.3105 42.7826 64.8683 34.3855 62.3419 27H36C35.4229 27 34.8585 27.0543 34.3116 27.1581Z" clip-rule="evenodd"/>
@@ -19,7 +16,5 @@ const EmojiChromium = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M36 26H59"/>
     <circle cx="36" cy="36" r="28" fill="none" stroke="#000" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChromium

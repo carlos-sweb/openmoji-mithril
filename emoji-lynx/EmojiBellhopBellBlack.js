@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bellhop bell" (black) [1F6CE]. */
-const EmojiBellhopBellBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBellhopBellBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3562" d="M19.1,33.3a17.65,17.65,0,0,1,35.3-.1v.1"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M17.3,34.3h39A1.7524,1.7524,0,0,1,58,36v.1a1.7524,1.7524,0,0,1-1.7,1.7h-39a1.7524,1.7524,0,0,1-1.7-1.7V36A1.6275,1.6275,0,0,1,17.3,34.3Z"/>
@@ -14,7 +11,5 @@ const EmojiBellhopBellBlack = {
     <rect x="15" y="45.5" width="42.4" height="3.5" fill="none" stroke="#000" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35,15a2.3505,2.3505,0,1,1,4.7-.1h0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBellhopBellBlack

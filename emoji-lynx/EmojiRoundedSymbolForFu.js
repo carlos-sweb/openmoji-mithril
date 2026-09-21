@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rounded symbol for fu" (color) [1F260]. */
-const EmojiRoundedSymbolForFu = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRoundedSymbolForFu = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="28" fill="#ea5a47" stroke="none" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
@@ -21,7 +18,5 @@ const EmojiRoundedSymbolForFu = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33,58.8 V33 H13.2 A23,23,0,0,0,15,45"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24,33 V55.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRoundedSymbolForFu

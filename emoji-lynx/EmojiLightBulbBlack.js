@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "light bulb" (black) [1F4A1]. */
-const EmojiLightBulbBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLightBulbBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m52.55,23.75c0,3.985-1.785,5.908-3.754,10.5-.5028,1.172-4.211,13.38-4.211,13.38h-17.17s-2.981-11.67-3.546-12.62c-2.37-3.998-4.419-6.91-4.419-11.26,0-9.141,7.41-16.55,16.55-16.55s16.55,7.41,16.55,16.55Z"/>
     <line x1="36" x2="36" y1="47.22" y2="35.28" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiLightBulbBlack = {
     <line x1="38.2" x2="43.98" y1="56.07" y2="54.89" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="28.02" x2="33.8" y1="51.6" y2="50.42" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLightBulbBlack

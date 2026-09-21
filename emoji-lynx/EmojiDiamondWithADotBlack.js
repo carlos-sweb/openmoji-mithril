@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "diamond with a dot" (black) [1F4A0]. */
-const EmojiDiamondWithADotBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDiamondWithADotBlack = lynxIcon(`
   <g id="line">
     <line x1="32" x2="24.5" y1="33" y2="25.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="40" x2="48.5" y1="33" y2="24.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiDiamondWithADotBlack = {
     <rect x="19.1581" y="19.3756" width="34.2487" height="34.2487" transform="translate(-15.1825 36.3462) rotate(-45)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <rect x="31.7574" y="32.7574" width="8.4853" height="8.4853" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDiamondWithADotBlack

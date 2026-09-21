@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "camera with flash" (color) [1F4F8]. */
-const EmojiCameraWithFlash = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCameraWithFlash = lynxIcon(`
   <g id="color">
     <circle cx="33.8525" cy="37.5908" r="4.9999" fill="#d0cfce"/>
     <path fill="#3f3f3f" d="m33.8524,27.5907c-2.1024,0-5.0159,1.4642-6.5495,2.6766,0,0,.9658,1.2952.6406,1.6224-.3262.3271-1.3249.369-1.3249.369-1.1046,1.4944-2.4297,3.3352-2.4297,5.3321,0,4.9629,4.9985,10.2978,9.9614,10.2978s9.7021-5.335,9.7021-10.2979-5.0371-10-10-10Zm0,16.0001c-3.3086,0-6-2.6914-6-6s2.6914-6,6-6,6,2.6914,6,6-2.6914,6-6,6Z"/>
@@ -26,7 +23,5 @@ const EmojiCameraWithFlash = {
     <circle cx="33.8524" cy="37.5907" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="13.8741 22.5596 5.6109 32.1725 15.7351 26.6968 17.075 39.0288 21.0205 27.7194 27.9435 31.8897 22.4349 22.913 31.889 17.3996 20.276 20.5804 19.2339 9.9071 16.1073 20.0856 5.6109 15.7738 13.8741 22.5596"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCameraWithFlash

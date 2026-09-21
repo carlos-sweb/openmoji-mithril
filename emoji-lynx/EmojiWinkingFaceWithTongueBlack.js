@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "winking face with tongue" (black) [1F61C]. */
-const EmojiWinkingFaceWithTongueBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWinkingFaceWithTongueBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40,31.7253c0.4132-0.344,2.2456-1.7915,4.9091-1.6364c2.1608,0.1259,3.61,1.2333,4.0909,1.6364"/>
@@ -13,7 +10,5 @@ const EmojiWinkingFaceWithTongueBlack = {
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M41.6597,41.818c0,6.0751-2.5324,11-5.6562,11 s-5.6563-4.9249-5.6563-11"/>
     <path d="M30,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,28,30,29.3448,30,31"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWinkingFaceWithTongueBlack

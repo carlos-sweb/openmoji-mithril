@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "interview" (color) [E24A]. */
-const EmojiInterview = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiInterview = lynxIcon(`
   <g id="color">
     <ellipse cx="20" cy="26.0208" rx="13.8" ry="13.8205" fill="#FCEA2B" stroke="#FCEA2B" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="#FCEA2B" stroke="none" d="M18.3981,39.9096C15.2441,44.248,11,46,5,46c2.874-1.916,5.748-5.6676,6.8636-8.617L18.3981,39.9096z"/>
@@ -27,7 +24,5 @@ const EmojiInterview = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M60.1364,52.663C61.252,55.6124,64.126,59.364,67,61.28c-6,0-10.2441-1.752-13.3981-6.0904"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M49.7251,55.0961 C43.0751,54.0095,38,48.2374,38,41.28c0-7.732,6.268-14,14-14s14,6.268,14,14c0,3.3337-1.1652,6.3952-3.1105,8.7995"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiInterview

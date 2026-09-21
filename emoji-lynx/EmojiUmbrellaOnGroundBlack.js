@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "umbrella on ground" (black) [26F1]. */
-const EmojiUmbrellaOnGroundBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiUmbrellaOnGroundBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.573,26.6752S24.2262,7.4424,45.8558,18.0329,55.5351,56.43,54.498,52.3157s-4.2925-2.564-4.2925-2.564-2.4084-3.7683-8.585-5.1281"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M17.5825,30.2648a11.97,11.97,0,0,1,9.4435,5.641c10.1234,2.5526,14.5945,8.7178,14.5945,8.7178"/>
@@ -14,7 +11,5 @@ const EmojiUmbrellaOnGroundBlack = {
     <line x1="22.0993" x2="34.5778" y1="59.7538" y2="38.8636" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="47.7399" x2="46.7143" y1="16.8287" y2="18.5457" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiUmbrellaOnGroundBlack

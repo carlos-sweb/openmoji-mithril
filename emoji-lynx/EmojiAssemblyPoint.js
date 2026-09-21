@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "assembly point" (color) [E080]. */
-const EmojiAssemblyPoint = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAssemblyPoint = lynxIcon(`
   <g id="color">
     <circle cx="36.0101" cy="21.1858" r="3.4779" fill="#fff"/>
     <path fill="#d22f27" d="m46.289,21.3899c0-6.0159-4.6073-10.9096-10.271-10.9096s-10.271,4.8937-10.271,10.9123c.0018.3005.1445,7.4974,8.3708,20.1793.53.8288,1.1424,1.2493,1.8196,1.2493,1.1879,0,1.9983-1.3088,2.0771-1.442,8.2789-12.689,8.2789-19.7028,8.2745-19.9893Zm-10.2709,4.3941c-2.5222,0-4.5742-2.052-4.5742-4.5742s2.052-4.5742,4.5742-4.5742,4.5742,2.052,4.5742,4.5742-2.052,4.5742-4.5742,4.5742Z"/>
@@ -25,7 +22,5 @@ const EmojiAssemblyPoint = {
     <circle cx="22.5904" cy="45.397" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="49.3921" cy="45.397" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAssemblyPoint

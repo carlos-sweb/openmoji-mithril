@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "saline drip" (color) [E30C]. */
-const EmojiSalineDrip = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSalineDrip = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m40.98,32.1777v6.4111c-.0471,3.0625-2.5675,5.5071-5.63,5.4606h-.71c-3.13.4462-3,4.1706-3,4.1706h-5.66s.13-3.7244-3-4.1706h-1.37c-3.0625.0465-5.5829-2.3981-5.63-5.4606v-6.4111h25Z"/>
     <path fill="#fff" d="m16.7838,31.3463s-.2656-10.404.3914-11.6241,2.2396-2.8335,3.3659-2.7397,15.264.0391,15.264.0391c0,0,3.7181.2348,4.3444,4.0313.5355,3.2465,0,10.3325,0,10.3325l-23.3656-.0391Z"/>
@@ -23,7 +20,5 @@ const EmojiSalineDrip = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m24.7312,9.8667c.4563,2.2588,2.6573,3.7201,4.9161,3.2639,1.6455-.3324,2.9315-1.6184,3.2639-3.2639h23.0888v55.1626"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m40.98,32.1777v6.4111c-.0471,3.0625-2.5675,5.5071-5.63,5.4606h-.71c-3.13.4462-3,4.1706-3,4.1706h-5.66s.13-3.7244-3-4.1706h-1.37c-3.0625.0465-5.5829-2.3981-5.63-5.4606v-6.4111h25Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSalineDrip

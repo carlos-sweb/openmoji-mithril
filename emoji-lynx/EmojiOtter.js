@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "otter" (color) [1F9A6]. */
-const EmojiOtter = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOtter = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M30.5206,30.6956c.8556.3943,1.7036,1.1046,2.45,3.1629"/>
     <path fill="#a57939" d="M38.4792,38.4068a17.5846,17.5846,0,0,1-5.5482.86,3.33,3.33,0,0,1-2.1582-.8086c-.14-.1166-.2537-.21-.2836-.2311a9.7692,9.7692,0,0,1-2.2671-3.6693h0c-.3573-.7-.7263-2.6367-.0554-3.4371a1.967,1.967,0,0,1,2.3539-.425c.8556.3943,1.675.7294,2.4215,2.7877"/>
@@ -63,7 +60,5 @@ const EmojiOtter = {
   <g id="color-foreground">
     <path fill="#a57939" d="M44.4448,44.628c-.03,2.4345-7.8851,5.1128-12.0379,3.2973-4.4271-1.9353-6.3237-6.284-5.1153-8.1263a1.9065,1.9065,0,0,1,2.985-.3947,3.9137,3.9137,0,0,0,3.2617.7079s1.382.2874,2.1685.4875C40.398,41.7926,44.4718,42.4651,44.4448,44.628Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOtter

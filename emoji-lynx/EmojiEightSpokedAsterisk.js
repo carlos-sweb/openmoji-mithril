@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "eight-spoked asterisk" (color) [2733]. */
-const EmojiEightSpokedAsterisk = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEightSpokedAsterisk = lynxIcon(`
   <g id="line-supplement">
     <line x1="36" x2="36" y1="20.9811" y2="51.0189" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
     <line x1="51.0189" x2="20.9811" y1="36" y2="36" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
@@ -22,7 +19,5 @@ const EmojiEightSpokedAsterisk = {
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M60,61H12a.9448.9448,0,0,1-1-1V12a.9448.9448,0,0,1,1-1H60a.9448.9448,0,0,1,1,1V60A.9448.9448,0,0,1,60,61Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEightSpokedAsterisk

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "musical keyboard" (black) [1F3B9]. */
-const EmojiMusicalKeyboardBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMusicalKeyboardBlack = lynxIcon(`
   <g id="line">
     <rect x="12.6294" y="12.0802" width="47.6616" height="47.6616" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="19.6398" y="12.0702" width="7.4038" height="30.9107" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiMusicalKeyboardBlack = {
     <line x1="36.4602" x2="36.4602" y1="47.433" y2="59.7418" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="48.3756" x2="48.3756" y1="47.433" y2="59.7418" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMusicalKeyboardBlack

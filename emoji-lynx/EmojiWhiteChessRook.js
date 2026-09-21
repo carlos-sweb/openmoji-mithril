@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "white chess rook" (color) [2656]. */
-const EmojiWhiteChessRook = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWhiteChessRook = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m17.19 11.55h8.926l-0.1167 6.763h5.439l0.01563-6.466h8.926v6.466h5.454l-0.1167-6.763h8.926v6.466l-5.359 0.2973-2.458 8.831 1e-6 19.9c1.148 4.735 2.169 9.533 6.708 12.61h-35.24c3.672-2.563 5.853-6.829 6.708-12.61v-19.9l-2.458-8.831-5.359-0.2973z"/>
     <path fill="#d0cfce" d="m35.91 59.65 10.91-22.56v9.949c0.5487 5.209 2.784 9.413 6.708 12.61z"/>
@@ -24,7 +21,5 @@ const EmojiWhiteChessRook = {
     <path stroke-linecap="round" stroke-linejoin="round" d="m18.3 59.65h35.24"/>
     <path stroke-linecap="round" stroke-linejoin="round" d="m49.28 18.31 5.359-0.2973v-6.466h-8.926l0.1167 6.763"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWhiteChessRook

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "deaf person" (color) [1F9CF]. */
-const EmojiDeafPerson = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDeafPerson = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M17.0985,61l1-4A13.7126,13.7126,0,0,1,24.71,48.215a10.25,10.25,0,0,1,5.6353-1.148c.225.0313-1.3287.251-1.0783.3947,7.9961,4.5894,12.1261,4.8623,16.9794,1.8752a6.4655,6.4655,0,0,1,5.9806-.4431C55.5247,50.3461,58.0985,53.419,58.0985,57v4"/>
   </g>
@@ -29,7 +26,5 @@ const EmojiDeafPerson = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.0713,46.0363l-.0062.8187a3.0988,3.0988,0,0,1-1.21,2.4507,8.0641,8.0641,0,0,1-3.4333,1.6379"/>
     <line x1="22.4219" x2="19.1568" y1="50.9436" y2="60.0006" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDeafPerson

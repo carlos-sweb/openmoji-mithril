@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "vibration mode" (black) [1F4F3]. */
-const EmojiVibrationModeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVibrationModeBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="60.9978,12 54.9993,19.9997 60.9978,27.9995 54.9993,35.9992 55.0058,35.9977 61,44.0005 54.9971,51.9972 60.9912,60"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="10.9993,60 16.9978,52.0003 10.9993,44.0005 16.9978,36.0008 16.9912,36.0023 10.9971,27.9995 17,20.0028 11.0058,12"/>
@@ -14,7 +11,5 @@ const EmojiVibrationModeBlack = {
     <circle cx="36" cy="56.0183" r="1.6714" fill="#000000" stroke="none"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="31.8214,14.2328 40.1786,14.2328 40.1786,14.2328 31.8214,14.2328"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVibrationModeBlack

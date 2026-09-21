@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nail polish: medium-light skin tone" (color) [1F485-1F3FC]. */
-const EmojiNailPolishMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNailPolishMediumLightSkinTone = lynxIcon(`
   <g id="line-supplement">
     <g>
       <rect x="15.3251" y="40.8262" rx="1.9492" width="3.8984" height="4.9305" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.8"/>
@@ -39,7 +36,5 @@ const EmojiNailPolishMediumLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.0822,43.5322s1.87-1.39,2.44-1.9154a3.9748,3.9748,0,0,0,1.4771-3.45,1.82,1.82,0,0,0-2.07-1.5135"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="43.152 25.408 52.816 11.013 58.03 13.766 48.201 28.747 45.418 26.907 43.152 25.408"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNailPolishMediumLightSkinTone

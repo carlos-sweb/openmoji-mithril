@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "volcano" (color) [1F30B]. */
-const EmojiVolcano = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVolcano = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="#D0CFCE" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M28.8,9.1c-0.4-0.7,1.6-4.2,4.6-4.4c3-0.3,5.2,1.5,4.4,3.6s-2.1,2.2-2.8,2.3l3.2,1.7c-0.8,2.1-7.8,2.7-6.5,5.6l-4,0.4 c0.1-1.5,0-3.7-1.5-4.9c-1.1-0.9-2.8-1.1-4.2-1.6c-2-0.7-2-2.7-1.4-4C21.3,6.4,22.4,5,24,5c1,0,2,0,3,1L28.8,9.1z"/>
     <polygon fill="#9B9B9A" points="63,57 56.4,49.1 53,40 45,34 40,34 36,22 40,34 36,22 32,24 24.2,22.1 19,34 17,46 9,57"/>
@@ -27,7 +24,5 @@ const EmojiVolcano = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.9,10.5c0.7-0.1,2-0.2,2.8-2.3s-1.4-3.9-4.4-3.6s-5,3.8-4.6,4.4"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31.6,17.9c-1.3-2.9,5.7-3.5,6.5-5.6"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVolcano

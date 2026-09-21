@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "melilla flag" (color) [1F3F4-E0065-E0073-E006D-E006C-E007F]. */
-const EmojiMelillaFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMelillaFlag = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#61b2e4"/>
     <path fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.62 34.32h8.784c0 10.31-2.035 10.34-4.416 10.34-2.431 0-4.368 0.09442-4.368-10.34z"/>
@@ -30,7 +27,5 @@ const EmojiMelillaFlag = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMelillaFlag

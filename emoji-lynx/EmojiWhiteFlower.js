@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "white flower" (color) [1F4AE]. */
-const EmojiWhiteFlower = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWhiteFlower = lynxIcon(`
   <g id="color"/>
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.92,17.2654 c-0.1494-2.5109-0.8696-4.9547-2.1057-7.1454l-2.1438,1.3618l-1.333-2.256c-2.1398,1.3226-3.9498,3.1159-5.2922,5.2433"/>
@@ -29,7 +26,5 @@ const EmojiWhiteFlower = {
     <path fill="none" stroke="#D22F27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.5691,32.7 c-3.4885-1.8278-8.5424-2.7863-14.6753,2.7938l1.7562,1.6874l0,0l-1.6872,1.7562c4.2018,3.9178,10.3775,4.8547,15.5522,2.3593"/>
     <path fill="none" stroke="#D22F27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.412,41.3381 c-4.4006,3.4813-6.2347,9.2934-4.6293,14.67l2.3492-0.706l0,0l0.706,2.3492c12.1151-4.3965,8.8766-14.8233,8.8766-14.8233 l0.7211-0.29c0,0,5.0513,9.5776,16.7732,4.5012l-1.015-2.2248l0,0l2.1833-1.118c-2.5966-4.9604-7.9238-7.8703-13.5007-7.3744"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWhiteFlower

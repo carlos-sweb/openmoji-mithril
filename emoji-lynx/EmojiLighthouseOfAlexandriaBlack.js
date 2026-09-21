@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lighthouse of alexandria" (black) [E212]. */
-const EmojiLighthouseOfAlexandriaBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLighthouseOfAlexandriaBlack = lynxIcon(`
   <g id="line">
     <line x1="36" x2="36" y1="7.6143" y2="10.0312" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <rect x="27.9402" y="32.6514" width="16.1197" height="3.5527" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiLighthouseOfAlexandriaBlack = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="45.949 62.528 42.395 36.204 36 36.204 29.605 36.204 26.051 62.528 36 62.528 45.949 62.528"/>
     <line x1="5.004" x2="66.9975" y1="62.5276" y2="62.5276" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0005"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLighthouseOfAlexandriaBlack

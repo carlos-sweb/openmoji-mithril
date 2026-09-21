@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person with skullcap: light skin tone" (black) [1F472-1F3FB]. */
-const EmojiPersonWithSkullcapLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonWithSkullcapLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <path d="m32.03 40.84a2.839 2.839 0 1 1-2.839-2.839 2.847 2.847 0 0 1 2.839 2.839"/>
     <path d="m45.65 40.84a2.839 2.839 0 1 1-2.839-2.839 2.847 2.847 0 0 1 2.839 2.839"/>
@@ -21,7 +18,5 @@ const EmojiPersonWithSkullcapLightSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12.61 31.03c-1.534 7.687 3.264 10.38 3.092 10.3"/>
     <circle cx="36" cy="24.98" r="3.953" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonWithSkullcapLightSkinToneBlack

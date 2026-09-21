@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "label" (color) [1F3F7]. */
-const EmojiLabel = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLabel = lynxIcon(`
   <g id="color">
     <path fill="#F4AA41" d="M24.7,16.4l-17,6v27.9l17,6h40v-40h-40V16.4z M16.2,41.4c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5 S19,41.4,16.2,41.4z"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiLabel = {
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M24.7,16.4l-17,6v27.9l17,6h40v-40h-40V16.4z M16.2,41.4c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S19,41.4,16.2,41.4z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLabel

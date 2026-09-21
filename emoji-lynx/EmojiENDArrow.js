@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "END arrow" (color) [1F51A]. */
-const EmojiENDArrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiENDArrow = lynxIcon(`
   <g id="color">
     <path fill="#3f3f3f" d="m56.25 31.81v-6.134h-27.84v-8.433l-12.66 11.5 12.66 11.5v-8.433z"/>
   </g>
@@ -16,7 +13,5 @@ const EmojiENDArrow = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33 54.75v-10l7.143 10v-10"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.06 44.68h4.383a2.08 2.08 0 0 1 2.08 2.08v5.841a2.08 2.08 0 0 1-2.08 2.08h-4.383v-10z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiENDArrow

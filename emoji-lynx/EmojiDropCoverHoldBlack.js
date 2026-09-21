@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "drop cover hold" (black) [E084]. */
-const EmojiDropCoverHoldBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDropCoverHoldBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.0438,47.82v.9658l-4.9071.66h-3.1687c-2.1412,0-3.1872.8168-3.1872,2.6516v2.2415h11.263c3.2113-.153,5.8349-2.2533,5.8349-5.2349"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38.6048,37.6739l3.4387,7.3661c1.2225,2.8287,2.0634,4.0522,4.4337,4.0522l12.2842-.4649c1.6779-.0825,2.7092-.6548,2.7092-2.3371,0-1.376-1.1523-2.0911-2.9109-2.0911h-11.1648l-3.1586-6.8046c-1.2092-2.8441-3.0349-4.0155-6.479-3.7377l-1.443.0713-9.2526.9907c-4.8164.535-6.7033,3.5406-6.7033,5.8348-.1647,2.3417,1.2228,4.5152,3.4163,5.3514"/>
@@ -16,7 +13,5 @@ const EmojiDropCoverHoldBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m28.04,42.8991c4.57,0,9.856-1.8741,11.9126-2.338"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.5974,33.018c0-1.957,1.5864-3.5435,3.5434-3.5436s3.5435,1.5864,3.5436,3.5434c0,1.957-1.5864,3.5435-3.5434,3.5436h-.0002"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDropCoverHoldBlack

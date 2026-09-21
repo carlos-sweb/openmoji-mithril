@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mirror" (black) [1FA9E]. */
-const EmojiMirrorBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMirrorBlack = lynxIcon(`
   <g id="line-supplement">
     <line x1="39.843" x2="43.4774" y1="24.5524" y2="29.6505" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="34.8239" x2="42.8042" y1="25.2117" y2="36.4059" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiMirrorBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.762,51.0963v6.1728h3.4289v-4.22"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.482,21.9973a7.9338,7.9338,0,0,0-1.8994,5.4362,8.7366,8.7366,0,0,0,1.079,4.3308v.0005a12.3867,12.3867,0,0,1,0,8.3983l0,.0023a8.7366,8.7366,0,0,0-1.0793,4.3312,7.9289,7.9289,0,0,0,1.9,5.4372"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMirrorBlack

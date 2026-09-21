@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "intricate" (color) [E24B]. */
-const EmojiIntricate = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIntricate = lynxIcon(`
   <g id="color">
     <ellipse cx="46.5" cy="39.5" rx="17.5" ry="17.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -14.3112 44.4497)" fill="#FCEA2B" stroke="none"/>
     <path fill="#F1B31C" stroke="none" d="M47.5607,54.7028c-0.789,0.789-1.6092,1.527-2.4482,2.231c4.9292,0.3899,9.9915-1.289,13.762-5.0594 c6.8342-6.8342,6.8342-17.9146,0-24.7487c-0.1168-0.1168-0.2441-0.2156-0.3634-0.3284 C58.8815,36.8519,55.2364,47.0271,47.5607,54.7028z"/>
@@ -22,7 +19,5 @@ const EmojiIntricate = {
     <circle cx="46.5" cy="39.5" r="17.5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="18" cy="21" r="11" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIntricate

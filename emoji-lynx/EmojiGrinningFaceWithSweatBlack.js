@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "grinning face with sweat" (black) [1F605]. */
-const EmojiGrinningFaceWithSweatBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGrinningFaceWithSweatBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M54.25,28.1758a4.2422,4.2422,0,0,1-4.2442-4.2427c0-4.2026,4.211-8.4619,4.253-8.5044.1543.1729,4.2343,4.3228,4.2343,8.5039A4.241,4.241,0,0,1,54.25,28.1758Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.0945,16.433A22.9582,22.9582,0,1,0,58.4938,31.1785"/>
@@ -14,7 +11,5 @@ const EmojiGrinningFaceWithSweatBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.6941,33.4036a4.7262,4.7262,0,0,0-8.6382,0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M48.9441,33.4036a4.7262,4.7262,0,0,0-8.6382,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGrinningFaceWithSweatBlack

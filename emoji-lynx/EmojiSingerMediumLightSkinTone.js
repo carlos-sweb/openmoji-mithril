@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "singer: medium-light skin tone" (color) [1F9D1-1F3FC-200D-1F3A4]. */
-const EmojiSingerMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSingerMediumLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#FFFFFF" d="M54.7775,58.5922c0,0,2-13.7973-10-13.7973c-3.1919,2.1192-5.9264,3.5837-9,3.5775h0.125 c-3.0736,0.0062-5.8082-1.4583-9-3.5775c-12,0-10,13.7973-10,13.7973"/>
     <path fill="#61B2E4" d="M26.9025,44.7949c-12,0-10,13.9674-10,13.9674h15.8934C32.7959,58.7623,28.3745,55.4976,26.9025,44.7949"/>
@@ -39,7 +36,5 @@ const EmojiSingerMediumLightSkinTone = {
     <path d="M41.9529,27.0468c0,1.1046-0.8954,2-2,2s-2-0.8954-2-2s0.8954-2,2-2C41.0573,25.0472,41.9525,25.9424,41.9529,27.0468"/>
     <rect x="59.3862" y="38.7816" width="4" height="10.4296" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.1305 56.2929)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="9.9999" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSingerMediumLightSkinTone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Greece" (color) [1F1EC-1F1F7]. */
-const EmojiFlagGreece = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagGreece = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#fff"/>
     <rect x="5" y="34" width="62" height="4" fill="#1e50a0"/>
@@ -20,7 +17,5 @@ const EmojiFlagGreece = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagGreece

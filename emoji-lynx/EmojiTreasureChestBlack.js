@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "treasure chest" (black) [1FA8E]. */
-const EmojiTreasureChestBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTreasureChestBlack = lynxIcon(`
   <g id="line" transform="translate(0 .00010023)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
     <path d="m14 40h20v15h-18c-1.1038 0-2-0.8962-2-2z"/>
     <path d="m34 40h20v13c0 1.1038-0.8962 2-2 2h-18z"/>
@@ -18,7 +15,5 @@ const EmojiTreasureChestBlack = {
     <path d="m16 40h30v-2c0-2.7614-2.2386-5-5-5-0.8615 0-1.6597 0.2378-2.3672 0.6215-0.696-0.7535-1.5977-1.3116-2.6428-1.5217 0.0012-0.0339 0.0101-0.0656 0.0101-0.0998 0-1.6569-1.3431-3-3-3s-3 1.3431-3 3c0 0.0085 0.0024 0.0163 0.0025 0.0247-0.8381-0.6343-1.8704-1.0247-3.0025-1.0247-2.7614 0-5 2.2386-5 5 0-1.6569-1.3431-3-3-3s-3 1.3431-3 3"/>
     <circle cx="33" cy="32" r="3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTreasureChestBlack

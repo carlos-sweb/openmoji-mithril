@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Mayotte" (color) [1F1FE-1F1F9]. */
-const EmojiFlagMayotte = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagMayotte = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#fff"/>
     <path fill="#1e50a0" stroke-width="0.7699" d="m28.63 36.7a1.357 1.357 0 0 0 1.21 1.346v0.0154h12.1v-0.0154a1.342 1.342 0 0 0 0.1513 0.0154 1.362 1.362 0 0 0 0-2.723 1.342 1.342 0 0 0-0.1513 0.0154v-0.0308a1.342 1.342 0 0 0 0.1513 0.0154 1.362 1.362 0 1 0 0-2.723 1.324 1.324 0 0 0-0.1513 0.0154v-0.0308a1.324 1.324 0 0 0 0.1513 0.0154 1.362 1.362 0 1 0-1.346-1.513h-0.333a1.354 1.354 0 0 0-2.693 0h-0.3328a1.354 1.354 0 0 0-2.693 0h-0.333a1.354 1.354 0 0 0-2.692 0h-0.3331a1.358 1.358 0 1 0-1.498 1.498v0.0308a1.354 1.354 0 0 0 0 2.692v0.0308a1.357 1.357 0 0 0-1.21 1.346z"/>
@@ -26,7 +23,5 @@ const EmojiFlagMayotte = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagMayotte

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "horse jumping hurdle" (color) [E157]. */
-const EmojiHorseJumpingHurdle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHorseJumpingHurdle = lynxIcon(`
   <g id="color">
     <rect x="16.237" y="35.3853" width="38.7486" height="5.7817" fill="#fff"/>
     <path fill="#fff" d="m15.23,56.02h-1.636c-.6292,0-1.139-.656-1.139-1.465V15.025c0-.8092.51-1.465,1.139-1.465h1.636c.6292,0,1.139.656,1.139,1.465v39.53c0,.8092-.5101,1.465-1.139,1.465Z"/>
@@ -45,7 +42,5 @@ const EmojiHorseJumpingHurdle = {
     <rect x="41.63" y="41.67" width="11.35" height="7.124" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="59.91 41.67 64.33 41.67 64.33 48.79 52.98 48.79 52.98 41.67 59.91 41.67"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHorseJumpingHurdle

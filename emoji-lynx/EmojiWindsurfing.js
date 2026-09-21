@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "windsurfing" (color) [E189]. */
-const EmojiWindsurfing = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWindsurfing = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.548">
     <path id="path13" d="m26.85 7.799 8.036-1.232 9.501 27.91"/>
     <path id="path15" d="m42.35 45.19-5.639 4.173"/>
@@ -33,7 +30,5 @@ const EmojiWindsurfing = {
     <path id="path50" transform="matrix(.7574 0 0 .7574 89.4 25.12)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m-63.64 34.32-8.274-2.369c-1.115-0.2829-2.294 0.08576-3.05 0.9533l-6.145 7.697c-0.6715 0.6748-0.7969 1.72-0.3041 2.535 0.44 0.51 1.719 0.1649 2.481-0.5977l4.825-5.058c0.8232-0.7818 2.06-0.9364 3.05-0.3813l5.243 2.955c1.101 0.5488 2.3 0.8728 3.527 0.9533h0.9532c1.213-0.09053 2.357-0.5955 3.241-1.43l0.4766-0.4766c0.8237-0.8903 1.413-1.971 1.716-3.146 0.1906-0.9533 0.4875-1.689 0.4875-1.689"/>
     <circle id="circle52" cx="47.82" cy="38.53" r="2.272" stroke-miterlimit="10" stroke-width="1.515"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWindsurfing

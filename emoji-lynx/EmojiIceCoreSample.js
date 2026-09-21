@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ice core sample" (color) [E2C4]. */
-const EmojiIceCoreSample = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIceCoreSample = lynxIcon(`
   <g id="color">
     <polygon fill="#ea5a47" points="31.312 41.391 31.312 66.125 40.687 66.125 40.687 32.625 31.312 32.625 31.312 41.391"/>
     <polygon fill="#d22f27" points="37.771 41.391 37.771 66.125 40.687 66.125 40.687 32.625 37.771 32.625 37.771 41.391"/>
@@ -28,7 +25,5 @@ const EmojiIceCoreSample = {
     <path fill="#ea5a47" d="M37.07,62.3038l4.2988-1.1665a2.2445,2.2445,0,0,0,1.5656-1.2692,1.6785,1.6785,0,0,0-1.2394-1.9813L41.67,58.9856a.9419.9419,0,0,1-.701.889l-4.3112,1.1395-6.026,1.4753c-.21.0571-1.3188.3239-1.5656,1.2692a2.7583,2.7583,0,0,0,.29,2.2988l.9744-1.4164a.9418.9418,0,0,1,.701-.8889Z"/>
     <path fill="#d22f27" d="M37.07,63.3038l4.2988-1.1665a3.0112,3.0112,0,0,0,1.4319-1.0228,1.0106,1.0106,0,0,0,.1425-.5293c.0339-1.0775.0339-.8932.0339-1.0435a7.9451,7.9451,0,0,1-2.1328,1.3658c-.1773.069-4.1869,1.1066-4.1869,1.1066l-6.026,1.4753a2.2445,2.2445,0,0,0-1.5656,1.2692c-.3176,1.6,1.4,1.9316,1.4,1.9316l-.1354-1.0492a.9418.9418,0,0,1,.701-.8889Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIceCoreSample

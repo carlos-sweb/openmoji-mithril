@@ -1,15 +1,10 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "part alternation mark" (black) [303D]. */
-const EmojiPartAlternationMarkBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPartAlternationMarkBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M57.3105,54.3405,46.9273,18.729c-2.33-4.3386-6.2667-1.5266-6.2667-1.5266l-6.91,5.7044L30.6177,17.009c-3.9368-5.5765-7.63,0-7.63,0l-7.5987,8.7282s-2.3361,2.3875.6161,5.34,6.6232-1.54,6.6232-1.54l3.286-3.748,3.9534,6.5206s2.3617,3.3372,6.1611-.77l4.0262-3.6184,9.0614,28.34a4.2285,4.2285,0,0,0,2.1411,2.5146c1.4508.7158,3.5588,1.2629,5.1377-.3873A4.167,4.167,0,0,0,57.3105,54.3405Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPartAlternationMarkBlack

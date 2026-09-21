@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "glass bottle" (black) [E0CB]. */
-const EmojiGlassBottleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGlassBottleBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="31" r="1"/>
     <circle cx="36" cy="35" r="1"/>
@@ -19,7 +16,5 @@ const EmojiGlassBottleBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.5 43.5h9"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38 11v1.5c0 4.5 5.5 16 5.5 19.5 0 2-1 3-1 5s1.5 3 1.5 6v24h-16v-24c0-3 1.5-4 1.5-6s-1-3-1-5c0-3.5 5.5-15 5.5-19.5v-1.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGlassBottleBlack

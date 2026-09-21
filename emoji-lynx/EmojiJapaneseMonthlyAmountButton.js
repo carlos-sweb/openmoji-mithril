@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “monthly amount” button" (color) [1F237]. */
-const EmojiJapaneseMonthlyAmountButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapaneseMonthlyAmountButton = lynxIcon(`
   <g id="color" transform="matrix(.2609 0 0 .2609 -91.17 -3.172)">
     <rect x="16.51" y="16.51" width="38.74" height="38.6" transform="matrix(4.749 0 0 4.749 317 -20.25)" fill="#b1cc33" stroke-width="0.8071"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiJapaneseMonthlyAmountButton = {
     <path transform="matrix(.2135 0 0 .2135 -137.9 4.23)" stroke-linecap="round" stroke-miterlimit="1.5" stroke-width="9.45" d="m754.3 215.7c14.58-12.42 24.19-30.87 26.54-46.22 2.799-18.31 2.862-41.02 2.838-44.45-0.165-23.16-0.775-39.31-0.775-39.31l88.19 0.091s-0.06 89.02-0.081 119.7c-4e-3 5.674-4.605 10.27-10.28 10.27h-23.5" clip-rule="evenodd"/>
     <rect x="16.51" y="16.51" width="38.74" height="38.74" stroke-linecap="round" stroke-width="1.614"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapaneseMonthlyAmountButton

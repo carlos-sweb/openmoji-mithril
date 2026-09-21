@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "phoenix" (black) [1F426-200D-1F525]. */
-const EmojiPhoenixBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPhoenixBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.066,45.887s-2.5-1.5-5.5-4.5c-2.7946-2.7946-5.9414-9.3186-6.4337-10.359"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.566,53.387c-3,1-5,0-5,0-4-1-9-7-9-7"/>
@@ -16,7 +13,5 @@ const EmojiPhoenixBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.566,22.387c-2-1-2.7071-3.7071-2-3,1,1,7,0,9,1s4.7889,5.8944,3,5c-2.0121-1.0061-3.0121-1-4.0182.0183-1.3585,1.3749-1.2361,3.7274.1307,5.0942l3.4497,3.3691"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.066,33.887c.3354-1.0062-.75-3.1875-1.5469-4.3594-.4478-.6586-.8316-1.3501-1.1301-2.0885-.9355-2.314-2.2034-6.9516.677-10.5522,4-5,13-7,13-7"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPhoenixBlack

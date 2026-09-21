@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "chrome canary" (color) [E065]. */
-const EmojiChromeCanary = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChromeCanary = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="28" fill="#fcea2b"/>
     <path fill="#fcea2b" fill-rule="evenodd" d="m34.31 27.16 8e-3 0.0467c2.003-0.3473 4.135-0.0214 6.033 1.074 4.305 2.485 5.78 7.99 3.294 12.29l-13.26 22.97c11.44 2.278 23.56-2.803 29.72-13.47 4.209-7.291 4.767-15.69 2.241-23.07h-26.34c-0.5771 0-1.142 0.0543-1.688 0.1581z" clip-rule="evenodd"/>
@@ -19,7 +16,5 @@ const EmojiChromeCanary = {
     <path stroke-linecap="round" d="m36 26h23"/>
     <circle cx="36" cy="36" r="28"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChromeCanary

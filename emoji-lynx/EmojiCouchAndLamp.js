@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "couch and lamp" (color) [1F6CB]. */
-const EmojiCouchAndLamp = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCouchAndLamp = lynxIcon(`
   <g id="color">
     <rect x="6.833" y="55.62" width="5.422" height="7.064" fill="#a57939" stroke-width="1.042"/>
     <rect x="51.82" y="55.62" width="5.422" height="7.064" fill="#a57939" stroke-width="1.042"/>
@@ -31,7 +28,5 @@ const EmojiCouchAndLamp = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m47.09 13.7s15.18-2.847 15.56 19.74c0.0985 5.856 0 23.43 0 23.43"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m58.92 59.61h7.546"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCouchAndLamp

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "carousel horse" (black) [1F3A0]. */
-const EmojiCarouselHorseBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCarouselHorseBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" points="32.55 5 32.55 16.57 32.55 23.16"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" points="37.55 5 37.55 15.83 37.55 22"/>
@@ -23,7 +20,5 @@ const EmojiCarouselHorseBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.55,25c-.2,2.269.3851,3.392,1,4,1.432,1.416,3.389.3868,5,2,1.149,1.15.8128,2.332,2,3,.9556.4213,2.0444.4213,3,0"/>
     <line x1="15.55" x2="15.55" y1="48" y2="52" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCarouselHorseBlack

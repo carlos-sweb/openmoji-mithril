@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman in manual wheelchair: light skin tone" (color) [1F469-1F3FB-200D-1F9BD]. */
-const EmojiWomanInManualWheelchairLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanInManualWheelchairLightSkinTone = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#d0cfce" d="M39.9686,59.62A12.2758,12.2758,0,0,1,27.5353,47.504h0A12.2757,12.2757,0,1,1,39.9686,59.62"/>
@@ -34,7 +31,5 @@ const EmojiWomanInManualWheelchairLightSkinTone = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.8318,12.994s.5786,-.27,.9252,.0177c.4081,.3371,.6856,1.5991,1.168,2.145a3.2608,3.2608,0,0,0,1.8128,1.0716"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanInManualWheelchairLightSkinTone

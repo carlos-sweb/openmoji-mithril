@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "blowfish" (color) [1F421]. */
-const EmojiBlowfish = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlowfish = lynxIcon(`
   <g id="color">
     <path fill="#6A462F" stroke="none" d="M51,35c0,11.0457-8.9543,20-20,20s-20-8.9543-20-20s8.9543-20,20-20c3.2428,0,6.3053,0.7718,9.0139,2.1416 C46.5315,20.4378,51,27.1971,51,35z"/>
     <path fill="#6A462F" stroke="none" d="M39.5833,16.3333C39.5833,16.3333,48,14,49,14s0.1667,5.3333-1.9167,8.1667"/>
@@ -43,7 +40,5 @@ const EmojiBlowfish = {
     <circle cx="27" cy="50" r="1" fill="#000000" stroke="none"/>
     <circle cx="40" cy="49" r="1" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlowfish

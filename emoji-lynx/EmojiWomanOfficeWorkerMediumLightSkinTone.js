@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman office worker: medium-light skin tone" (color) [1F469-1F3FC-200D-1F4BC]. */
-const EmojiWomanOfficeWorkerMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanOfficeWorkerMediumLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" d="M16.8466,58.8567c0,0-1.5465-13.8402,10.4535-13.8402c3.1919,2.1279,5.9264,3.5984,9,3.5922h-0.125 c3.0736,0.0062,5.1081-2.5643,8.3-4.6922c15.5705-0.0001,11.1,14.9402,11.1,14.9402"/>
     <polyline fill="#D0CFCE" points="36.615,54.1697 39.0302,57.439 45.3621,44.1395 52.1943,53.6302 40.3644,58.3477"/>
@@ -41,7 +38,5 @@ const EmojiWomanOfficeWorkerMediumLightSkinTone = {
     <line x1="51.0015" x2="59.4342" y1="52.5942" y2="52.5942" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="51.0015" x2="59.4342" y1="56.1785" y2="56.1785" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanOfficeWorkerMediumLightSkinTone

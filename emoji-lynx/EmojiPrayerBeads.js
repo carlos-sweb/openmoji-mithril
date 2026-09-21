@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "prayer beads" (color) [1F4FF]. */
-const EmojiPrayerBeads = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPrayerBeads = lynxIcon(`
   <g id="line-supplement">
     <circle id="xx_1_" cx="40.4665" cy="54" r="1.95"/>
   </g>
@@ -25,7 +22,5 @@ const EmojiPrayerBeads = {
   <g id="color-foreground">
     <path id="xx" fill="none" stroke="#D22F27" stroke-dasharray="0,6.7346,0,0,0,0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M47.6095,12.8474c1.1383,11.1934-2.5564,14.3792,7.9682,15.4424c10.5246,1.0632,0.6967,20.0417-13.9754,20.0417 S25.2386,38.0801,29.4125,33.9062c4.1738-4.1738-3.1185-6.2607-4.3102-4.1738s-17.9028,0.1524-9.9347-10.6242 S46.4711,1.654,47.6095,12.8474z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPrayerBeads

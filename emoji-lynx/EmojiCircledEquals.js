@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "circled equals" (color) [229C]. */
-const EmojiCircledEquals = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCircledEquals = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="26.68" fill="#fff" fill-rule="evenodd" paint-order="normal"/>
   </g>
@@ -14,7 +11,5 @@ const EmojiCircledEquals = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8.031" d="m28.03 42.18h15.95" clip-rule="evenodd"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8.031" d="m28.03 29.82h15.95" clip-rule="evenodd"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCircledEquals

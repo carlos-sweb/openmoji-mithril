@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clinical thermometer" (black) [E324]. */
-const EmojiClinicalThermometerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClinicalThermometerBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.8521,24.6873h0a4.7576,4.7576,0,0,0-6.7234-.2545L26.1505,39.2452c-1.336,1.2384-1.5632,4.9386-1.7681,5.1272l-3.1005,2.8552a2.3555,2.3555,0,0,0-.1371,3.3284l.1148.1246a2.3555,2.3555,0,0,0,3.3283.1371l3.1005-2.8552c.2642-.2432,3.7053-.6033,4.9309-1.7394L48.5976,31.4105A4.7574,4.7574,0,0,0,48.8521,24.6873Z"/>
     <line x1="23.4629" x2="46.253" y1="48.5753" y2="27.4172" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiClinicalThermometerBlack = {
     <rect x="36.8144" y="29.0347" rx="0.5234" width="2.7857" height="1.5706" transform="translate(32.2766 -18.2825) rotate(45)"/>
     <rect x="39.7268" y="26.2489" rx="0.5234" width="2.7857" height="1.5706" transform="translate(31.1598 -21.1579) rotate(45)"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClinicalThermometerBlack

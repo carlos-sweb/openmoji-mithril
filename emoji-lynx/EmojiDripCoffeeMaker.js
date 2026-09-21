@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "drip coffee maker" (color) [E155]. */
-const EmojiDripCoffeeMaker = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDripCoffeeMaker = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="M16.6168 37.555C16.837 36.0864 18.0986 35 19.5836 35H33.4164C34.9014 35 36.163 36.0864 36.3832 37.555L38.4832 51.555C38.7553 53.3688 37.3505 55 35.5164 55H17.4836C15.6495 55 14.2447 53.3688 14.5168 51.555L16.6168 37.555Z"/>
     <path fill="#fff" fill-rule="evenodd" d="M20.7439 35H19.5836C18.0986 35 16.837 36.0864 16.6168 37.555L14.5168 51.555C14.4656 51.8957 14.4737 52.2301 14.5327 52.5483C13.0333 51.8183 12 50.2798 12 48.5V36.5C12 34.0147 14.0147 32 16.5 32C18.4593 32 20.1262 33.2522 20.7439 35Z" clip-rule="evenodd"/>
@@ -29,7 +26,5 @@ const EmojiDripCoffeeMaker = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M50 38H52"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M50 29L52 29"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDripCoffeeMaker

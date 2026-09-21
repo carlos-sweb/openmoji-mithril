@@ -1,18 +1,13 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "thong sandal" (black) [1FA74]. */
-const EmojiThongSandalBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiThongSandalBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43.55,22.6038C44.816,10.1385,34.5016,10.97,34.5016,10.97s-8.1434.5758-9.4276,11.5684"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.3811,37.4927l2.3622,14.7248s.8348,10.0291,10.4589,8.4611c8-1.3034,5.5232-12.4566,5.5232-12.4566S44.1129,42.81,43.7066,36.62"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28.1894,35.1471s-11.22-3.6806,5.464-15.1572l.3479-2.83"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.6653,34.1658S51.3068,29.504,33.6534,19.99"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiThongSandalBlack

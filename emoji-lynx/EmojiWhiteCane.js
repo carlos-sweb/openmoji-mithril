@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "white cane" (color) [1F9AF]. */
-const EmojiWhiteCane = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWhiteCane = lynxIcon(`
   <g id="color">
     <path fill="#3f3f3f" d="M54.26,17.4722l6.5031-6.5031a1.2343,1.2343,0,0,0,0-1.7455l-.7191-.7192a1.2259,1.2259,0,0,0-1.7335,0l-6.5091,6.5091Z"/>
     <rect x="14.59" y="30.4268" width="45.0355" height="3.477" transform="translate(-11.8757 35.6601) rotate(-45)" fill="#d0cfce"/>
@@ -17,7 +14,5 @@ const EmojiWhiteCane = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.26,17.4722l6.5031-6.5031a1.2343,1.2343,0,0,0,0-1.7455l-.7191-.7192"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" d="M61.6354,8.867s1.2293-2.4586,4.9172-2.4586,4.9172,7.3758,3.6879,8.6051-3.6879-2.4586-4.9172-3.6879A17.684,17.684,0,0,0,61.6354,8.867Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWhiteCane

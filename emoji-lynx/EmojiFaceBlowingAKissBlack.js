@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face blowing a kiss" (black) [1F618]. */
-const EmojiFaceBlowingAKissBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceBlowingAKissBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M20.5907,30.0053c0.4075-1.5078,1.358-2.8098,2.6702-3.656c1.2228-0.9847,2.769-1.4753,4.3352-1.3805"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M51.0599,31.0689c-2.2698-2.2443-5.7488-2.7231-8.5407-1.1752"/>
@@ -15,7 +12,5 @@ const EmojiFaceBlowingAKissBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36.4141,41.091c0,0,10.5248,3.1956,0,5.5637c0,0,10.4577,2.9883,0,4.9125"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M53.0134,44.4703c-1.9101-0.5703-3.9277,0.5201-4.498,2.4301c-0.1899,0.6362-0.2018,1.3099-0.0342,1.948l0.111,0.3522l3.797,9.7215 l8.5568-6.0862c0.6097-0.4613,1.0532-1.1008,1.275-1.8435c0.5703-1.91-0.5199-3.9283-2.4306-4.4987 c-1.3381-0.3995-2.7576-0.0041-3.7038,1.0317c-0.0808,0.0887-0.2057,0.1237-0.3214,0.0892 c-0.1151-0.0344-0.2004-0.1321-0.2199-0.2508C55.3224,45.9789,54.3521,44.87,53.0134,44.4703z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceBlowingAKissBlack

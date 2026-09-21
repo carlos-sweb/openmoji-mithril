@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ring buoy" (color) [1F6DF]. */
-const EmojiRingBuoy = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRingBuoy = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.8742,15.0481C2.3563,28.1948,4.886,45.9647,15.4493,56.3005A30.3559,30.3559,0,0,0,44.75,63.6551C69.6439,53.2674,68.4718,28.893,56.2756,15.7239,47.1666,5.8883,31.8768,2.4252,16.8742,15.0481Z"/>
   </g>
@@ -37,7 +34,5 @@ const EmojiRingBuoy = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7922,51.3478a24.9933,24.9933,0,0,0,6,6l8.0237-8.0224a13.8661,13.8661,0,0,1-6.0047-5.9976Z"/>
     <circle cx="36.0001" cy="36.1701" r="14.9875" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRingBuoy

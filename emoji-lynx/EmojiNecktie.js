@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "necktie" (color) [1F454]. */
-const EmojiNecktie = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNecktie = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" stroke="#61b2e4" stroke-miterlimit="10" stroke-width="2" d="m16.1319,13.7776c-3.292,0-5.9607,2.6687-5.9607,5.9607v38.0785c0,3.292,2.6687,5.9607,5.9607,5.9607h38.0785c3.292,0,5.9607-2.6687,5.9607-5.9607V19.7383c0-3.292-2.6687-5.9607-5.9607-5.9607h-3.1635l-10.3509-5.8139-8.528-.2269-8.2214,2.3051-4.029,3.7356h-3.7857Z"/>
     <path fill="#92d3f5" stroke="#92d3f5" stroke-miterlimit="10" stroke-width="2" d="m20.2061,12.8622s-4.1164,2.6922,7.013,16.4569l3.9887-7.0302-6.8234-8.4142-2.4456-1.9713"/>
@@ -19,7 +16,5 @@ const EmojiNecktie = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.6791 31.6198 33.6717 31.6198 29.6463 63.7776 40.696 63.7776 36.6791 31.6198"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.6791 24.6625 33.6717 24.6625 32.168 28.1411 33.6717 31.6198 36.6791 31.6198 38.1829 28.1411 36.6791 24.6625"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNecktie

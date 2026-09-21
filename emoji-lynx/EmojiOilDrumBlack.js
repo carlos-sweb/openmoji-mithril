@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "oil drum" (black) [1F6E2]. */
-const EmojiOilDrumBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOilDrumBlack = lynxIcon(`
   <g id="line">
     <line x1="50" x2="23.78" y1="16.67" y2="16.67" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="23.78" x2="50" y1="29.78" y2="29.78" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -19,7 +16,5 @@ const EmojiOilDrumBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M50,29.78c-1.4057,1.3429-1.7607,3.6963-1.7607,6.376,0,2.937.125,5.4819,1.7607,6.734"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M50,42.89c-1.4057,1.3429-1.7607,3.6963-1.7607,6.376,0,2.937.125,5.4819,1.7607,6.734"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOilDrumBlack

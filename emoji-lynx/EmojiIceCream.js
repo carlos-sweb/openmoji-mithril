@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ice cream" (color) [1F368]. */
-const EmojiIceCream = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIceCream = lynxIcon(`
   <g id="color">
     <ellipse cx="35.9995" cy="21.0014" rx="9.9997" ry="10.0004" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.3062 31.6067)" fill="#FCEA2B"/>
     <path fill="#F1B31C" d="M43.0703,13.9375c-2.5937-2.5937-6.2578-3.4551-9.5713-2.6016c1.6748,0.4317,3.2608,1.2911,4.5713,2.6016 c3.9063,3.9063,3.9063,10.2378,0.001,14.1421c-1.3106,1.311-2.8975,2.1724-4.5713,2.602c3.3135,0.8536,6.9766-0.0078,9.5713-2.602 C46.9766,24.1753,46.9766,17.8438,43.0703,13.9375z"/>
@@ -25,7 +22,5 @@ const EmojiIceCream = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9467" d="M33,60v-6c0-2.7617-2.2393-5-5-5h-4h-3c-2.7607,0-5-2.2383-5-5v-3c0-1.1045,0.8955-2,2-2h36c1.1045,0,2,0.8955,2,2v3 c0,2.7617-2.2393,5-5,5h-3h-4c-2.7607,0-5,2.2383-5,5v6"/>
     <line x1="29" x2="43" y1="60" y2="60" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9467"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIceCream

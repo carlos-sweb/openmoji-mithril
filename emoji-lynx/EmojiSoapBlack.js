@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "soap" (black) [1F9FC]. */
-const EmojiSoapBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSoapBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M21.2364,27.2573a11.3923,11.3923,0,0,0-3.9031,3.8094"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M31.499,25.6752H45.8209a11.4406,11.4406,0,0,1,11.418,11.4075v3.6638A11.4406,11.4406,0,0,1,45.8209,52.154H27.0234A11.4406,11.4406,0,0,1,15.6055,40.7465V38.4358"/>
@@ -14,7 +11,5 @@ const EmojiSoapBlack = {
     <circle cx="14.7793" cy="34.3527" r="4.1633" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.6752,21.87a5.1348,5.1348,0,0,0-.4909.3643,4.1077,4.1077,0,0,0-.1777-.4986,4.1633,4.1633,0,1,0-1.9787,5.5454c.0665-.0315.1208-.0771.1848-.1116A5.1985,5.1985,0,1,0,23.6752,21.87Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSoapBlack

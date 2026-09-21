@@ -1,17 +1,12 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "teacup without handle" (black) [1F375]. */
-const EmojiTeacupWithoutHandleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTeacupWithoutHandleBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.5,20.3161H4c0,15.5398,5.1109,28.5562,15.9055,35.0476h32.1874c10.7962-6.4914,15.9071-19.5078,15.9071-35.0476H31.5"/>
     <line x1="25.5" x2="25.3334" y1="20.5" y2="31.4186" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="18.3238" y="29.4186" width="14.019" height="17.5238" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTeacupWithoutHandleBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "books" (color) [1F4DA]. */
-const EmojiBooks = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBooks = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="M61.2167,21.6411,37.911,15.0386a1.0068,1.0068,0,0,0-.5537.0019l-22.5947,6.627a.9484.9484,0,0,0-.1365.0719,5.3829,5.3829,0,0,0-1.8343,9.5426,5.3642,5.3642,0,0,0,.0663,8.6968,5.3776,5.3776,0,0,0,1.4856,9.5022l23.0146,6.7128a1.0034,1.0034,0,0,0,.5547.002l23.3057-6.6514a1.0008,1.0008,0,0,0,.7255-.9619V22.603A1,1,0,0,0,61.2167,21.6411Z"/>
     <polygon fill="#92d3f5" points="37.638 15.976 60.944 22.579 37.638 29.231 15.044 22.603 37.638 15.976"/>
@@ -20,7 +17,5 @@ const EmojiBooks = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.08,31.2942a4.4,4.4,0,0,0-.4554,8.4813l23.0141,6.713,23.3057-6.6516"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.08,40.04a4.4,4.4,0,0,0-.4554,8.4813l23.0141,6.713,23.3057-6.6516"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBooks

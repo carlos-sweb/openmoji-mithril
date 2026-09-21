@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "paw prints" (color) [1F43E]. */
-const EmojiPawPrints = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPawPrints = lynxIcon(`
   <g id="color">
     <path fill="#3f3f3f" d="m11.9757,19.2767s-.3253,2.1644-.1301,2.4924,1.8214,2.23,2.0817,2.23,1.9516.1968,1.9516.1968l1.1059-2.23-1.3011-2.23-2.4069-.9838-1.3011.5247Z"/>
     <polygon fill="#3f3f3f" points="17.0448 11.1712 16.9178 13.7029 18.5051 15.6777 20.2195 15.6777 21.1084 14.3934 20.7274 11.6315 18.1651 9.7531 17.0448 11.1712"/>
@@ -30,7 +27,5 @@ const EmojiPawPrints = {
     <ellipse cx="58.7502" cy="48.9832" rx="3.7636" ry="2.6884" transform="translate(-14.6955 70.3534) rotate(-56.043)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0001"/>
     <ellipse cx="53.6913" cy="41.331" rx="3.7634" ry="2.6883" transform="translate(-4.3103 76.3571) rotate(-68.7157)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPawPrints

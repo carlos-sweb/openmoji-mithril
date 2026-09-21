@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ninja: medium-light skin tone" (black) [1F977-1F3FC]. */
-const EmojiNinjaMediumLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNinjaMediumLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="19.875 46.59 9.329 28.985 14.739 25.611 25.91 43.573"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="14.206 30.088 13.508 35.961 22.129 37.493"/>
@@ -22,7 +19,5 @@ const EmojiNinjaMediumLightSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43.3209,43.47s-.4327,4.7916-6.6119,10.7171"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.7394,45.8433a25.1692,25.1692,0,0,1-9.2432,13.59"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNinjaMediumLightSkinToneBlack

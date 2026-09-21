@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "blue book" (color) [1F4D8]. */
-const EmojiBlueBook = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlueBook = lynxIcon(`
   <g id="color">
     <rect x="18" y="12" width="42" height="47.5" fill="#92d3f5"/>
     <path fill="#61b2e4" d="m12.5,12h6.4925l-1.25,47.5h-2.7361c-1.6604,0-2.5064-1.346-2.5064-3.0064V12Z"/>
@@ -21,7 +18,5 @@ const EmojiBlueBook = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m49.5633,32.8214c.2456.8558,1.0442,1.4328,1.9338,1.3973h0c.9665.1166,1.8446-.5723,1.9612-1.5388.1167-.9665-.5723-1.8446-1.5388-1.9612-.1403-.0169-.2821-.0169-.4224,0,.9665.1166,1.8446-.5723,1.9612-1.5388.1167-.9665-.5723-1.8446-1.5388-1.9612-.1403-.0169-.2821-.0169-.4224,0h0c-.8896-.0355-1.6882.5416-1.9338,1.3973"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlueBook

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man teacher: medium-dark skin tone" (black) [1F468-1F3FE-200D-1F3EB]. */
-const EmojiManTeacherMediumDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManTeacherMediumDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <path d="M27.57,15.9098c0.24,0.61,0.54,1.31,1.09,2H26.28c-0.26-0.48-0.44-0.9301-0.59-1.3c-0.33,0.43-0.61,0.87-0.85,1.3H11.83 v32.29h2.06c0.55,0,1,0.44,1,1c0,0.55-0.45,1-1,1h-3.06c-0.55,0-1-0.45-1-1v-34.29c0-0.55,0.45-1,1-1H27.57z"/>
     <path d="M61.77,16.9098v34.29c0,0.55-0.45,1-1,1h-2.59c-0.55,0-1-0.45-1-1c0-0.56,0.45-1,1-1h1.59v-32.29H47.55 c-0.55-0.67-1.21-1.33-1.98-2h15.2C61.32,15.9098,61.77,16.3597,61.77,16.9098z"/>
@@ -22,7 +19,5 @@ const EmojiManTeacherMediumDarkSkinToneBlack = {
     <path d="M53.0441,58.7525c-0.5096,0-0.9023-0.4491-0.8345-0.9541l3.3718-26.5033L54.1676,57.967 C54.1379,58.4091,53.4872,58.7525,53.0441,58.7525L53.0441,58.7525z"/>
     <path d="M53.0439,59.5029c-0.4599,0-0.8964-0.1982-1.1982-0.5439c-0.3027-0.3467-0.4404-0.8057-0.3789-1.2608l3.3701-26.498 c0.0508-0.3994,0.3975-0.6895,0.8115-0.6523c0.4014,0.0361,0.7032,0.3837,0.6817,0.7871L54.917,58.0068 C54.8506,58.9746,53.7676,59.5029,53.0439,59.5029z M53.7539,51.6025l-0.7998,6.2911l0.0898,0.1093 c0.1153,0,0.3028-0.0859,0.379-0.1572L53.7539,51.6025z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManTeacherMediumDarkSkinToneBlack

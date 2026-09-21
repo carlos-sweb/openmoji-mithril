@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lentils with spaetzle" (black) [E0C2]. */
-const EmojiLentilsWithSpaetzleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLentilsWithSpaetzleBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.0881,53.3746c1.4673,3.77,3.6856,6.1728,6.1679,6.1728,4.2314,0,7.6866-6.9862,7.972-15.8241a9.9982,9.9982,0,0,0-.0111-18.3571A8.9976,8.9976,0,0,0,39.7881,15.56"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.892,18.1835a8.9489,8.9489,0,0,0,1.1437,13.684,30.6026,30.6026,0,0,0-1.78,10.68,35.54,35.54,0,0,0,.2245,4.0161A15.3825,15.3825,0,0,0,34,49"/>
@@ -19,7 +16,5 @@ const EmojiLentilsWithSpaetzleBlack = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M45.6771,41.5083a2.4652,2.4652,0,0,1-3.06-2.731A21.96,21.96,0,0,0,40.159,24.8217a24.8832,24.8832,0,0,0-9.4063-9.3508,2.4422,2.4422,0,0,1-.8916-3.3558,2.485,2.485,0,0,1,3.38-.8978A29.7714,29.7714,0,0,1,44.4946,22.4454a26.7994,26.7994,0,0,1,3.0129,17.037A2.4752,2.4752,0,0,1,45.6771,41.5083Z"/>
     <circle cx="36" cy="36" r="28" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLentilsWithSpaetzleBlack

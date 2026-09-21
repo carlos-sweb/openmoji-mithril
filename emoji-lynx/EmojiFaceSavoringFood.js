@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face savoring food" (color) [1F60B]. */
-const EmojiFaceSavoringFood = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceSavoringFood = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="24" fill="#FCEA2B"/>
     <path fill="#EA5A47" d="M50.5707,44.471c0,0,6.3864,4.2101,6.3864,7.6241c0,2.4671-1.5752,4.5107-4.2717,4.5107 c-3.7214,0-7.6844-6.2448-7.6844-6.2448"/>
@@ -20,7 +17,5 @@ const EmojiFaceSavoringFood = {
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M50.5707,44.471c0,0,6.3864,4.2101,6.3864,7.6241 c0,2.4671-1.5752,4.5107-4.2717,4.5107c-3.7214,0-7.6844-6.2448-7.6844-6.2448"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M20.1657,41.3575C22.3985,47.9591,28.644,52.7116,36,52.7116c7.3561,0,13.6024-4.7533,15.8349-11.3559"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceSavoringFood

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "leafless tree" (color) [1FABE]. */
-const EmojiLeaflessTree = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLeaflessTree = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M40.0843,30.1896l7.864-5.1752c1.9668-1.2943,4.5973-.8659,6.0517.9856h0s-8.8623,6.2036-8.8623,6.2036c-.7444.5211-1.3327,1.2351-1.7017,2.0655l-2.5741,5.7917c-.5683,1.2786-.8619,2.6622-.8619,4.0614v9.536c0,1.4839.6591,2.8911,1.7991,3.8411l4.2009,3.5008-6.7508-1.6877c-.7608-.1902-1.5625.0818-2.0505.6956l-1.1986,1.5075-1.104-1.3885c-.5352-.6731-1.4408-.9287-2.2489-.6349l-9.647,3.508,7.0697-5.4987c1.2179-.9473,1.9303-2.4038,1.9303-3.9468v-13.5546l-6.5822-8.4629c-.275-.3536-.6257-.6411-1.0264-.8415l-13.3914-6.6957,16.2429,3.6095c1.1357.2524,2.1478.8929,2.8621,1.8112l2.9177,3.7513,1.1526-4.4285-4.0458-12.3491c-.3399-1.0374-.4324-2.1399-.2702-3.2195l.6728-4.4777,9.5522,21.4924Z"/>
     <line x1="33.0227" x2="34.1753" y1="33.1721" y2="28.7436" fill="none" stroke="#a57939" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiLeaflessTree = {
     <line x1="47.6569" x2="47.6569" y1="25.2014" y2="14.7656" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="18.758" x2="21.4378" y1="18.5077" y2="26.3195" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLeaflessTree

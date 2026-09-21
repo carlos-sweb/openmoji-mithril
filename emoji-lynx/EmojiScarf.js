@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "scarf" (color) [1F9E3]. */
-const EmojiScarf = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiScarf = lynxIcon(`
   <g id="color">
     <path id="Scarf_Color_1" fill="#ea5a47" d="M58.5325,26.2869c-.7637-4.5368-5.5179-3.3408-6.6654-4.8738,0,0,1.5728-3.7014.79-6.2409-.84-2.7235-4.5033-4.4717-5.0751-4.0175a20.7541,20.7541,0,0,1-11.6084,4.017,20.7541,20.7541,0,0,1-11.6084-4.017c-.5718-.4542-4.2353,1.294-5.0751,4.0175A8.2083,8.2083,0,0,0,19.397,19.27a2.65,2.65,0,0,1-1.9159,3.2084c-1.6963.422-3.6067,1.0736-4.067,3.8084-1.1975,7.1144,3.9252,8.4664,6.6654,8.8068,7.8862.98,23.8853.8409,31.7876,0C54.6128,34.8016,59.73,33.4013,58.5325,26.2869Z"/>
     <path id="Scarf_Color_2" fill="#ea5a47" d="M41.786,35.7819s7.049-.4124,7.4305-.4535a33.6533,33.6533,0,0,0,7.8259-1.8118c.0192-.0058,0,5.6384,0,5.6384-.1608,6.5671-.8528,16.53-.8528,16.53L42.8,57.1252s-.156-10.7842-.2307-17.1464c-.0015-.13-.7821-.834-.7836-.96Z"/>
@@ -24,7 +21,5 @@ const EmojiScarf = {
     <line id="Scarf_Line_6" x1="46.8874" x2="46.8874" y1="60.6356" y2="54.6211" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path id="Scarf_Line_7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M22.98,23.4314c3.7066,1.6744,7.5693,2.1755,12.993,2.1755a25.1354,25.1354,0,0,0,7.1648-1.0878"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiScarf

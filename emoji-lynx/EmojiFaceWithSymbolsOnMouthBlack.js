@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with symbols on mouth" (black) [1F92C]. */
-const EmojiFaceWithSymbolsOnMouthBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithSymbolsOnMouthBlack = lynxIcon(`
   <g id="line-supplement">
     <line x1="44.96" x2="44.96" y1="44.3741" y2="48.8453" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="44.9259" cy="51.6467" r="1"/>
@@ -25,7 +22,5 @@ const EmojiFaceWithSymbolsOnMouthBlack = {
     <line x1="49" x2="42" y1="25.1126" y2="29.1126" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <rect x="19.868" y="41.076" rx="4.0768" width="32.2641" height="13.5745" fill="none" stroke="#000" stroke-miterlimit="2" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithSymbolsOnMouthBlack

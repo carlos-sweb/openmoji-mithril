@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "colossus of rhodes" (black) [E210]. */
-const EmojiColossusOfRhodesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiColossusOfRhodesBlack = lynxIcon(`
   <g id="line">
     <line x1="34.3155" x2="32.4374" y1="17.7316" y2="15.8536" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="35.9519" cy="19.3681" r="2.3143" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -19,7 +16,5 @@ const EmojiColossusOfRhodesBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="44.299 65 44.299 60.953 55.019 60.953"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39.8324,29.3244l1.5149,9.5872L47.805,58.985l.0015-.0006a1.46,1.46,0,0,1-2.6723,1.1667l-7.33-16.9553a1.8584,1.8584,0,0,0-3.6578,0l-7.33,16.9553a1.46,1.46,0,0,1-2.6724-1.1667l.0016.0006,6.4577-20.0734,1.5148-9.5872"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiColossusOfRhodesBlack

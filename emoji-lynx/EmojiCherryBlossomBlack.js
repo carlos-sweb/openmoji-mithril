@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cherry blossom" (black) [1F338]. */
-const EmojiCherryBlossomBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCherryBlossomBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.5589,46.5211 c-1.3349-0.7304-2.6211-1.6939-3.6593-2.9643c-3.993-4.886-2.805-12.462-2.805-12.462s5.0132,0.2297,9.0421,2.9018"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.0696,24.6209c-1.7699-3.313-2.9507-8.3121,2.2021-13.9802l1.5576,1.5576h0.0025"/>
@@ -18,7 +15,5 @@ const EmojiCherryBlossomBlack = {
     <line x1="38.2634" x2="40.7196" y1="29.5137" y2="31.9736" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.1626,43.8927 c-3.438,3.548-7.676,10.246-5.829,20.735"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCherryBlossomBlack

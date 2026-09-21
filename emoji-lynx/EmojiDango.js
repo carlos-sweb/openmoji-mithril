@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "dango" (color) [1F361]. */
-const EmojiDango = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDango = lynxIcon(`
   <g id="color">
     <ellipse cx="36.1418" cy="35.9995" rx="10" ry="9.9996" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -14.8698 36.0984)" fill="#FFFFFF" stroke="none"/>
     <ellipse cx="22.1423" cy="21.9994" rx="9.9996" ry="10.0002" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.0706 22.1005)" fill="#ea5a47" stroke="none"/>
@@ -24,7 +21,5 @@ const EmojiDango = {
     <ellipse cx="50.2842" cy="50.1416" rx="10.0003" ry="10.0003" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -20.7276 50.2424)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="60.1426" x2="67.1426" y1="60" y2="67" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDango

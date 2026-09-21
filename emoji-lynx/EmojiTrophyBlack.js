@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "trophy" (black) [1F3C6]. */
-const EmojiTrophyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTrophyBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m52.219,11.832c.1581,0,.275.1446.2389.2984-.2055.8767-.9426,4.2922-3.5876,17.5156-1.588,7.942-5.5,12.572-12.833,12.572s-11.245-4.5-12.833-12.443c-2.414-11.8492-3.667-17.943-3.667-17.943h32.6817Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m23.0443,31.479s.079-.261-5.421-3.928c-2.528-1.683-5.459-3.9-5.459-6.943s2.5-5.11,5.539-5.11h1.513"/>
@@ -14,7 +11,5 @@ const EmojiTrophyBlack = {
     <circle cx="36.0373" cy="24.581" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="36.0373" x2="36.0373" y1="50.332" y2="42.218" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTrophyBlack

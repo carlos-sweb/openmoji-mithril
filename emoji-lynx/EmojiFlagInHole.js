@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag in hole" (color) [26F3]. */
-const EmojiFlagInHole = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagInHole = lynxIcon(`
   <g id="color">
     <path fill="#B1CC33" stroke="none" d="M17.0033,68c0-5.6246-0.5417-10.3318,8.1621-11.6317c0.1915,2.5172,2.2717,3.5067,4.8379,3.5067 s4.6464-0.9896,4.8379-3.5067c8.7037,1.2999,8.4122,6.0071,8.4122,11.6317H17.0033z"/>
     <path fill="#5C9E31" stroke="none" d="M24.4252,68h18.8293c0-2.5777,0.097-5.6094-1.0543-7.6507C42.2002,66.9583,30.1722,68,24.4252,68z"/>
@@ -23,7 +20,5 @@ const EmojiFlagInHole = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.0033,28.75v30.8832c0,0,1.8471,0.5469,4,0V28.75"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.0045,24.7409l3.9988-0.0017l21.0638-4.9902h-0.0013c1.0825-0.3304,1.9375-0.8674,1.9375-1.9375s-0.9144-1.6427-1.9375-1.9375 l-21.0625-4.9899h-4L28.0045,24.7409z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagInHole

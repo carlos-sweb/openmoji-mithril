@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "dotnet" (black) [E04C]. */
-const EmojiDotnetBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDotnetBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-linejoin="round">
     <path stroke-width="2" d="m59.03 60h-46.07a0.9679 0.9679 0 0 1-0.9649-0.9651v-46.07a0.9679 0.9679 0 0 1 0.9651-0.9649h46.07a0.9679 0.9679 0 0 1 0.9649 0.9651v46.07a0.9679 0.9679 0 0 1-0.9651 0.9649z"/>
     <g transform="matrix(1.55 0 0 1.55 135.6 111.9)" clip-rule="evenodd">
@@ -23,7 +20,5 @@ const EmojiDotnetBlack = {
     <path stroke-linecap="round" stroke-miterlimit="10" stroke-width="4.453" d="m53.82 41.34c-0.4564-1.777-2.429-3.11-4.793-3.11-2.703 0-4.893 1.743-4.893 3.896 0 2.151 2.191 3.896 4.893 3.896l-0.1002 0.01336c2.703 0 4.893 1.745 4.893 3.896 0 2.153-2.191 3.896-4.893 3.896-2.364 0-4.337-1.336-4.793-3.112" clip-rule="evenodd" display="none"/>
     <path stroke-linecap="round" stroke-miterlimit="10" stroke-width="4.456" d="m36.74 38.23v10.03c0 3.077-2.493 5.569-5.569 5.569-1.432 0-2.738-0.5414-3.727-1.43" clip-rule="evenodd" display="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDotnetBlack

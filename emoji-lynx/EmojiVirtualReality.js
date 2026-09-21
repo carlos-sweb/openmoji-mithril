@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "virtual reality" (color) [E1CA]. */
-const EmojiVirtualReality = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVirtualReality = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M45.1,52.5C45,56.6,44,63.3,44,63.3l-17.2,0.1l0.1-5.8c0,0-0.2-11.2-5.3-15.5c-10.3-8.6-7.6-26.7,3.7-31.2 C36.5,6.4,47.6,9.7,51,14.7s0.6,9.2,0.6,9.2s-0.8,1.5,1.1,4.6S57.6,39,57.6,39l-4.1,1.4c0,0,2,9.5-0.8,10.9s-8.7,0.8-13.2-0.6"/>
     <path fill="#9B9B9A" d="M59.2,18v15.7H44.7c0,0-8.7-7.5,0-16.2h14.5V18z"/>
@@ -26,7 +23,5 @@ const EmojiVirtualReality = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.6,22H14.5c0,0-2,6.1,0,8.1H42"/>
     <line x1="54.8" x2="54.8" y1="17.6" y2="33.6" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVirtualReality

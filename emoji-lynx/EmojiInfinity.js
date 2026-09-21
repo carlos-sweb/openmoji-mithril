@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "infinity" (color) [267E]. */
-const EmojiInfinity = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiInfinity = lynxIcon(`
   <g id="color">
     <path fill="#9b9b9a" stroke="#9b9b9a" stroke-width="2" d="m36 39.44c-4.335 4.335-8.841 9.096-15.73 9.096-7.141 0-12.24-5.271-12.24-12.58 0.05558-7.058 5.863-12.67 12.92-12.54 6.29 0 10.97 4.973 15.05 9.054 4.335-4.336 8.841-9.054 15.73-9.054 7.226 0 12.24 5.229 12.24 12.54-0.05592 7.058-5.863 12.75-12.92 12.62-6.29 0-10.97-5.057-15.05-9.137zm-3.4-3.444c-3.315-3.06-6.801-7.522-11.73-7.522-4.129 0.0055-7.475 3.351-7.48 7.48-0.2047 4.113 3.108 7.584 7.226 7.522 4.844 5e-4 8.754-4.166 11.98-7.48zm26.01-0.0417c0.205-4.113-3.108-7.543-7.226-7.48-4.846 0-8.756 4.165-11.99 7.48 3.315 3.06 6.8 7.522 11.73 7.522 4.129-0.0057 7.476-3.393 7.482-7.522z"/>
   </g>
@@ -14,7 +11,5 @@ const EmojiInfinity = {
     <line x1="32.6" x2="36" y1="36" y2="32.51" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="36" x2="39.4" y1="39.49" y2="36" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiInfinity

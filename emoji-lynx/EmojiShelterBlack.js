@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shelter" (black) [E098]. */
-const EmojiShelterBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShelterBlack = lynxIcon(`
   <g id="line">
     <line x1="60.0633" x2="60.0633" y1="61.4636" y2="20.1288" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="35.7945" x2="63.8" y1="9.2474" y2="28.0984" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -26,7 +23,5 @@ const EmojiShelterBlack = {
     <circle cx="31.2056" cy="33.8729" r="2.7168" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="40.7019" cy="33.8729" r="2.7168" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShelterBlack

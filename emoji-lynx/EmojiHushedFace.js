@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hushed face" (color) [1F62F]. */
-const EmojiHushedFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHushedFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#FCEA2B"/>
     <ellipse cx="36" cy="48.395" rx="5.2452" ry="6.5383" fill="#FFFFFF"/>
@@ -21,7 +18,5 @@ const EmojiHushedFace = {
     <path d="M30,35c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,32,30,33.3448,30,35"/>
     <path d="M48,35c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,33.3448,48,35"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHushedFace

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hot springs" (color) [2668]. */
-const EmojiHotSprings = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHotSprings = lynxIcon(`
   <g id="color">
     <path fill="none" stroke="#ea5a47" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.9614,12.3875s-9.4036,7.4062-1.7964,16.3364S28.3686,45.06,28.3686,45.06h-2s9.4036-7.4061,1.7964-16.3363,1.7964-16.3364,1.7964-16.3364Z"/>
     <path fill="none" stroke="#ea5a47" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.277,12.099s-9.4036,7.4062-1.7964,16.3364-1.7964,16.3363-1.7964,16.3363h-2s9.4036-7.4062,1.7964-16.3363S38.277,12.099,38.277,12.099Z"/>
@@ -24,7 +21,5 @@ const EmojiHotSprings = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.7964,12.099S28.3928,19.5052,36,28.4354"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.2036,44.7717S43.6072,37.3655,36,28.4354"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHotSprings

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Netscape Navigator" (color) [E055]. */
-const EmojiNetscapeNavigator = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNetscapeNavigator = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="m58,11H14c-1.6569,0-3,1.3431-3,3v44c0,1.6569,1.3431,3,3,3h44c1.6569,0,3-1.3431,3-3V14c0-1.6569-1.3431-3-3-3Z"/>
     <path fill="#3f3f3f" fill-rule="evenodd" d="m61,46.2467c-7.6472-3.3735-16.1048-5.2467-25-5.2467s-17.3528,1.8732-25,5.2467v11.7533c0,1.6569,1.3431,3,3,3h44c1.6569,0,3-1.3431,3-3v-11.7533Z"/>
@@ -19,7 +16,5 @@ const EmojiNetscapeNavigator = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m40,39c-3.8669-4.5114-7.2192-8.4224-12-14v17c0,1.1046.8954,2,2,2h1v3h-9v-3h1c1.1046,0,2-.8954,2-2v-17c0-1.1046-.8954-2-2-2h-2v-3h8l17,19v-15c0-1.1046-.8954-2-2-2h-1v-3h9v3h-1c-1.1046,0-2,.8954-2,2v16"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="m61,46.2467c-7.6472-3.3735-16.1048-5.2467-25-5.2467-1.6832,0-3.3507.0671-5,.1987m-20,5.048c2.8909-1.2753,5.8976-2.3362,9-3.1625"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNetscapeNavigator

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no littering" (color) [1F6AF]. */
-const EmojiNoLittering = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoLittering = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="26" fill="#fff"/>
     <path fill="#fcea2b" d="m44.37 51.95a20.26 20.26 0 0 1-0.3614-3.468c0.012-1.251 0.2252-2.51-0.4312-3.632a1.501 1.501 0 0 0-2.59 1.514c0.2483 0.4244 0.03 1.397 0.024 1.871-0.0074 0.5543-0.0152 1.11 6e-4 1.664a22.69 22.69 0 0 0 0.4655 2.847c0.2932 1.902 3.184 1.094 2.893-0.7975z"/>
@@ -32,7 +29,5 @@ const EmojiNoLittering = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.39 37.64-0.8574-12.54"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.15 31.74 0.307-6.63"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoLittering

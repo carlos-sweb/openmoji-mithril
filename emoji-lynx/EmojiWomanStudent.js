@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman student" (color) [1F469-200D-1F393]. */
-const EmojiWomanStudent = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanStudent = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" d="M54.8495,58.9165c0,0,2-14-10-14c-3.1919,2.1279-5.9264,3.5984-9,3.5922h0.125 c-3.0736,0.0062-5.8082-1.4643-9-3.5922c-12,0-10,14-10,14"/>
     <polygon fill="#9B9B9A" points="45.1188,12.2713 35.8088,13.1813 26.7388,12.2913 21.2988,11.7613 35.1788,9.2413 50.3088,11.7613"/>
@@ -37,7 +34,5 @@ const EmojiWomanStudent = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.1188,11.7613v0.51v7.97c0,0-6.72-0.27-9.19,2.63"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="50.3088,11.7613 35.1788,9.2413 21.2988,11.7613"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanStudent

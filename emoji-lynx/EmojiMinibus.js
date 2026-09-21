@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "minibus" (color) [1F690]. */
-const EmojiMinibus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMinibus = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" stroke="none" d="M61.0833,53.0625l3.4792-1H67L66.875,47.5h-0.6875c0,0,0.625-17.625-1.75-18.5 c-2.375-0.875-27.6875-0.5625-30.8125,0S27,28.625,15.75,39.9375L8,42.48c0,0-1.5,0.8325-1.5625,5.2075c0,0-0.875,0.25-0.75,1.5 c0.1164,1.1644-0.2544,4.2792,4.9688,4.5313"/>
     <circle cx="16.4803" cy="52.2917" r="3" fill="#d0cfce" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -28,7 +25,5 @@ const EmojiMinibus = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M35.0625,40.6539h21.7707c0.2292,0,0.4515-0.0788,0.6296-0.2231l2.1667-1.7556C59.8639,38.4853,60,38.1998,60,37.8982v-4.9607"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="61.6577,42.849 61.6577,47.5988 63.1161,48.0481"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMinibus

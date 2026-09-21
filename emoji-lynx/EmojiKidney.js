@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "kidney" (color) [E316]. */
-const EmojiKidney = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiKidney = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#D22F27" d="M25.942,31.2662c-1.6653-1.6314-2.8128-3.7174-3.2992-5.9974c-0.4464-2.2508-0.2846-4.9334,2.1864-6.5942 c0,0,10.4386-7.3873,19.5924,0c0,0,11.081,6.8252,9.3948,24.6511c0,0-0.1606,12.2855-12.687,12.4461 c0,0-6.1828,1.5256-6.8252-8.5918c0.0609-0.9424,0.059-1.8878-0.0055-2.83c-0.2494-3.8546-2.0436-7.4455-4.9764-9.9593 C28.2947,33.5075,27.0856,32.4184,25.942,31.2662z"/>
@@ -21,7 +18,5 @@ const EmojiKidney = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.7879,33.69 c-0.4326,0.3737-0.7294,0.88-0.8442,1.44c-0.1346,0.6446-0.0589,1.3153,0.2161,1.9136c0.3386,0.7868,0.7848,2.5839-0.3043,5.44"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.1566,42.0087 l6.7782-2.3365c0,0,5.6207-2.2483,6.4237-5.701c0,0-0.3212-6.0223,2.0877-7.3071"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiKidney

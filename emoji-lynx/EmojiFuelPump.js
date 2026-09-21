@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fuel pump" (color) [26FD]. */
-const EmojiFuelPump = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFuelPump = lynxIcon(`
   <g id="color">
     <rect x="15" y="16" width="20" height="40" fill="#d0cfce" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="#ea5a47" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="35,46 35,36 63,36 63,46"/>
@@ -29,7 +26,5 @@ const EmojiFuelPump = {
     <path fill="#000000" stroke="none" d="M13,38c0,0.55-0.3375,1-0.75,1h-4.5C7.3375,39,7,38.55,7,38s0.3375-1,0.75-1h4.5C12.6625,37,13,37.45,13,38z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M12,52c-4-6-1-7-2-14"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFuelPump

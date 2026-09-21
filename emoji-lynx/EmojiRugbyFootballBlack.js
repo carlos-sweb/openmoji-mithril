@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rugby football" (black) [1F3C9]. */
-const EmojiRugbyFootballBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRugbyFootballBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M58.6194,13.2261c-12.3292-3.2325-25.9985-0.0171-35.6616,9.646c-9.6832,9.6832-12.8918,23.3893-9.6257,35.7385l0.0486,0.0486 c12.3292,3.2325,25.9985,0.0171,35.6616-9.646C58.7255,39.33,61.934,25.6239,58.668,13.2747"/>
     <line x1="58.6692" x2="13.3333" y1="13.276" y2="58.6119" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -19,7 +16,5 @@ const EmojiRugbyFootballBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M46.0156,36.0794c0,1.8198-0.4861,3.5261-1.3355,4.996"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M30.9861,27.4344c1.4575-0.8498,3.1494-1.3415,4.9551-1.3547"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRugbyFootballBlack

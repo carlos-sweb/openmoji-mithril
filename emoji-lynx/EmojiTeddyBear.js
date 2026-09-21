@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "teddy bear" (color) [1F9F8]. */
-const EmojiTeddyBear = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTeddyBear = lynxIcon(`
   <g id="color">
     <path fill="#6a462f" d="M30.5611,10.066a7.5009,7.5009,0,1,0-8.9647,9.7881Z"/>
     <path fill="#6a462f" d="M50.4041,19.8542A7.5008,7.5008,0,1,0,41.44,10.0649Z"/>
@@ -35,7 +32,5 @@ const EmojiTeddyBear = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.4348,41.9494,43.6438,48.01a3.22,3.22,0,0,1-4.2578,1.3235h0A3.22,3.22,0,0,1,37.96,44.9867l1.0163-1.9848"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.2861,58.0782s9.4536,6.5808,23.4278,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTeddyBear

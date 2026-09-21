@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pinching hand" (black) [1F90F]. */
-const EmojiPinchingHandBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPinchingHandBlack = lynxIcon(`
   <g id="line">
     <g id="Pinching_Hand-2">
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.7356,42.1428c-.869,2.5155-1.12,4.3475-1.7985,5.5912a2.1933,2.1933,0,0,1-2.582,1.0226,47.1968,47.1968,0,0,0-6.2064-1.455,2.15,2.15,0,0,1-.6908-.2417c-4.0951-2.2435-8.509-3.4083-9.4579-2.4594a2.3467,2.3467,0,0,0-.7764,2.9644c.7646,2.2938,7.2284,5.2139,8.5651,6.728l5.849,5.8491S31.61,65.0583,35.435,65.0372C47.4984,64.9708,54.9871,49.2418,55,45.4723a21.652,21.652,0,0,0-.2793-3.2872,19.0358,19.0358,0,0,0-.7777-3.0063"/>
@@ -18,7 +15,5 @@ const EmojiPinchingHandBlack = {
       <line x1="39.6751" x2="43.1657" y1="28.0814" y2="33.5938" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPinchingHandBlack

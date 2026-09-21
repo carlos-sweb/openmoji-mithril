@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "magnifying glass tilted right" (color) [1F50E]. */
-const EmojiMagnifyingGlassTiltedRight = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMagnifyingGlassTiltedRight = lynxIcon(`
   <g id="color">
     <ellipse cx="43.9713" cy="25.4757" rx="11.1657" ry="11.1656" transform="matrix(0.5379 -0.843 0.843 0.5379 -1.1578 48.8391)" fill="#FFFFFF" stroke="none"/>
     <path fill="#92D3F5" stroke="none" d="M53.4402,31.8458c1.461-2.289,2.284-6.5149,1.6981-9.1673c-0.4014-1.8161-2.6553-3.8396-3.8988-5.1585 c0.6487,2.3544,1.0384,7.3509-2.1852,11.9716c-2.7358,3.9212-6.6908,5.6353-8.9477,6.0576 C44.3554,36.8323,50.9377,35.7667,53.4402,31.8458z"/>
@@ -20,7 +17,5 @@ const EmojiMagnifyingGlassTiltedRight = {
     <ellipse cx="43.9713" cy="25.4757" rx="11.1657" ry="11.1656" transform="matrix(0.5379 -0.843 0.843 0.5379 -1.1578 48.8391)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31.3102,39.9657l4.4057,2.811L25.22,59.2267c-0.7499,1.1753-2.344,1.4986-3.5606,0.7224l0,0 c-1.2166-0.7763-1.595-2.3582-0.8451-3.5335L31.3102,39.9657z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMagnifyingGlassTiltedRight

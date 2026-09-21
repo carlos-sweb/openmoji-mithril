@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "speech balloon" (color) [1F4AC]. */
-const EmojiSpeechBalloon = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpeechBalloon = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m17.09 50.75c-3.184-4.073-5.088-9.191-5.088-14.75 0-13.23 10.77-24 24-24s24 10.77 24 24-10.77 24-24 24c-1.955 0-3.855-0.2406-5.676-0.6839-5.919-1.481-10.33-4.341-13.24-8.567z"/>
     <circle cx="23.48" cy="54.97" r="5" fill="#fff"/>
@@ -22,7 +19,5 @@ const EmojiSpeechBalloon = {
     <circle cx="-4.026" cy="64.73" r="2.5" transform="matrix(-.9831 .1829 .1829 .9831 0 0)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="-13.58" cy="57.88" r="4.981" transform="matrix(-.9831 .1829 .1829 .9831 0 0)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpeechBalloon

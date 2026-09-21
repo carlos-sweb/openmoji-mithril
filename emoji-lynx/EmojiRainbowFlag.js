@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rainbow flag" (color) [1F3F3-FE0F-200D-1F308]. */
-const EmojiRainbowFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRainbowFlag = lynxIcon(`
   <g id="color">
     <rect x="5" y="48" width="62" height="6.2" fill="#b399c8" stroke-width="0"/>
     <rect x="5" y="42" width="62" height="6" fill="#92d3f5" stroke-width="0"/>
@@ -20,7 +17,5 @@ const EmojiRainbowFlag = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRainbowFlag

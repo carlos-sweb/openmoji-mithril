@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "canned food" (black) [1F96B]. */
-const EmojiCannedFoodBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCannedFoodBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.67,31.4908a6.311,6.311,0,0,1,3.3679,5.3886c0,3.6514-3.5924,6.596-8.0188,6.596S28,40.5308,28,36.8794a6.3159,6.3159,0,0,1,3.24-5.3"/>
@@ -16,7 +13,5 @@ const EmojiCannedFoodBlack = {
     <line x1="19" x2="53" y1="49" y2="49" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="19.895 5 19 5 19 60 53 60 53 5 52.105 5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCannedFoodBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "earthquake" (color) [E09C]. */
-const EmojiEarthquake = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEarthquake = lynxIcon(`
   <g id="color">
     <polygon fill="#9b9b9a" points="36.641 23.012 40.117 26.752 37.922 30.756 37.936 36.303 22.978 36.303 22.592 32.459 21.554 30.277 22.063 27.49 21.298 20.899 33.33 11.134 40.153 14.303 36.641 23.012"/>
     <polygon fill="#3f3f3f" points="36.641 23.012 40.117 26.752 37.922 30.756 37.936 36.303 47.788 36.303 47.633 32.761 46.005 28.481 46.823 24.602 46.104 16.936 40.153 14.303 36.641 23.012"/>
@@ -27,7 +24,5 @@ const EmojiEarthquake = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.9783,42.615A15.8563,15.8563,0,0,1,52.5921,57.9081"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.2578,57.9081c0-7.3088,5.61-14.2373,13.7462-15.6474"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEarthquake

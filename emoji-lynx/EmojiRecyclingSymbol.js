@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "recycling symbol" (color) [267B]. */
-const EmojiRecyclingSymbol = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRecyclingSymbol = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="24.6001 40.688 34.5992 22.9548 44.6545 41.7291 24.6001 40.688"/>
     <path fill="#5c9e31" stroke="#5c9e31" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m34.5992,22.9548l-3.6234,5.9466-10-6,2.9936-5.047c1.4882-1.9298,4.1084-2.4725,6.2065-1.4143.4895.2469.8889.6454,1.1717,1.1151l3.2209,5.3487.0307.0509Z"/>
@@ -21,7 +18,5 @@ const EmojiRecyclingSymbol = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="14.7341 35.7661 17.76 30.7817 15.9432 29.4782 25.3515 30.1741 28 37.9064 26 36.9064 25.5367 37.5666"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.3269,37.7505l-1.2117-2.1088,10.0715-5.8791,2.9838,5.0528c.9756,2.2332.1905,4.7912-1.7467,6.1213-.4519.3103-.9935.4687-1.5413.4906l-11.2687.0641v-2.2145l-4.754,7.761,4.6071,8.2326.0478-2.1256,5.7482.008.2891-.0004c.9508-.0344,1.2847-.9301,1.6403-1.5779l3.3361-6.0667"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRecyclingSymbol

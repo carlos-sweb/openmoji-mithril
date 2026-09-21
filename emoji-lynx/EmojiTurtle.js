@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "turtle" (color) [1F422]. */
-const EmojiTurtle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTurtle = lynxIcon(`
   <g id="color">
     <path fill="#b1cc33" stroke="#b1cc33" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m20.725 54.299-7.6415 0.68486c-1.5508 0.02674-3.1026 0.0535-2.8221-0.69574 0.2806-0.7492 2.3942-2.2742 3.2638-4.0529s0.49504-3.8121 1.0703-5.3512c0.5753-1.5391 2.1003-2.5826 3.6252-3.6259l4.3121-3.4877"/>
     <path fill="#b1cc33" stroke="#b1cc33" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m49.069 46.164 0.93729 4.0839c0.11633 0.7191 0.23247 1.437-0.07081 2.2369-0.30327 0.8-1.0256 1.6829-0.77093 2.1109 0.2548 0.42803 1.4855 0.40128 2.7153 0.37454l5.4534-0.47742-2.6472-11.622"/>
@@ -31,7 +28,5 @@ const EmojiTurtle = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m33.828 24.349-6.9244 12.941"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m52.898 30.082 4.4271 13.054"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTurtle

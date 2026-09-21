@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rolled-up newspaper" (color) [1F5DE]. */
-const EmojiRolledUpNewspaper = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRolledUpNewspaper = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m19.7308,35.538l31.8228-20.1826s12.837,2.0879,9.1687,13.7346l-11.005,8.8024-19.1439,15.0121s.265-7.4608-3.0966-11.3923c-3.0165-3.2341-4.2745-3.2342-7.746-5.9742Z"/>
     <path fill="#9b9b9a" d="m23.3144,39.6012l-2.6667,1.7189s5.5548,2.0772,5.9455,5.0601.4358,4.6404-.197,5.9122-3.585,3.5126-9.7627,4.0226c0,0,3.6569,1.9283,6.0194,1.7127,2.8129-.2567,6.2663-3.9556,6.3993-5.5092s.582-5.2496-.3945-6.6767c-1.1024-1.6111-5.3434-6.2406-5.3434-6.2406Z"/>
@@ -24,7 +21,5 @@ const EmojiRolledUpNewspaper = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m58.577,31.61c.3967-4.325-1.7074-8.4976-5.4208-10.75"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m46.6436,40.8149c1.64-5.3617-.4786-11.1606-5.1888-14.2023l-11.5868,7.1892s9.2435,5.7543,6.6109,15.3448l10.1647-8.3317Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRolledUpNewspaper

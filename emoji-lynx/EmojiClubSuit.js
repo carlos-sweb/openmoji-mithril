@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "club suit" (color) [2663]. */
-const EmojiClubSuit = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClubSuit = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m33.289,36.9738l-3.4617-6.7458s5.3256,4.083,12.7815,0c0,0-1.7752,6.1245-1.5089,6.9233s-7.8109-.1775-7.8109-.1775Z"/>
     <circle cx="19" cy="36.7" r="11.5" fill="#3f3f3f"/>
@@ -19,7 +16,5 @@ const EmojiClubSuit = {
     <circle cx="53.4" cy="36.7" r="11.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="19" cy="36.7" r="11.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClubSuit

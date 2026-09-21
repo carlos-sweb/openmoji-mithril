@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "locomotive" (color) [1F682]. */
-const EmojiLocomotive = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLocomotive = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" d="M7.7037,46.5833L7.7037,46.5833z"/>
     <path fill="#3F3F3F" d="M67.19,30.9498v9.26c0,0.19-0.05,0.37-0.15,0.51c-0.07-0.01-0.15-0.02-0.23-0.02H6.75 c-0.09-0.14-0.14-0.31-0.14-0.49v-9.26c0-0.55,0.46-1,1.03-1h58.51c0.02,0,0.05,0,0.0699,0.01 C66.77,29.9897,67.19,30.4197,67.19,30.9498z"/>
@@ -42,7 +39,5 @@ const EmojiLocomotive = {
     <circle cx="22.3332" cy="51" r="5.0001" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="57.162,21.297 57.162,29.9636 50.2454,29.9636"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLocomotive

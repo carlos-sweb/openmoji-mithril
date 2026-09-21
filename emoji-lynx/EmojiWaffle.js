@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "waffle" (color) [1F9C7]. */
-const EmojiWaffle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWaffle = lynxIcon(`
   <g id="line-supplement">
     <line x1="17.534" x2="49.1785" y1="26.8777" y2="38.0096" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="32.3606" x2="58.8929" y1="24.1496" y2="33.4832" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -49,7 +46,5 @@ const EmojiWaffle = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.4861,39.9162a3.42,3.42,0,0,0-1.2418,2.4385c0,1.84,2.0323,3.5276,5.4148,4.8432a28.7656,28.7656,0,0,0,4.9752,1.4553,66.4254,66.4254,0,0,0,13.2721,1.3084c13.0682,0,23.6621-3.4057,23.6621-7.6069a3.3306,3.3306,0,0,0-1.1276-2.327"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0545" d="M12.2443,42.3547a4.36,4.36,0,0,0-1.39,5.5978c2.1367,4.0564,11.1794,7.3448,24.97,7.3448h.3508A65.915,65.915,0,0,0,49.1786,54.125s2.9172-.6432,4.8861-1.3223c3.6176-1.2476,6.1014-2.9913,7.0806-4.85a4.36,4.36,0,0,0-1.39-5.5978"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWaffle

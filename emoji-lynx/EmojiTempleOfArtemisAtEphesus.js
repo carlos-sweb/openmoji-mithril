@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "temple of artemis at ephesus" (color) [E215]. */
-const EmojiTempleOfArtemisAtEphesus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTempleOfArtemisAtEphesus = lynxIcon(`
   <g id="color">
     <path fill="#9b9b9a" d="M17.5083,48.7969a1,1,0,0,1-1-1V32.0479a1,1,0,0,1,2,0v15.749A1,1,0,0,1,17.5083,48.7969Z"/>
     <path fill="#9b9b9a" d="M25.5083,48.7969a1,1,0,0,1-1-1V32.0479a1,1,0,0,1,2,0v15.749A1,1,0,0,1,25.5083,48.7969Z"/>
@@ -32,7 +29,5 @@ const EmojiTempleOfArtemisAtEphesus = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="59.054 25.155 59.054 32.048 12.946 32.048 12.946 25.155"/>
     <line x1="36" x2="36" y1="20.7051" y2="18.3864" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTempleOfArtemisAtEphesus

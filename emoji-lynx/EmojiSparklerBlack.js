@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sparkler" (black) [1F387]. */
-const EmojiSparklerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSparklerBlack = lynxIcon(`
   <g id="line-supplement">
     <g>
       <line x1="27.612" x2="27.612" y1="16.1095" y2="16.1095" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -34,7 +31,5 @@ const EmojiSparklerBlack = {
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M17,52.8787,40.6378,29.2409a1.5,1.5,0,0,1,2.1214,0h0a1.5,1.5,0,0,1,0,2.1213L31.92,42.201"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSparklerBlack

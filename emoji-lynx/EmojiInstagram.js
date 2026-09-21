@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "instagram" (color) [E043]. */
-const EmojiInstagram = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiInstagram = lynxIcon(`
   <g id="color">
     <path fill="#FFFFFF" d="M46.7845,12.6136h-21.569c-6.9598,0-12.6019,5.6421-12.6019,12.6019v21.5689 c0,6.9598,5.6421,12.6019,12.6019,12.6019h21.5689c6.9598,0,12.6019-5.6421,12.6019-12.6019V25.2155 C59.3864,18.2557,53.7443,12.6136,46.7845,12.6136z"/>
   </g>
@@ -17,7 +14,5 @@ const EmojiInstagram = {
     <circle cx="36" cy="36" r="11.29" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="49.7092" cy="22.2908" r="2.4193"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiInstagram

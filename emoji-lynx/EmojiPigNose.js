@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pig nose" (color) [1F43D]. */
-const EmojiPigNose = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPigNose = lynxIcon(`
   <g id="color">
     <path fill="#ffa7c0" d="m35.5757,16.3628c-.8333.3333-6.1226,1.3211-6.8589,1.7114-2.0796,1.1021-12.9234,8.1925-12.9234,8.1925l-4.189,6.0842-1.0843,8.31.4604,8.0491,1.8554,2.8552c1.2911,1.9868,3.3968,3.2988,5.7492,3.5822l1.2109.1459c1.5926.5132,3.3295-.5389,4.8986-1.12l11.3054-3.8297,6.08,1.2158,7.9633,2.9786,2.3278.9118c3.1329.1607,6.2121-.8598,8.6289-2.8599l.897-1.6992,1.5197-3.8297-.2432-8.0848-.6079-5.1062-1.9245-5.3075-6.8898-5.6952-8.0951-4.4646c-1.2754-.7034-2.6857-1.1277-4.1375-1.2447l-5.9431-.795Z"/>
     <path fill="#e67a94" d="m24.3377,33.4188l-4.0833,2.0833-3.1667,5.5.4167,5,2.9167,2.5833,4.4167-2.3333,2.4167-5s.4167-3.6667.3333-3.9167c-.0834-.2499-1.3334-3.9166-3.2501-3.9166Z"/>
@@ -16,7 +13,5 @@ const EmojiPigNose = {
     <ellipse cx="22.3267" cy="41.023" rx="7.9642" ry="4.9003" transform="translate(-23.7875 48.4289) rotate(-70.5666)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9999"/>
     <ellipse cx="51.6711" cy="41.0176" rx="4.9003" ry="7.9642" transform="translate(-10.7032 19.5283) rotate(-19.4334)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9999"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPigNose

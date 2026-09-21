@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sunflower" (black) [1F33B]. */
-const EmojiSunflowerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSunflowerBlack = lynxIcon(`
   <g id="line">
     <circle cx="40.7923" cy="26.177" r="5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.8586,38.5631 c2.7895,3.4142,1.96,8.708,1.96,8.708s-5.3525-0.2425-8.1427-3.6566s-1.96-8.708-1.96-8.708S21.0691,35.1517,23.8586,38.5631z"/>
@@ -13,7 +10,5 @@ const EmojiSunflowerBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.2415,51.9973 c3.4142-2.7895,8.708-1.96,8.708-1.96s-0.2425,5.3525-3.6566,8.1427c-3.4142,2.7902-8.708,1.96-8.708,1.96 S32.8301,54.7868,36.2415,51.9973z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.3663,41.0292 c-3.438,3.548-7.676,10.246-5.829,20.735"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSunflowerBlack

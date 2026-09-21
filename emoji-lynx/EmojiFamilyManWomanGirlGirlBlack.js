@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "family: man, woman, girl, girl" (black) [1F468-200D-1F469-200D-1F467-200D-1F467]. */
-const EmojiFamilyManWomanGirlGirlBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFamilyManWomanGirlGirlBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M31.5,25.5689c0,0.1839,0,0.3678,0,0.6437 c0,5.7012-3.5862,10.3908-8,10.3908s-8-4.6897-8-10.3908c0-0.1839,0-0.3678,0-0.6437"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.9286,21.3903 c0.5334-7.7347,6.4011-7.8236,9.335-7.3791c0.2667,0.0889,1.0669,0,1.3336,0c5.3343-0.7112,8.0014,5.3343,8.0014,8.0014 c0,0.978,0.2255,3.3655-1.1081,4.6991c0,0-3.2483-3.7211-3.4261-5.8549c0,0-10.1352,3.8229-10.8464,0.5334 c0,0-0.7112,2.6671-1.3336,3.3784c0,0-0.3288,2.0448-0.3288,2.6671C15.5558,27.4359,13.6619,24.7687,13.9286,21.3903z"/>
@@ -32,7 +29,5 @@ const EmojiFamilyManWomanGirlGirlBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M26.5,40.7038 c3.864,1.3703,5.567,5.8271,5.6943,9.6307c1.4225,0.308,2.8826-0.3898,3.8057-1.461c-0.9845-0.8337-1.7269-1.9167-2.1494-3.1356 c0.7369-5.7252-2.03-9.5793-7.3506-8.4862c-5.3206-1.0931-8.0875,2.761-7.3506,8.4862c-0.4225,1.2189-1.1649,2.3019-2.1494,3.1356 c0.923,1.0712,2.3833,1.769,3.8057,1.461C20.933,46.5311,22.6359,42.074,26.5,40.7038z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M45.5003,40.7038 c3.864,1.3703,5.567,5.8271,5.6943,9.6307c1.4225,0.308,2.8826-0.3898,3.8057-1.461c-0.9845-0.8337-1.7269-1.9167-2.1494-3.1356 c0.7369-5.7252-2.03-9.5793-7.3506-8.4862c-5.3206-1.0931-8.0875,2.761-7.3506,8.4862c-0.4225,1.2189-1.1649,2.3019-2.1494,3.1356 c0.923,1.0712,2.3833,1.769,3.8057,1.461C39.9333,46.5311,41.6362,42.074,45.5003,40.7038z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFamilyManWomanGirlGirlBlack

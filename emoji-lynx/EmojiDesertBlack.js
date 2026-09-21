@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "desert" (black) [1F3DC]. */
-const EmojiDesertBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDesertBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48,49V26c0-1.6569-1.3431-3-3-3l0,0c-1.6569,0-3,1.3431-3,3v23"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41,35c-1.1046,0-2-0.8954-2-2v-2c0-1.1046-0.8954-2-2-2l0,0c-1.1046,0-2,0.8954-2,2v2c0,3.3137,2.6863,6,6,6"/>
@@ -14,7 +11,5 @@ const EmojiDesertBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M7,40c0.5259-1.0198,1.7275-2.9672,4-4c2.6096-1.1859,3-2,6-4c4.7461-3.164,6.792-9.0278,11-9c1.7205,0.0114,4,3,5,6"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M65,39c0,0-3,0-6,1c-0.8645,0.2882-2,0-2,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDesertBlack

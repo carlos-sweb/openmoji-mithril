@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with medical mask" (black) [1F637]. */
-const EmojiFaceWithMedicalMaskBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithMedicalMaskBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
     <path d="m23.24 32.01s3.439-2.888 7.849-1.546"/>
     <path d="m48.76 32.01s-3.439-2.888-7.849-1.546"/>
@@ -17,7 +14,5 @@ const EmojiFaceWithMedicalMaskBlack = {
     <path d="m13.05 33.52 8.427 4.775"/>
     <path d="m13 37.35 10.59 10.3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithMedicalMaskBlack

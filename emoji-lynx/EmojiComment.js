@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "comment" (color) [E263]. */
-const EmojiComment = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiComment = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="35" r="20.8" fill="#FCEA2B" stroke="none"/>
     <path fill="#FCEA2B" stroke="none" d="M23.437,50.3563C22.1049,53.8785,18.4321,58.7119,15,61c7.1652,0,12.2335-2.0922,16-7.2731"/>
@@ -21,7 +18,5 @@ const EmojiComment = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M23.437,50.3563C22.1049,53.8785,18.4321,58.7119,15,61c7.1652,0,12.2335-2.0922,16-7.2731"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M20.4809,47.6168 C17.6795,44.1751,16,39.7837,16,35c0-11.0457,8.9543-20,20-20s20,8.9543,20,20s-8.9543,20-20,20 c-0.3703,0-0.7383-0.0101-1.1037-0.0299"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiComment

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pea pod" (black) [1FADB]. */
-const EmojiPeaPodBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPeaPodBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m37.1504,38.1907c.8984-2.1313,3.0071-3.6273,5.4652-3.6273,2.7134,0,5.0011,1.823,5.705,4.311"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m24.2429,42.0272c1.2789-1.9261,3.4677-3.1957,5.953-3.1957,3.9437,0,7.1407,3.197,7.1407,7.1407"/>
@@ -16,7 +13,5 @@ const EmojiPeaPodBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m48.2845,33.4631c.3761-1.8936,2.0468-3.321,4.0509-3.321,1.2114,0,2.301.5216,3.0565,1.3524"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.3827,53.7962s-.9854-.2463-1.1052-.3196c-.7325-.4489-1.136-.3697-2.1883-.8999-.799-.4025.9286-2.9166,1.8498-3.5009.4641-.2944,1.0704-.5863,1.7756-.8733"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPeaPodBlack

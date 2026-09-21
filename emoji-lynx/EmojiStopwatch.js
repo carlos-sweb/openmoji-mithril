@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stopwatch" (color) [23F1]. */
-const EmojiStopwatch = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStopwatch = lynxIcon(`
   <g id="color">
     <polyline fill="#d0cfce" stroke="#d0cfce" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="53.7559,19.7366 58.3424,16.187 61.4023,20.1407 57.1493,23.4322"/>
     <rect x="31.3126" y="7" width="11.0083" height="6.2941" fill="#d0cfce" stroke="none"/>
@@ -29,7 +26,5 @@ const EmojiStopwatch = {
     <ellipse cx="49.7975" cy="49.4528" rx="1.0121" ry="0.9878" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -20.3831 49.6965)" fill="#000000" stroke="none"/>
     <ellipse cx="22.8975" cy="22.5528" rx="1.0121" ry="0.9878" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.2407 22.7965)" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStopwatch

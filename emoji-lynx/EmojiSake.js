@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sake" (color) [1F376]. */
-const EmojiSake = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSake = lynxIcon(`
   <g id="color">
     <path fill="#FFFFFF" stroke="none" d="M65,66.64c-1.3,0-22,0.36-32,0C34,52,36,37,41,24l1-0.82c-4.32-3.03-6.37-8.6-6.37-16.18h28.74 c0,7.58-2.05,13.15-6.37,16.18V24C64,37,64,52,65,66.64z"/>
     <path fill="#FFFFFF" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.0002,66.6361C44,67,63.7002,66.6361,65,66.6361C64,52,64,37,58,24"/>
@@ -26,7 +23,5 @@ const EmojiSake = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M64.3702,8c0,6.7783-2.1735,12.4834-6.7586,15.4563"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.9775,23.1016C37.747,20.0434,35.7374,14.5178,35.7374,8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSake

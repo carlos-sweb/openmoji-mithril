@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "volleyball" (color) [1F3D0]. */
-const EmojiVolleyball = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVolleyball = lynxIcon(`
   <g id="color">
     <circle cx="35.9885" cy="35.9583" r="29" fill="#D0CFCE" stroke="none"/>
     <path fill="#9B9B9A" stroke="none" d="M50.738,10.9985c4.8254,5.1792,7.7822,12.1224,7.7822,19.7596c0,16.0162-12.9837,29-29,29 c-5.3519,0-10.3612-1.4558-14.6646-3.9839C20.1448,61.4195,27.6533,64.9583,36,64.9583c16.0162,0,29-12.9838,29-29 C65,25.327,59.2692,16.047,50.738,10.9985z"/>
@@ -25,7 +22,5 @@ const EmojiVolleyball = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M64.3321,33.8675C53.5037,28.4732,46.6464,18.9614,45.4557,8.7083"/>
     <circle cx="35.9885" cy="35.9583" r="29" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVolleyball

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "disguised face" (black) [1F978]. */
-const EmojiDisguisedFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDisguisedFaceBlack = lynxIcon(`
   <g id="line-supplement">
     <path d="M39.664,37.59a14.4676,14.4676,0,0,1,1.797.554l.043.0166a6,6,0,1,0-.2266-8.2832c-4.4892,2.0332-9.6.3379-10.5742-.0215a6,6,0,1,0-.208,8.3047.8521.8521,0,0,0,.0879-.0361,10.28,10.28,0,0,1,1.4286-.5464s.4265-5.741,3.9163-5.741S39.664,37.59,39.664,37.59Zm-13.3621.31a4,4,0,1,1,4-4A4,4,0,0,1,26.3019,37.9Zm19.3964,0a4,4,0,1,1,4-4A4,4,0,0,1,45.6983,37.9Z"/>
   </g>
@@ -17,7 +14,5 @@ const EmojiDisguisedFaceBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.6627,43.3662s-.7642,4.7622,4.2653,4.7622,4.2263-4.7622,4.2263-4.7622"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42.817,44.4015s5.0827.07,2.5335,4.3472a4.4929,4.4929,0,0,0-1.8128-.8214s.2266,2.9174-3.5122,3.229V49.74s-.6041,2.096-4.0975,2.096h-.0168c-3.4933,0-4.0975-2.096-4.0975-2.096v1.4162c-3.7388-.3116-3.5122-3.229-3.5122-3.229a4.493,4.493,0,0,0-1.8127.8214c-2.5492-4.2769,2.5335-4.3472,2.5335-4.3472"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDisguisedFaceBlack

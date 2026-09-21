@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Mrs. Claus: dark skin tone" (color) [1F936-1F3FF]. */
-const EmojiMrsClausDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMrsClausDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" d="M46.9799,21.4051c0,0,15,22.8504,0,22.8504h-22c-15,0,0-22.8504,0-22.8504"/>
     <path fill="#EA5A47" d="M25.4342,19.9935c0-5.8242,4.7215-10.5457,10.5457-10.5457s10.5457,4.7215,10.5457,10.5457"/>
@@ -34,7 +31,5 @@ const EmojiMrsClausDarkSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.9799,31.4051c0,1.6569,1.3431,3,3,3c1.6569,0,3-1.3431,3-3h2c0,1.6569,1.3431,3,3,3s3-1.3431,3-3"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.099,17.545c-0.8798,0-1.6738,0.3416-2.2798,0.8875c-0.606-0.5459-1.3999-0.8875-2.2798-0.8875 c-0.8798,0-1.6737,0.3416-2.2797,0.8875c-0.606-0.5459-1.4-0.8875-2.2798-0.8875s-1.6738,0.3416-2.2798,0.8875 c-0.606-0.5459-1.3999-0.8875-2.2797-0.8875c-0.8799,0-1.6738,0.3416-2.2798,0.8875c-0.606-0.5459-1.4-0.8875-2.2798-0.8875 c-1.8886,0-3.4196,1.5311-3.4196,3.4197s1.531,3.4196,3.4196,3.4196c0.8798,0,1.6738-0.3416,2.2798-0.8874 c0.606,0.5458,1.3999,0.8874,2.2798,0.8874c0.8798,0,1.6737-0.3416,2.2797-0.8874c0.606,0.5458,1.4,0.8874,2.2798,0.8874 s1.6738-0.3416,2.2798-0.8874c0.606,0.5458,1.3999,0.8874,2.2797,0.8874c0.8799,0,1.6738-0.3416,2.2798-0.8874 c0.606,0.5458,1.4,0.8874,2.2798,0.8874c1.8886,0,3.4196-1.531,3.4196-3.4196C48.5186,19.0761,46.9876,17.545,45.099,17.545z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMrsClausDarkSkinTone

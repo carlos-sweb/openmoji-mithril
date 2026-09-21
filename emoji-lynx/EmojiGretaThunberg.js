@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Greta Thunberg" (color) [E188]. */
-const EmojiGretaThunberg = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGretaThunberg = lynxIcon(`
   <g id="color">
     <rect x="26" y="36" width="20" height="14" fill="#3f3f3f"/>
     <path fill="#fcea2b" d="M51.6,47.4A7.67,7.67,0,0,0,53,43a7.9931,7.9931,0,0,0-7-7.9v10c-.3,0-.7-.1-1-.1L33,47v1.3A17.9536,17.9536,0,0,1,27,45a3.4019,3.4019,0,0,0-1,.1v-10A8.07,8.07,0,0,0,19,43a7.4412,7.4412,0,0,0,1.4,4.4A8.6366,8.6366,0,0,0,17,54v5H55V54A8.7988,8.7988,0,0,0,51.6,47.4Z"/>
@@ -31,7 +28,5 @@ const EmojiGretaThunberg = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M55,58V54c0-4-3.1-7.3-6.9-8.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51.7,47.4A7.5782,7.5782,0,0,0,53,43a8.1434,8.1434,0,0,0-4.6-7.3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGretaThunberg

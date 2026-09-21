@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person facepalming: light skin tone" (color) [1F926-1F3FB]. */
-const EmojiPersonFacepalmingLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonFacepalmingLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M16,60.958L15.875,57c0-5.875,6.1328-10,11.125-10c6,5,12,5,18,0c4.9941,0,10,5.0059,10,10v3.958"/>
   </g>
@@ -29,7 +26,5 @@ const EmojiPersonFacepalmingLightSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M29,60c0.0049-0.5703-0.6973-9.4512,0-14.0137c0.2666-1.7461,2.1914-2.289,3-3.9863c1.9063-4,2.334-7.8057,3.9365-14"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.3262,19.7109 c0.5107-0.5605,0.9062-1.1352,1.6738-1.7114c0,0,4,5.0005,7,8c0,0,1,2.0005,1,5.0005c0,9-5.127,14-11.0635,14 C35.7178,45,35.377,44.9771,35,44.9438"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonFacepalmingLightSkinTone

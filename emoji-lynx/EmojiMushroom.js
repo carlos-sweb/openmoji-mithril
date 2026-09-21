@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mushroom" (color) [1F344]. */
-const EmojiMushroom = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMushroom = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="#D0CFCE" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M27.1244,42.9616v11.2545c0,0-0.1171,1.9012,2.5264,1.9012s11.7694,0,11.7694,0s2.2545,0.5562,2.2545-2.4086 c0-1.6448,0-6.6322,0-10.7472"/>
     <path fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M27.1244,46.7322v8.0389c0,0-0.1171,1.358,2.5264,1.358s11.7694,0,11.7694,0s2.2545,0.3973,2.2545-1.7204 c0-1.1748,0-4.7373,0-7.6766"/>
@@ -27,7 +24,5 @@ const EmojiMushroom = {
     <ellipse cx="35.996" cy="30.1489" rx="8.0208" ry="6.1759" transform="matrix(0.9993 -0.0382 0.0382 0.9993 -1.1252 1.3968)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.1551,15.3869c0,0-4.6919,14.1211,10.9254,14.0122C60.0804,29.399,57.0754,20.3354,49.1551,15.3869z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMushroom

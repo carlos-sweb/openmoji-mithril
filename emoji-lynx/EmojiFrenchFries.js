@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "french fries" (color) [1F35F]. */
-const EmojiFrenchFries = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFrenchFries = lynxIcon(`
   <g id="color">
     <polyline fill="#fcea2b" stroke="none" points="27,48.8418 27,9.5234 26,9.5234 26,7 22,7 22,11.5234 21,11.5234 21,48"/>
     <polyline fill="#fcea2b" stroke="none" points="43,46 43,9.5225 42,9.5225 42,5 38,5 38,8.5771 37,8.5225 37,47"/>
@@ -33,7 +30,5 @@ const EmojiFrenchFries = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="46,34.7363 46,13 42,13 42,35.3682"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="38,36 38,12 34,12 34,36"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFrenchFries

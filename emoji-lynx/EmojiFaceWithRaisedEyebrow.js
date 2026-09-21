@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with raised eyebrow" (color) [1F928]. */
-const EmojiFaceWithRaisedEyebrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithRaisedEyebrow = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36,13c-12.6823,0-23,10.3177-23,23s10.3177,23,23,23s23-10.3178,23-23C59.0001,23.3177,48.6823,13,36,13z"/>
   </g>
@@ -20,7 +17,5 @@ const EmojiFaceWithRaisedEyebrow = {
     <path d="M48,35c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,33.3448,48,35"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.1321,47.1385 c4.6002-1.4165,9.8284-1.4698,13.7359,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithRaisedEyebrow

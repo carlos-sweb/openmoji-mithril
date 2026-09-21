@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tractor" (color) [1F69C]. */
-const EmojiTractor = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTractor = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m38.4759,25.1614l-.248,10.5806h.8266s4.877-6.1169,8.5141-6.1996l-.0827-4.877-9.01.496Z"/>
     <rect x="26.682" y="28.3643" width="3.1666" height="4.4166" fill="#3f3f3f"/>
@@ -29,7 +26,5 @@ const EmojiTractor = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m37.0168,37.2787h2.6602s2.7485-4.8599,9.3606-6.7061"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17.044,38.0151v2.12c0,.55-.4501,1-1,1h-1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTractor

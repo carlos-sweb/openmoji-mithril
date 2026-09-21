@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cowboy hat face" (black) [1F920]. */
-const EmojiCowboyHatFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCowboyHatFaceBlack = lynxIcon(`
   <g id="line">
     <ellipse cx="28.0684" cy="32.818" rx="3" ry="5.4038"/>
     <ellipse cx="43.9316" cy="32.8216" rx="3" ry="5.4038"/>
@@ -15,7 +12,5 @@ const EmojiCowboyHatFaceBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M50.595,43.64 c0.012,1.5397-0.2838,3.0662-0.87,4.49c-12.49,3.03-25.43,0.34-27.49-0.13c-0.5588-1.3852-0.8407-2.8664-0.83-4.36h0.11 c0,0,14.8,3.59,28.89,0.07L50.595,43.64z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.7251,48.13 c-1.79,4.27-6.35,7.23-13.69,7.23c-7.41,0-12.03-3.03-13.8-7.36C24.2951,48.47,37.235,51.16,49.7251,48.13z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCowboyHatFaceBlack

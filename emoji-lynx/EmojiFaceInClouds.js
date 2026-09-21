@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face in clouds" (color) [1F636-200D-1F32B-FE0F]. */
-const EmojiFaceInClouds = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceInClouds = lynxIcon(`
   <g id="color">
     <path transform="translate(0 0)" fill="#d0cfce" d="M32.4,25.2a4.9126,4.9126,0,0,0,4.7-5.1,4.8278,4.8278,0,0,0-4.3-4.6h0a3.8281,3.8281,0,0,0-3.6-3.8A3.4576,3.4576,0,0,0,25.9,14a4.7026,4.7026,0,0,0-7,4,4.0126,4.0126,0,0,0-1.5-.3,3.8053,3.8053,0,0,0,0,7.6h15Z"/>
     <path transform="translate(0 0)" fill="#fcea2b" d="M36,17.6A18.4,18.4,0,1,0,54.4,36,18.3516,18.3516,0,0,0,36,17.6Z"/>
@@ -23,7 +20,5 @@ const EmojiFaceInClouds = {
     <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.3,59.9a6.7439,6.7439,0,0,0,6.8-6.8,6.8412,6.8412,0,0,0-6.2-6.8h0A5.3351,5.3351,0,0,0,48.6,41a5.5022,5.5022,0,0,0-4.9,3.2,6.6966,6.6966,0,0,0-9.2,2.5,8.0165,8.0165,0,0,0-.9,3,5.28,5.28,0,0,0-4.4,9.6,5.45,5.45,0,0,0,2.2.5H53.3Z"/>
     <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38.2,27.1a5.5488,5.5488,0,0,1-5.5-5.5,5.61,5.61,0,0,1,5-5.5h0A4.2682,4.2682,0,0,1,42,11.8a4.1361,4.1361,0,0,1,3.9,2.6,5.432,5.432,0,0,1,8.2,4.5A4.21,4.21,0,0,1,59.7,21a4.2965,4.2965,0,0,1-2.1,5.6,3.9222,3.9222,0,0,1-1.8.4H38.2Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceInClouds

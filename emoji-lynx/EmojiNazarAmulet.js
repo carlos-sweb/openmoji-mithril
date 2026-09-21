@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nazar amulet" (color) [1F9FF]. */
-const EmojiNazarAmulet = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNazarAmulet = lynxIcon(`
   <g id="color">
     <circle cx="36.2835" cy="35.9583" r="29" fill="#1e50a0"/>
     <path fill="#1e50a0" d="M52.1725,11.4337a29.2845,29.2845,0,0,1-40.46,40.4591,29.3,29.3,0,1,0,40.46-40.4591Z"/>
@@ -19,7 +16,5 @@ const EmojiNazarAmulet = {
     <circle cx="36.2835" cy="35.9583" r="13" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="36.2835" cy="35.9583" r="6" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNazarAmulet

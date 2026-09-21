@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "foggy" (color) [1F301]. */
-const EmojiFoggy = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFoggy = lynxIcon(`
   <g id="color">
     <rect x="3.9" y="4" width="64" height="64" fill="#fff"/>
     <path transform="translate(0 0)" fill="#d0cfce" d="M44.9,12.6a5.1017,5.1017,0,0,1-5,5.1H18.7a6.6143,6.6143,0,0,1-.6-13.2h0V4h18a7.096,7.096,0,0,1,1.6,3.9,5.3742,5.3742,0,0,1,2.1-.5h.3a4.2528,4.2528,0,0,1,1.1.2A5.2511,5.2511,0,0,1,44.9,12.6Z"/>
@@ -43,7 +40,5 @@ const EmojiFoggy = {
     <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.3,54.7h.2c.1,0,.3-.1.4-.1a.6012.6012,0,0,0,.4-.1h.9a7.1732,7.1732,0,0,1,2.9.6,10.0387,10.0387,0,0,1,.4-2.4,4.1792,4.1792,0,0,1,.4-1,9.2017,9.2017,0,0,1,5.5-4.9,9.54,9.54,0,0,1,7.4.7,7.134,7.134,0,0,1,9.3-3.8,6.3419,6.3419,0,0,1,2.3,1.6"/>
     <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.6,19.9a7.36,7.36,0,0,0-6.5-4.4,6.9629,6.9629,0,0,0-2.5.5h0A7.1086,7.1086,0,0,0,8,22.6H8a4.5292,4.5292,0,0,0-1.6.3,4.15,4.15,0,0,0-1.3.7"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFoggy

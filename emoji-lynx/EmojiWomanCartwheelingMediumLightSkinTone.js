@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman cartwheeling: medium-light skin tone" (color) [1F938-1F3FC-200D-2640-FE0F]. */
-const EmojiWomanCartwheelingMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanCartwheelingMediumLightSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="skin">
     <circle cx="32.6976" cy="49.5701" r="2.8598" fill="#debb90"/>
@@ -17,7 +14,5 @@ const EmojiWomanCartwheelingMediumLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.8322,57.1963V49.57c0-3.2411,1.7159-5.243,3.8131-5.72a16.2448,16.2448,0,0,1,9.5327,0c2.0972.4766,3.8131,2.5738,3.8131,5.72v7.6262"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.3863,54.6458s.6582-.0084.8517-.43c.2284-.4959-.0785-1.7926.1255-2.5157a3.3622,3.3622,0,0,1,1.2049-1.8068"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanCartwheelingMediumLightSkinTone

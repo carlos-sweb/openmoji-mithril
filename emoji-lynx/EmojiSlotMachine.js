@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "slot machine" (color) [1F3B0]. */
-const EmojiSlotMachine = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSlotMachine = lynxIcon(`
   <g id="color">
     <path fill="#fff" fill-rule="evenodd" d="m12.08,19.86h44.95v32.27H12.08V19.86Z"/>
     <line x1="13.23" x2="55.87" y1="22.52" y2="22.52" fill="none" stroke="#9b9b9a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.305"/>
@@ -33,7 +30,5 @@ const EmojiSlotMachine = {
     <polyline fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="32.28 31.23 32.28 29.24 36.82 29.24 34.02 37.3"/>
     <polyline fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="47.26 35.69 47.26 33.7 51.8 33.7 49 41.77"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSlotMachine

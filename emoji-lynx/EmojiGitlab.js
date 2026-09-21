@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "gitlab" (color) [E059]. */
-const EmojiGitlab = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGitlab = lynxIcon(`
   <g id="color">
     <polygon fill="#f1b31c" points="12.231 33.089 8.011 44.143 35.645 64.14 12.231 33.089"/>
     <polygon fill="#f1b31c" points="36.047 64.441 63.982 43.741 60.264 33.793 36.047 64.441"/>
@@ -22,7 +19,5 @@ const EmojiGitlab = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="60.337 33.079 36.245 64.617 11.79 33.079"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.7818,33.5822c-.2592.9938-10.5371,31.0347-10.5371,31.0347.0794-.3042-9.9348-30.7256-9.9348-30.7256"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGitlab

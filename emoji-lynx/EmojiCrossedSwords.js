@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "crossed swords" (color) [2694]. */
-const EmojiCrossedSwords = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCrossedSwords = lynxIcon(`
   <g id="color">
     <g id="_2694">
       <path fill="#9b9b9a" d="M29.8689,49.8881s3.8768-.1914,1.57-2.9351A27.3514,27.3514,0,0,1,21.46,41.6161s-3.6038,1.0922-.9827,3.2489A44.5205,44.5205,0,0,1,29.8689,49.8881Z"/>
@@ -40,7 +37,5 @@ const EmojiCrossedSwords = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.326,55.9442a1.997,1.997,0,1,0,3.522,1.8837,88.1683,88.1683,0,0,0,3.8491-10.02L24.523,47.18A88.1637,88.1637,0,0,0,18.326,55.9442Z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCrossedSwords

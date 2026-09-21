@@ -164,17 +164,17 @@ const ${name} = {
 export default ${name}
 `
 
-  // mithril-lynx / Lynx: no m.trust — SVG children go in the `content` attr.
+  // mithril-lynx / Lynx: full <svg> in content + outer size via style {width,height} px
+  const lynxDefaultsFn =
+    viewBox === '0 0 72 72'
+      ? `_attrs`
+      : `(size) => ({ ..._attrs(size), viewBox: '${viewBox}' })`
+
   const lynxComponentCode = `import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "${label}" (${variant}) [${hexcode}]. */
-const ${name} = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size)${viewboxOverride}, ...(vnode.attrs || {}), content: \`${escaped}\` }
-  )
-}
+const ${name} = lynxIcon(\`${escaped}\`, ${lynxDefaultsFn}, 72)
 export default ${name}
 `
 

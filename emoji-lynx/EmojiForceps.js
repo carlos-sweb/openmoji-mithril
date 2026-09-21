@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "forceps" (color) [E318]. */
-const EmojiForceps = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiForceps = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m23.0481,61.9023s-2.6029.0837-2.5377-1.7412.9093-3.0868,1.3655-3.8689,24.6495-37.8917,24.6495-37.8917l-20.4987,41.0045s-1.3349,2.5816-2.9787,2.4972Z"/>
   </g>
@@ -14,7 +11,5 @@ const EmojiForceps = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3.251" d="m19.33,61.22c-.4682-1.5641-.1359-3.2585.8883-4.53,0,0,24.13-39.9,31.51-47.4"/>
     <path d="m51.3472,7.0815l2.522,1.4563c.441.2547.5921.8185.3376,1.2596l-5.5467,9.401-3.9341-2.1932,5.3616-9.5861c.2547-.441.8185-.5921,1.2596-.3376Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiForceps

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "code editor" (black) [E1C1]. */
-const EmojiCodeEditorBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCodeEditorBlack = lynxIcon(`
   <g id="line">
     <rect x="11" y="16.0009" width="50" height="39.9982" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.3287,16.4792 16.3287,20.8542 11,20.8542 61,20.8542"/>
@@ -15,7 +12,5 @@ const EmojiCodeEditorBlack = {
     <line x1="42.1588" x2="49.0859" y1="44.2515" y2="37.3244" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="42.1588" x2="49.0859" y1="30.3296" y2="37.2567" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCodeEditorBlack

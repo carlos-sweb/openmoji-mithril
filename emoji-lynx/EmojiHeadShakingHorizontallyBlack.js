@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "head shaking horizontally" (black) [1F642-200D-2194-FE0F]. */
-const EmojiHeadShakingHorizontallyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeadShakingHorizontallyBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.0451,42.7468c-.9211,1.0397-2.5008,1.7046-4.7409,1.7046-2.2233,0-3.8046-.6574-4.7354-1.6846"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.725,34.6614c-3.3356,1.779-6.56,0-6.56,0"/>
@@ -14,7 +11,5 @@ const EmojiHeadShakingHorizontallyBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47,41c5,0,19-2,11-7"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.5694,44.6849c3.4396-.1946,7.4306-.6849,10.4306-2.6849"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeadShakingHorizontallyBlack

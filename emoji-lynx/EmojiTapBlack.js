@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tap" (black) [E100]. */
-const EmojiTapBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTapBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.79,23.7098c4.13-1.45,7.09-5.39,7.09-10.02,0-5.87-4.75-10.63-10.62-10.63s-10.62,4.76-10.62,10.63c0,4.65,2.99,8.6,7.15,10.04"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m54.8163,50.7743c0,9.0883-7.3675,16.4558-16.4558,16.4558s-16.4558-7.3675-16.4558-16.4558"/>
@@ -23,7 +20,5 @@ const EmojiTapBlack = {
     <line x1="16.8357" x2="18.6571" y1="39.1198" y2="41.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m54.8315,50.7591c0,9.0883-7.3675,16.4558-16.4558,16.4558s-16.4557-7.3675-16.4557-16.4558"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTapBlack

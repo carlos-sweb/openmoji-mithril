@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "women wrestling: dark skin tone" (black) [1F93C-1F3FF-200D-2640-FE0F]. */
-const EmojiWomenWrestlingDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomenWrestlingDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <circle cx="37.0981" cy="13.6495" r="3" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38.0514,24.04l6.3869,7.15a3.1057,3.1057,0,0,1,.3813,3.1458L40.9112,41.39a12.4122,12.4122,0,0,0-1.0486,3.5271l-.8579,10.486a1.6146,1.6146,0,0,0,1.43,1.9065,2.5371,2.5371,0,0,0,2.0972-1.8112l1.8112-7.7215a13.9406,13.9406,0,0,1,1.5252-3.4317l2.5739-3.5271a17.6954,17.6954,0,0,1,2.5738-2.7645L53.78,35.7654A4.831,4.831,0,0,0,55.21,32.62a5.9587,5.9587,0,0,0-1.2393-3.3364l-7.34-8.1028"/>
@@ -19,7 +16,5 @@ const EmojiWomenWrestlingDarkSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.2852,12.8225s-.4585-.4723-.8981-.3229c-.5171.1749-1.2482,1.289-1.9136,1.6377a3.3624,3.3624,0,0,1-2.1406.3665"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.2383,11.1353s.4585-.4724.8981-.323c.5171.1749,1.2482,1.289,1.9136,1.6378a3.3628,3.3628,0,0,0,2.1406.3664"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomenWrestlingDarkSkinToneBlack

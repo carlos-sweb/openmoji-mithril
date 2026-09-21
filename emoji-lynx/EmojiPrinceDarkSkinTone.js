@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "prince: dark skin tone" (color) [1F934-1F3FF]. */
-const EmojiPrinceDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPrinceDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#FFA7C0" d="M54.5509,58.8718c0,0,2-13.7973-10-13.7973c-3.1918,2.1192-5.9264,3.5837-9,3.5775h0.125 c-3.0736,0.0062-5.8081-1.4583-9-3.5775c-12,0-10,13.7973-10,13.7973"/>
     <polygon fill="#FFFFFF" points="35.8323,57.6636 32.9258,52.6293 30.0192,47.5951 35.8323,47.5951 41.6454,47.5951 38.7388,52.6293"/>
@@ -37,7 +34,5 @@ const EmojiPrinceDarkSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.8009,18.9963c-0.0034-0.463-4.7091,5.3323-15.3343,1.9899"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.1837,15.8194c0,0,0.7576-1.7372-1.1344-3.4702"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPrinceDarkSkinTone

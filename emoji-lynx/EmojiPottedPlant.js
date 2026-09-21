@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "potted plant" (color) [1FAB4]. */
-const EmojiPottedPlant = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPottedPlant = lynxIcon(`
   <g id="color">
     <rect x="38.9184" y="33.8117" rx="0.8031" ry="0.8031" width="3.3818" height="4.4162" fill="#fff"/>
     <rect x="28.6385" y="33.6681" rx="0.8031" ry="0.8031" width="3.3818" height="4.4162" fill="#fff"/>
@@ -26,7 +23,5 @@ const EmojiPottedPlant = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35.2122,30.3226c3.4659-6.4211,19.5492-7.9037,19.5492-7.9037,0,0-3.2069-5.12-9.9567-2.7906"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35.4193,29.7723c-.304-8.1412,14.1129-17.7623,14.1129-17.7623-3.7338-1.9917-8.357-1.0382-10.9982,2.2682-1.2157,1.4059-2.1149,3.0568-2.6366,4.8407"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPottedPlant

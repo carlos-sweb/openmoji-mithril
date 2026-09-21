@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ceuta flag" (color) [1F3F4-E0065-E0073-E0063-E0065-E007F]. */
-const EmojiCeutaFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCeutaFlag = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#fff"/>
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.1" d="m5 17 31 19v-19z"/>
@@ -23,7 +20,5 @@ const EmojiCeutaFlag = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCeutaFlag

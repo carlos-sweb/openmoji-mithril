@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman mountain biking" (black) [1F6B5-200D-2640-FE0F]. */
-const EmojiWomanMountainBikingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanMountainBikingBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51.5245,60.693l4.9814-.1215L60.1719,64"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.9705,52.3383l6.2039,2.8146,4.7947-1.0571,5.2654,1.0212"/>
@@ -19,7 +16,5 @@ const EmojiWomanMountainBikingBlack = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M48.9711,31.45l-7.1617,8.9814"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.008,5.9936s.5982-.2747.9541.0234c.4189.35.698,1.653,1.1924,2.2187A3.3623,3.3623,0,0,0,53.018,9.351"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanMountainBikingBlack

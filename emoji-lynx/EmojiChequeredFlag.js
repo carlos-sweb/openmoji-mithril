@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "chequered flag" (color) [1F3C1]. */
-const EmojiChequeredFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChequeredFlag = lynxIcon(`
   <g id="color">
     <rect x="22.3576" y="17.2677" width="6.0019" height="6.0019" fill="#fff"/>
     <polygon fill="#fff" points="28.3595 33.8934 22.3576 35.2734 22.3576 29.2715 28.3595 29.2715 28.3595 33.8934"/>
@@ -36,7 +33,5 @@ const EmojiChequeredFlag = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m23.0844,17.488c2.885-1.7983,8.4218-4.2326,14.4156-1.488,3.689,1.6892,5.6344,4.6976,15.0405,4.1142.7886-.0489,1.4595.5967,1.4595,1.4106v15.1253c0,.6226-.4235,1.0771-.9648,1.354-1.947.9959-7.2715.9349-15.5352-3.0041-3.3653-1.6041-8.5703-2.5683-14.4582,1.4425"/>
     <line x1="19.3271" x2="19.3271" y1="12.875" y2="59.8348" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChequeredFlag

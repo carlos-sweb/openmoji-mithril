@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "potentiometer" (color) [E1D5]. */
-const EmojiPotentiometer = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPotentiometer = lynxIcon(`
   <g id="color">
     <rect x="21" y="30" width="6" height="12" fill="#FFFFFF"/>
     <circle cx="41" cy="36" r="15" fill="#FFFFFF"/>
@@ -27,7 +24,5 @@ const EmojiPotentiometer = {
     <path fill="#E27022" d="M20.005,34.99v2.02h-4.04c-0.606,0-1.01-0.505-1.01-1.01s0.404-1.01,1.01-1.01H20.005z"/>
     <path fill="#E27022" d="M20.005,38.99v2.02h-4.04c-0.606,0-1.01-0.505-1.01-1.01s0.404-1.01,1.01-1.01H20.005z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPotentiometer

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "joker" (color) [1F0CF]. */
-const EmojiJoker = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJoker = lynxIcon(`
   <g id="color">
     <rect x="16.5" y="4.8" width="39" height="62.4" fill="#d0cfce"/>
     <polygon fill="#ea5a47" points="35.806 48.602 26.843 51.115 27.93 46.615 21.283 46.466 24.239 44.005 28.268 42.502 45.313 42.78 50.338 46.309 44.057 46.615 45.501 51.115 35.806 48.602"/>
@@ -30,7 +27,5 @@ const EmojiJoker = {
     <path d="M33.9763,31.0968a1.9489,1.9489,0,1,1-1.9489-1.9489,1.95,1.95,0,0,1,1.9489,1.9489"/>
     <path d="M35.925,40.8433a7.4566,7.4566,0,0,1-3.3591-.836.9745.9745,0,1,1,.8717-1.7432,5.24,5.24,0,0,0,4.9748,0,.9745.9745,0,1,1,.8717,1.7432A7.4566,7.4566,0,0,1,35.925,40.8433Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJoker

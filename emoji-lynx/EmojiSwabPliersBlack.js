@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "swab pliers" (black) [E30E]. */
-const EmojiSwabPliersBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSwabPliersBlack = lynxIcon(`
   <g id="line">
     <ellipse cx="31.5843" cy="51.769" rx="3.7292" ry="3.0028" transform="translate(-29.0064 49.2472) rotate(-56.2294)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path d="m30.5831,48.93l-.2992-2.1686s-1.1385.02-.5878-.7848l2.3613-.279.3392,2.4585c-.6709.0607-1.3055.3315-1.8135.7739Z"/>
@@ -17,7 +14,5 @@ const EmojiSwabPliersBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m44.32,18.1092s-4.7619-2.1223-4.7969,3.6111l.4813,6.6443"/>
     <rect x="36.185" y="28.4226" rx="1.7358" ry="1.7358" width="5.6787" height="3.4715" transform="translate(-6.6057 48.8754) rotate(-60.0001)"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSwabPliersBlack

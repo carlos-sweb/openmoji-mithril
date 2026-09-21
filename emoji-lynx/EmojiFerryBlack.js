@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ferry" (black) [26F4]. */
-const EmojiFerryBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFerryBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
     <path stroke-width="2.1521" d="M64.8,18v6.6H61.1V18Z"/>
     <path stroke-width="2" d="m56.8 18.9v5.7h-3.7v-5.7z"/>
@@ -17,7 +14,5 @@ const EmojiFerryBlack = {
     <polyline stroke-width="2" points="67 33 42 33 42 25 67 25"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m5 55.003c1.5483 0.386 4.9902 0.94992 6.9719 0.94992 1.9817 0 5.8272-2.0724 10.331-2.2042s7.0209 2.1243 10.207 2.4509c3.1857 0.32664 5.6912-1.2372 7.6966-1.2372"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFerryBlack

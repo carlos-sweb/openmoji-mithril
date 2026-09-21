@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with rolling eyes" (color) [1F644]. */
-const EmojiFaceWithRollingEyes = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithRollingEyes = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#FCEA2B"/>
     <circle cx="46" cy="32" r="6.5" fill="#FFFFFF"/>
@@ -22,7 +19,5 @@ const EmojiFaceWithRollingEyes = {
     <circle cx="26" cy="32" r="6.5" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="31" x2="41" y1="49.4967" y2="49.4967" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithRollingEyes

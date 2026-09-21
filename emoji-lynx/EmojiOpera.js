@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Opera" (color) [E052]. */
-const EmojiOpera = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOpera = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" fill-rule="evenodd" d="M36 64C50.3594 64 62 51.464 62 36C62 20.536 50.3594 8 36 8C21.6406 8 10 20.536 10 36C10 51.464 21.6406 64 36 64ZM36 57C44.8366 57 52 47.598 52 36C52 24.402 44.8366 15 36 15C27.1634 15 20 24.402 20 36C20 47.598 27.1634 57 36 57Z" clip-rule="evenodd"/>
     <g>
@@ -19,7 +16,5 @@ const EmojiOpera = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M29 17.1111C31.1144 15.7588 33.4897 15 36 15C44.8366 15 52 24.402 52 36C52 47.598 44.8366 57 36 57C33.4897 57 31.1144 56.2412 29 54.8889"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M31 11.3723C24.4484 16.1117 20 25.3632 20 36C20 46.6368 24.4484 55.8883 31 60.6277"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOpera

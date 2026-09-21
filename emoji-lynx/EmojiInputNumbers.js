@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "input numbers" (color) [1F522]. */
-const EmojiInputNumbers = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiInputNumbers = lynxIcon(`
   <g id="line-supplement" transform="translate(-.005724 -.00219)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3.885" clip-rule="evenodd">
     <path d="m44.02 21c0.3905-1.902 2.075-3.336 4.093-3.336 1.154 0 2.197 0.4682 2.953 1.224 1.175 1.177 1.068 3.13-0.03497 4.375l-7.095 8h8.354"/>
     <path d="m20.96 51.93c0.3575 1.55 1.904 2.714 3.757 2.714 2.118 0 3.835-1.521 3.835-3.4 0-1.877-1.717-3.4-3.835-3.4 2.118 0 3.835-1.521 3.835-3.4 0-1.877-1.717-3.4-3.835-3.4-1.853 0-3.4 1.168-3.757 2.716"/>
@@ -26,7 +23,5 @@ const EmojiInputNumbers = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiInputNumbers

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "up-down arrow" (color) [2195]. */
-const EmojiUpDownArrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiUpDownArrow = lynxIcon(`
   <g id="color">
     <polygon fill="#3F3F3F" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="51.7651,50.2627 47.7305,46.5533 39.062,55.7613 39.062,16.2377 47.7305,25.4453 51.7651,21.7363 36.0015,4.9995 20.2349,21.7363 24.2681,25.4453 32.9331,16.2445 32.9331,55.7546 24.2681,46.5533 20.2349,50.2627 36.0015,66.9995"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiUpDownArrow = {
   <g id="line">
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="51.7651,50.2627 47.7305,46.5533 39.062,55.7613 39.062,16.2377 47.7305,25.4453 51.7651,21.7363 36.0015,4.9995 20.2349,21.7363 24.2681,25.4453 32.9331,16.2445 32.9331,55.7546 24.2681,46.5533 20.2349,50.2627 36.0015,66.9995"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiUpDownArrow

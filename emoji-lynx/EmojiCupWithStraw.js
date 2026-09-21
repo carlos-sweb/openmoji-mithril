@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cup with straw" (color) [1F964]. */
-const EmojiCupWithStraw = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCupWithStraw = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="18.933 21.376 52.9693 21.495 46.9395 65.7271 25.9937 65.5684 18.933 21.376"/>
     <polygon fill="#d22f27" points="49.9235 50.25 51.9 35.85 20.4 35.85 22.6588 50.25 49.9235 50.25"/>
@@ -16,7 +13,5 @@ const EmojiCupWithStraw = {
     <line x1="18" x2="54" y1="20.55" y2="20.55" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="36" x2="36" y1="5" y2="17" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCupWithStraw

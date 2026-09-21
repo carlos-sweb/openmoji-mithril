@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pensive face" (black) [1F614]. */
-const EmojiPensiveFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPensiveFaceBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="27" x2="45" y1="46" y2="46" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiPensiveFaceBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M19.9385,27.2501c0.4872,0.2275,2.6277,1.1608,5.1639,0.3327c2.0576-0.6718,3.1771-2.1117,3.5396-2.6239"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M52.642,27.2501c-0.4872,0.2275-2.6277,1.1608-5.1639,0.3327c-2.0576-0.6718-3.1771-2.1117-3.5396-2.6239"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPensiveFaceBlack

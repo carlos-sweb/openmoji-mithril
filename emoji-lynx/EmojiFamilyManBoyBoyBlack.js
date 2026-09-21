@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "family: man, boy, boy" (black) [1F468-200D-1F466-200D-1F466]. */
-const EmojiFamilyManBoyBoyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFamilyManBoyBoyBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M31.5,25.5689c0,0.1839,0,0.3678,0,0.6437 c0,5.7012-3.5862,10.3908-8,10.3908s-8-4.6897-8-10.3908c0-0.1839,0-0.3678,0-0.6437"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.9286,21.3903 c0.5334-7.7347,6.4011-7.8236,9.335-7.3791c0.2667,0.0889,1.0669,0,1.3336,0c5.3343-0.7112,8.0014,5.3343,8.0014,8.0014 c0,0.978,0.2255,3.3655-1.1081,4.6991c0,0-3.2483-3.7211-3.4261-5.8549c0,0-10.1352,3.8229-10.8464,0.5334 c0,0-0.7112,2.6671-1.3336,3.3784c0,0-0.3288,2.0448-0.3288,2.6671C15.5558,27.4359,13.6619,24.7687,13.9286,21.3903z"/>
@@ -26,7 +23,5 @@ const EmojiFamilyManBoyBoyBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M57.9888,45.2681 c0,0,1.1557-0.6462,0.624-2.9844c-1.09-4.7916-4.8491-4.9802-7.12-4.6433c-0.3436,0.0276-0.6888,0.0276-1.0324,0 c-2.7285-0.4181-5.2973,1.4017-5.8079,4.1144c-0.1538,0.6611-0.6603,2.5579,0.3721,3.5136c0,0,3.8763-2.2937,4.4254-3.8674 c0,0,4.0176,4.2337,4.487,0.8706C54.2248,40.2093,57.9888,45.2681,57.9888,45.2681z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M11.0003,60V44.9552c0-3.2895,3.2918-5.9566,6.5836-5.9566c1.4914,1.2532,2.9827,2.029,4.4789,2.3273"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFamilyManBoyBoyBlack

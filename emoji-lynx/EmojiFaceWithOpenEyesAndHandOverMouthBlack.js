@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with open eyes and hand over mouth" (black) [1FAE2]. */
-const EmojiFaceWithOpenEyesAndHandOverMouthBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithOpenEyesAndHandOverMouthBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.0624,54.2975A22.9962,22.9962,0,1,1,44.51,57.3743"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.0708,28.7432A7.1738,7.1738,0,0,1,26.98,27.1068a7.0776,7.0776,0,0,1,4.0909,1.6364"/>
@@ -14,7 +11,5 @@ const EmojiFaceWithOpenEyesAndHandOverMouthBlack = {
     <path d="M48,35a3,3,0,1,1-3-3,3.001,3.001,0,0,1,3,3"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.6,61.8,31.4,60c2.5-.6,9.9-2.8,11.5-5.5a1.5418,1.5418,0,0,0-.1-2.1c-.1-.1-.1-.2-.2-.2.5-.3.8-.6.9-.6a2.1081,2.1081,0,0,0,.7-2.9,1.205,1.205,0,0,0-.5-.5,1.8071,1.8071,0,0,0-.1-2.1c-.5-.6-1.6-1.1-3.1,0a.7786.7786,0,0,0-.3-.7,1.9047,1.9047,0,0,0-2.7-.4.0979.0979,0,0,0-.1.1,31.9553,31.9553,0,0,1-6.3,4c.5026-1.286,1.69-5.814-.6-5.1-.6.2-1.2,1.7-1.5,2.2-1.738,2.511-2.258,5.218-2.8,8.1.031,1.077-1.076,1.676-1.8,2.4"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithOpenEyesAndHandOverMouthBlack

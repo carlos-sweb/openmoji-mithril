@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flute" (color) [1FA88]. */
-const EmojiFlute = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlute = lynxIcon(`
   <g id="color">
     <path fill="#6a462f" d="M52.0354,12l-12.663,5.5927s-.1314,.9289,.1298,1.1901,11.2363,11.1301,11.2363,11.1301l1.8237-.5674,4.4874-11.996-3.9605-5.3496h-1.0537Z"/>
     <path fill="#a57939" d="M11,51.2048l28.6312-31.0575,9.6246,9.2202-30.2488,28.8738-8.007-7.0365Z"/>
@@ -19,7 +16,5 @@ const EmojiFlute = {
     <path fill="none" stroke="#000" stroke-width="2" d="M40.5552,17.0111l10.923-4.6775c.6965-.2983,1.5059-.115,2.0059,.4543l3.1298,3.563c.4481,.5102,.5611,1.2334,.29,1.8559l-4.521,10.3802c-.4889,1.1226-1.9493,1.4101-2.8273,.5566l-9.5319-9.266c-.8965-.8715-.6178-2.3745,.5315-2.8666Z"/>
     <line x1="45.8305" x2="50.0354" y1="19.4903" y2="23.578" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlute

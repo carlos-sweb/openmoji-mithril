@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cat face" (black) [1F431]. */
-const EmojiCatFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCatFaceBlack = lynxIcon(`
   <g id="line">
     <ellipse cx="45.0854" cy="38.1033" rx="1.6461" ry="2.8119"/>
     <ellipse cx="26.8427" cy="38.1033" rx="1.6461" ry="2.8119"/>
@@ -21,7 +18,5 @@ const EmojiCatFaceBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.3859,60.7598c3.88,1.6845,5.6481,1.8093,9.3021,0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m25.4446,54.6836s-8.2116,2.2454-8.6795,11.2958"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCatFaceBlack

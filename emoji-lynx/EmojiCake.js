@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cake" (color) [E0C7]. */
-const EmojiCake = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCake = lynxIcon(`
   <g id="color">
     <circle cx="38.5" cy="15" r="2" fill="#ea5a47" stroke="none"/>
     <circle cx="33.5" cy="15" r="2" fill="#ea5a47" stroke="none"/>
@@ -26,7 +23,5 @@ const EmojiCake = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.2334,34.4141 14,56 58,56 55.7666,34.4141"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M16.2334,34.4141C16.7295,34.7773,17.3369,35,18,35c1.6572,0,3-1.3437,3-3v-2c0-1.6567,1.3428-3,3-3c1.6572,0,3,1.3433,3,3v2 c0,1.6563,1.3428,3,3,3c1.6572,0,3-1.3437,3-3v-2c0-1.6567,1.3428-3,3-3c1.6572,0,3,1.3433,3,3v2c0,1.6563,1.3428,3,3,3 c1.6572,0,3-1.3437,3-3v-2c0-1.6567,1.3428-3,3-3c1.6572,0,3,1.3433,3,3v2c0,1.6563,1.3428,3,3,3 c0.6631,0,1.2705-0.2227,1.7666-0.5859"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCake

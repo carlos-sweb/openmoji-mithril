@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ballot box with ballot" (color) [1F5F3]. */
-const EmojiBallotBoxWithBallot = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBallotBoxWithBallot = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" stroke="#d0cfce" stroke-linejoin="round" stroke-width="2" d="m10.14,62.8l.25-31.7h51.23l-.5,31.45-50.98.25Z"/>
     <rect x="22.17" y="36.99" width="27.87" height="3.752" fill="#d0cfce"/>
@@ -19,7 +16,5 @@ const EmojiBallotBoxWithBallot = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0001" points="37.2631 36.8415 23.7767 31.3123 33.7653 6.9477 50.4851 13.7991 41.1095 36.6612"/>
     <line x1="21.91" x2="50.1" y1="36.92" y2="36.92" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBallotBoxWithBallot

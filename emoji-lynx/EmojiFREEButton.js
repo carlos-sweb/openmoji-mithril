@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "FREE button" (color) [1F193]. */
-const EmojiFREEButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFREEButton = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000">
     <path transform="matrix(1.398 0 0 1.762 54.52 53.69)" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m0-7h-4v7h4" clip-rule="evenodd"/>
     <path transform="matrix(1.398 0 0 1.762 48.93 47.53)" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m0 0h3" clip-rule="evenodd"/>
@@ -28,7 +25,5 @@ const EmojiFREEButton = {
     <rect x="12" y="12" ry="5" width="48" height="47.83" fill="none" stroke-width="2"/>
   </g>
   <g id="line"/>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFREEButton

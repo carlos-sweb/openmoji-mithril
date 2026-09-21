@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "queretaro flag" (color) [1F3F4-E006D-E0078-E0071-E0075-E0065-E007F]. */
-const EmojiQueretaroFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiQueretaroFlag = lynxIcon(`
   <g id="color" transform="matrix(1.263 0 0 1.263 -9.462 -11.43)">
     <rect x="5" y="17" width="62" height="38" transform="matrix(.7919 0 0 .7919 7.493 9.053)" fill="#fff"/>
     <g transform="translate(0 -.3986)" paint-order="normal">
@@ -31,7 +28,5 @@ const EmojiQueretaroFlag = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiQueretaroFlag

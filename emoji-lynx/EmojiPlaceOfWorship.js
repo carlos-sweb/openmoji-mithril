@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "place of worship" (color) [1F6D0]. */
-const EmojiPlaceOfWorship = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPlaceOfWorship = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="35.676 45.588 36.9395 49.1927 34.5983 49.0069 34.4868 47.2231 35.676 45.588"/>
     <circle cx="32.02" cy="25.04" r="3" fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
@@ -17,7 +14,5 @@ const EmojiPlaceOfWorship = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m23.29,39.46s2.67,4.92,6.02,4.92,1.649-9.221,8.239-12.25c5.227-2.407,14.21,14.38,10.31,21.46"/>
     <path fill="#000" d="m10.6165,24.0605c-.5261.2976-.7008.972-.3852,1.4876l.0064.0105c.2621.4282.8167.5711,1.2531.3229l24.3488-13.8477c.0737-.0419.1637-.0427.2381-.0021l24.3348,13.2849c.4454.2432,1.0037.0729,1.2376-.3774h0c.2752-.5297.076-1.1821-.448-1.4679l-24.8772-13.581c-.2022-.1104-.447-.1086-.6475.0048l-25.0609,14.1654Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPlaceOfWorship

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "closed mailbox with raised flag" (black) [1F4EB]. */
-const EmojiClosedMailboxWithRaisedFlagBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClosedMailboxWithRaisedFlagBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M27.815,13.7636 c-0.6841,0-1.3577,0.0737-2.0103,0.221h-0.0105c-0.642-0.1474-1.3051-0.221-1.9891-0.221H27.815z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M35.87,13.7698H24.31c-0.08,0-0.16,0-0.24,0"/>
@@ -15,7 +12,5 @@ const EmojiClosedMailboxWithRaisedFlagBlack = {
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.0868,31.3539h0.9347 c0.6427,0,1.1684-0.4404,1.1684-0.9786v-9.9812h2.1031c0.6426,0,1.1684-0.4404,1.1684-0.9786v-7.437 c0-0.5383-0.5258-0.9786-1.1684-0.9786h-4.2061c-0.6426,0-1.1684,0.4403-1.1684,0.9786v18.3968 C39.9184,30.9135,40.4442,31.3539,41.0868,31.3539z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M39.23,44.875V57.78 c0,1.85-1.51,3.37-3.36,3.37c-0.93,0-1.77-0.38-2.38-0.99s-0.99-1.46-0.99-2.38V44.8438"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClosedMailboxWithRaisedFlagBlack

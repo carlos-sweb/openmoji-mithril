@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "dodo" (black) [1F9A4]. */
-const EmojiDodoBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDodoBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.95,22.16S9.7623,20.559,9.7623,26.1787c0,0,0,3.01,1.9078,3.4435,0,0,.7179-2.498,3.0543-2.498"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.8292,45.0409c1.5491,2.5935,4.7957,5.3184,8.1812,5.1076h0s1.704,3.7123,5.066,3.95S47.8,49.2918,47.8,49.2918s7.9213-.3808,7.9213-7.8531c0,0-.945-11.5778-11.52-11.9052,0,0-4.5725-.1-7.6533,1.8641s-5.7419-1.06-5.7419-1.06a5.3768,5.3768,0,0,1-1.154-3.4131,5.1883,5.1883,0,0,1,1.2335-3.413,4.6329,4.6329,0,0,0,1.2335-2.7552s.2786-6.9906-7.202-6.5383a5.34,5.34,0,0,0-4.7934,2.7541"/>
@@ -15,7 +12,5 @@ const EmojiDodoBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38.06,36.7031c2.418,1.9988.1612,4.7715.1612,4.7715,2.8,2.155,1.4943,4.4257,1.4943,4.4257-2.9392,1.7195-4.9587-1.88-4.9587-1.88a7.6461,7.6461,0,0,0-1.58-1.98,3.1488,3.1488,0,0,1-.72-3.0192"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M59.5316,40.7388s4.4782,2.9654,2.5417,5.656c-2.0167,2.802-4.4987-.0152-4.4987-.0152s.2109,2.28-1.7359,2.4538c-1.3735.1222-1.9687-1.52-2.1872-2.0221"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDodoBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hear-no-evil monkey" (color) [1F649]. */
-const EmojiHearNoEvilMonkey = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHearNoEvilMonkey = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M50.3838,47.2065c-1.7396,1.4508-3.5449,2.0133-3.8255,2.096c1.2769,3.8998,1.5308,7.3335,0.8554,9.3629"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M23.7414,31.4072c4.0808-1.403,9.8253,0.1056,12.4177,4.5449c2.5249-4.2094,7.8873-5.739,11.8223-4.7169"/>
@@ -40,7 +37,5 @@ const EmojiHearNoEvilMonkey = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M18.945,56.8993c-0.4804-6.0396,0.0392-6.4239-0.4413-12.4635c0.7336-1.8542,1.6918-4.7683,2.059-8.4418 c0.2878-2.8791-0.0143-3.9562-0.4118-10.2995c-0.5229-8.3456-0.2387-10.2904-1.0295-10.4961 c-1.4192-0.3691-4.4446,5.3461-5.971,10.4961c-1.6205,5.4675-1.2354,13.5938-1.2354,13.5938l-1.2,5.2695"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M53.4019,57.9872c0.4804-6.0396-0.0392-7.5118,0.4413-13.5514c-0.7336-1.8542-1.6918-4.7683-2.059-8.4418 c-0.2878-2.8791,0.0143-3.9562,0.4118-10.2995c0.5229-8.3456,0.2387-10.2904,1.0295-10.4961 c1.4192-0.3691,4.4446,5.3461,5.971,10.4961c1.6205,5.4675,1.2354,13.5938,1.2354,13.5938l1.4909,6.5466"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHearNoEvilMonkey

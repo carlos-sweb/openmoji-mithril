@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "black nib" (color) [2712]. */
-const EmojiBlackNib = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlackNib = lynxIcon(`
   <g id="color">
     <path fill="#3f3f3f" d="M50.8751,34.0285a2.7147,2.7147,0,0,1-1.9317-.8h0L38.7169,23.0021a2.7308,2.7308,0,0,1,.0009-3.8628l9.5557-9.5566a1.0168,1.0168,0,0,1,1.3965,0L62.3634,22.276a.988.988,0,0,1,0,1.3955l-9.5567,9.5571A2.714,2.714,0,0,1,50.8751,34.0285Z"/>
     <path fill="#fcea2b" d="M48.1407,35.0242a1.8386,1.8386,0,0,1-1.2992-.54h0L37.48,25.1205a1.8007,1.8007,0,0,1-.03-2.5431l1.1156-1.1156a1.0078,1.0078,0,0,1,1.4266,0l10.51,10.51a1.0087,1.0087,0,0,1,0,1.426L49.3856,34.513A1.7548,1.7548,0,0,1,48.1407,35.0242Zm.1264-1.9679.0009.0015v-.0005Z"/>
@@ -19,7 +16,5 @@ const EmojiBlackNib = {
     <line x1="15.1" x2="33.951" y1="56.8458" y2="37.9948" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.9721,10.28l-9.5573,9.5573a1.7446,1.7446,0,0,0-.155,2.29l-1.1337,1.1307a.7948.7948,0,0,0,.03,1.123L47.565,33.79a.7948.7948,0,0,0,1.123.03l1.1291-1.1349a1.7446,1.7446,0,0,0,2.2911-.1539l9.5573-9.5572"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlackNib

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man supervillain: light skin tone" (black) [1F9B9-1F3FB-200D-2642-FE0F]. */
-const EmojiManSupervillainLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManSupervillainLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39,38.9729 c-1.875-1-4.125-1-6,0"/>
     <path d="M42,29.9729c0,1.1046-0.8954,2-2,2s-2-0.8954-2-2s0.8954-2,2-2S42,28.8683,42,29.9729"/>
@@ -26,7 +23,5 @@ const EmojiManSupervillainLightSkinToneBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.4088,30.3887 c-0.0336-0.0528-0.0743-0.1315-0.11-0.1915c0.4827,4.4619,1.6003,7.8987,3.7012,7.8987"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.9761,25.8292 C49.9904,25.2535,50,24.6755,50,24.0959c0-6-5-12-14-12s-14,6-14,12c0,0.5797,0.0096,1.1577,0.0239,1.7333"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManSupervillainLightSkinToneBlack

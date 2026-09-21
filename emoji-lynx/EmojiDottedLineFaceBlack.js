@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "dotted line face" (black) [1FAE5]. */
-const EmojiDottedLineFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDottedLineFaceBlack = lynxIcon(`
   <g id="line-supplement">
     <circle cx="35.9773" cy="35.9583" r="23" fill="none" stroke="#000" stroke-dasharray="0 0 0 0 0 0 5.1598 5.1598" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
@@ -14,7 +11,5 @@ const EmojiDottedLineFaceBlack = {
     <path d="m47.9772,32.9583c0,1.6569-1.3431,3-3,3s-3-1.3431-3-3,1.3431-3,3-3c1.6566.0006,2.9994,1.3434,3,3"/>
     <line x1="29.9772" x2="41.9772" y1="43.7964" y2="43.7964" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDottedLineFaceBlack

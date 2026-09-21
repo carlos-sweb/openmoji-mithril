@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bubbles" (color) [1FAE7]. */
-const EmojiBubbles = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBubbles = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M40 47.091C40.243 46.6518 40.5461 46.2506 40.8984 45.8984C41.2506 45.5461 41.6518 45.243 42.091 45"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M48.5 25.5C48.6162 25.29 48.7612 25.0981 48.9296 24.9296C49.0981 24.7612 49.29 24.6162 49.5 24.5"/>
@@ -28,7 +25,5 @@ const EmojiBubbles = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M45 60C50.5228 60 55 55.5228 55 50C55 44.4772 50.5228 40 45 40C39.4772 40 35 44.4772 35 50C35 55.5228 39.4772 60 45 60Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M45 60C50.5228 60 55 55.5228 55 50C55 44.4772 50.5228 40 45 40C39.4772 40 35 44.4772 35 50C35 55.5228 39.4772 60 45 60Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBubbles

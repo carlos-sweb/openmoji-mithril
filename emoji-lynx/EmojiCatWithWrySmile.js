@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cat with wry smile" (color) [1F63C]. */
-const EmojiCatWithWrySmile = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCatWithWrySmile = lynxIcon(`
   <g id="color">
     <path fill="#F4AA41" d="M58.6655,48.9454c-3.5976,9.1169-12.6313,15.0413-23.2072,15.0413c-9.1173,0-19.256-5.7342-22.8537-14.8511 l-0.1262-0.3127c-1.1415-2.8597-0.9573-6.3599-0.9573-9.6324L15.188,6.8192l10.2281,10.0799 c2.9226-1.2477,6.137-1.9388,9.5103-1.9388H35.99c3.3734,0,6.5877,0.6911,9.5103,1.9388L56.7285,5.8192l3.7223,33.8758 c0,3.2725-0.6283,6.3969-1.7707,9.2566"/>
     <path fill="#E27022" d="M35.4583,63.9866c10.6088,0.3425,20.3541-5.8905,23.9517-15.0074l0.1109-0.231 c1.1415-2.8597,0.9579-6.8965,0.9579-10.169l-3.7503-31.76"/>
@@ -30,7 +27,5 @@ const EmojiCatWithWrySmile = {
     <circle cx="23.52" cy="38.5601" r="2.08"/>
     <circle cx="48.48" cy="38.5601" r="2.08"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCatWithWrySmile

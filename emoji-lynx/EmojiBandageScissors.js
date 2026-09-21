@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bandage scissors" (color) [E325]. */
-const EmojiBandageScissors = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBandageScissors = lynxIcon(`
   <g id="color">
     <path fill="#3f3f3f" d="M23.7877,41.921s8.3575-1.6821,8.7626-1.7962c.9567-.27,1.102.5416,1.102.5416-.0516.5042-.7612.8425-1.2887,1.11l-3.9512,2.0019a6.5473,6.5473,0,0,1-1.6965.58,8.1655,8.1655,0,0,1-3.1978.1985C22.5511,44.1791,22.7075,42.2623,23.7877,41.921Z"/>
     <path fill="#9b9b9a" d="M24.2836,47.1122s8.3412-6.635,8.4676-7.0773.78-3.5549,1.7646-4.3054c.9107-.6942,2.2162-.5281,2.9824.9378s.09,4.73-.6357,5.8347-9.6907,6.6726-10.3866,7.082S23.1147,49.9212,24.2836,47.1122Z"/>
@@ -18,7 +15,5 @@ const EmojiBandageScissors = {
     <line x1="41.9724" x2="37.7973" y1="32.1736" y2="37.7872" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.2836,47.1122s8.3412-6.635,8.4676-7.0773.78-3.5549,1.7646-4.3054c.9107-.6942,2.2162-.5281,2.9824.9378s.09,4.73-.6357,5.8347-9.6907,6.6726-10.3866,7.082S23.1147,49.9212,24.2836,47.1122Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBandageScissors

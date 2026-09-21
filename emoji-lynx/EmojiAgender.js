@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "agender" (color) [E431]. */
-const EmojiAgender = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAgender = lynxIcon(`
   <g id="color">
     <rect x="6" y="18" width="60" height="36" fill="#3f3f3f"/>
     <rect x="6" y="18" width="60" height="30.86" fill="#9b9b9a"/>
@@ -18,7 +15,5 @@ const EmojiAgender = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAgender

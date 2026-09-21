@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "busts in silhouette" (color) [1F465]. */
-const EmojiBustsInSilhouette = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBustsInSilhouette = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M63,61c0,0,0-4,0-8c0-7-4-10-8-10c-5,0-5,0-12,0c-2.7842,0-5.5645,0.5059-7,3.75 c-1.125-3.3125-4.2158-4.7031-7-4.7031C24,42.0469,24,43,17,43c-4,0-8,3-8,10c0,1,0,8,0,8"/>
     <path fill="#D0CFCE" stroke="none" d="M15,26c0,4,0.876,6.3145,2,8c1.4316,2.1484,3.7061,3,6,3c2.3809,0,4.5664-0.8516,6-3c1.123-1.6855,2-4,2-8 c0-2.1484-1.0771-9-8-9S15,22.4189,15,26z"/>
@@ -19,7 +16,5 @@ const EmojiBustsInSilhouette = {
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-width="2" d="M15,26c0,4,0.876,6.3145,2,8 c1.4316,2.1484,3.7061,3,6,3c2.3809,0,4.5664-0.8516,6-3c1.123-1.6855,2-4,2-8c0-2.1484-1.0771-9-8-9S15,22.4189,15,26z"/>
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-width="2" d="M41,26c0,4,0.876,6.3145,2,8 c1.4316,2.1484,3.7061,3,6,3c2.3809,0,4.5664-0.8516,6-3c1.123-1.6855,2-4,2-8c0-2.1484-1.0771-9-8-9C42.0771,17,41,22.4189,41,26z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBustsInSilhouette

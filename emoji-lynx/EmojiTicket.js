@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ticket" (color) [1F3AB]. */
-const EmojiTicket = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTicket = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" stroke="none" d="M48.7127,23.515c-3.4279-3.5522-4.0284-8.7836-1.8682-12.9334l-3.6009-3.7315L6.8857,41.9362l3.8016,3.9394 c4.0722-1.5735,8.8681-0.6711,12.09,2.6676c3.2219,3.3387,3.9531,8.1636,2.2356,12.1773l3.8016,3.9394l36.3579-35.0861 l-3.6009-3.7315C57.3473,27.8534,52.1406,27.0671,48.7127,23.515z"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiTicket = {
     <ellipse cx="43.6116" cy="28.6606" rx="2" ry="2" transform="matrix(0.7098 -0.7044 0.7044 0.7098 -7.5322 39.0393)" fill="#000000" stroke="none"/>
     <ellipse cx="50.101" cy="35.1992" rx="2" ry="2" transform="matrix(0.7098 -0.7044 0.7044 0.7098 -10.2548 45.5083)" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTicket

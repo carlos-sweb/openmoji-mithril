@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "light rail" (color) [1F688]. */
-const EmojiLightRail = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLightRail = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M68.1967,49H18.769c-6.2907,0-11.4375-4.4743-11.4375-9.9429h0C7.3315,33.5886,21.0565,20,27.3471,20H68.3315V48.8828A.1273.1273,0,0,1,68.1967,49Z"/>
     <polyline fill="#92d3f5" points="30.331 38 40.92 29 45.331 29 45.331 38 30.331 38"/>
@@ -21,7 +18,5 @@ const EmojiLightRail = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="28.331 30 21.331 37 11.331 37"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M68.1967,49H18.769c-6.2907,0-11.4375-4.4743-11.4375-9.9429h0C7.3315,33.5886,21.0565,20,27.3471,20H68.3315V48.8828A.1273.1273,0,0,1,68.1967,49Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLightRail

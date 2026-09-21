@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ferris wheel" (color) [1F3A1]. */
-const EmojiFerrisWheel = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFerrisWheel = lynxIcon(`
   <g id="color">
     <polygon fill="#61b2e4" points="33.636 37.325 17.31 66.846 30.098 66.846 33.636 37.325"/>
     <polygon fill="#61b2e4" points="36.386 37.606 52.647 66.846 39.859 66.846 36.386 37.606"/>
@@ -51,7 +48,5 @@ const EmojiFerrisWheel = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m52.5492,55.4635c0,2.5626-2.0774,4.64-4.64,4.64s-4.64-2.0774-4.64-4.64,2.0774-4.64,4.64-4.64h0c2.5623.0008,4.6392,2.0777,4.64,4.64Z"/>
     <circle cx="13.141" cy="47.1319" r="4.5885" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFerrisWheel

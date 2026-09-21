@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "footprints" (black) [1F463]. */
-const EmojiFootprintsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFootprintsBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m19.92 47.53c-0.9807-6.527-8.351-23.23-8.295-25.26 0.1586-5.812 10.49-9.177 12.76-6.249 0.7559 0.7541 1.984 4.935 1.528 9.273-1.062 10.12 1.628 15.72 3.893 19.89 1.22 2.848-0.2223 5.898-3.228 6.571-3.006 0.6728-5.888-0.7659-6.661-4.224z"/>
     <circle cx="9.235" cy="18.07" r="1.04" transform="rotate(-1.534)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.04"/>
@@ -20,7 +17,5 @@ const EmojiFootprintsBlack = {
     <ellipse cx="49.94" cy="18.91" rx="1.893" ry="2.332" transform="matrix(.9973 .07399 -.1025 .9947 0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.155"/>
     <ellipse cx="20.93" cy="12.69" rx="1.888" ry="2.374" transform="matrix(.9932 -.1168 .1312 .9914 0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.164"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFootprintsBlack

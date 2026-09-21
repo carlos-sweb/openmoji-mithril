@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "watermelon" (black) [1F349]. */
-const EmojiWatermelonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWatermelonBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M55.2257,56.7807 c-10.9878,10.9766-28.7798,10.9766-39.7676,0c-10.9765-10.9878-10.9765-28.7797,0-39.7675l2.6542,2.6542 c-9.5258,9.5145-9.5258,24.9447,0,34.4592c9.5145,9.5258,24.9447,9.5258,34.4592,0L55.2257,56.7807z"/>
     <line x1="17.5157" x2="53.7223" y1="19.0707" y2="55.2773" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiWatermelonBlack = {
     <ellipse cx="17.8643" cy="40.8938" rx="1.687" ry="0.8435" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -23.684 24.6094)" fill="#000000" stroke="none"/>
     <ellipse cx="22.2812" cy="50.0862" rx="1.687" ry="0.8435" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8903 30.4251)" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWatermelonBlack

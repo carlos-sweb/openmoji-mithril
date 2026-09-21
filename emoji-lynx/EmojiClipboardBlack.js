@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clipboard" (black) [1F4CB]. */
-const EmojiClipboardBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClipboardBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m49.6856,11.9519h4.9838v52.0211c0,1.6568-1.3431,3-3,3h-31.8494c-1.6569,0-3-1.3432-3-3V11.9519h4.6155"/>
     <line x1="50.797" x2="50.797" y1="15.8454" y2="54.9602" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiClipboardBlack = {
     <line x1="24.5808" x2="31.7029" y1="42.6148" y2="42.6148" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.2763,10.9439h-3.7961c.1302-.3182.2034-.666.2034-1.0311,0-1.5047-1.2199-2.7244-2.7247-2.7244s-2.7244,1.2197-2.7244,2.7244c0,.3651.0729.7129.2033,1.0311h-4.0611c-2.367,0-4.286,1.9189-4.286,4.286h21.4716c0-2.3671-1.919-4.286-4.286-4.286Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClipboardBlack

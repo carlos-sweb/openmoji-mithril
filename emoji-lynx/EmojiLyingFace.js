@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lying face" (color) [1F925]. */
-const EmojiLyingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLyingFace = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36,12c-13.2337,0-24,10.7663-24,24s10.7663,24,24,24s24-10.7664,24-24C60.0001,22.7663,49.2337,12,36,12z"/>
     <path fill="#FCEA2B" d="M37.4298,44.1622c0,0,8.7363-0.0809,12.075,0.5893c3.3387,0.6701,6.7322,2.0667,9.1412,0.9499 c1.1362-0.5267,1.6476-1.6404,1.7222-2.7085c0.1014-1.0659-0.2206-2.2484-1.255-2.9542c-2.1935-1.4965-5.7742-0.6235-9.1776-0.5096 s-12.0084-1.3976-12.0084-1.3976"/>
@@ -22,7 +19,5 @@ const EmojiLyingFace = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M39.7224,50.6354c0,0-5.7186-1.8346-8.8718,1.5503"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M37.4298,44.1622c0,0,8.7363-0.0809,12.075,0.5893c3.3387,0.6701,6.7322,2.0667,9.1412,0.9499 c1.1362-0.5267,1.6476-1.6404,1.7222-2.7085c0.1014-1.0659-0.2206-2.2484-1.255-2.9542c-2.1935-1.4965-5.7742-0.6235-9.1776-0.5096 s-12.0084-1.3976-12.0084-1.3976"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLyingFace

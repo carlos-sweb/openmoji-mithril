@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "1st place medal" (color) [1F947]. */
-const Emoji1stPlaceMedal = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const Emoji1stPlaceMedal = lynxIcon(`
   <g id="color">
     <polyline fill="#fcea2b" stroke="none" points="28.0567,22.4271 28.0567,17 43.915,17 43.915,22.4271"/>
     <polyline fill="#92d3f5" stroke="#92d3f5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" points="54.9988,4.0221 43,16.0208 36,16.0208 30.9584,10.9792 37.9207,4.0169 54.9988,4.0169"/>
@@ -29,7 +26,5 @@ const Emoji1stPlaceMedal = {
     <line x1="37.9207" x2="54.9988" y1="4.0169" y2="4.0169" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="30.3593,37.3924 37.5572,32 37.5572,58"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default Emoji1stPlaceMedal

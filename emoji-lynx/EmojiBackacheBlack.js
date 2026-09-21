@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "backache" (black) [E321]. */
-const EmojiBackacheBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBackacheBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.12,9.7472v9.3654a8.2241,8.2241,0,0,1-1.2136,4.3084c-2.603,4.2408-7.7481,16.491,1.7839,37.5332"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M50.8866,60.9542s12.7608-18.8731,2.305-37.5907a8.2459,8.2459,0,0,1-1.05-4.018V9.7472"/>
@@ -18,7 +15,5 @@ const EmojiBackacheBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="29.308 21.018 26.683 17.367 29.536 16.594 26.237 12.006"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.773 19.751 37.403 15.298 34.517 15.938 35.309 10.343"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBackacheBlack

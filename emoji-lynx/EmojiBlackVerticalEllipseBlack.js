@@ -1,18 +1,13 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "black vertical ellipse" (black) [2B2E]. */
-const EmojiBlackVerticalEllipseBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlackVerticalEllipseBlack = lynxIcon(`
   <g id="line-supplement">
     <path fill="#000" d="M55.9999 35.9585C56.0349 51.4217 47.1089 63.9768 36.063 64C25.0171 64.0231 16.0341 51.5057 16.0001 36.0415C15.9651 20.5783 24.8911 8.0232 35.937 8.00003C46.9829 7.97686 55.9659 20.4943 55.9999 35.9585Z"/>
   </g>
   <g id="line">
     <path fill="none" stroke="#000" stroke-width="2" d="M56 36C56 51.4637 47.046 64 36 64C24.954 64 16 51.4637 16 36C16 20.5363 24.954 8 36 8C47.046 8 56 20.5363 56 36Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlackVerticalEllipseBlack

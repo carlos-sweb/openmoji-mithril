@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hanging gardens of babylon" (black) [E211]. */
-const EmojiHangingGardensOfBabylonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHangingGardensOfBabylonBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="13.125 42.175 13.125 36.506 58.875 36.506 58.875 42.175"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="18.707 32.948 18.707 27.28 42.012 27.28"/>
@@ -28,7 +25,5 @@ const EmojiHangingGardensOfBabylonBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.3928,42.74a6.41,6.41,0,0,1,6.2334,2.9936"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43.8448,23.7216H24.3431a3.558,3.558,0,0,0-3.558,3.558H42.012"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHangingGardensOfBabylonBlack

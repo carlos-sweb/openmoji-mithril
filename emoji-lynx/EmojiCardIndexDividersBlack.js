@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "card index dividers" (black) [1F5C2]. */
-const EmojiCardIndexDividersBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCardIndexDividersBlack = lynxIcon(`
   <g id="line">
     <line x1="11" x2="61" y1="29" y2="29" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="26.8928" x2="61" y1="25" y2="25" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiCardIndexDividersBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.565,20h5.87A1.565,1.565,0,0,1,38,21.565V25a0,0,0,0,1,0,0H29a0,0,0,0,1,0,0V21.565A1.565,1.565,0,0,1,30.565,20Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.565,24h5.87A1.565,1.565,0,0,1,27,25.565V29a0,0,0,0,1,0,0H18a0,0,0,0,1,0,0V25.565A1.565,1.565,0,0,1,19.565,24Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCardIndexDividersBlack

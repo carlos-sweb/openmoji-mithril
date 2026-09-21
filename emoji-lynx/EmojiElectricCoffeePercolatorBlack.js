@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "electric coffee percolator" (black) [E154]. */
-const EmojiElectricCoffeePercolatorBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiElectricCoffeePercolatorBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44 21H52V27.5C52 30.7382 48.7231 41.5133 47.475 45.5M44 23.5H49.5V27.5C49.5 28.9799 47.5728 33.4381 46 36.8301"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.5 45.42C21.2337 41.3711 18 30.7168 18 27.5C18 23.5 18 21 18 21H22C22 21 22 22.5 22 25C22 26.6667 23.7778 28.7778 24.963 30"/>
@@ -15,7 +12,5 @@ const EmojiElectricCoffeePercolatorBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M27 17H40"/>
     <rect x="33" y="8" width="4" height="4" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiElectricCoffeePercolatorBlack

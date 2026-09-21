@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "passport control" (black) [1F6C2]. */
-const EmojiPassportControlBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPassportControlBlack = lynxIcon(`
   <g id="line">
     <line x1="46.9898" x2="41.774" y1="48.521" y2="60.9712" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="51.6112" x2="47.0616" y1="50.6805" y2="60.9973" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -33,7 +30,5 @@ const EmojiPassportControlBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="22.379 48.744 22.379 39.203 11.822 39.203 11.822 54.179 17.371 54.179"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="17.371 54.179 22.379 54.179 22.379 48.744"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPassportControlBlack

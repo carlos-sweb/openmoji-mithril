@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fox" (black) [1F98A]. */
-const EmojiFoxBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFoxBlack = lynxIcon(`
   <g id="line">
     <path fill="#000000" stroke="none" d="M29.0454,41.681c0,0-3.0393,1.5997-4.5092,1.0171c-1.4698-0.5826-2.2313-2.14-1.7007-3.4785 c0.5306-1.3386,2.1522-1.9514,3.622-1.3688C27.9274,38.4334,29.0454,41.681,29.0454,41.681z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M35.9943,56.9292c-1.513-0.2346-2.7355-0.9125-3.641-2.075v-0.698"/>
@@ -19,7 +16,5 @@ const EmojiFoxBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.6672,65.4494c-3.804,2.0509-7.418,2.0886-10.8055,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M29.0178,17.9521c0,0,6.0552-3.1842,13.7809-0.1044"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFoxBlack

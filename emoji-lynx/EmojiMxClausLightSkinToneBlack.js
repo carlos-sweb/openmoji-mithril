@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Mx Claus: light skin tone" (black) [1F9D1-1F3FB-200D-1F384]. */
-const EmojiMxClausLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMxClausLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.5206,24.3478a27.7526,27.7526,0,0,0-.2988,3.747c-.1723,8.2606,4.6388,15.06,10.7461,15.1878s11.1974-6.4661,11.37-14.7267"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.3376,28.5559a27.4609,27.4609,0,0,0-.2348-4.2081"/>
@@ -22,7 +19,5 @@ const EmojiMxClausLightSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.3727,23.42a14.2578,14.2578,0,0,1-5.2976,1.4325s.8181,3.2885,2.6488,4.2367c0,0,.3859,10.6864,7.3309,10.6864"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.381,23.42a14.258,14.258,0,0,0,5.2977,1.4325s-.8181,3.2885-2.6488,4.2367c0,0-.3859,10.6864-7.3309,10.6864"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMxClausLightSkinToneBlack

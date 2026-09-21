@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "petri dish" (black) [1F9EB]. */
-const EmojiPetriDishBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPetriDishBlack = lynxIcon(`
   <g id="line">
     <circle cx="36.0526" cy="36.3321" r="16.9387" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="36.0526" cy="36.3321" r="21.5814" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -17,7 +14,5 @@ const EmojiPetriDishBlack = {
     <circle cx="40.8696" cy="27.549" r="0.8293" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="35.2804" cy="47.5386" r="0.8293" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPetriDishBlack

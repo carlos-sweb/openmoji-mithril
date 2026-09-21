@@ -1,15 +1,10 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hook" (black) [1FA9D]. */
-const EmojiHookBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHookBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.5511,49.87s-6.4505-4.0285-5.64-10.1295L19.91,39.74A13.1848,13.1848,0,1,0,41.5335,49.87V22.5059a7.9115,7.9115,0,1,0-4.7465-.18V49.87a8.4382,8.4382,0,1,1-16.8763,0h.8339M41.2972,17.4489a3.1645,3.1645,0,1,1,1.3123-2.566"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHookBlack

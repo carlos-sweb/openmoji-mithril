@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "help others" (color) [E083]. */
-const EmojiHelpOthers = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHelpOthers = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M42.5982,36.6476A12.2757,12.2757,0,1,0,54.7143,49.0807,12.29,12.29,0,0,0,42.5982,36.6476Z"/>
     <path fill="#9b9b9a" d="M42.511,43.3987a5.524,5.524,0,1,0,5.4523,5.5949A5.53,5.53,0,0,0,42.511,43.3987Z"/>
@@ -30,7 +27,5 @@ const EmojiHelpOthers = {
     <circle cx="26.9251" cy="13.9751" r="3.5434" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="44.5686" cy="17.6046" r="3.5434" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHelpOthers

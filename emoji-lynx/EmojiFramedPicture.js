@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "framed picture" (color) [1F5BC]. */
-const EmojiFramedPicture = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFramedPicture = lynxIcon(`
   <g id="color">
     <rect x="12" y="12" width="48" height="48" fill="#A57939" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="18" y="18" width="36" height="36" fill="#92D3F5" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiFramedPicture = {
     <rect x="18" y="18" width="36" height="36" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M22,43c0.5259-1.0198,0.7275-1.9672,3-3c2.6096-1.1859,3-2,6-4c4.746-3.164,6.792-9.0278,11-9c1.7205,0.0114,5,7,8,8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFramedPicture

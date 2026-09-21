@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "service dog" (color) [1F415-200D-1F9BA]. */
-const EmojiServiceDog = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiServiceDog = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#6a462f" d="m43.7705,56.9941c2.2959-3.7382,3.2914-8.1306,2.8315-12.4933l-2.099-3.083-4.1079-1.5344c.0547.6407,1.5706,5.5234,2.0129,6.7978.0998.2885.1443.5932.131.8982-.248,5.4983-1.561,6.9861-1.8953,7.2784-.0212.0166-.0421.0331-.0625.05l-.0157.0109.0025.0023c-.3654.3104-.5898.7553-.622,1.2337-.0282,1.0642.804,1.9536,1.8677,1.9961.6068.0467,1.2021-.1846,1.6182-.6287l.0024.0022.0078-.0123c.1385-.1524.2496-.3276.3284-.5179Z"/>
@@ -39,7 +36,5 @@ const EmojiServiceDog = {
       <line x1="31.8497" x2="31.8497" y1="37.0384" y2="32.4578" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiServiceDog

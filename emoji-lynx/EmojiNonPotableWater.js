@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "non-potable water" (color) [1F6B1]. */
-const EmojiNonPotableWater = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNonPotableWater = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="26" fill="#fff"/>
     <path fill="#ea5a47" stroke-miterlimit="10" d="m36 7c-16.02 0-29 12.98-29 29s12.98 29 29 29 29-12.98 29-29-12.98-29-29-29zm-25.21 29.27c0-5.075 3.417-12.69 6.202-16.49l35.2 35.27c-3.805 2.784-10.93 5.904-16.01 5.904-12.7 0-25.39-11.98-25.39-24.68zm44.87 15.18-35.06-35.13c3.805-2.784 10.77-5.441 15.84-5.441 12.7 0 24.68 12.25 24.68 24.95 0 5.075-2.686 11.81-5.47 15.62z"/>
@@ -27,7 +24,5 @@ const EmojiNonPotableWater = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32.5 28h13.5v8l-5.136 0.165"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m28.87 31.86c-2.468 0.1054-5.076 2.69-4.869 5.139h4c-0.5578-0.2505 0.7514-2.916 3.264-2.666"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNonPotableWater

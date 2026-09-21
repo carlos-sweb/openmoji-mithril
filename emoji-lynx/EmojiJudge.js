@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "judge" (color) [1F9D1-200D-2696-FE0F]. */
-const EmojiJudge = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJudge = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" d="M16.9628,58.9989c0,0-2.1669-14.8402,9.8331-14.8402c3.1918,2.128,5.7264,3.6985,8.8,3.6922h-0.125 c3.0736,0.0063,6.208-1.9642,9.3999-4.0922c12.3378-0.0001,10.109,15.1402,10.34,15.2402"/>
     <path fill="#FFFFFF" d="M44.7853,44.6077l-3.8861,5.9728l-2.5935,4.4989c-1.2071,2.0939-4.2282,2.0958-5.438,0.0035l-2.5994-4.4955 l-3.4576-5.9797C32.9523,49.8996,38.9435,49.8996,44.7853,44.6077z"/>
@@ -33,7 +30,5 @@ const EmojiJudge = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26,36.5808c-4,0-4-6-4-13 s4-14,14-14s14,7,14,14s0,13-4,13"/>
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-width="2" d="M24.9365,28.5808c0,9,4.9365,14,11,14 c5.9365,0,11.0635-5,11.0635-14c0.0245-1.7187-0.3164-3.4229-1-5c-3-3-7-8-7-8c-4,3-7,6-13,7.0005 C26,22.5808,24.9365,23.58,24.9365,28.5808z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJudge

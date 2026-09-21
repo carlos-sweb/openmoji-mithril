@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ladder" (color) [1FA9C]. */
-const EmojiLadder = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLadder = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="37.7593 20.2288 43.852 20.2288 42.2034 24.6012 36.9709 24.6012 37.7593 20.2288"/>
     <polygon fill="#fff" points="34.5338 32.1991 40.1964 32.0558 38.3328 36.4999 33.3153 36.1415 34.5338 32.1991"/>
@@ -25,7 +22,5 @@ const EmojiLadder = {
     <line x1="37.2559" x2="23.4385" y1="50.9739" y2="50.9739" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="27.2119" x2="41.0292" y1="39.316" y2="39.316" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLadder

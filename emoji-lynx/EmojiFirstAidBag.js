@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "first aid bag" (color) [E309]. */
-const EmojiFirstAidBag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFirstAidBag = lynxIcon(`
   <g id="color">
     <rect x="11" y="21.3062" width="50" height="34.3876" fill="#D0CFCE"/>
     <polygon fill="#D22F27" points="27.706,40.8719 34.446,40.8719 34.446,47.6119 39.19,47.6119 39.19,40.8719 45.93,40.8719 45.93,36.1279 39.19,36.1279 39.19,29.3879 34.446,29.3879 34.446,36.1279 27.706,36.1279"/>
@@ -20,7 +17,5 @@ const EmojiFirstAidBag = {
     <path d="M18.9391,18.6936h2.8591c0.5127,0,0.9284,0.4157,0.9284,0.9284v1.8314c0,0.5127-0.4157,0.9284-0.9284,0.9284h-2.8591 c-0.5127,0-0.9284-0.4157-0.9284-0.9284V19.622C18.0107,19.1093,18.4264,18.6936,18.9391,18.6936z"/>
     <path d="M51.2323,18.6936h2.8591c0.5127,0,0.9284,0.4157,0.9284,0.9284v1.8314c0,0.5127-0.4157,0.9284-0.9284,0.9284h-2.8591 c-0.5127,0-0.9284-0.4157-0.9284-0.9284V19.622C50.3039,19.1093,50.7196,18.6936,51.2323,18.6936z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFirstAidBag

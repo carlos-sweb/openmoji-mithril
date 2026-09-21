@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "swipe down" (color) [E10B]. */
-const EmojiSwipeDown = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSwipeDown = lynxIcon(`
   <g id="color">
     <circle cx="14.2291" cy="21.7237" r="3.9999" fill="#92d3f5"/>
   </g>
@@ -34,7 +31,5 @@ const EmojiSwipeDown = {
     <line x1="18.6961" x2="13.4949" y1="44.3501" y2="49.5518" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="8.2932" x2="13.4949" y1="44.3506" y2="49.5518" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSwipeDown

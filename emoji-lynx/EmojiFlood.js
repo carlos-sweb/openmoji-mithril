@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flood" (color) [E09F]. */
-const EmojiFlood = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlood = lynxIcon(`
   <g id="color">
     <rect x="17.4678" y="25.8874" width="36.7212" height="25.7556" fill="#fff"/>
     <polygon fill="#a57939" points="41.051 31.123 30.741 31.123 30.741 44.767 41.051 48 41.051 31.123"/>
@@ -25,7 +22,5 @@ const EmojiFlood = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m61.7947,48.9356c-5.1544,0-5.1544-3.1836-10.3089-3.1836s-5.1545,3.1836-10.3089,3.1836-5.1545-3.1836-10.3089-3.1836-5.1545,3.1836-10.4606,3.1836-5.1544-3.1836-10.4605-3.1836"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m61.7947,63.8662c-5.1544,0-5.1544-3.1836-10.3089-3.1836s-5.1545,3.1836-10.3089,3.1836-5.1545-3.1836-10.3089-3.1836-5.1545,3.1836-10.4606,3.1836-5.1544-3.1836-10.46-3.1836"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlood

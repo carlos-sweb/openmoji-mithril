@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "classical building" (black) [1F3DB]. */
-const EmojiClassicalBuildingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClassicalBuildingBlack = lynxIcon(`
   <g id="line">
     <rect x="11.99" y="55.89" width="48.01" height="3.993" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="14.18" y="21.76" width="43.65" height="3.999" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.001"/>
@@ -16,7 +13,5 @@ const EmojiClassicalBuildingBlack = {
     <polygon transform="matrix(1.091 0 0 .9982 -3.283 .098)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.916" points="36 12 19 21.75 53 21.75"/>
     <rect x="40.35" y="25.61" width="4.298" height="26.3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.702"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClassicalBuildingBlack

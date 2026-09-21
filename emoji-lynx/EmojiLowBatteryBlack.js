@@ -1,16 +1,11 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "low battery" (black) [1FAAB]. */
-const EmojiLowBatteryBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLowBatteryBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M61.081,31.3475v-7.159a1,1,0,0,0-1-1H6.772a1,1,0,0,0-1,1v25.016a1,1,0,0,0,1,1H60.085a1,1,0,0,0,1-1v-6.674h5.143V31.3475Z"/>
     <rect x="11" y="27.3595" width="10.1213" height="19.007" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLowBatteryBlack

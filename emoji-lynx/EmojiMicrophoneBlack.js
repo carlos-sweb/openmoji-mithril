@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "microphone" (black) [1F3A4]. */
-const EmojiMicrophoneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMicrophoneBlack = lynxIcon(`
   <g id="line">
     <line x1="30.7498" x2="34.7704" y1="38.9407" y2="34.3225" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.514,30.4299c-1.8043,1.0136-3.7741,1.4947-5.6491,1.4045"/>
@@ -15,7 +12,5 @@ const EmojiMicrophoneBlack = {
     <line x1="15.4968" x2="12.4507" y1="56.0006" y2="59.0746" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="53.8679" x2="37.249" y1="29.5206" y2="14.9404" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMicrophoneBlack

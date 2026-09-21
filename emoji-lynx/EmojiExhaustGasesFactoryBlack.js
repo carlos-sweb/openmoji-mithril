@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "exhaust gases factory" (black) [E2CC]. */
-const EmojiExhaustGasesFactoryBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiExhaustGasesFactoryBlack = lynxIcon(`
   <g id="line">
     <g id="line-2">
       <rect x="11.1061" y="44.0303" width="49.7879" height="15.9697" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -27,7 +24,5 @@ const EmojiExhaustGasesFactoryBlack = {
     </g>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38.889,12.2778a5.2581,5.2581,0,0,1,9.2247-3.4712,4.195,4.195,0,0,1,7.6433,2.4177c.0071,0,.0137-.002.0208-.002a4.2222,4.2222,0,1,1,0,8.4444c-.0686,0-.1323-.017-.2-.02a3.1151,3.1151,0,0,1-1.9479,4.06c.0057.0633.0369.1178.0369.1825a2.1111,2.1111,0,1,1-4.2222,0,2.0851,2.0851,0,0,1,.5476-1.3879,3.1488,3.1488,0,0,1-.4257-.9549,3.1433,3.1433,0,0,1-4.2993-2.4894A4.1985,4.1985,0,0,1,39.18,13.9329,5.22,5.22,0,0,1,38.889,12.2778Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiExhaustGasesFactoryBlack

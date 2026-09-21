@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "abacus" (black) [1F9EE]. */
-const EmojiAbacusBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAbacusBlack = lynxIcon(`
   <g id="line">
     <line x1="12.0921" x2="12.0921" y1="58.8737" y2="12.8737" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="48.651" x2="59.5457" y1="19.7366" y2="19.7365" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -37,7 +34,5 @@ const EmojiAbacusBlack = {
     <circle cx="41.088" cy="41.0113" r="2.7237" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.3618"/>
     <circle cx="51.4228" cy="41.0113" r="2.7237" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.3618"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAbacusBlack

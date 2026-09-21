@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "honey pot" (black) [1F36F]. */
-const EmojiHoneyPotBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHoneyPotBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="55,17 55,11 17,11 17,17"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M51,42c0,1.6563-1.3428,3-3,3c-1.6572,0-3-1.3437-3-3"/>
@@ -17,7 +14,5 @@ const EmojiHoneyPotBlack = {
     <line x1="33" x2="33" y1="17" y2="11" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45,60c8.2842,0,15-6.7158,15-15V22c0-2.7612-2.2383-5-5-5H17c-2.7617,0-5,2.2388-5,5v23c0,8.2842,6.7158,15,15,15H45z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHoneyPotBlack

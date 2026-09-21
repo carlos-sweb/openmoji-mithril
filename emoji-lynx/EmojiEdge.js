@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Edge" (color) [E057]. */
-const EmojiEdge = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEdge = lynxIcon(`
   <g id="color">
     <path fill="#61B2E4" d="M29 36.5V32C26.8333 32 22.5 34.7 22.5 45.5C22.5 56.3 31.1667 62.3333 35.5 64C36.1667 64 39.1 63.6 45.5 62C51.9 60.4 56.8333 54.6667 58.5 52C53.3333 53.6667 41.5 55.6 35.5 50C29.5 44.4 28.6667 38.6667 29 36.5Z"/>
     <path fill="#92D3F5" fill-rule="evenodd" d="M63.3049 26.2072C59.2885 15.0096 48.5796 7 36 7C19.9837 7 7 19.9837 7 36C7 52.0163 19.9837 65 36 65C36.1937 65 36.3869 64.9981 36.5797 64.9943C28.1007 62.4485 22 55.3538 22 47C22 36.5066 24.5 28.5 40.5 28.5C47.2548 28.5 54.2528 31.091 59.0315 35.2569L63.3049 26.2072Z" clip-rule="evenodd"/>
@@ -17,7 +14,5 @@ const EmojiEdge = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.5C15 16.3333 23 8 36 8C52.5076 8 65 19 64.5 30.5C64 42 55 45 48.5 45C43.3 45 41.1831 42 40.7747 40.5C41.7974 39.0684 42.5 37.3874 42.5 35.5C42.5 29 34.5 21.5 24 21.5C16.5 21.5 8 23.5 8 35.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 36C8 52 21 62 29 63"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEdge

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "smiling face with hearts" (black) [1F970]. */
-const EmojiSmilingFaceWithHeartsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmilingFaceWithHeartsBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M45.815,44.8043 c-5.6998,4.6988-13.9302,4.6988-19.63,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.04,50.3656 c-2.2368,0.0001-4.0499,1.8135-4.0498,4.0502c0,0.7409,0.2033,1.4677,0.5878,2.1011l0.232,0.3422l7.1911,9.218l7.2333-9.2748 c1.3204-1.8042,0.9281-4.3372-0.8761-5.6576c-1.8042-1.3204-4.3372-0.9281-5.6576,0.8761 c-0.147,0.2008-0.2751,0.4148-0.3828,0.6392c-0.0843,0.1747-0.2943,0.2481-0.4691,0.1637 c-0.0715-0.0345-0.1292-0.0922-0.1637-0.1637C55.0167,51.2541,53.5967,50.3603,52.04,50.3656z"/>
@@ -17,7 +14,5 @@ const EmojiSmilingFaceWithHeartsBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.6941,32.4036 c-1.0598-2.3854-3.8527-3.46-6.238-2.4002c-1.0697,0.4752-1.9249,1.3305-2.4002,2.4002"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M48.9441,32.4036 c-1.0598-2.3854-3.8527-3.46-6.238-2.4002c-1.0697,0.4752-1.9249,1.3305-2.4002,2.4002"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmilingFaceWithHeartsBlack

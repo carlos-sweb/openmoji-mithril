@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "control knobs" (black) [1F39B]. */
-const EmojiControlKnobsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiControlKnobsBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M56.4636,59.8432h-41.688c-1.6569,0-3-1.3431-3-3v-41.688c0-1.6569,1.3431-3,3-3h41.688c1.6569,0,3,1.3431,3,3v41.688 C59.4636,58.5001,58.1205,59.8432,56.4636,59.8432z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M51.6525,25.7643c-0.1089,2.7593-2.434,4.9079-5.1932,4.799c-2.7594-0.1089-4.9079-2.434-4.799-5.1932 c0.1089-2.7593,2.4339-4.9079,5.1932-4.799"/>
@@ -17,7 +14,5 @@ const EmojiControlKnobsBlack = {
     <line x1="31.3463" x2="24.1665" y1="25.7985" y2="25.5152" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="51.6564" x2="46.6564" y1="21.0804" y2="25.5672" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiControlKnobsBlack

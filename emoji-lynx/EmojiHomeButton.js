@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "home button" (color) [E25E]. */
-const EmojiHomeButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHomeButton = lynxIcon(`
   <g id="color">
     <polygon fill="#d0cfce" points="42.2771 59.8522 42.2638 41.5965 30.0769 41.5439 30.0327 59.8993 16.7565 59.8993 16.0605 34.7399 16.0812 29.0201 36.0216 8.9381 55.9811 28.8969 55.9766 43.3584 55.5109 59.9379 42.2771 59.8522"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiHomeButton = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="8.4925 35.5947 36.0155 7.9766 63.5958 35.3474"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="41.8149 59.9327 41.8149 41.6273 30.2251 41.6273 30.2251 59.9327"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHomeButton

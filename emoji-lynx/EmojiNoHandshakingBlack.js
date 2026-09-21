@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no handshaking" (black) [E380]. */
-const EmojiNoHandshakingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoHandshakingBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="36" cy="36" r="30" stroke-width="2"/>
     <path stroke-width="2" d="m55.66 51.44a24.99 24.99 0 0 0-35.06-35.13z"/>
@@ -19,7 +16,5 @@ const EmojiNoHandshakingBlack = {
     <path stroke-width="2" d="m39.33 45.97c-0.4456 0.4954-0.6563 1.17-0.2472 1.89 0 0 0.6043 0.9872 0.777 1.373 0.08633 0.1288 0.1295 0.3004 0.259 0.4292 0.6043 0.8155 1.813 0.9872 2.676 0.3434 0.08279-0.06065 0.159-0.1274 0.2284-0.1993"/>
     <path stroke-width="1.819" d="m33.11 24.57 2.495-0.774 5.474-1.356c1.171-0.3074 2.383 0.3314 2.791 1.472 0.4391 1.636 0.9789 2.889 2.102 4.868 0.4255 1.038-0.0612 2.225-1.093 2.666-1.114 0.277-1.623-0.2243-2.605-0.9799-1.282-1.221-1.535-1.741-2.222-2.658l-3.029 0.8602"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoHandshakingBlack

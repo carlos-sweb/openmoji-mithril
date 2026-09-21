@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "leftwards pushing hand" (black) [1FAF7]. */
-const EmojiLeftwardsPushingHandBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLeftwardsPushingHandBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.879" d="m22.5057,66.6568c6.5766-2.8186,10.5132-10.3347,8.0799-18.4052l36.0775,3.3729v15.0323H22.5057Z"/>
     <g id="line-2">
@@ -13,7 +10,5 @@ const EmojiLeftwardsPushingHandBlack = {
     </g>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.879" d="m30.8956,49.7455c-6.229-3.7581-6.8397-13.0123-7.488-18.3018-.4698-2.7152-1.6817-2.7152-2.1139-5.4304l-2.4709-16.7328c-.0921-1.089-.8837-1.9906-1.9516-2.223-1.3436-.2923-2.6698.5599-2.9621,1.9035v20.1621"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLeftwardsPushingHandBlack

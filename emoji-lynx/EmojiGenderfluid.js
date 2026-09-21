@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "genderfluid" (color) [E42F]. */
-const EmojiGenderfluid = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGenderfluid = lynxIcon(`
   <g id="color">
     <rect x="6" y="18" width="60" height="36" fill="#1e50a0"/>
     <rect x="6" y="18" width="60" height="28.8" fill="#3f3f3f"/>
@@ -16,7 +13,5 @@ const EmojiGenderfluid = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGenderfluid

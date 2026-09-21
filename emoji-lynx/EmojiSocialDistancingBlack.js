@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "social distancing" (black) [E0B0]. */
-const EmojiSocialDistancingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSocialDistancingBlack = lynxIcon(`
   <g id="line">
     <g id="line-2">
       <g id="Standing_Man">
@@ -31,7 +28,5 @@ const EmojiSocialDistancingBlack = {
     <line x1="45.9663" x2="40.6911" y1="35.628" y2="40.9032" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="27.116" x2="32.3561" y1="35.628" y2="40.8681" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSocialDistancingBlack

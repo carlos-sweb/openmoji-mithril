@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "raspberry pi" (color) [E1C9]. */
-const EmojiRaspberryPi = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRaspberryPi = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" stroke="none" d="M19.9502,25.5384c0,0-2.5794,1.5485-3.1555,4.0953s0.0005,5.3368,0.0005,5.3368 s-4.0466,1.6684-4.0466,6.9178s3.4132,6.7328,3.4132,6.7328s0.0403,6.1949,3.859,9.5361c3.8187,3.3412,7.8262,3.3565,7.8262,3.3565 s2.0841,4.4087,8.2153,4.4087s8.2153-4.4087,8.2153-4.4087s4.1496-0.606,7.8262-3.3565c3.6766-2.7504,3.5755-9.5361,3.5755-9.5361 s3.6966-1.4834,3.6966-6.7328s-4.0466-6.9178-4.0466-6.9178s0.5766-2.7901,0.0005-5.3368s-3.1555-4.0953-3.1555-4.0953"/>
     <path fill="#EA5A47" stroke="none" d="M55.4477,33.4279c0-10.7186-8.6891-13.7384-19.4077-13.7384s-19.4077,3.0198-19.4077,13.7384 S25.3214,52.8356,36.04,52.8356S55.4477,44.1465,55.4477,33.4279z"/>
@@ -37,7 +34,5 @@ const EmojiRaspberryPi = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M46.3732,29.4392c0,3.0961,2.4819,5.6059,5.5436,5.6059"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.2512,42.6717c0,2.26,1.5157,4.1856,3.6392,4.9194"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRaspberryPi

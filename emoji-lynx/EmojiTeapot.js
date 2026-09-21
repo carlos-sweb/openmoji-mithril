@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "teapot" (color) [1FAD6]. */
-const EmojiTeapot = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTeapot = lynxIcon(`
   <g id="color">
     <path id="color_fill" fill="#d0cfce" stroke-width="0" d="m18.273 38c-1.41-.60931-4.279-4.2418-5.055-5.3813l-4.7256-1.6187c-.10467 5.4196 7.2272 11.308 9.7639 12.939 1.4424 3.4789 3.1394 8.0545 10.465 11.076h14.557c9.8158-1.9951 13.468-11.723 9.0037-21.151l5.0324-.03843c2.8145-1.105 3.4014 5.3433.80722 9.292-.10454 3.1149 2.479 3.3155 3.5719 2.1226 1.1365-1.6516 4.1237-13.588-1.125-15.251h-9.8858l-1.0248-1.9884c-2.3831-2.6294-6.9124-5.8892-10.571-6.25-.2155-1.9868-.34607-4.7443-3.0875-4.75-3.9817.0072-2.7102 2.8187-3.0875 4.75-4.8988.93751-8.2176 2.9875-10.571 5.8968z"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiTeapot = {
     <path id="body_lhs" fill="none" stroke="#000000" stroke-linejoin="round" stroke-width="2" d="m22.342 28c-10.115 19.308 1.7766 27.301 7.3792 27.016h12.556c5.6026.34797 17.497-7.7078 7.3812-27.016z"/>
     <path id="handle_in" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m52.282 33.863 4.7565-.0625c4.3904-.19398 2.059 7.2093 1.1784 9.0661-.94319 2.3026 1.6621 4.2152 3.4766 2.3726 3.4084-4.9319 2.8179-14.73-1.125-15.251h-9.8858"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTeapot

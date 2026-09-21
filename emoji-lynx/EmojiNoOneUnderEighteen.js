@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no one under eighteen" (color) [1F51E]. */
-const EmojiNoOneUnderEighteen = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoOneUnderEighteen = lynxIcon(`
   <g id="line-supplement" transform="translate(.05977 -5.062)" fill="none" stroke="#000">
     <path transform="translate(-.05977 5.062)" stroke-linejoin="round" stroke-width="2" d="m43.55 38.9s0.2869-0.1526 0.4414-0.1437c1.053 0.06008 2.084 0.3032 2.877 1.315 1.056 1.349 1.013 3.058 0.5936 4.004"/>
     <path stroke-width="2" d="m34.67 35c0.5599-5.391 4.525-8.083 8.964-8.261 5.362-0.04795 8.964 4.055 8.99 8.561 0 2.353-1 4.463-2.609 6.076 1.585 1.597 2.478 3.812 2.478 6.164 0 0.6926-0.3246 2.982-1.228 4.435"/>
@@ -26,7 +23,5 @@ const EmojiNoOneUnderEighteen = {
     <path d="m55.66 51.44c7.846-9.939 7.019-24.18-1.926-33.14-8.945-8.963-23.18-9.819-33.13-1.992l2.657 2.662z"/>
     <path d="m16.99 20.07a24.99 24.99 0 0 0 35.2 35.27z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoOneUnderEighteen

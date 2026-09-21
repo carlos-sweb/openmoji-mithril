@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hedgehog" (color) [1F994]. */
-const EmojiHedgehog = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHedgehog = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M13.5877,35.5855c0,0-4.1667,5.1667-3.6667,8.3333l-2.8333,2.5v1.5c0,0,6.8333,2.8333,13.3333,0.8333v2.5 l0.1667,2.5l3.3333,1.3333c0,0,3.8333-0.6667,4.8333-6c0,0,4,1.5,5.6667,5.8333l4.6667-0.3333c0,0,0.6667-2.5-0.1667-4.1667 l20.5-0.3333l2,1.8333v2l1,1.1667h2.1667l1.6667-1.8333l-1.8333-6.5l1.5-4.6667c0,0-17.3333,10.5-41.3333-3.1667l-1.8333-3.8333 c0,0-3.8333,0.6667-3.6667,1.6667C19.0877,36.7521,18.2544,34.0855,13.5877,35.5855z"/>
     <path fill="#6A462F" stroke="none" d="M18.5877,30.5021l-3.5,5.5c0,0,4.0833,0.1667,4,1.5833c-0.0833,1.4167,2.5,2.4167-0.4167,6.5833l2.1667,1 l1.4167-1.0833l1.5833-3.5l0.75-1.6667c0,0,19.0833,14.4167,41.3333,3.1667l1.5833-3l-5-5l-0.5833-2.1667l-0.6667-2.8333 l-3.9167-0.75l-3.5-4l-7.9167-1.3333l-4.25-1.5833l-3.8333,2.75l-3.8333-0.9167l-4.1667,2.9167l-1.9167,0.0833l-3.4167-0.3333 l-2.25,4.8333l-2.3333,0.0833L18.5877,30.5021z"/>
@@ -28,7 +25,5 @@ const EmojiHedgehog = {
     <line x1="46.9444" x2="52.3975" y1="32.4901" y2="29.9873" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="53.0404" x2="59.3015" y1="43.7689" y2="45.4464" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHedgehog

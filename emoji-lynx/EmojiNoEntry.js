@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no entry" (color) [26D4]. */
-const EmojiNoEntry = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoEntry = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36,11c-13.8066,0-25,11.1926-25,25c0,13.8066,11.1934,25,25,25c13.8065,0,25-11.1934,25-25C61,22.1926,49.8065,11,36,11z"/>
     <path fill="#FFFFFF" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M55.5195,39.4297c0.1986-1.1263,0.3081-2.2831,0.3081-3.4659c0-1.171-0.1078-2.316-0.3014-3.4306H16.4738 c-0.1936,1.1146-0.3014,2.2596-0.3014,3.4306c0,1.1828,0.1095,2.3396,0.3081,3.4659H55.5195z"/>
@@ -17,7 +14,5 @@ const EmojiNoEntry = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36,11c-13.8066,0-25,11.1926-25,25c0,13.8066,11.1934,25,25,25c13.8065,0,25-11.1934,25-25C61,22.1926,49.8065,11,36,11z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M55.5195,39.4297c0.1986-1.1263,0.3081-2.2831,0.3081-3.4659c0-1.171-0.1078-2.316-0.3014-3.4306H16.4738 c-0.1936,1.1146-0.3014,2.2596-0.3014,3.4306c0,1.1828,0.1095,2.3396,0.3081,3.4659H55.5195z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoEntry

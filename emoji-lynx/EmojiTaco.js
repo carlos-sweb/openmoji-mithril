@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "taco" (color) [1F32E]. */
-const EmojiTaco = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTaco = lynxIcon(`
   <g id="color">
     <ellipse cx="28.7075" cy="23.3108" rx="5.9988" ry="5.999" transform="matrix(0.9659 -0.2588 0.2588 0.9659 -5.0542 8.2223)" fill="#ea5a47" stroke="none"/>
     <ellipse cx="15.4904" cy="30.1549" rx="5.9997" ry="5.9999" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -16.7863 19.7875)" fill="#ea5a47" stroke="none"/>
@@ -25,7 +22,5 @@ const EmojiTaco = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.3047,18.7378c0.9971-0.4414,2.1435-0.561,3.2812-0.2568c1.1338,0.3037,2.0645,0.977,2.7071,1.854"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M57.002,25.1943c1.1093,0.1026,2.1894,0.5738,3.041,1.4253c0.8105,0.8106,1.2754,1.8272,1.4062,2.8804"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTaco

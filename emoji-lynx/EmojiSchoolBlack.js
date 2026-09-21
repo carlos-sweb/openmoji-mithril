@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "school" (black) [1F3EB]. */
-const EmojiSchoolBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSchoolBlack = lynxIcon(`
   <g id="line">
     <rect x="26.72" y="20.49" width="18.5601" height="36.02" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="24.8 20.49 26.72 20.49 26.72 23.56 9.36 23.56 13.21 17.42 28.4107 17.42 24.8 20.49"/>
@@ -35,7 +32,5 @@ const EmojiSchoolBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="58.2838 32.2841 56.3461 32.2841 56.3461 27.4398"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="51.5018 32.2841 49.564 32.2841 49.564 27.4398"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSchoolBlack

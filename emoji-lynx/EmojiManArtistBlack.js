@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man artist" (black) [1F468-200D-1F3A8]. */
-const EmojiManArtistBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManArtistBlack = lynxIcon(`
   <g id="line">
     <path d="M41.972,26.9445c0,1.1045-0.8965,2-2,2s-2-0.8955-2-2c0-1.1035,0.8965-2,2-2S41.972,25.841,41.972,26.9445"/>
     <path d="M33.972,26.9445c0,1.1045-0.8965,2-2,2s-2-0.8955-2-2c0-1.1035,0.8965-2,2-2S33.972,25.841,33.972,26.9445"/>
@@ -25,7 +22,5 @@ const EmojiManArtistBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M60.275,44.1946l-3.8708,14.9676c-0.2929,1.1327-1.4505,1.8146-2.5832,1.5217c-0.5615-0.1452-1.0243-0.5128-1.297-0.9758 c-0.2728-0.4631-0.3699-1.0459-0.2247-1.6075L56.17,43.133"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="60.275,44.1946 61.1538,40.7964 60.1372,40.5335 58.0847,40.0027 57.0488,39.7348 56.17,43.133"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManArtistBlack

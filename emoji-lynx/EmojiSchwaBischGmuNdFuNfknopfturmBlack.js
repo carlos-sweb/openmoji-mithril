@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "schwäbisch gmünd fünfknopfturm" (black) [E208]. */
-const EmojiSchwaBischGmuNdFuNfknopfturmBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSchwaBischGmuNdFuNfknopfturmBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="46.949 18.484 44.078 18.435 41.207 18.386 42.685 15.873 44.163 13.359 45.556 15.921 46.949 18.484"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="40.7 19.691 40.7 15.202 39.65 13.353 35.45 13.353 34.4 15.202 34.4 19.691"/>
@@ -22,7 +19,5 @@ const EmojiSchwaBischGmuNdFuNfknopfturmBlack = {
     <line x1="33.35" x2="33.35" y1="50.3243" y2="52.4369" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="37.55" x2="37.5605" y1="17.5786" y2="17.5786" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSchwaBischGmuNdFuNfknopfturmBlack

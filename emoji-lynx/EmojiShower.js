@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shower" (color) [1F6BF]. */
-const EmojiShower = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShower = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="#9B9B9A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.5153,20.1707c0,0,7.116-7.9306,13.3053-7.2782v5.8571c0,0-3.3014-0.9753-8.2012,5.762"/>
     <path fill="#9B9B9A" stroke="#9B9B9A" stroke-miterlimit="10" d="M23.3045,24.1514c0,0-3.6232,2.4309-3.1341,4.0328l23.497,23.5426 c0,0,0.9153,0.5151,2.0191-1.0588l1.7375-2.5347"/>
@@ -30,7 +27,5 @@ const EmojiShower = {
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M27.2838,48.4537 c-0.9549,0.9549-2.5745,0.8797-3.6198-0.1655c-1.0453-1.0453-1.1185-2.6668-0.1636-3.6217c0,0,1.1397-1.1811,4.8354-1.683 c0,0,0.7352-0.1359,0.6299,0.5727C28.4638,47.2519,27.2838,48.4537,27.2838,48.4537"/>
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M33.8206,54.9905 c-0.9549,0.9549-2.5745,0.8797-3.6198-0.1655c-1.0453-1.0453-1.1185-2.6668-0.1636-3.6217c0,0,1.1397-1.1812,4.8354-1.683 c0,0,0.7352-0.1359,0.6299,0.5727C35.0007,53.7887,33.8206,54.9905,33.8206,54.9905"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShower

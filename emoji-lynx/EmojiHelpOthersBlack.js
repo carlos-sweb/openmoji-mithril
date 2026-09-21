@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "help others" (black) [E083]. */
-const EmojiHelpOthersBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHelpOthersBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.6756,23.9431c-.2778-2.1086-1.4292-3.4866-3.34-3.4866-1.7539,0-3.4779.7993-4.29,4.0489,0,0-2.371,7.6178-2.371,10.303a10.0957,10.0957,0,0,0,.7729,3.6431l6.2751,20.884a2.3655,2.3655,0,0,0,2.1436,1.84,1.6845,1.6845,0,0,0,1.564-1.84L24.2467,36.06"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.1854,32.6275H28.4419a2.5277,2.5277,0,0,1-2.6036-1.748l-2.8058-6.5133"/>
@@ -18,7 +15,5 @@ const EmojiHelpOthersBlack = {
     <circle cx="26.9251" cy="13.9751" r="3.5434" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="44.5686" cy="17.6046" r="3.5434" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHelpOthersBlack

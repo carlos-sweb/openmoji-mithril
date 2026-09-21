@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "zombie" (color) [1F9DF]. */
-const EmojiZombie = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiZombie = lynxIcon(`
   <g id="color">
     <circle cx="36.9435" cy="28.0392" r="10" fill="#e67a94"/>
     <path fill="#b1cc33" d="M35.1773,17.1567c-5.8765.5287-10.5159,6.6407-10.5159,14.1212,0,7.8277,5.0764,14.1733,11.3386,14.1733s11.3387-6.3456,11.3387-14.1733a17.2594,17.2594,0,0,0-.7674-5.0941,9.9175,9.9175,0,0,1-11.394-9.0271Z"/>
@@ -32,7 +29,5 @@ const EmojiZombie = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5" d="M42,29.9171a2,2,0,1,1-2-2,2.0007,2.0007,0,0,1,2,2"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5" d="M34,29.9171a2,2,0,1,1-2-2,2.0007,2.0007,0,0,1,2,2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiZombie

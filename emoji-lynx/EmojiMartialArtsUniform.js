@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "martial arts uniform" (color) [1F94B]. */
-const EmojiMartialArtsUniform = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMartialArtsUniform = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M62.48,46.02c-0.74-0.16-1.45-0.22-2.13-0.22c-3.8199,0-6.58,2.09-6.58,2.09L47.71,28.21L47.2,47.45 l4.66,15.96c0,0-2.19,0.85-3.86,1.21l-0.01-0.14c-4.28,1.03-12.01,2.11-22.63,0.4v-2.92c0,0-2.73,0.85-4.52-1.15l3.98-13.65 l-0.51-19.24L18.25,47.6v-0.03c0,0-2.76-2.09-6.58-2.09c-0.68,0-1.38,0.06-2.12,0.22l7.11-23.02c0,0,1.56-5.47,3.44-7.19 c1.87-1.72,8.1801-2.46,8.1801-2.46l2.1-5.37c0.12-0.3,0.47-0.55,1.22-0.55h9.01c0.76,0,1.1,0.24,1.22,0.55l2.11,5.37 c0,0,6.11,1.04,7.98,2.76c1.88,1.71,3.44,7.18,3.44,7.18L62.48,46.02z"/>
     <polygon fill="#9B9B9A" stroke="none" points="30.9212,7.875 41.5833,7.875 36,16.9583"/>
@@ -25,7 +22,5 @@ const EmojiMartialArtsUniform = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M47.3123,42.1536c-9.8928,0.9136-17.8024,0.7124-22.6167,0.0011"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M47.2005,46.2577c-9.7712,0.8963-17.5847,0.7032-22.393,0.0074"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMartialArtsUniform

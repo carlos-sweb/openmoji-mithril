@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mechanic: medium skin tone" (color) [1F9D1-1F3FD-200D-1F527]. */
-const EmojiMechanicMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMechanicMediumSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M17.1347,58.8989c0,0-2-13.5,10-13.5c3.1918,2.1279,5.9264,3.5984,9,3.5922h-0.125 c3.0736,0.0062,5.4081-2.1643,8.6-4.2922c15.5705,0,10.8,14.2,10.8,14.2"/>
     <polygon fill="#61B2E4" points="49.2972,58.8612 49.2972,45.9861 44.8058,45.2018 44.8058,52.4469 26.929,52.4469 26.9308,45.2018 22.2649,45.9861 22.2649,58.8612"/>
@@ -36,7 +33,5 @@ const EmojiMechanicMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.8089,22.4082c-6.1883-4.9827-16.9721-5.4838-24.0306-2.1379c-1.2509,0.593-2.3848,1.3068-3.3554,2.1379"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M25.4782,20.4703c0.5452-0.1169,10.5986-5.3959,21.5581,0.3394l-0.0361,0.1447c1.5074,5.4986,0.1748,6.2727,0.1748,6.2727 l-5.2599-6.3244c0,0-1.4782,2.8056-5.6542,2.4931c0,0,0.6471-2.293,0.2934-3.5679c0,0-6.8103,4.4728-11.6497,6.5335L24.8973,26.36 l-0.1214,0.0037c-0.4592,0.1263-0.7052-4.1554,0.8544-5.824"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMechanicMediumSkinTone

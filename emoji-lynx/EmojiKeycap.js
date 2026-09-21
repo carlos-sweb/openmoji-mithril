@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "keycap: #" (color) [0023-FE0F-20E3]. */
-const EmojiKeycap = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiKeycap = lynxIcon(`
   <g id="color">
     <rect x="12" y="12" width="48" height="47.83" fill="#92d3f5"/>
   </g>
@@ -16,7 +13,5 @@ const EmojiKeycap = {
     <line x1="26.97" x2="43.68" y1="39.85" y2="39.83" stroke-width="4.781"/>
     <rect x="12" y="12" width="48" height="48" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiKeycap

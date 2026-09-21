@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stuffed flatbread" (black) [1F959]. */
-const EmojiStuffedFlatbreadBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStuffedFlatbreadBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m43.4959,46.9594c.1527.136.3454.2189.5491.2363.2045.0107.4062-.0511.5695-.1747"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32.3127,38.0187c.1527.136.3454.2189.5491.2363.2045.0108.4062-.0511.5695-.1746"/>
@@ -22,7 +19,5 @@ const EmojiStuffedFlatbreadBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.3514,22.8631c-1.0914.306-2.0544.9573-2.7448,1.8563-.6617.9221-.9762,2.0485-.888,3.18"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.5584,16.1544c.5169-1.0088,1.3467-1.823,2.3651-2.3208,1.0353-.4651,2.2016-.5493,3.2929-.2378"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStuffedFlatbreadBlack

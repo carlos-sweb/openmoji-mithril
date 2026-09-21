@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "three finger operation" (color) [E102]. */
-const EmojiThreeFingerOperation = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiThreeFingerOperation = lynxIcon(`
   <g id="color">
     <circle cx="27.3387" cy="18.2325" r="6.3704" fill="#fff"/>
     <circle cx="35.0301" cy="15.1712" r="6.3704" fill="#fff"/>
@@ -18,7 +15,5 @@ const EmojiThreeFingerOperation = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35.8989,13.9997c1.418-1.6288,3.5068-2.6583,5.836-2.6583,4.2718,0,7.7349,3.463,7.7349,7.7349,0,3.0563-1.7726,5.6986-4.3459,6.9548"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.6145,20.7375c.284-1.9293-1.0499-3.7236-2.9792-4.0075s-3.7236,1.0498-4.0075,2.9792c-.0455.3093-.0498.6232-.0126.9336l-.2572,18.9982.0048.9513-.0056-1.6253c.284-1.9293-.8514-3.7236-2.7808-4.0075-1.9293-.284-3.7236,1.0498-4.0075,2.9792-.0455.3093-.0498,1.7509-.0126,2.0613l-.1759,3.8711.0526,10.0853c.4248,8.3102,7.7518,13.6293,16.06,13.2046,4.7918-.2654,9.32-2.2781,12.7278-5.6571,2.9178-3.0904,10.0855-11.5349,10.0855-11.5349,1.4629-2.1582.3282-5.4939-.8007-4.6726l-9.8756,4.6509-.0389-5.3996.0389,5.3996-.0389-5.3996.0395-21.8505c.284-1.9293-1.0499-3.7236-2.9792-4.0075s-3.7236,1.0498-4.0075,2.9792c-.0455.3093-.0498.6232-.0126.9336l-.0947,6.9994-.1861,10.6365.3671-22.1928c.284-1.9293-1.0499-3.7236-2.9792-4.0075s-3.7236,1.0498-4.0075,2.9792c-.0455.3093-.0498.6232-.0126.9336l-.1758,20.4538"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiThreeFingerOperation

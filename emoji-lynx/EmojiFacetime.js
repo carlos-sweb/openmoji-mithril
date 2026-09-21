@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "facetime" (color) [E06E]. */
-const EmojiFacetime = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFacetime = lynxIcon(`
   <g id="color" transform="translate(7.9988e-5 -.00040601)" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" clip-rule="evenodd">
     <path fill="#b1cc33" stroke-width="0.1166" d="m61.068 24.241v23.301c0 6.4304-5.2204 11.651-11.65 11.651h-27.2c-6.43 0-11.65-5.2204-11.65-11.651v-23.301c0-6.4304 5.2205-11.651 11.65-11.651h27.2c6.4301 0 11.65 5.2204 11.65 11.651z"/>
     <path fill="#5c9e31" stroke-width="1.2296" d="m19.179 57.897c15.217-12.195 33.793-29.176 40.649-34.494 0.24207-0.18769 0.87221 3.0054 0.87221 3.0054l-0.06532 22.871s-0.08581 3.8754-3.1943 6.581c-2.755 2.3975-6.1759 2.5014-8.8912 2.5427-5.3165 0.08027-26.722 0.01299-26.722 0.01299s-1.1322-0.03305-2.6487-0.5194z"/>
@@ -18,7 +15,5 @@ const EmojiFacetime = {
     <path transform="translate(-16.432 11.591)" fill="none" stroke="#000" stroke-width="1.9984" d="m42.598 28.414v15.42c0 2.3834-1.9352 4.3192-4.3189 4.3192h-17.718c-2.3837 0-4.319-1.9358-4.319-4.3192v-15.42c0-2.3834 1.9353-4.3179 4.319-4.3179h17.718c2.3837 0 4.3189 1.9345 4.3189 4.3179z"/>
     <path transform="translate(-16.432 11.591)" fill="none" stroke="#000" stroke-width="1.9977" d="m61.068 24.241v23.301c0 6.4304-5.2204 11.651-11.65 11.651h-27.2c-6.43 0-11.65-5.2204-11.65-11.651v-23.301c0-6.4304 5.2205-11.651 11.65-11.651h27.2c6.4301 0 11.65 5.2204 11.65 11.651z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFacetime

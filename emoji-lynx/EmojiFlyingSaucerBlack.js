@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flying saucer" (black) [1F6F8]. */
-const EmojiFlyingSaucerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlyingSaucerBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M52.04,41.4402c0,0.31-0.07,0.61-0.2,0.88 c-0.02,0.05-0.04,0.09-0.07,0.14c-0.35,0.61-1.02,1.03-1.77,1.03c-0.18,0-0.35-0.02-0.51-0.08c-0.53-0.13-0.99-0.48-1.25-0.95 c-0.19-0.3-0.29-0.65-0.29-1.02c0-0.55,0.22-1.06,0.6-1.42c0.24-0.27,0.57-0.46,0.94-0.55c0.16-0.05,0.33-0.07,0.51-0.07 C51.12,39.4002,52.04,40.3202,52.04,41.4402z"/>
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M38.195,41.4402c0,0.31-0.07,0.61-0.2,0.88 c-0.02,0.05-0.04,0.09-0.07,0.14c-0.35,0.61-1.02,1.03-1.77,1.03c-0.18,0-0.35-0.02-0.51-0.08c-0.53-0.13-0.99-0.48-1.25-0.95 c-0.19-0.3-0.29-0.65-0.29-1.02c0-0.55,0.22-1.06,0.6-1.42c0.24-0.27,0.57-0.46,0.94-0.55c0.16-0.05,0.33-0.07,0.51-0.07 C37.275,39.4002,38.195,40.3202,38.195,41.4402z"/>
@@ -17,7 +14,5 @@ const EmojiFlyingSaucerBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M42.16,46.97c-0.42,0.01-0.84,0.01-1.26,0.02h-0.34c0.12,0,0.23,0,0.35-0.01C41.33,46.98,41.74,46.97,42.16,46.97z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M51.4,35.75v0.1H20.83v-0.09c0.19-2.67,1.07-5.16,2.46-7.28c2.3-3.5,5.98-6,10.27-6.72c0.83-0.14,1.69-0.21,2.56-0.21 c0.15,0,0.31,0,0.46,0.01C44.45,21.79,50.83,27.96,51.4,35.75z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlyingSaucerBlack

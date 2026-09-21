@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "volcano ashes" (color) [E09A]. */
-const EmojiVolcanoAshes = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVolcanoAshes = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m45.1178,11.8696l6.2509-1.6625c.174-.0463.3501-.0839.5277-.1139.3741-.063,1.0113-.1736,1.4833-.2429.3184-.0467.6385-.0524.9585-.0182l9.6491.5112c.6839,0,1.5128,1.806,1.11,2.3587l-4.5786,4.8561c-.7631.2081-.5147,1.6756-.2081,2.1506l4.648,5.4804c.4489.6954.7015,1.8328.2081,2.4974l-5.2809,4.9783c-.3067.4131-.296.9812.0259,1.3826l4.7694,4.9469c.5442.6786.2485,1.9327-.3469,2.5668l-4.2976,4.2465c-.2227.2371-.233.6032-.0242.8526l5.2236,4.6131c.6207.7595-.1858,2.3127-.9018,2.983l-6.7645,5.1668-19.1809-25.3543,6.8093-21.4042c.0031-.1572-.2357-.772-.0801-.7951Z"/>
     <polygon fill="#9b9b9a" points="7.785 63.268 21.297 43.369 31.046 36.135 37.309 37.608 42.625 36.135 47.753 42.546 56.1 48.371 62.656 63.268 7.785 63.268"/>
@@ -43,7 +40,5 @@ const EmojiVolcanoAshes = {
     <circle cx="48.1082" cy="60.3594" r="1.4802"/>
     <circle cx="41.5145" cy="40.1445" r="1.4802"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVolcanoAshes

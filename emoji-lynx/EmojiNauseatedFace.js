@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nauseated face" (color) [1F922]. */
-const EmojiNauseatedFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNauseatedFace = lynxIcon(`
   <g id="color">
     <circle cx="36.0027" cy="36" r="23" fill="#B1CC33"/>
   </g>
@@ -22,7 +19,5 @@ const EmojiNauseatedFace = {
     <path d="M30,33c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,30,30,31.3448,30,33"/>
     <path d="M48,33c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,31.3448,48,33"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNauseatedFace

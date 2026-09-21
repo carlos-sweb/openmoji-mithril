@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "smartwatch" (color) [E1CE]. */
-const EmojiSmartwatch = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmartwatch = lynxIcon(`
   <g id="color">
     <rect x="29" y="4" width="14" height="18" fill="#9B9B9A" stroke="none"/>
     <rect x="29" y="50" width="14" height="18" fill="#9B9B9A" stroke="none"/>
@@ -30,7 +27,5 @@ const EmojiSmartwatch = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M33,44h-4c-0.5523,0-1-0.4477-1-1v-4c0-0.5523,0.4477-1,1-1h4c0.5523,0,1,0.4477,1,1v4C34,43.5523,33.5523,44,33,44z"/>
     <circle cx="36" cy="66" r="2" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmartwatch

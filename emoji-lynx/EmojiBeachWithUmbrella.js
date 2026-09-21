@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "beach with umbrella" (color) [1F3D6]. */
-const EmojiBeachWithUmbrella = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBeachWithUmbrella = lynxIcon(`
   <g id="color">
     <path fill="#F1B31C" d="M10,50c0-1,10.9255-10.6791,24-8.5c0.3311,0.0552,0.6606,0.1119,0.9885,0.17l5.5038,1.1217 C49.5282,44.8554,59,49,60,49.4953c0,0,1.0586,1.1176,0.6667,2.4214C60.2708,53.2333,57.1563,54,57.1563,54h-5.601l-5.8296,1.2432 L27.5833,55l-12.4981-1H11.75c0,0-1.2199-0.5756-1.75-1.8333C9.4688,50.9063,10,50,10,50z"/>
     <path fill="#92D3F5" d="M12,55.5c1.7419-2.0295,4.3382-5.4262,7-5c2.888,0.4624,4.6471,4.065,6.4235,4.065 c2.8824,0,4.5234-3.588,8.5765-4.065c3.6107-0.4249,3.5938,2.2813,6.0156,3.6719C40.9893,54.731,42.6139,54.4981,43,54.5 c3.6617,0.0176,4.9681-3.9727,8-4c4.0625-0.0366,7.4063,1.5625,8,5"/>
@@ -23,7 +20,5 @@ const EmojiBeachWithUmbrella = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.8403,32.1859C45.9911,25.6592,44.7195,19.9795,42,19.5s-5.857,4.4227-7.0078,10.9495L44.8403,32.1859z"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="37.3115,46.0898 37.3115,46.0898 39.9162,31.3177 39.9162,31.3177"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBeachWithUmbrella

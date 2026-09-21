@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "family: woman, boy" (color) [1F469-200D-1F466]. */
-const EmojiFamilyWomanBoy = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFamilyWomanBoy = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M36.0004,38.9986h-6.5838c-4.0035,3.2895-7.9182,3.2895-11.8327,0c-3.2918,0-6.5836,2.6671-6.5836,5.9566 V61h25.0001V38.9986z"/>
     <path fill="#B1CC33" d="M26.5,61v-2.5333C26.5,56,29.0018,54,31.5036,54c2.9751,2.4667,5.9502,2.4667,8.9929,0 c2.5017,0,5.0035,2,5.0035,4.4667V61"/>
@@ -32,7 +29,5 @@ const EmojiFamilyWomanBoy = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M33.6358,42.2716 c0.4694,3.3631,4.487-0.8706,4.487-0.8706c0.5491,1.5737,4.4254,3.8674,4.4254,3.8674c1.0324-0.9557,0.5259-2.8525,0.3721-3.5136 c-0.5106-2.7127-3.0794-4.5325-5.8079-4.1144c-0.3436,0.0276-0.6888,0.0276-1.0324,0c-2.2709-0.3369-6.03-0.1483-7.12,4.6433 c-0.5317,2.3382,0.624,2.9844,0.624,2.9844S33.348,40.2093,33.6358,42.2716z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M11.0003,60V44.9552c0-3.2895,3.2918-5.9566,6.5836-5.9566c2.6822,2.2539,5.3643,2.9634,8.0751,2.1288"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFamilyWomanBoy

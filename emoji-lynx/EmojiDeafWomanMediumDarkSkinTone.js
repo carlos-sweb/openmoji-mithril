@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "deaf woman: medium-dark skin tone" (color) [1F9CF-1F3FE-200D-2640-FE0F]. */
-const EmojiDeafWomanMediumDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDeafWomanMediumDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M17.0985,61l1-4c0.882-3.7223,3.2788-6.9071,6.6115-8.785c1.7304-0.9126,3.6858-1.3109,5.6353-1.148 c0.225,0.0313-1.3287,0.251-1.0783,0.3947c7.9961,4.5894,12.1261,4.8623,16.9794,1.8752c1.8003-1.1192,4.035-1.2848,5.9806-0.4431 c3.2977,1.4523,5.8715,4.5252,5.8715,8.1062v4"/>
   </g>
@@ -35,7 +32,5 @@ const EmojiDeafWomanMediumDarkSkinTone = {
       <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.895,37.1205 c1.8826-0.9693,4.1174-0.9693,6,0v0.2729c-1.8826,0.9693-4.1174,0.9693-6,0V37.1205z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDeafWomanMediumDarkSkinTone

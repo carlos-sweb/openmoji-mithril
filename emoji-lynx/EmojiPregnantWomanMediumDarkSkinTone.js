@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pregnant woman: medium-dark skin tone" (color) [1F930-1F3FE]. */
-const EmojiPregnantWomanMediumDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPregnantWomanMediumDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" d="M47.3364,49.4814c-5.0144-1.16-11.5564,6.1034-15.9453,6.1034l0.4558,7.5247l1.0888,4.8662h9.0131 l0.962-4.223l4.6068-9.3292C48.1425,52.8218,48.0769,51.033,47.3364,49.4814z"/>
     <path fill="#3F3F3F" d="M41.3207,51.6566c0.6864,2.7364-2.7075,9.8993-2.7603,16.3191h3.3884c0,0,0.3031-3.1508,0.962-4.223 c0.6589-1.0722,4.1092-9.3292,4.1092-9.3292s1.7373-4.0488,0.1223-4.9422C46.5059,49.3559,42.5591,50.6669,41.3207,51.6566z"/>
@@ -29,7 +26,5 @@ const EmojiPregnantWomanMediumDarkSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.4877,6.5347c0,0,8.1-3.57,11.32,3.99c2.71,6.38,2.41,11.13,2.25,12.46c-0.03,0.19-0.23,0.32-0.41,0.25 c-1.24-0.45-5.29-2.03-5.81-3.57l0.11-6.25v-0.01"/>
     <path d="M30.918,50.71c-0.71,0-1.4825-0.0537-2.3262-0.168c-0.5479-0.0742-0.9316-0.5781-0.8574-1.125s0.5781-0.9326,1.125-0.8574 c5.6728,0.7705,7.1758-1.4756,8.6924-4.7285c2.3144-5.7413,1.9228-13.4053,1.9189-13.4825 c-0.0312-0.5507,0.3916-1.0224,0.9434-1.0527c0.5371-0.0557,1.0224,0.3906,1.0527,0.9434 c0.0186,0.331,0.4199,8.1894-2.0811,14.3886C37.8789,47.8613,36.0752,50.71,30.918,50.71z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPregnantWomanMediumDarkSkinTone

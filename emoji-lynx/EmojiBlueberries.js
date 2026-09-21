@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "blueberries" (color) [1FAD0]. */
-const EmojiBlueberries = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlueberries = lynxIcon(`
   <g id="color">
     <circle cx="31.0752" cy="31.0752" r="15.9318" fill="#1e50a0"/>
     <path fill="#92d3f5" d="M31.1391,25.3086a6.83,6.83,0,0,0-3.1626-.4173,6.8188,6.8188,0,0,0-1.3688-2.88l-.0962-.0884-.0962.0884a7.1959,7.1959,0,0,0-1.3688,2.88,6.83,6.83,0,0,0-3.1626.4173l-.1132.0651.0552.1183a7.1677,7.1677,0,0,0,2.3152,2.1859,6.8412,6.8412,0,0,0-.6005,3.1348l.0268.1278.13-.0158A7.2429,7.2429,0,0,0,26.5115,29.4a7.1092,7.1092,0,0,0,2.7793,1.5246l.13.0158.0269-.1278a6.8058,6.8058,0,0,0-.5654-3.1348,7.1688,7.1688,0,0,0,2.3152-2.1859l.0552-.1183Z"/>
@@ -18,7 +15,5 @@ const EmojiBlueberries = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M45.8609,40.3086a6.83,6.83,0,0,1,3.1626-.4173,6.8188,6.8188,0,0,1,1.3688-2.88l.0962-.0884.0962.0884a7.1959,7.1959,0,0,1,1.3688,2.88,6.83,6.83,0,0,1,3.1626.4173l.1132.0651-.0552.1183a7.1677,7.1677,0,0,1-2.3152,2.1859,6.8412,6.8412,0,0,1,.6005,3.1348l-.0268.1278-.13-.0158A7.2429,7.2429,0,0,1,50.4885,44.4a7.1092,7.1092,0,0,1-2.7793,1.5246l-.13.0158-.0269-.1278a6.8058,6.8058,0,0,1,.5654-3.1348,7.1688,7.1688,0,0,1-2.3152-2.1859l-.0552-.1183Z"/>
     <circle cx="46" cy="46" r="15" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlueberries

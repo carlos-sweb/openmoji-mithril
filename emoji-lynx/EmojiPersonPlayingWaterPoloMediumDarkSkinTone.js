@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person playing water polo: medium-dark skin tone" (color) [1F93D-1F3FE]. */
-const EmojiPersonPlayingWaterPoloMediumDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonPlayingWaterPoloMediumDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M68,43.334c0-1.916-11.917,3.041-16.917,3.041s-10-3-16-3s-10,3-16,3S4,41.417,4,43.25 c0,5.3125-0.2705,7.4795,1.667,11.167c1.9619,3.7344,9.958,3.667,13.083,6.917c2.415,2.5117,7.125,1.833,10.25,1.833 c2.166,0,4.5518,0.083,8.9688,0.083c3.833,0,10.4882-1.334,13.2802-1.334c2.333,0,5.791-3.3857,6.5-4.8027 c2.003-4.0029,6.5508-0.96,8.25-4.0664C68.1865,49.0469,68,48.8125,68,43.334z"/>
     <circle cx="14.9688" cy="15.0938" r="3" fill="#EA5A47"/>
@@ -27,7 +24,5 @@ const EmojiPersonPlayingWaterPoloMediumDarkSkinTone = {
     <circle cx="14.9688" cy="15.0938" r="3" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M17.875,16l2.4688,7.1108c0.3613,1.0391,1.5292,2.1075,2.5966,2.3741l4.1192,1.0302c1.0674,0.2666,2.8379,0.5537,3.9345,0.6382 l9.0118,0.6934c1.0966,0.0845,2.6308,0.7895,3.4082,1.5674l0.1718,0.1718c0.7774,0.7774,1.708,2.2647,2.0664,3.3047l0.7657,2.2207 c0.3584,1.0401,1.0097,2.7168,1.4472,3.7256L50.75,45.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonPlayingWaterPoloMediumDarkSkinTone

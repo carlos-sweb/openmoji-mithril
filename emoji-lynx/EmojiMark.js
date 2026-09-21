@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mark" (color) [E240]. */
-const EmojiMark = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMark = lynxIcon(`
   <g id="color">
     <circle cx="35.4728" cy="36.1677" r="18.0684" fill="#fff"/>
     <polygon fill="#d0cfce" points="54.9984 12.297 35.4838 40.4967 24.9116 30.2655 24.9116 35.2959 35.8675 46.0386 54.9984 18.2865 54.9984 12.297"/>
@@ -14,7 +11,5 @@ const EmojiMark = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m52.0844,28.991c.9115,2.1542,1.4156,4.5227,1.4156,7.009,0,9.9411-8.0589,18-18,18s-18-8.0589-18-18,8.0589-18,18-18c3.2668,0,6.3303.8703,8.9714,2.3916"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="54.5737 12.7708 35.5 40.3333 25.1667 30.3333 25.1667 35.25 35.875 45.75 54.5737 18.625 54.5737 12.7708"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMark

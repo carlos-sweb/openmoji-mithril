@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "couple with heart: woman, woman, medium skin tone" (color) [1F469-1F3FD-200D-2764-FE0F-200D-1F469-1F3FD]. */
-const EmojiCoupleWithHeartWomanWomanMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCoupleWithHeartWomanWomanMediumSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" d="M36,11.7c1.1-2.4,4-3.4,6.3-2.2s3.3,4,2.2,6.4c-0.1,0.3-0.3,0.5-0.4,0.7L36,27l-8.1-10.4 c-0.2-0.2-0.3-0.5-0.4-0.7c-1.1-2.4-0.1-5.2,2.2-6.4S34.9,9.3,36,11.7L36,11.7z"/>
     <path fill="#92D3F5" d="M38,61v-3.3c0-3.7,3.7-6.7,7.4-6.7c4.4,3.7,8.8,3.7,13.3,0c3.7,0,7.4,3,7.4,6.7V61"/>
@@ -39,7 +36,5 @@ const EmojiCoupleWithHeartWomanWomanMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36,11.7 c1.1-2.4,4-3.4,6.3-2.2s3.3,4,2.2,6.4c-0.1,0.3-0.3,0.5-0.4,0.7L36,27l-8.1-10.4c-0.2-0.2-0.3-0.5-0.4-0.7 c-1.1-2.4-0.1-5.2,2.2-6.4S34.9,9.3,36,11.7L36,11.7z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6,60v-2.3 C6,54,9.7,51,13.4,51c4.4,3.7,8.8,3.7,13.3,0c3.7,0,7.4,3,7.4,6.7V60"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCoupleWithHeartWomanWomanMediumSkinTone

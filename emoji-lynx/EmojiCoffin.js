@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "coffin" (color) [26B0]. */
-const EmojiCoffin = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCoffin = lynxIcon(`
   <g id="color">
     <path fill="#A57939" stroke="#A57939" stroke-miterlimit="10" stroke-width="2" d="M31.6322,67.6h9.0635 c1.3055,0,2.4611-0.8442,2.858-2.0879L55.9064,26.807c0.271-0.8492,0.1504-1.7749-0.3292-2.5262L43.772,5.7859 C43.2209,4.9225,42.2675,4.4,41.2432,4.4H31.0847c-1.0242,0-1.9777,0.5225-2.5288,1.3859L16.7507,24.2807 c-0.4796,0.7514-0.6002,1.6771-0.3292,2.5262l12.3527,38.7051C29.1711,66.7558,30.3267,67.6,31.6322,67.6z"/>
     <line x1="36.3342" x2="36.3342" y1="22" y2="38" fill="#f4aa41" stroke="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiCoffin = {
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M31.6322,67.6h9.0635 c1.3055,0,2.4611-0.8442,2.858-2.0879L55.9064,26.807c0.271-0.8492,0.1504-1.7749-0.3292-2.5262L43.772,5.7859 C43.2209,4.9225,42.2675,4.4,41.2432,4.4H31.0847c-1.0242,0-1.9777,0.5225-2.5288,1.3859L16.7507,24.2807 c-0.4796,0.7514-0.6002,1.6771-0.3292,2.5262l12.3527,38.7051C29.1711,66.7558,30.3267,67.6,31.6322,67.6z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCoffin

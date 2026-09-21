@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "patient clipboard" (color) [E30B]. */
-const EmojiPatientClipboard = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPatientClipboard = lynxIcon(`
   <g id="color">
     <path fill="#A57939" d="M22.2499,14.3071h27.5003c1.8029,0,3.2644,1.4615,3.2644,3.2644V57.651 c0,1.8029-1.4615,3.2644-3.2644,3.2644H22.2499c-1.8029,0-3.2644-1.4615-3.2644-3.2644V17.5715 C18.9855,15.7686,20.447,14.3071,22.2499,14.3071z"/>
     <rect x="23.3085" y="16.5645" width="25.3953" height="38.9302" fill="#FFFFFF"/>
@@ -23,7 +20,5 @@ const EmojiPatientClipboard = {
     <line x1="26.1942" x2="39.7736" y1="48.704" y2="48.704" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     <path d="M29.4134,21.3892v1.8837h1.8837v1.3261h-1.8837v1.8838h-1.3261V24.599h-1.8837v-1.3261h1.8837v-1.8837H29.4134 M29.4134,20.3892h-1.3261c-0.5523,0-1,0.4477-1,1v0.8837h-0.8837c-0.5523,0-1,0.4477-1,1v1.3261c0,0.5523,0.4477,1,1,1h0.8837 v0.8838c0,0.5523,0.4477,1,1,1h1.3261c0.5523,0,1-0.4477,1-1V25.599h0.8837c0.5523,0,1-0.4477,1-1v-1.3261c0-0.5523-0.4477-1-1-1 h-0.8837v-0.8837C30.4134,20.8369,29.9657,20.3892,29.4134,20.3892z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPatientClipboard

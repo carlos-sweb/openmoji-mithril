@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pen" (color) [1F58A]. */
-const EmojiPen = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPen = lynxIcon(`
   <g id="color">
     <polygon fill="#9b9b9a" points="18.6374 51.1068 23.6734 56.1428 18.3138 58.1855 16.6149 56.3855 18.6374 51.1068"/>
     <path fill="#d0cfce" stroke="#d0cfce" stroke-miterlimit="10" stroke-width="2" d="m18.033,59.0699c7.3107-1.7183,14.4552-7.1937,18.0334-10.0996,5.2841-4.2911,15.6814-15.0196,22.0242-21.6934,2.9813-3.137,3.1752-7.8102.4421-10.5434h0s-.4873-.4873-.4873-.4873h0c-2.7332-2.7333-7.4063-2.5395-10.5434.4419-6.6738,6.3428-17.4023,16.7401-21.6934,22.0243-2.7631,3.4024-7.8498,10.0295-9.8201,16.9581-.1883.662.0198,1.3745.5065,1.8612l1.5382,1.5382"/>
@@ -17,7 +14,5 @@ const EmojiPen = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18.033,59.0699c7.3107-1.7183,14.4552-7.1937,18.0334-10.0996,5.2841-4.2911,15.6814-15.0196,22.0242-21.6934,2.9813-3.137,3.1752-7.8102.4421-10.5434h0s-.4873-.4873-.4873-.4873h0c-2.7332-2.7333-7.4063-2.5395-10.5434.4419-6.6738,6.3428-17.4023,16.7401-21.6934,22.0243-2.9058,3.5781-8.3813,10.7225-10.0996,18.0333l2.3242,2.3242"/>
     <line x1="24.4737" x2="18.7879" y1="55.747" y2="50.061" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9613"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPen

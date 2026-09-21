@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman kneeling: light skin tone, facing right" (black) [1F9CE-1F3FB-200D-2640-FE0F-200D-27A1-FE0F]. */
-const EmojiWomanKneelingLightSkinToneFacingRightBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanKneelingLightSkinToneFacingRightBlack = lynxIcon(`
   <g id="line" transform="scale(-1, 1) translate(-72, 0)">
     <g id="Kneeing_Woman">
       <circle cx="37.9688" cy="18.094" r="3" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiWomanKneelingLightSkinToneFacingRightBlack = {
     </g>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.354,15.2087s.5786-.27.9253.0177c.408.3372.6855,1.5991,1.1679,2.145A3.2612,3.2612,0,0,0,45.26,18.4431"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanKneelingLightSkinToneFacingRightBlack

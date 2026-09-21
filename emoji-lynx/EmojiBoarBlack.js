@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "boar" (black) [1F417]. */
-const EmojiBoarBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBoarBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.9874,37.6522s2.0168,1.435,4.2662-.1551l3.1083.2228c1.2161.0872,2.411-.3521,3.2811-1.2061l3.2672-3.2067"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13.5926,33.272c-.862-.6593-1.3426-2.5845-.4667-4.2095"/>
@@ -15,7 +12,5 @@ const EmojiBoarBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.6225,45.5745c.4154,1.9173.6969,4.7358-.4188,8.2036-.344,1.0692.4357,2.1677,1.5588,2.1677h.0046"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m64.5713,31.0769c.5566,1.0204,1.515,6.2151-.4484,7.4211-1.9634,1.2059.5892,3.3395.5892,3.3395"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBoarBlack

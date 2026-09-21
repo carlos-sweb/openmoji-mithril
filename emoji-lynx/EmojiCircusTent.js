@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "circus tent" (color) [1F3AA]. */
-const EmojiCircusTent = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCircusTent = lynxIcon(`
   <g id="color">
     <rect x="11.5" y="39" width="49" height="16" fill="#FFFFFF" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polygon fill="#FFFFFF" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,25 11.5,39 60.5,39"/>
@@ -29,7 +26,5 @@ const EmojiCircusTent = {
     <rect x="36" y="44" width="0" height="11" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,44 33,55 39,55"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCircusTent

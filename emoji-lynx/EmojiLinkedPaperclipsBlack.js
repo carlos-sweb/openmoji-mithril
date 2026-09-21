@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "linked paperclips" (black) [1F587]. */
-const EmojiLinkedPaperclipsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLinkedPaperclipsBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.0667,11.2112a7.8894,7.8894,0,0,0-1.0352-.5193c-4.5363-1.7523-8.713.7674-10.5537,5.2112L11.4929,39.8477"/>
@@ -14,7 +11,5 @@ const EmojiLinkedPaperclipsBlack = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.9371,26.19l7.14,17.4a2.59,2.59,0,1,0,4.7856-1.9822L43.0413,15.3206a5.3177,5.3177,0,0,0-6.8484-2.8367,5.2166,5.2166,0,0,0-2.82,6.766l.37.89"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLinkedPaperclipsBlack

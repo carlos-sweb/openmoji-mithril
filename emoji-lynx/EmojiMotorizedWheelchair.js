@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "motorized wheelchair" (color) [1F9BC]. */
-const EmojiMotorizedWheelchair = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMotorizedWheelchair = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M53.5813,29.472a3.5128,3.5128,0,0,1-1,.0729H35.4045a1.0029,1.0029,0,0,0-1,1v2.0076a1.0029,1.0029,0,0,0,1,1H56.5888a1.0029,1.0029,0,0,0,1-1V11.3682a1.0029,1.0029,0,0,0-1-1H54.5813a1.0029,1.0029,0,0,0-1,1V29.472Z"/>
     <path fill="#ea5a47" d="M41.3058,33.5525c-7.8,2.8289-8.5532,11.1565-8.5532,11.1565l-9.29.1483a14.883,14.883,0,0,1,1.9152,7.0546l10.81.1463v-.1463a12.4838,12.4838,0,1,1,24.9676,0c1.7835-10.7-3.5667-19.6176-3.5667-19.6176"/>
@@ -22,7 +19,5 @@ const EmojiMotorizedWheelchair = {
     <line x1="34.4045" x2="34.4045" y1="18.4809" y2="20.581" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="15.1762" cy="50.7988" r="6.2911" transform="translate(-1.1795 0.3674) rotate(-1.3352)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMotorizedWheelchair

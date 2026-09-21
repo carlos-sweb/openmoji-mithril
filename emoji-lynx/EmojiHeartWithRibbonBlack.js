@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "heart with ribbon" (black) [1F49D]. */
-const EmojiHeartWithRibbonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeartWithRibbonBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M49.8349,36.7943 c6.8388,2.1218,8.5475,7.3849,11.9167,2.9132c3.4589-4.591,2.0652-13.1305-0.8826-14.798 c-0.3288-0.186-0.6769-0.2865-1.0397-0.2865c-1.3081,0-3.069,0.5698-4.8473,1.4479h-0.0001 c-2.1988,1.0857-4.4243,2.6428-5.8537,4.177"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.2245,36.7942c-0.7336,0.2654-1.3985,0.5799-2.0064,0.9181c-1.3036,1.734-3.6129,5.2131-6.0849,10.7513 c-0.197,0.4413,0.1046,0.9701,0.5041,0.8828l2.8449-0.622c0.4127-0.0902,0.8258,0.1557,1.0284,0.6122l1.2813,2.8876 c0.2242,0.5053,0.8301,0.4045,0.9396-0.1564c0.5556-2.8469,1.8298-8.9941,3.3739-13.1395 C45.1949,38.7345,44.4609,37.8902,44.2245,36.7942z"/>
@@ -16,7 +13,5 @@ const EmojiHeartWithRibbonBlack = {
       <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M58.6477,20.4541C56.8293,15.7982,52.2998,12.5,47,12.5c-4.7533,0-8.8861,2.6536-11,6.5598C33.8861,15.1536,29.7533,12.5,25,12.5 c-6.9036,0-12.5,5.5964-12.5,12.5c0,2.9699,1.0403,5.6942,2.7703,7.8387l-0.0043,0.0034L36,58.5397l3.1014-3.8438"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeartWithRibbonBlack

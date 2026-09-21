@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman running: medium-dark skin tone" (black) [1F3C3-1F3FE-200D-2640-FE0F]. */
-const EmojiWomanRunningMediumDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanRunningMediumDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <circle cx="26.9688" cy="13.0938" r="3" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42,36l5.8535,8.3613a11.0249,11.0249,0,0,0,2.8692,2.6553l6.7216,3.9668A2.3633,2.3633,0,0,1,58.667,53.5a1.69,1.69,0,0,1-2.35.74L47.85,50.76a14.1043,14.1043,0,0,1-3.3447-2.0889L37,42"/>
@@ -14,7 +11,5 @@ const EmojiWomanRunningMediumDarkSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.9375,22l-1.4189,5.0771A2.7758,2.7758,0,0,1,27,29H20"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.422,11.05s.5786-.27.9252.0177c.4081.3371.6856,1.5991,1.168,2.145a3.2608,3.2608,0,0,0,1.8128,1.0716"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanRunningMediumDarkSkinToneBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bagel" (black) [1F96F]. */
-const EmojiBagelBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBagelBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="7" stroke-width="2" d="m10.6 37.96q-0.2063 0.162-0.4043 0.334a4.407 4.407 0 0 0-1.557 5.01q0.05945 0.2025 0.1339 0.4107c2.149 6.018 7.761 9.779 13.55 11.86a40.47 40.47 0 0 0 13.68 2.281 36.93 36.93 0 0 0 19.44-5.039 18.16 18.16 0 0 0 7.769-9.039 4.465 4.465 0 0 0-0.8647-4.949"/>
     <ellipse cx="35.99" cy="20.91" rx="11.17" ry="2.233" fill="none" stroke="#000" stroke-miterlimit="7" stroke-width="2"/>
@@ -25,7 +22,5 @@ const EmojiBagelBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="7" stroke-width="2" d="m16.01 44.42a6.232 6.232 0 0 0 7.656-0.8294 3.874 3.874 0 0 0 2.515 2.846 4.296 4.296 0 0 0 3.269-0.4988 6.19 6.19 0 0 0 5.702 4.47 6.052 6.052 0 0 0 6.173-4.511 3.501 3.501 0 0 0 3.581 1.138 3.855 3.855 0 0 0 2.578-2.025 6.211 6.211 0 0 0 7.209 1.028"/>
     <circle cx="22.56" cy="33.29" r="0.8265" stroke-width="1.446"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBagelBlack

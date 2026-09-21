@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "spider web" (black) [1F578]. */
-const EmojiSpiderWebBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpiderWebBlack = lynxIcon(`
   <g id="line">
     <line x1="8.112" x2="63.89" y1="36" y2="36" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="36" x2="36" y1="8.112" y2="63.89" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiSpiderWebBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m36.14 55.88s-6.289-6.553-14.69-5.373c0 0 0.1913-9.123-5.838-14.25 0 0 6.442-6.65 5.997-14.67 0 0 9.38-0.112 14.32-6.1 0 0 6.289 6.553 14.31 6.108 0 0 0.112 9.38 6.214 14.68 0 0-6.44 6.649-5.995 14.09 0 0-9.38-0.469-14.32 5.519z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m49.25 35.48s-3.624 4.594-3.49 9.856c0 0-6.702 0.5071-10.04 3.803 0 0-3.846-3.97-9.214-3.803 0 0-0.9087-6.074-4.256-9.612 0 0 4.338-4.547 4.091-9.856 0 0 6.501-0.1241 10.12-4.052 0 0 3.352 4.093 9.297 4.052 0 0 0.1421 6.365 3.49 9.612z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpiderWebBlack

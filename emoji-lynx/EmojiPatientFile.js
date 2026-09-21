@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "patient file" (color) [E30A]. */
-const EmojiPatientFile = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPatientFile = lynxIcon(`
   <g id="color">
     <rect x="15.5" y="21.903" width="7.29" height="3.894" fill="#EA5A47"/>
     <rect x="25.107" y="21.903" width="7.29" height="3.894" fill="#FCEA2B"/>
@@ -24,7 +21,5 @@ const EmojiPatientFile = {
     <rect x="15.5" y="25.797" width="40.5" height="24.3" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path d="M37.0761,32.8534v3.7674h3.7674v2.6523h-3.7674v3.7675h-2.6522v-3.7675h-3.7674v-2.6523h3.7674v-3.7674H37.0761 M37.0761,30.8534h-2.6522c-1.1046,0-2,0.8954-2,2v1.7674h-1.7674c-1.1046,0-2,0.8954-2,2v2.6523c0,1.1046,0.8954,2,2,2h1.7674 v1.7675c0,1.1046,0.8954,2,2,2h2.6522c1.1046,0,2-0.8954,2-2v-1.7675h1.7674c1.1046,0,2-0.8954,2-2v-2.6523c0-1.1046-0.8954-2-2-2 h-1.7674v-1.7674C39.0761,31.7488,38.1807,30.8534,37.0761,30.8534z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPatientFile

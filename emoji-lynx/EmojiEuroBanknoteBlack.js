@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "euro banknote" (black) [1F4B6]. */
-const EmojiEuroBanknoteBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEuroBanknoteBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.7094,20.8465h17.8015c.5523,0,1,.4477,1,1v29.2008c0,.5523-.4477,1-1,1h-17.8015"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.5686,21.8042v29.2855c0,.1053-.02.2011-.05.2969-.13.383-.51.6608-.95.6608h-15.34c-.44,0-.82-.2778-.95-.6608-.03-.0958-.05-.1915-.05-.2969v-29.2855c0-.1053.02-.2011.05-.2969.13-.3831.51-.6608.95-.6608h15.34c.44,0,.82.2777.95.6608.03.0958.05.1916.05.2969Z"/>
@@ -16,7 +13,5 @@ const EmojiEuroBanknoteBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47.4307,32h0c-1.0579,0-1.9155-.8576-1.9155-1.9155v-3.1689c0-1.0579.8576-1.9156,1.9155-1.9156h0c1.058,0,1.9156.8577,1.9156,1.9156v3.1689c0,1.0579-.8576,1.9155-1.9156,1.9155Z"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="40.7405 26.4518 42.6784 25 42.6784 32"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEuroBanknoteBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman vampire: dark skin tone" (color) [1F9DB-1F3FF-200D-2640-FE0F]. */
-const EmojiWomanVampireDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanVampireDarkSkinTone = lynxIcon(`
   <g id="hair">
     <path fill="#000000" d="M17.6583,47.37c1.1226,1.0189,2.3391,1.9294,3.6331,2.7193c1.5566-1.1839,3.4138-1.908,5.361-2.09 c6.209,5.0127,12.4951,5.0127,18.7,0c1.5145,0.1121,2.9697,0.6354,4.2087,1.5136c1.0534-0.6931,2.0475-1.4724,2.972-2.33 c1.1884-0.7148,3.125-8.2822,0.3916-13.0254c-0.4386-0.8534-0.8251-1.7326-1.1573-2.6328C50.295,28.2544,49.7442,27.0312,49.419,21 c0.0273-3.6929-3.794-6.7842-7.4746-7.0928c-0.266-0.0182-0.5139-0.1418-0.6885-0.3433c-0.0928-0.1-2.4082-2.6547-7.2432-2.6547 c-6.2,0-11.4413,3.3818-12.743,8.226c-0.534,2.0122-0.7248,4.1001-0.5645,6.1758c0.2039,2.019-0.0563,4.0578-0.7607,5.9609 c-0.2481,0.7561-0.6269,1.4629-1.1192,2.0881C15.0528,37.78,17.8506,47.6626,17.6583,47.37z"/>
   </g>
@@ -30,7 +27,5 @@ const EmojiWomanVampireDarkSkinTone = {
     <polygon stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="34,38.7 34.3,41.1 35.1,38.8 35,38.7"/>
     <polygon stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="37.9,38.7 37.7,41.1 36.9,38.8 36.8,38.7"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanVampireDarkSkinTone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "anatomical heart" (black) [1FAC0]. */
-const EmojiAnatomicalHeartBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAnatomicalHeartBlack = lynxIcon(`
   <g id="line">
     <g id="_600YlC-2">
       <g>
@@ -16,7 +13,5 @@ const EmojiAnatomicalHeartBlack = {
       </g>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAnatomicalHeartBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "add contact" (color) [E268]. */
-const EmojiAddContact = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAddContact = lynxIcon(`
   <g id="color">
     <polygon fill="#D0CFCE" points="32,50.08 21.92,50.08 21.92,40 18.08,40 18.08,50.08 8,50.08 8,53.92 18.08,53.92 18.08,64 21.92,64 21.92,53.92 32,53.92"/>
     <path fill="#92D3F5" d="M61.3949,57c-0.5311,0-0.9618-0.4306-0.9618-0.9618v-0.8854c0-4.2816-4.3244-7.5123-8.3214-7.6869 c-5.9682,4.8203-12.0143,4.8203-17.9824,0c-3.9971,0.1747-8.3215,3.4053-8.3215,7.6869V57"/>
@@ -26,7 +23,5 @@ const EmojiAddContact = {
     <path d="M43.1204,38.8043c-1.1078,0-2.2157-0.2752-3.3157-0.8251c-0.4752-0.2377-0.6678-0.8153-0.4301-1.2906 c0.2372-0.4748,0.8139-0.6679,1.2906-0.4302c1.6521,0.8266,3.2583,0.8266,4.9104,0c0.4758-0.2377,1.053-0.0446,1.2906,0.4302 c0.2377,0.4752,0.0451,1.0529-0.4301,1.2906C45.3362,38.5291,44.2284,38.8043,43.1204,38.8043z"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="32,50.08 21.92,50.08 21.92,40 18.08,40 18.08,50.08 8,50.08 8,53.92 18.08,53.92 18.08,64 21.92,64 21.92,53.92 32,53.92"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAddContact

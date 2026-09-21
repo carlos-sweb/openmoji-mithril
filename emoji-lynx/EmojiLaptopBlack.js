@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "laptop" (black) [1F4BB]. */
-const EmojiLaptopBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLaptopBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="62.625,40.9795 62.625,68.0462 12.625,68.0462 12.625,40.9795"/>
     <rect x="12.625" y="3.8917" width="50" height="32.0667" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 75.25 39.85)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiLaptopBlack = {
     <rect x="30.7171" y="56.1856" width="13.5062" height="8.1037" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="12.625" y="3.8917" width="50" height="32.0667" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 75.25 39.85)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLaptopBlack

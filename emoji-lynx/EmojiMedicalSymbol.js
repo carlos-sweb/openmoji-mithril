@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "medical symbol" (color) [2695]. */
-const EmojiMedicalSymbol = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMedicalSymbol = lynxIcon(`
   <g id="color">
     <path fill="#B1CC33" stroke="#B1CC33" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M31.8796,32.5444h3.0758c1.081,0,1.9573,0.8763,1.9573,1.9573s-0.8763,1.9573-1.9573,1.9573H22.0928 c-3.4747,0-6.2915,2.8168-6.2915,6.2915s2.8168,6.2915,6.2915,6.2915h5.82l0.1518-4.1943h-5.6921 c-1.081,0-2.1149-0.8916-2.1149-1.9726c0-1.081,1.0339-1.9421,2.1149-1.9421h12.0237h0.4194c3.4747,0,6.2915-2.8168,6.2915-6.2915 s-2.8168-6.2915-6.2915-6.2915h-2.936V32.5444z"/>
     <path fill="#5C9E31" stroke="#5C9E31" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M25.6815,52.9568l6.2564,0c1.0718,0,2.0064-0.8259,2.0385-1.8971c0.0333-1.1085-0.8554-2.0176-1.9564-2.0176v-4.1943h0.2686 c3.4114,0,6.317,2.6528,6.4382,6.062c0.1273,3.5793-2.7365,6.5209-6.2874,6.5209h-11.045l0,0 c0.3544-1.7722,1.476-3.2963,3.0626-4.1617l0,0C24.8326,53.0641,25.2537,52.9568,25.6815,52.9568z"/>
@@ -36,7 +33,5 @@ const EmojiMedicalSymbol = {
     <circle cx="28.0646" cy="12.0384" r="3" fill="#000000" stroke="none"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M32.02,44.8478h0.2686c3.4114,0,6.317,2.6528,6.4382,6.062c0.1273,3.5793-2.7365,6.5209-6.2874,6.5209h-11.045l0,0 c0.3544-1.7722,1.476-3.2963,3.0626-4.1617l0,0c0.3756-0.2049,0.7966-0.3122,1.2245-0.3122l6.2564,0 c1.0718,0,2.0064-0.8259,2.0385-1.8971c0.0333-1.1085-0.8554-2.0176-1.9564-2.0176"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMedicalSymbol

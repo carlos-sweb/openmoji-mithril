@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "scroll" (color) [E104]. */
-const EmojiE104 = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiE104 = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m37.2971,16.7728h-2.472c-5.8763,0-10.6842,4.8079-10.6842,10.6842v16.9332c0,5.8763,4.8079,10.6842,10.6842,10.6842h2.472c5.8763,0,10.6842-4.8079,10.6842-10.6842v-16.9332c0-5.8763-4.8079-10.6842-10.6842-10.6842Z"/>
     <path fill="#3f3f3f" d="m36.0611,22.1118h0c-1.1405,0-2.0737.9332-2.0737,2.0737v5.8343c0,1.1405.9332,2.0737,2.0737,2.0737h0c1.1405,0,2.0737-.9332,2.0737-2.0737v-5.8343c0-1.1405-.9332-2.0737-2.0737-2.0737Z"/>
@@ -19,7 +16,5 @@ const EmojiE104 = {
     <line x1="30.8574" x2="36.073" y1="11.892" y2="6.6763" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="41.3312" x2="36.1155" y1="11.892" y2="6.6763" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiE104

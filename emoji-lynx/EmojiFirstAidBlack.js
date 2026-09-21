@@ -1,15 +1,10 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "first aid" (black) [E090]. */
-const EmojiFirstAidBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFirstAidBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="27.67 43.857 13.72 43.857 13.72 28.467 27.714 28.502 27.732 14.384 43.461 14.384 43.461 28.334 57.278 28.252 57.278 43.857 43.461 43.857 43.461 57.941 27.635 57.941 27.67 43.857"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFirstAidBlack

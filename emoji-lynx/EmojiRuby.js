@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ruby" (color) [E04F]. */
-const EmojiRuby = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRuby = lynxIcon(`
   <g id="color" transform="matrix(.7071 -.7071 .7071 .7071 -9.056 41.86)">
     <polygon fill="#d22f27" points="36 64.08 68 23.35 56.38 11.98 16.38 11.98 4 23.35"/>
     <polyline fill="#ea5a47" points="37.37 62.34 55.75 23.35 36 11.98 56.38 11.98 68 23.35 37.37 62.34"/>
@@ -18,7 +15,5 @@ const EmojiRuby = {
     <line x1="36" x2="55.75" y1="11.98" y2="23.35"/>
     <polygon points="36 64.08 68 23.35 56.38 11.98 16.38 11.98 4 23.35"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRuby

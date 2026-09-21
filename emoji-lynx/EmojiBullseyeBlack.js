@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bullseye" (black) [1F3AF]. */
-const EmojiBullseyeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBullseyeBlack = lynxIcon(`
   <g id="line">
     <line x1="11.4659" x2="2.5131" y1="11.4989" y2="11.4989" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="11.4662" x2="11.4663" y1="11.4989" y2="2.546" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiBullseyeBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.0779,34.4744c2.4674,0.3067,4.3769,2.4111,4.3769,4.9616c0,2.7614-2.2386,5-5,5c-2.4824,0-4.5422-1.809-4.9332-4.1806"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M35.7775,30.1663c1.1474-0.4587,2.3996-0.7111,3.7107-0.7111c5.5228,0,10,4.4772,10,10s-4.4772,10-10,10s-10-4.4771-10-10 c0-1.2548,0.252-2.4731,0.6858-3.5895"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBullseyeBlack

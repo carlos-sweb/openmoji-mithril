@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "goggles" (color) [1F97D]. */
-const EmojiGoggles = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGoggles = lynxIcon(`
   <g id="color">
     <path id="Goggles_Color_1" fill="#d0cfce" d="M61.1838,27.995c-4.4209-2.1333-14.9-3.9756-25.2155-3.7365C22.3166,23.942,8.884,29.1326,8.884,29.1326l.0977,7.6946c0,6.424,2.9308,15.8283,22.5434,10.7755L33.4372,40l2.55-2.0909,2.8876,2.1029,1.3277,5.279a3.9665,3.9665,0,0,0,3.0453,2.9015C60.6485,51.8567,63.33,42.9843,63.33,36.8391l.0667-5.2537A3.925,3.925,0,0,0,61.1838,27.995Z"/>
     <path id="Goggles_Color_2" fill="#9b9b9a" d="M43.8847,48.8524C61.9275,50.73,63.4758,43.2512,63.4758,36.8272l-.0477-7.6826-6.9541-3.099C54.5376,37.2328,43.8847,48.8524,43.8847,48.8524Z"/>
@@ -17,7 +14,5 @@ const EmojiGoggles = {
     <polyline id="Goggles_Line_2" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="9.503 29.17 5.168 31.951 5.549 40.438 10.078 43.096"/>
     <polyline id="Goggles_Line_3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="62.405 29.17 66.74 31.951 66.359 40.438 61.83 43.096"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGoggles

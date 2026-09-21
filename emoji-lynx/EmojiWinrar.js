@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "winrar" (color) [E06D]. */
-const EmojiWinrar = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWinrar = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m61.22 21.64-23.31-6.602a1.007 1.007 0 0 0-0.5537 0.0019l-22.59 6.627a0.9484 0.9484 0 0 0-0.1365 0.0719 5.383 5.383 0 0 0-1.834 9.543 5.364 5.364 0 0 0 0.0663 8.697 5.378 5.378 0 0 0 1.486 9.502l23.01 6.713a1.003 1.003 0 0 0 0.5547 2e-3l23.31-6.651a1.001 1.001 0 0 0 0.7255-0.9619v-25.98a1 1 0 0 0-0.7275-0.9619z"/>
     <polygon fill="#b399c8" points="37.64 29.23 15.04 22.6 37.64 15.98 60.94 22.58"/>
@@ -38,7 +35,5 @@ const EmojiWinrar = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="m54.32 24.96-23.86-7.209z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m45.85 27.39-23.01-6.713z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWinrar

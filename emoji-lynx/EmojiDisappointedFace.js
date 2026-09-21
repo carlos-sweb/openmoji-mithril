@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "disappointed face" (color) [1F61E]. */
-const EmojiDisappointedFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDisappointedFace = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="m12 36a24 24 0 1 0 24-24 24.027 24.027 0 0 0-24 24z"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiDisappointedFace = {
     <path stroke-linecap="round" stroke-linejoin="round" d="m51.422 39.497a7.4028 7.4028 0 0 1-5.3048-0.3243 7.4 7.4 0 0 1-4.11-3.4111"/>
     <path stroke-linecap="round" stroke-linejoin="round" d="m21.185 39.487a8.44 8.44 0 0 0 9.413-3.7176"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDisappointedFace

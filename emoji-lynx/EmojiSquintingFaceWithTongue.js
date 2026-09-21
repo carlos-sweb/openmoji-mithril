@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "squinting face with tongue" (color) [1F61D]. */
-const EmojiSquintingFaceWithTongue = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSquintingFaceWithTongue = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36,13c-12.6823,0-23,10.3177-23,23c0,12.6822,10.3177,23,23,23c12.6822,0,23-10.3178,23-23 C59,23.3177,48.6822,13,36,13z"/>
     <path fill="#FFFFFF" d="M41.6682,46.5925c2.018-1.0892,3.6277-2.7511,4.4969-4.7746c-1.9847,0.9853-6.1585,1.5931-10.5745,1.5426 c-4.0546-0.0464-7.7116-0.6408-9.5171-1.5426h-0.2385c0.939,2.1647,2.7178,3.8986,4.9168,4.9729"/>
@@ -21,7 +18,5 @@ const EmojiSquintingFaceWithTongue = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M30.7517,46.7908c-2.199-1.0742-3.9778-2.8081-4.9168-4.9729 M46.165,41.818c-0.8692,2.0234-2.4789,3.6854-4.4969,4.7746 M26.0734,41.818c1.8055,0.9018,5.4625,1.4962,9.5171,1.5426c4.4161,0.0505,8.5899-0.5572,10.5745-1.5426"/>
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.6597,42.818 c0,6.0751-2.5324,11-5.6562,11s-5.6563-4.9249-5.6563-11"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSquintingFaceWithTongue

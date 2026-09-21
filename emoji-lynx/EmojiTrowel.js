@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "trowel" (color) [E346]. */
-const EmojiTrowel = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTrowel = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m36 35.34v24.64s-7.518-6.788-8.104-8.13-0.2766-16.26-0.2766-16.26z"/>
     <path fill="#9b9b9a" d="m44.36 35.78 0.107 15.22s-6.624 7.454-8.463 8.976c-0.02152-2.034 0-23.9 0-23.9z"/>
@@ -18,7 +15,5 @@ const EmojiTrowel = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32.38 36.12 2.281 5.303c0.4681 1.149 2.091 1.216 2.654 0.1089l2.296-5.412"/>
     <ellipse cx="35.8" cy="17.76" rx="1.915" ry="1.89"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTrowel

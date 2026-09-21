@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "backhand index pointing down: light skin tone" (black) [1F447-1F3FB]. */
-const EmojiBackhandIndexPointingDownLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBackhandIndexPointingDownLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M16.5208,37.2567v-12v-0.8735c0-9.0883,7.3675-16.4558,16.4558-16.4558s16.4558,7.3675,16.4558,16.4558"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M23.5131,37.5501c-0.081,1.9313-1.7123,3.4313-3.6436,3.3502s-3.4313-1.7123-3.3502-3.6436"/>
@@ -20,7 +17,5 @@ const EmojiBackhandIndexPointingDownLightSkinToneBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M52.7337,33.718c-1.9526-2.1439-3.3734-5.1677-3.3013-9.5218"/>
     <line x1="54.5014" x2="52.68" y1="36.0377" y2="33.6575" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBackhandIndexPointingDownLightSkinToneBlack

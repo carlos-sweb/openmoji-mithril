@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Taurus" (color) [2649]. */
-const EmojiTaurus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTaurus = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000" stroke-width="3">
     <circle cx="36.01" cy="39.47" r="8.651" stroke-miterlimit="10"/>
     <path stroke-linecap="round" stroke-linejoin="round" d="m51.42 24.1c-2.202-0.5966-4.541 0.248-5.854 2.113-2.709 5.178-9.561 4.558-9.561 4.558s-6.852 0.5902-9.561-4.588c-1.313-1.865-3.653-2.709-5.855-2.112"/>
@@ -18,7 +15,5 @@ const EmojiTaurus = {
   <g id="line" fill="none">
     <rect x="12" y="12" width="48" height="48" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTaurus

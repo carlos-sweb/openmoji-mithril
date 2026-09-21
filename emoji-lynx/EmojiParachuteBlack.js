@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "parachute" (black) [1FA82]. */
-const EmojiParachuteBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiParachuteBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m60.9824,32.6058l-22.316,27.1671"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m60.709,28.9912c-1.9879-11.9821-12.4224-20.7206-24.5674-20.5742-13.7193,0-24.841,10.88-24.841,24.3005,0,0,3.0573-1.8827,5.1108-.2893.2137.1642.5015.1942.7445.0778,3.2218-1.543,6.9739-1.5198,10.1763.0629.167.0925.3642.1141.5473.06,1.5773-.4857,9.6051-2.708,16.679-.0346.2018.0755.4263.0605.6163-.0411,3.196-1.5665,6.9329-1.5849,10.1442-.05.2478.1179.5409.0858.7574-.0829,2.0348-1.5919,4.906.1853,4.906.1853"/>
@@ -17,7 +14,5 @@ const EmojiParachuteBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="32.0805 59.7729 11.3006 32.7175 32.0805 59.7729"/>
     <rect x="32.0805" y="58.353" rx="1.4199" ry="1.4199" width="6.5859" height="6.5859" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiParachuteBlack

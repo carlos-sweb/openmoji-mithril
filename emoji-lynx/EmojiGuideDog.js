@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "guide dog" (color) [1F9AE]. */
-const EmojiGuideDog = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGuideDog = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m46.0864,57.1092s2.3035-5.5769,2.1216-7.456,2.3035.8487,2.3035.8487l-.4243,5.7587s-3.8796,2.6066-4.0008.8487Z"/>
     <path fill="#fff" d="m35.6601,52.381s-.1378-6.3898-.4243-8.6078,4.0614-.7274,4.0614-.7274l1.8792,6.0618s-5.3253,5.3483-5.5163,3.2734Z"/>
@@ -44,7 +41,5 @@ const EmojiGuideDog = {
       <path fill="none" stroke="#3f3f3f" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m29.1744,30.3174l19.2011-15.4683c.2039-.1643.2361-.4628.0718-.6668-.0642-.0798-.1526-.1366-.2518-.1619l-2.3655-.6049"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGuideDog

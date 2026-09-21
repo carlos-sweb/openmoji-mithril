@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "deaf man: light skin tone" (color) [1F9CF-1F3FB-200D-2642-FE0F]. */
-const EmojiDeafManLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDeafManLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M17.1,61l1-4a14.0069,14.0069,0,0,1,6.6-8.8,9.921,9.921,0,0,1,5.6-1.1c.2,0-1.3.3-1.1.4,8,4.6,12.1,4.9,17,1.9a6.3763,6.3763,0,0,1,6-.4c3.3,1.5,5.9,4.5,5.9,8.1v4"/>
   </g>
@@ -32,7 +29,5 @@ const EmojiDeafManLightSkinTone = {
     <path d="M37,30a2,2,0,1,1-2-2,2.0059,2.0059,0,0,1,2,2"/>
     <path d="M45,30a2,2,0,1,1-2-2,2.0059,2.0059,0,0,1,2,2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDeafManLightSkinTone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "synagogue" (black) [1F54D]. */
-const EmojiSynagogueBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSynagogueBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M52,33.7806V60H18V33.7806 c0-0.3181,0.1513-0.6173,0.4076-0.8057l15.9731-11.744c0.3555-0.3077,0.8831-0.3077,1.2386,0l15.9731,11.744 C51.8487,33.1634,52,33.4625,52,33.7806z"/>
     <rect x="8" y="39" width="10" height="21" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiSynagogueBlack = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="35,27 26.3397,42 43.6603,42"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="35,47 43.6603,32 26.3397,32"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSynagogueBlack

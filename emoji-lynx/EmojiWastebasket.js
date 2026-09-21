@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wastebasket" (color) [1F5D1]. */
-const EmojiWastebasket = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWastebasket = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="49.4185 60.1783 22.4092 59.971 16.5845 18.0188 55.3223 18.0188 49.4185 60.1783"/>
     <polygon fill="#d0cfce" points="15.0757 12.0679 15.0757 18.0188 50.8205 18.0188 51.4647 12.0679 15.0757 12.0679"/>
@@ -30,7 +27,5 @@ const EmojiWastebasket = {
     <line x1="42.853" x2="50.1245" y1="54.4035" y2="54.4035" fill="none" stroke="#000" stroke-miterlimit="10"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="50.1245 54.4035 49.4158 59.9663 22.4302 59.9663 21.7487 54.4035 50.1245 54.4035"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWastebasket

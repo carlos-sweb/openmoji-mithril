@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mosque" (color) [1F54C]. */
-const EmojiMosque = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMosque = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M54.9748,35h-26a.9994.9994,0,0,0-1,1v5.42h-5.5V16a1,1,0,0,0-1-1h-5a1,1,0,0,0-1,1V56a.9994.9994,0,0,0,1,1h5l.0009,0H54.9748a.9994.9994,0,0,0,1-1V36A1,1,0,0,0,54.9748,35Z"/>
     <circle cx="41.9667" cy="20.0079" r="2" fill="#f4aa41"/>
@@ -33,7 +30,5 @@ const EmojiMosque = {
     <line x1="16.4746" x2="16.4746" y1="27.1926" y2="35.5287" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="21.4746" x2="21.4746" y1="27.1926" y2="35.5287" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMosque

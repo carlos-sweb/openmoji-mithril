@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rose" (black) [1F339]. */
-const EmojiRoseBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRoseBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.8675,30.3979c-0.4428,0.6348-1.2583,1.0208-2.0207,1.2533c-1.0107,0.3083-2.0878,0.3971-3.1319,0.2346 c-1.8682-0.2907-3.5402-1.174-4.8179-2.4517c-1.2014-1.2014-2.0541-2.7514-2.3933-4.4853"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.0032,22.8224c0-1.6312,1.6529-2.9535,3.6919-2.9535c2.039,0,3.6919,1.3223,3.6919,2.9535"/>
@@ -19,7 +16,5 @@ const EmojiRoseBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.9293,32.3094 c3.992,4.886,2.805,12.462,2.805,12.462s-7.66-0.347-11.653-5.233s-2.805-12.462-2.805-12.462S21.9373,27.4274,25.9293,32.3094z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.1043,40.8644 c-3.438,3.548-7.676,10.246-5.829,20.735"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRoseBlack

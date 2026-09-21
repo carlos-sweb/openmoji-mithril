@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rightwards pushing hand: medium skin tone" (black) [1FAF8-1F3FD]. */
-const EmojiRightwardsPushingHandMediumSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRightwardsPushingHandMediumSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.879" d="m5.2026,66.6568v-15.0323l36.0775-3.3729c-2.4334,8.0705,1.5032,15.5866,8.0799,18.4052H5.2026Z"/>
     <g id="line-2">
@@ -13,7 +10,5 @@ const EmojiRightwardsPushingHandMediumSkinToneBlack = {
     </g>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.879" d="m57.9566,29.123V8.961c-.2923-1.3436-1.6185-2.1959-2.9621-1.9035-1.0679.2323-1.8595,1.134-1.9516,2.223l-2.4709,16.7328c-.4322,2.7152-1.6442,2.7152-2.1139,5.4304-.6483,5.2895-1.259,14.5437-7.488,18.3018"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRightwardsPushingHandMediumSkinToneBlack

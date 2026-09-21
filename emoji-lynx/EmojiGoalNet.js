@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "goal net" (color) [1F945]. */
-const EmojiGoalNet = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGoalNet = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="10.7518 18.0834 10.976 52.776 17.888 45.5761 53.3118 45.9601 61.0878 53.448 61.6638 17.9282 10.7518 18.0834"/>
   </g>
@@ -71,7 +68,5 @@ const EmojiGoalNet = {
     <line x1="10" x2="19.32" y1="17" y2="45.5834" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="53" x2="62" y1="46" y2="18" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGoalNet

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "glowing star" (color) [1F31F]. */
-const EmojiGlowingStar = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGlowingStar = lynxIcon(`
   <g id="color">
     <polygon fill="#FCEA2B" stroke="none" points="35.9704,6.0368 27.7688,22.6704 9.4169,25.3441 22.702,38.2843 19.5737,56.5642 35.9859,47.928 52.4045,56.552 49.2626,38.2744 62.5382,25.3244 44.1842,22.6643"/>
     <polygon fill="#FCEA2B" stroke="none" points="14.1635,41.4594 4.8592,42.0365 6.4763,46.7329"/>
@@ -25,7 +22,5 @@ const EmojiGlowingStar = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="50.4125,16.0862 57.9972,10.6662 54.1371,7.5403"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="22.0843,15.5917 18.6602,6.9211 14.6934,9.9103"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGlowingStar

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "test tube" (color) [1F9EA]. */
-const EmojiTestTube = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTestTube = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m30.059,30.0289l.0486-11.8572s4.0334,2.1868,10.6424.2916l.1944,11.7601s-7.5809,2.1868-10.8853-.1944Z"/>
     <ellipse cx="35.7203" cy="15.2074" rx="6.5302" ry="2.5828" fill="#fff"/>
@@ -18,7 +15,5 @@ const EmojiTestTube = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.06,29.84v23.08c.0022,3.5932-2.9088,6.5078-6.502,6.51h-.008c-.6006.0021-1.1985-.0816-1.7754-.2486-2.8026-.7909-4.7372-3.3493-4.7346-6.2614v-23.08"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.277,30.8938c1.9619.9152,4.1087,1.3648,6.273,1.3137.9923.0058,1.9829-.0812,2.9589-.26.071-.0119.1539-.0236.2249-.0355,1.0725-.1919,2.1126-.5345,3.0891-1.0178"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTestTube

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "black hole" (color) [E20D]. */
-const EmojiBlackHole = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlackHole = lynxIcon(`
   <g id="line-supplement">
     <path fill="#000" fill-rule="evenodd" d="M20.3995 32.4312C20.1381 33.5788 20 34.7733 20 36C20 44.8366 27.1634 52 36 52C37.2268 52 38.4213 51.8619 39.5688 51.6005C36.2332 49.1646 32.7253 46.1628 29.2812 42.7187C25.8372 39.2747 22.8354 35.7668 20.3995 32.4312ZM46.6172 47.97C43.291 47.2808 38.0773 43.8898 33.0938 38.9063C28.1102 33.9227 24.7192 28.709 24.03 25.3828C26.961 22.0808 31.2375 20 36 20C44.8366 20 52 27.1634 52 36C52 40.7625 49.9192 45.039 46.6172 47.97Z" clip-rule="evenodd"/>
   </g>
@@ -24,7 +21,5 @@ const EmojiBlackHole = {
   <g id="color-foreground">
     <path fill="none" stroke="#E27022" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M36 52C27.1634 52 20 44.8366 20 36"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlackHole

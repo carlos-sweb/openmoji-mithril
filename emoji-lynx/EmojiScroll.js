@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "scroll" (color) [1F4DC]. */
-const EmojiScroll = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiScroll = lynxIcon(`
   <g id="color">
     <rect x="15.0229" y="16.2834" width="41.9541" height="40.9771" fill="#F4AA41" stroke="none"/>
     <polyline fill="#E27022" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16,55.7479 11,55.9479 11,60.9896 61,60.9896 61,53.9479 56,54.1479"/>
@@ -27,7 +24,5 @@ const EmojiScroll = {
     <line x1="20.8523" x2="52.019" y1="40.6479" y2="40.6479" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="20.8523" x2="52.019" y1="45.896" y2="45.896" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiScroll

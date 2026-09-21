@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "schwäbisch gmünd forum gold und silber" (color) [E207]. */
-const EmojiSchwaBischGmuNdForumGoldUndSilber = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSchwaBischGmuNdForumGoldUndSilber = lynxIcon(`
   <g id="color">
     <rect x="20" y="40" width="35" height="11" fill="#9b9b9a"/>
     <path fill="#fcea2b" d="M46,18l13,4L56,42l-5,5-3-5Q47,30,46,18Z"/>
@@ -20,7 +17,5 @@ const EmojiSchwaBischGmuNdForumGoldUndSilber = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46,18l13,4L56,42l-5,5-3-5Q47,30,46,18Z"/>
     <line x1="46" x2="56" y1="18" y2="42" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSchwaBischGmuNdForumGoldUndSilber

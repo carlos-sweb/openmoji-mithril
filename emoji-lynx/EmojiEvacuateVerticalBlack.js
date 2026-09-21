@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "evacuate vertical" (black) [E086]. */
-const EmojiEvacuateVerticalBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEvacuateVerticalBlack = lynxIcon(`
   <g id="line">
     <line x1="38.6775" x2="34.0269" y1="29.0791" y2="28.0675" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.7411,38.49l-1.2329,6.2363c-.1966,1.0892-.6015,2.1302-1.1925,3.066l-2.6818,5.6877c-.5095.8232-1.5293,1.1722-2.4363.8335-.7188-.3625-.8282-1.4934-.3865-2.417l2.6143-6.9494.5052-4.0976"/>
@@ -14,7 +11,5 @@ const EmojiEvacuateVerticalBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.796,31.303s1.4482-6.0251,1.8065-7.3793c.1647-.7605.7013-1.3869,1.4275-1.6664l4.3275-1.6693"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m28.2635,13.4056c0-1.8787,1.5229-3.4017,3.4016-3.4018s3.4017,1.5229,3.4018,3.4016c0,1.8787-1.5229,3.4017-3.4016,3.4018h-.0001"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEvacuateVerticalBlack

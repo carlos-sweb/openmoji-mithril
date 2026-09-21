@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nuclear worker woman" (black) [E2D8]. */
-const EmojiNuclearWorkerWomanBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNuclearWorkerWomanBlack = lynxIcon(`
   <g id="line">
     <circle cx="36.3436" cy="10.4324" r="2.969" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.4771,24.2518c2.3523,3.5329.677,6.107.0317,8a33.3767,33.3767,0,0,0-.8975,5.6136c-.6,5.9762-1.0025,24.0044-1.0025,24.0044-.055,1.1.575,2,1.4,2a2.076,2.076,0,0,0,1.729-1.987l2.539-22.031c.126-1.093.679-1.987,1.229-1.987s1.1.894,1.229,1.987l2.5423,22.0314a2.076,2.076,0,0,0,1.729,1.987c.825,0,1.455-.9,1.4-2,0,0-.5226-17.8415-1.0731-23.7627a35.8713,35.8713,0,0,0-.8269-5.8553c-.6173-1.9024-2.416-4.7392-.0287-8"/>
@@ -15,7 +12,5 @@ const EmojiNuclearWorkerWomanBlack = {
     <circle cx="36.3436" cy="13.4014" r="1.5" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="39.6304" cy="20.8745" r="1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNuclearWorkerWomanBlack

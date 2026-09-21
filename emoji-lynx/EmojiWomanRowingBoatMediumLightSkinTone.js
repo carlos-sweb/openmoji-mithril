@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman rowing boat: medium-light skin tone" (color) [1F6A3-1F3FC-200D-2640-FE0F]. */
-const EmojiWomanRowingBoatMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanRowingBoatMediumLightSkinTone = lynxIcon(`
   <g id="skin">
     <circle cx="33.5048" cy="21.785" r="3" fill="#debb90"/>
     <path fill="#debb90" d="M44.8039,31.4579c-3.8131-.9532-10.5813-3.05-14.2991-3.813-4.7663-.9533-9.5327,10.4859-9.5327,10.4859h7.6262l4.29-7.4355,9.7234,2.0972"/>
@@ -25,7 +22,5 @@ const EmojiWomanRowingBoatMediumLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28.5983,38.1308l3.8131-6.6729"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29.9286,19.5309s-.47-.4613-.9055-.3015c-.5128.1872-1.2172,1.3184-1.8741,1.6829a3.3629,3.3629,0,0,1-2.1313.4173"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanRowingBoatMediumLightSkinTone

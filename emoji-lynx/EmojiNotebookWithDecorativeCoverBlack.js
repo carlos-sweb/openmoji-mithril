@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "notebook with decorative cover" (black) [1F4D4]. */
-const EmojiNotebookWithDecorativeCoverBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNotebookWithDecorativeCoverBlack = lynxIcon(`
   <g id="line">
     <line x1="17" x2="17" y1="13" y2="59" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M62.9087,54.8149A1.986,1.986,0,0,0,64,53.0467V9.0833A2.0833,2.0833,0,0,0,61.9167,7H16.4591a4.7714,4.7714,0,0,0-3.9733,2.13h0a1.889,1.889,0,0,0,1.573,2.9349h3.8086l2.1331-.0177H59.9167v48H14.0583a1.8905,1.8905,0,0,1-1.8916-1.85V10.575"/>
@@ -23,7 +20,5 @@ const EmojiNotebookWithDecorativeCoverBlack = {
       </g>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNotebookWithDecorativeCoverBlack

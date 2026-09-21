@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rounded symbol for cai" (black) [1F265]. */
-const EmojiRoundedSymbolForCaiBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRoundedSymbolForCaiBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="28" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="33" y="26" width="6" height="20" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiRoundedSymbolForCaiBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44,14.5 v43 a23,23,0,0,0,14.5,-16.5 H49 v7.5 a18,18,0,0,0,2.5,-3"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44,14.5 a23,23,0,0,1,14.5,16.5 H49 v-7.5 a18,18,0,0,1,2.5,3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRoundedSymbolForCaiBlack

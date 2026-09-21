@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "milk jug" (color) [E153]. */
-const EmojiMilkJug = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMilkJug = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" fill-rule="evenodd" d="M21.4202 12H13C12.7522 14.726 14.224 18.4346 15.7716 22.3345C17.0514 25.5593 18.3831 28.9149 18.8372 31.9537L16.9513 54.5848C16.7083 57.4999 19.0088 60 21.934 60H49.6777C52.5619 60 54.8479 57.5666 54.668 54.6881L52.3125 17L52.293 16.6881L52.0586 12.9376C52.0257 12.4106 51.5886 12 51.0606 12H47.3027H31.5H25.1007H21.4202Z" clip-rule="evenodd"/>
     <g>
@@ -22,7 +19,5 @@ const EmojiMilkJug = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M20.25 15C19.6707 21.9519 19.1836 27.7967 18.7083 33.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.5 21.5L54.4293 19.5733C54.3877 18.4408 55.2946 17.5 56.428 17.5H64.6887C65.9076 17.5 66.8431 18.581 66.668 19.7873L62.7486 46.7873C62.6059 47.7706 61.7629 48.5 60.7694 48.5H58C56.8954 48.5 56 47.6046 56 46.5V44.9377"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMilkJug

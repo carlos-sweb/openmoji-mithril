@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "peacock" (black) [1F99A]. */
-const EmojiPeacockBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPeacockBlack = lynxIcon(`
   <g id="line-supplement">
     <circle cx="22.25" cy="36.98" r="1.5"/>
     <circle cx="49.75" cy="36.98" r="1.5"/>
@@ -29,7 +26,5 @@ const EmojiPeacockBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="38.956 55.081 38.956 60.592 36.739 61.331"/>
     <line x1="41.1726" x2="38.9556" y1="60.5918" y2="60.5918" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPeacockBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hot beverage" (color) [2615]. */
-const EmojiHotBeverage = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHotBeverage = lynxIcon(`
   <g id="color">
     <path fill="#fff" fill-rule="evenodd" d="m36,52c9.9411,0,18-8.0589,18-18H18c0,9.9411,8.0589,18,18,18Z"/>
     <path fill="#fff" d="m16.5086,49.9385h41.8588c.69,0,1.0356.8343.5477,1.3222l-3.4059,3.1559c-.3985.3985-.9389.6223-1.5025.6223H20.73c-.661,0-1.2877-.2941-1.7102-.8025l-2.9687-3.3231c-.322-.3875-.0464-.9748.4574-.9748Z"/>
@@ -21,7 +18,5 @@ const EmojiHotBeverage = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="m51,45h4.5c3.0376,0,5.5-2.4624,5.5-5.5s-2.4624-5.5-5.5-5.5h-2.5"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m16.5086,49.9385h41.8588c.69,0,1.0356.8343.5477,1.3222l-3.4059,3.1559c-.3985.3985-.9389.6223-1.5025.6223H20.73c-.661,0-1.2877-.2941-1.7102-.8025l-2.9687-3.3231c-.322-.3875-.0464-.9748.4574-.9748Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHotBeverage

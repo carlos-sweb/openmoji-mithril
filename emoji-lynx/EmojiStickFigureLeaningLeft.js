@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stick figure leaning left" (color) [1FBC7]. */
-const EmojiStickFigureLeaningLeft = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStickFigureLeaningLeft = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="30.8156 19.6103 38.1349 18.1516 35.371 35.5798 30.7132 34.3769 30.8156 19.6103"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiStickFigureLeaningLeft = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30,19l-5,8,5,7.5"/>
     <circle cx="35" cy="11" r="3" fill="none" stroke="#000" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStickFigureLeaningLeft

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "green book" (black) [1F4D7]. */
-const EmojiGreenBookBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGreenBookBlack = lynxIcon(`
   <g id="line">
     <line x1="18" x2="18" y1="13" y2="59" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m62.9087,54.8149c.6677-.3369,1.0895-1.0203,1.0913-1.7682V9.0833c0-1.1506-.9327-2.0833-2.0833-2.0833H16.4591c-1.5975,0-3.0889.7996-3.9733,2.13h0c-.5776.8688-.3416,2.0413.5271,2.6189.3099.206.6737.316,1.0459.316h3.8086l2.1331-.0177h39.9162v48H14.0583c-1.0289.0008-1.8696-.8213-1.8916-1.85V10.575"/>
@@ -17,7 +14,5 @@ const EmojiGreenBookBlack = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m49.4011,29.0073c.2058-.9997,1.0858-1.7171,2.1065-1.7173h0c.5703-.0006,1.1173.2262,1.52.63.5815.6406.5735,1.6205-.0185,2.2515l-3.6517,4.1185h4.3"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGreenBookBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman bouncing ball: medium skin tone" (color) [26F9-1F3FD-200D-2640-FE0F]. */
-const EmojiWomanBouncingBallMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanBouncingBallMediumSkinTone = lynxIcon(`
   <g id="skin">
     <circle cx="27.1073" cy="13.4638" r="3" fill="#c19a65"/>
     <path fill="#c19a65" stroke="#c19a65" stroke-miterlimit="10" stroke-width="2" d="M29.1183,23.7569c.0938.385.237.928.4435,1.57,0,0,.18.56.3549,1.02.5914,1.557,1.5083,1.9274,2.2425,3.5317a12.0038,12.0038,0,0,1,.7549,2.9865c.3046,1.5615-.0608,2.3043-.8454,4.1877,0,0-.3461.0921-3.3226,7.1368l-.3146,12.8974,1.2141.8828a1.3746,1.3746,0,0,0,1.6716-1.1348l1.495-9.9662,2.86-5.72,5.2629-4.9217.1351-3.22q-2.6991-5.4621-5.398-10.9242"/>
@@ -24,7 +21,5 @@ const EmojiWomanBouncingBallMediumSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.9207,21.9484s-1.5142,6.3832-1.7977,6.6967c-.2415.2663-7.2937,3.9028-7.2937,3.9028"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.2475,10.4518s.4242-.5033.8732-.3851c.5281.1382,1.3355,1.1982,2.0238,1.4995a3.3634,3.3634,0,0,0,2.1611.2154"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanBouncingBallMediumSkinTone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "badminton" (black) [1F3F8]. */
-const EmojiBadmintonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBadmintonBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m48.4009,52.2372c.2055-1.3254-.7025-2.5665-2.0279-2.772-1.3254-.2055-2.5665.7025-2.772,2.0279-.0382.2463-.0382.497-.0001.7432v3.6l-2.05,4.0979-.4957.991-3.0563,6.11,3.2.0005,1.6-1.6,1.6,1.6,1.6-1.6,1.6,1.6,1.6-1.6,1.6,1.6,3.2.0005-3.0631-6.1263-.5629-1.1263-1.9729-3.9465v-3.1548l.0009-.4452Z"/>
@@ -17,7 +14,5 @@ const EmojiBadmintonBlack = {
       <ellipse cx="25.7518" cy="16.8421" rx="9" ry="11.8421" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBadmintonBlack

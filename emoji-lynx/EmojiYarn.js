@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "yarn" (color) [1F9F6]. */
-const EmojiYarn = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiYarn = lynxIcon(`
   <g id="color">
     <circle cx="30.8061" cy="34.8221" r="22.2237" fill="#f4aa41"/>
     <path fill="#e27022" d="M43.2943,15.8254C37.055,18.5041,31.2826,23.86,31.2826,33.4714s2.7688,16.8558,11.31,19.955c5.712-4.986,11.01-8.8868,11.01-18.4984S47.09,18.8793,43.2943,15.8254Z"/>
@@ -22,7 +19,5 @@ const EmojiYarn = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.5632,15.8254A22.2229,22.2229,0,0,0,30.3879,34.8221,21.8953,21.8953,0,0,0,41.66,53.9286"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44.5777,17.8248A22.926,22.926,0,0,0,37.055,34.8221c0,6.904,2.8854,13.414,8.0874,17.1489"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiYarn

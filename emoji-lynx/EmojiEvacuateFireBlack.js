@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "evacuate fire" (black) [E08B]. */
-const EmojiEvacuateFireBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEvacuateFireBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="55.667 43.758 50.264 43.758 46.453 39.512"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.55,35.9786s-5.3819.91-6.5319,1.7338c-1.4689,1.0521-4.1343,6.2446-4.1343,6.2446"/>
@@ -16,7 +13,5 @@ const EmojiEvacuateFireBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42.375,52.4469l-2.6421,3.5847-6.7443,4.3753"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.74,33.1515a3.135,3.135,0,1,1,3.135,3.135"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEvacuateFireBlack

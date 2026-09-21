@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "drop cover hold" (color) [E084]. */
-const EmojiDropCoverHold = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDropCoverHold = lynxIcon(`
   <g id="color">
     <rect x="15.6244" y="23.8694" width="40.9752" height="30.4703" fill="#fff"/>
     <polygon fill="#a57939" points="64.166 18.937 7.657 18.937 7.657 23.222 11.158 23.222 11.158 54.339 15.443 54.339 15.443 23.222 56.684 23.222 56.684 54.339 60.969 54.339 60.969 23.222 64.166 23.222 64.166 18.937"/>
@@ -28,7 +25,5 @@ const EmojiDropCoverHold = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m28.04,42.8991c4.57,0,9.856-1.8741,11.9126-2.338"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.5974,33.018c0-1.957,1.5864-3.5435,3.5434-3.5436s3.5435,1.5864,3.5436,3.5434c0,1.957-1.5864,3.5435-3.5434,3.5436h-.0002"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDropCoverHold

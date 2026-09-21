@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "speaker medium volume" (color) [1F509]. */
-const EmojiSpeakerMediumVolume = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpeakerMediumVolume = lynxIcon(`
   <g id="color">
     <path fill="#9b9b9a" stroke="none" d="M12.0792,44.4113v-16.694c0-1.1046,0.8955-2,2-2h11.712v20.692h-11.712 C12.9754,46.4093,12.0803,45.5151,12.0792,44.4113z"/>
     <path fill="#d0cfce" stroke="none" d="M42.2682,58.4333l-14.5-11.579c0.036-0.0961,0.0566-0.1974,0.061-0.3v-21.25 c-0.0055-0.0394-0.0135-0.0785-0.024-0.117l14.459-11.74L42.2682,58.4333z"/>
@@ -19,7 +16,5 @@ const EmojiSpeakerMediumVolume = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M54.6738,24.6122 c5.0427,6.7235,5.0427,15.9684,0,22.692"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M58.8689,19.7825 c7.1892,9.5856,7.1892,22.7658,0,32.3514"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpeakerMediumVolume

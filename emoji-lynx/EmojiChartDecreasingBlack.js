@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "chart decreasing" (black) [1F4C9]. */
-const EmojiChartDecreasingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChartDecreasingBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="47.9061,52.0658 37.261,30.5927 29.9089,34.2373 21.1514,22.14 24.3481,19.7354 31.358,29.0544 35.4843,27.0088 35.4708,26.9815 39.0546,25.2048 51.4898,50.2891"/>
     <rect x="12.0515" y="12.0154" width="47.897" height="47.8969" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiChartDecreasingBlack = {
     <line x1="43.2552" x2="59.2261" y1="24.1772" y2="24.1772" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="12.2635" x2="17.5519" y1="24.1772" y2="24.1772" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChartDecreasingBlack

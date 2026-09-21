@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Pisces" (color) [2653]. */
-const EmojiPisces = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPisces = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3">
     <path stroke-miterlimit="10" d="m23.39 50.52s7.057-4.043 6.983-14.52c0.0732-10.48-6.983-14.52-6.983-14.52"/>
     <path stroke-miterlimit="10" d="m48.61 21.48s-7.057 4.043-6.984 14.52c-0.0719 10.48 6.984 14.52 6.984 14.52"/>
@@ -20,7 +17,5 @@ const EmojiPisces = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPisces

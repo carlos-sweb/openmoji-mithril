@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "roller coaster" (color) [1F3A2]. */
-const EmojiRollerCoaster = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRollerCoaster = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="m39.4776,16.4928c5.5494-3.93,8.754-.6339,8.754-.6339.9628.8397,1.0667,2.2993.2327,3.267l-9.9662,11.4952c-.8397.9629-2.2993,1.0669-3.267.2328l-3.7134-3.2195c-.9629-.8397-1.0669-2.2993-.2328-3.267l1.6316-1.8819,3.2342,2.8045,5.8114-6.7029-2.4845-2.0943Z"/>
     <path fill="#f4aa41" d="m45.9661,22.1935l-7.1061,8.1965c-.8397.9628-2.2992,1.0667-3.2669.2327l-3.7131-3.2197c-.9628-.8397-1.0668-2.2993-.2327-3.2669l1.6315-1.8819,3.2343,2.804,2.4169-2.7882"/>
@@ -30,7 +27,5 @@ const EmojiRollerCoaster = {
     <circle cx="42.2104" cy="28.608" r="1.5501"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="64.822 11.896 58.417 22.378 58.417 63.893 64.822 63.893 64.822 11.896"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRollerCoaster

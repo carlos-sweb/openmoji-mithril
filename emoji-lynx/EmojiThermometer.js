@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "thermometer" (color) [1F321]. */
-const EmojiThermometer = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiThermometer = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m35.9709,3.4517h0c-3.0012,0-4.6841,2.4329-4.6841,5.4341v23.106h9.1182l.25-23.106c.0001-3.0012-1.6829-5.4341-4.6841-5.4341Z"/>
     <path fill="#ea5a47" d="m40.5656,47.4983c3.526,1.8284,6.4344,5.5058,6.4344,9.7445,0,6.0613-4.9249,10.9749-11,10.9749s-11-4.9136-11-10.9749c0-4.2539,3.1375-8.1981,6.6841-10.0196l.0891-18.521s7.572,1.437,8.7737-1.1432l.0187,19.9394Z"/>
@@ -19,7 +16,5 @@ const EmojiThermometer = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.6634,49.4624c1.2934-.9629,1.2755-2.2365,1.2755-2.2365V8.6385c0-2.807,2.2755-5.0825,5.0825-5.0825s5.0825,2.2755,5.0825,5.0825v38.5874s.0052,1.2859,1.2986,2.2488c2.3101,1.8633,3.7879,4.7172,3.7879,7.9162,0,5.614-4.5511,10.1651-10.1651,10.1651s-10.1651-4.5511-10.1651-10.1651c0-1.5355.3405-2.9915.95-4.2966"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38.3874,12.8208c-.7217.1599-1.9748.2657-3.3999.2657-2.2364,0-4.0494-.2606-4.0494-.582"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiThermometer

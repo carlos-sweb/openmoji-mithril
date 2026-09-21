@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "non-potable water" (black) [1F6B1]. */
-const EmojiNonPotableWaterBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNonPotableWaterBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m49.22 32.9v-3.664a3.753 3.753 0 0 0 3.264-1.973h3.264v8.901h-3.264a3.753 3.753 0 0 0-3.264-1.973v-3.664"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m38.91 19.92s-3.15-0.6766-4.747-0.89c-2.374-0.2971-2.374 1.483-2.374 2.67s0.89 2.077 2.67 1.78c0.9689-0.2452 1.969-0.3452 2.967-0.2967 0.837-0.09713 1.681 0.1138 2.374 0.5934v1.484h1.78v-1.484c0.6928-0.4796 1.537-0.6905 2.374-0.5934 0.9983-0.04854 1.998 0.05145 2.967 0.2967 1.78 0.2967 2.67-0.5934 2.67-1.78s0-2.967-2.374-2.67c-1.597 0.2134-4.747 0.89-4.747 0.89z"/>
@@ -16,7 +13,5 @@ const EmojiNonPotableWaterBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32.5 28h13.5v8l-5.136 0.165"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m28.87 31.86c-2.468 0.1054-5.076 2.69-4.869 5.139h4c-0.5578-0.2505 0.7514-2.916 3.264-2.666"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNonPotableWaterBlack

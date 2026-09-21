@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Tokelau" (color) [1F1F9-1F1F0]. */
-const EmojiFlagTokelau = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagTokelau = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#1e50a0"/>
     <polygon fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" points="19.75 21.972 20.986 25.972 17.75 23.5 21.75 23.5 18.514 25.972 19.75 21.972"/>
@@ -18,7 +15,5 @@ const EmojiFlagTokelau = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagTokelau

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "passport control" (color) [1F6C2]. */
-const EmojiPassportControl = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPassportControl = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#92d3f5" d="M16.274,61.8992s-1.8-13.9,10.2-13.9c3.2,2.1,5.9,3.6,9,3.6h-.1c3.1,0,6.3-1.6,9.5-3.7,11.6,0,9.6,13.9,9.8,14"/>
@@ -56,7 +53,5 @@ const EmojiPassportControl = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="22.379 48.744 22.379 39.203 11.822 39.203 11.822 54.179 17.371 54.179"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="17.371 54.179 22.379 54.179 22.379 48.744"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPassportControl

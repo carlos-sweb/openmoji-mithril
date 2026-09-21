@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "litter in bin sign" (black) [1F6AE]. */
-const EmojiLitterInBinSignBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLitterInBinSignBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000">
     <polyline transform="matrix(.9423 0 0 .9423 -.3349 1.624)" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.123" points="33.9 44.4 32.9 58.4 24.9 58.4 23.9 44.4"/>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m29.09 40.44s-5.283 0.3191-5.402 0.3873c-0.1194 0.06831 1.095-1.521 0.9162-3.284 0 0 2.866 0.9781 5.543-0.4898l-1.057 3.386z"/>
@@ -14,7 +11,5 @@ const EmojiLitterInBinSignBlack = {
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.96 33.5s3.695-1.334 4.711-2.827c0.9847-1.445 4-8.457 6.098-8.48h4.523c2.098 0.02346 3.817 1.673 3.926 3.769l0.597 14.32"/>
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLitterInBinSignBlack

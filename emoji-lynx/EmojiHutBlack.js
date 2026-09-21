@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hut" (black) [1F6D6]. */
-const EmojiHutBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHutBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M55.986,41.2306,55.9737,55.478a2.3154,2.3154,0,0,1-1.2693,2.3232c-2.1873,1.1044-7.3737,2.8312-18.6947,3.1268-11.7573.3069-16.8981-1.7856-18.9344-3.0824a2.3,2.3,0,0,1-1.049-2.1985V41.2306"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="30.044 57.816 30.044 45.269 42.193 45.269 42.193 57.816"/>
@@ -17,7 +14,5 @@ const EmojiHutBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.4,32.9267q-1.5348,2.4249-3.0562,5.0865"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.7406,33.0874c1.0231,1.6166,2.0464,3.3131,3.0562,5.0865"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHutBlack

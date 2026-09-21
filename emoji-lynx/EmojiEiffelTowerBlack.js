@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "eiffel tower" (black) [E205]. */
-const EmojiEiffelTowerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEiffelTowerBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="27.44 43.224 44.56 43.224 43.519 48.724 28.385 48.724 27.44 43.224"/>
     <rect x="5.0191" y="62.5276" width="61.9618" height="4.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiEiffelTowerBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.14,42.594c2.2115-8.4604,3.7113-17.091,4.4836-25.8015.2378-2.6899.4028-5.309.4949-7.8574"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.0282,42.594c-2.2115-8.4604-3.7112-17.091-4.4835-25.8015-.2378-2.6899-.4028-5.309-.4949-7.8574"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEiffelTowerBlack

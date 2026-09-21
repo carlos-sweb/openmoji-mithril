@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pomegranate" (black) [E0C4]. */
-const EmojiPomegranateBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPomegranateBlack = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.25 20.94c1.554 0.2358 2.192-0.1519 2.773-0.5791"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m28.15 24.68c1.554 0.2358 2.192-0.1519 2.773-0.5791"/>
@@ -30,7 +27,5 @@ const EmojiPomegranateBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="m15.18 46.36c2.177 2.331 4.22 2.526 4.347 2.538 11.82 1.074 27.92-16.01 26.88-28.63-0.1845-1.538-0.9901-2.714-2.387-3.445"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m53.26 55.35c-1.899 1.899-4.025 3.447-6.296 4.644-0.7534 0.3922-1.527 0.7534-2.312 1.073-3.127 1.259-6.461 1.899-9.784 1.899-6.657 0-13.31-2.539-18.39-7.616-10.16-10.16-4.489-20.96 5.666-31.12 7.42-7.428 15.19-12.45 22.79-10.65 0.5377 0.127 3.531-1.687 3.003-4.498-0.02462-0.1311 1.098-0.2277 2.761 0.3031 1.805 0.5762 2.682 1.569 3.53 2.933-2.569 0.9024-2.981 4.066-2.748 4.319l1.776 1.928c1.147 1.245 2.219 2.672 3.137 4.024 6.853 10.11 5.831 23.8-3.137 32.76z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPomegranateBlack

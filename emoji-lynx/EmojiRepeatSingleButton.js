@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "repeat single button" (color) [1F502]. */
-const EmojiRepeatSingleButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRepeatSingleButton = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin"/>
@@ -17,7 +14,5 @@ const EmojiRepeatSingleButton = {
     <line x1="49.6427" x2="57.8281" y1="28.7274" y2="20.5135" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.6469,46.4723 19.6258,44.2406 19.6258,55.001"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRepeatSingleButton

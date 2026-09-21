@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pinched fingers: light skin tone" (color) [1F90C-1F3FB]. */
-const EmojiPinchedFingersLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPinchedFingersLightSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="skin">
     <path fill="#fadcbc" d="M58.0473,37.3569,55.892,17.8921a3.25,3.25,0,0,0-1.4268-2.3486,3.1816,3.1816,0,0,0-2.665-.417,5.1412,5.1412,0,0,0-1.9934,1.0919,2.6586,2.6586,0,0,0-.3328,0,5.2528,5.2528,0,0,0-4.33,2.9328,4.18,4.18,0,0,0-3.48-.0832c-2.5957,1.1074-3.9454,4.6015-4.1895,5.291C35.7465,28.3608,31.3334,35.93,26.9984,35.93a13.4336,13.4336,0,0,0-7.3056,2.2177c-3.4746,1.9522-5.8047,6.3194-5.8047,10.8887a13.1256,13.1256,0,0,0,13.1143,13.11c.53-.002,13.0634-.0655,19.2861-1.79,4.32-1.1982,8.4785-10.5781,11.206-18.2363A10.6553,10.6553,0,0,0,58.0473,37.3569Z"/>
@@ -16,7 +13,5 @@ const EmojiPinchedFingersLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.0544,35.3131c4.1148-3.195,7.1215-10.0539,7.3385-10.5576.0092-.0213.0163-.04.0241-.0623.1758-.4961,2.3675-6.4132,6.327-4.6275"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M50.16,17.2593a4.114,4.114,0,0,1,1.92-1.1726,2.2321,2.2321,0,0,1,2.8183,1.9156l2.155,19.4649a9.705,9.705,0,0,1-.5014,4.3182c-1.7368,4.8784-6.2583,16.4236-10.531,17.6079-6.1645,1.7086-19.0223,1.7539-19.0223,1.7539a12.11,12.11,0,0,1-12.11-12.11c0-4.18,2.118-8.26,5.3394-10.0422a12.41,12.41,0,0,1,6.771-2.0645"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPinchedFingersLightSkinTone

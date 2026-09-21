@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: British Indian Ocean Territory" (color) [1F1EE-1F1F4]. */
-const EmojiFlagBritishIndianOceanTerritory = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagBritishIndianOceanTerritory = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#fff"/>
     <path fill="#fff" d="M67,44a42.5886,42.5886,0,0,1-6.2,1c-1.5693-.0494-4.6308-1.0494-6.2-1s-4.6308,1.0494-6.2,1-4.6307-1.0494-6.2-1-4.6307,1.0494-6.2,1-4.6308-1.0492-6.2-1-4.6308,1.0481-6.2,1-4.6306-1.0415-6.2-1-4.63,1-6.2,1A50.8361,50.8361,0,0,1,5,44V42a50.8361,50.8361,0,0,0,6.2,1c1.57,0,4.6305-.9586,6.2-1s4.6308.9519,6.2,1,4.6308-.9508,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1,4.6307-.9506,6.2-1,4.6307.9506,6.2,1A42.5886,42.5886,0,0,0,67,42Z"/>
@@ -45,7 +42,5 @@ const EmojiFlagBritishIndianOceanTerritory = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagBritishIndianOceanTerritory

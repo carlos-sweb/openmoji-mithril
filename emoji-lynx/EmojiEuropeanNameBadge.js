@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "european name badge" (color) [E147]. */
-const EmojiEuropeanNameBadge = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEuropeanNameBadge = lynxIcon(`
   <g id="color">
     <rect x="4.7004" y="20.1471" rx="3.4092" ry="3.4092" width="62.5993" height="38.7052" fill="#d0cfce"/>
     <rect x="31.396" y="10.5993" rx="1.5573" ry="1.5573" width="9.0029" height="15.6727" fill="#9b9b9a"/>
@@ -23,7 +20,5 @@ const EmojiEuropeanNameBadge = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="44.396 45.141 44.396 38.141 41.396 44.141 38.396 38.141 38.396 45.141"/>
     <rect x="31.4986" y="10.2372" rx="1.5573" ry="1.5573" width="9.0029" height="15.6727" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEuropeanNameBadge

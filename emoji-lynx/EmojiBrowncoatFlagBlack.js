@@ -1,16 +1,11 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "browncoat flag" (black) [1F3F4-FE0F-200D-1F7E9-200D-2B50]. */
-const EmojiBrowncoatFlagBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBrowncoatFlagBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M67 17H5V55H67V17Z"/>
     <path fill="#000" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M36 25L38.4697 32.9463H46.4616L39.996 37.8574L42.4656 45.8037L36 40.8926L29.5344 45.8037L32.004 37.8574L25.5384 32.9463H33.5303L36 25Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBrowncoatFlagBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "card file box" (black) [1F5C3]. */
-const EmojiCardFileBoxBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCardFileBoxBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="11.7512,21.6194 11.7631,42.3123 59.7488,42.3123 59.7369,21.6194"/>
     <rect x="11.7263" y="15.0026" width="48.0106" height="6.6168" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -15,7 +12,5 @@ const EmojiCardFileBoxBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.9698,32.4574c-0.2972-0.6082-0.9219-1.0271-1.6444-1.0271h-7.9775c-1.0101,0-1.8291,0.8189-1.8291,1.829v1.2736H17.2326"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.0031,38.3785v-1.1524c0-0.914-0.8188-1.655-1.829-1.655h-7.9776c-1.0101,0-1.829,0.741-1.829,1.655v1.1524H17.2326"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCardFileBoxBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nuclear worker man" (black) [E2D7]. */
-const EmojiNuclearWorkerManBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNuclearWorkerManBlack = lynxIcon(`
   <g id="line">
     <circle cx="36.2038" cy="10.4324" r="2.969" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.17,23.37l1.9,38c.055,1.1-.575,2-1.4,2a2.076,2.076,0,0,1-1.729-1.987l-2.542-22.031c-.129-1.093-.679-1.987-1.229-1.987s-1.103.894-1.229,1.987l-2.539,22.031a2.076,2.076,0,0,1-1.729,1.987c-.825,0-1.455-.9-1.4-2l1.9-38"/>
@@ -16,7 +13,5 @@ const EmojiNuclearWorkerManBlack = {
     <ellipse cx="33.7038" cy="13.521" rx="0.7574" ry="1.1343" transform="translate(-0.806 24.8277) rotate(-40)" stroke="#000" stroke-miterlimit="10"/>
     <circle cx="36.2038" cy="13.4014" r="1.5" stroke="#000" stroke-miterlimit="10"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNuclearWorkerManBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "webassembly" (color) [E06A]. */
-const EmojiWebassembly = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWebassembly = lynxIcon(`
   <g id="color" fill="#b399c8">
     <path d="m12.96 12a0.9679 0.9679 0 0 0-0.9648 0.9648v46.07a0.9679 0.9679 0 0 0 0.9648 0.9648h46.07a0.9679 0.9679 0 0 0 0.9648-0.9648v-46.07a0.9679 0.9679 0 0 0-0.9648-0.9648h-18.69c0 2.401-1.946 4.348-4.348 4.348s-4.348-1.946-4.348-4.348z" display="none"/>
     <path d="m12.96 12c-0.5321 0.0017-0.9631 0.4327-0.9648 0.9648v46.07c0.0017 0.5321 0.4327 0.9631 0.9648 0.9648h46.07c0.5321-0.0017 0.9631-0.4327 0.9648-0.9648v-46.07c-0.001702-0.5321-0.4327-0.9631-0.9648-0.9648h-16.8c-1.801 0.3379-1.804 0.3453-2.472 2.173-0.7515 1.3-2.157 2.175-3.767 2.175-1.531 0-2.877-0.7908-3.652-1.986-0.7905-2.049-0.7823-2.055-2.743-2.362z"/>
@@ -18,7 +15,5 @@ const EmojiWebassembly = {
       <path d="m0 7-3-7-3 7"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWebassembly

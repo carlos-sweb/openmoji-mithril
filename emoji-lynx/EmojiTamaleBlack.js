@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tamale" (black) [1FAD4]. */
-const EmojiTamaleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTamaleBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28.5,32.88a49.3636,49.3636,0,0,1-2.1924-12.5929,3.5779,3.5779,0,0,1,2.9713-3.6183,41.7747,41.7747,0,0,1,13.4416-.0317,3.5806,3.5806,0,0,1,2.9713,3.6183A51.9888,51.9888,0,0,1,43.4326,33.4"/>
     <rect x="26.3064" y="34.5551" rx="1.5533" width="19.3872" height="3.1066" transform="matrix(-.976 -.213 .213 -.976 63.461 79.069)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -17,7 +14,5 @@ const EmojiTamaleBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.7154,51.1569A55.1427,55.1427,0,0,0,38.3893,38.22"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.6258,51.1569a43.6505,43.6505,0,0,1,.8446-6.7476"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTamaleBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "radioactive" (color) [2622]. */
-const EmojiRadioactive = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRadioactive = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#f4aa41"/>
   </g>
@@ -16,7 +13,5 @@ const EmojiRadioactive = {
     <path stroke="#000" stroke-miterlimit="10" stroke-width="1.254" d="m 36 50.87 a 14.76 14.76 0 0 1 -5.296 -0.9794 l 3.129 -8.494 a 5.733 5.733 0 0 0 4.333 0 l 3.129 8.494 a 14.76 14.76 0 0 1 -5.296 0.9794 z"/>
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRadioactive

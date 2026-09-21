@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "goblin" (color) [1F47A]. */
-const EmojiGoblin = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGoblin = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" stroke="#ea5a47" stroke-miterlimit="10" d="m15.3127,11h41l-.4087,34.0923-1.7905,4.6783-2.5492,4.3957-2.9134,2.9134-2.8831,2.0637-4.1474,1.8149-4.9635.8888c-.8756-.0237-1.7477-.1194-2.6076-.2862l-4.639-.9001-4.4658-1.9235c-.2193-.1136-.4318-.2397-.6366-.3776l-1.9475-1.312c-.6975-.6975-1.3447-1.4437-1.9365-2.2328l-2.1111-2.8148-1.0908-1.6362c-.5993-.8989-1.001-1.9148-1.1786-2.9805l-.5259-3.1555c-.1362-.8171-.2046-1.6441-.2046-2.4724V11Z"/>
     <path fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="m23.2977,23.8647l.4543-.5574c1.2341-1.514,3.4619-1.7409,4.9759-.5068l4.5938,3.7446c1.514,1.2341,1.7409,3.4619.5068,4.9759l-.4543.5574c-1.2341,1.514-3.4619,1.7409-4.9759.5068l-4.5938-3.7446c-1.5141-1.2341-1.741-3.4619-.5068-4.9759Z"/>
@@ -30,7 +27,5 @@ const EmojiGoblin = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.3127,45s4-3,8,0c.7638.6155,1.6585,1.0478,2.6154,1.2638"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35.9281,45s-4-3-8,0c-.7638.6155-1.6585,1.0478-2.6154,1.2638"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGoblin

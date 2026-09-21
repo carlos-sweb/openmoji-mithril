@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wrapped gift" (color) [1F381]. */
-const EmojiWrappedGift = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWrappedGift = lynxIcon(`
   <g id="color">
     <path fill="#D22F27" stroke="none" d="M51.024,14.0213c-1.6705-3.0089-3.6713-4.5339-5.9477-4.5339c-2.6203,0-5.3416,2.0624-8.0912,6.133 c-0.3517,0.521-0.6812,1.042-0.985,1.5449c-0.3038-0.5029-0.6333-1.0238-0.9857-1.5449c-2.7479-4.0705-5.4701-6.133-8.0904-6.133 c-2.2762,0-4.278,1.5249-5.9476,4.5339c-1.2484,2.252-1.1453,4.0191-0.548,4.9787c1.0765,1.7294,3.8299,2.7454,7.7039,3.4114 C31.1069,22.9241,34.2545,23,35.8658,23h0.0009c0.0453,0,0.0898,0,0.1335,0c0.0445,0,0.0889,0,0.1344,0 c1.6114,0,4.759-0.0759,7.7336-0.5886c3.8731-0.666,6.6256-1.682,7.7039-3.4114C52.1675,18.0404,52.2734,16.2734,51.024,14.0213z"/>
     <rect x="16" y="36" width="39" height="25" fill="#FCEA2B" stroke="none"/>
@@ -29,7 +26,5 @@ const EmojiWrappedGift = {
     <line x1="29.7143" x2="29.7143" y1="22" y2="35" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" points="42.2857,44.7071 42.2857,35.5 29.7143,35.5202 29.7143,42.8737"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWrappedGift

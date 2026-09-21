@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "empty nest" (color) [1FAB9]. */
-const EmojiEmptyNest = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEmptyNest = lynxIcon(`
   <g id="color">
     <path fill="#a57939" d="M11.5905,31.688c0-6.7958,10.9285-12.3048,24.41-12.3048s24.41,5.509,24.41,12.3048v1.0556c0,5.6918-2.0093,12.49-5.0625,16.3445C52.2593,52.9859,45.7545,55.242,36,55.242s-15.8538-1.8262-19.347-6.1539c-3.0884-3.8263-5.0625-9.6808-5.0625-16.3445Z"/>
     <path fill="#6a462f" d="M56.616,47.215c0,2.1079-7.3333,8.027-17.6307,8.027S20.34,53.5331,20.34,51.4252s7.4581.6442,19.3909-1.3738C49.8844,48.3343,56.616,45.1071,56.616,47.215Z"/>
@@ -19,7 +16,5 @@ const EmojiEmptyNest = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.5905,31.688c0-6.7958,10.9285-12.3048,24.41-12.3048s24.41,5.509,24.41,12.3048v1.0556c0,5.6918-2.0093,12.49-5.0625,16.3445C52.2593,52.9859,45.7545,55.242,36,55.242s-15.8538-1.8262-19.347-6.1539c-3.0884-3.8263-5.0625-9.6808-5.0625-16.3445Z"/>
     <ellipse cx="36.1876" cy="36.9227" rx="13.0311" ry="4.1791"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEmptyNest

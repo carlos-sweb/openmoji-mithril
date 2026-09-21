@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "location indicator" (color) [E242]. */
-const EmojiLocationIndicator = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLocationIndicator = lynxIcon(`
   <g id="color">
     <circle cx="35.9867" cy="25.4947" r="10.3805" fill="#fff"/>
     <path fill="#d0cfce" d="m36,65.0208s-3.091-5.9737-13.8722-26.8922c-2.1278-4.1286-4.8172-7.7062-4.8172-12.5241,0-10.3214,8.3671-18.6885,18.6885-18.6885v8.0285s-10.4583.5199-10.4583,10.3971,10.4587,10.7561,10.4587,10.7561l.0005,28.9231Z"/>
@@ -17,7 +14,5 @@ const EmojiLocationIndicator = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36,65.0208s-3.091-5.9737-13.8722-26.8922c-2.1278-4.1286-4.8172-7.7062-4.8172-12.5241,0-10.3214,8.3671-18.6885,18.6885-18.6885"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.002,65.0172s2.998-6.0172,13.8722-26.8922c2.0634-3.9611,4.8173-7.7062,4.8173-12.5242,0-10.3214-8.3671-18.6885-18.6885-18.6885"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLocationIndicator

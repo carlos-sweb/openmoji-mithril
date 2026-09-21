@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "smiling cat with heart-eyes" (color) [1F63B]. */
-const EmojiSmilingCatWithHeartEyes = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmilingCatWithHeartEyes = lynxIcon(`
   <g id="color">
     <path fill="#F4AA41" d="M58.6283,48.8437c-3.5949,9.1099-12.6217,15.1431-23.1895,15.1431 c-9.1103,0-19.2413-5.8431-22.8362-14.9531l-0.1261-0.3124c-1.1406-2.8575-0.9558-6.355-0.9558-9.625l3.664-32.3458 l10.2196,10.0714c2.9204-1.2468,6.1323-1.9373,9.5031-1.9373h1.0627c3.3708,0,6.5827,0.6905,9.5031,1.9373L56.6928,5.7504 l3.7194,33.85c0,3.27-0.6278,6.3921-1.7694,9.2495"/>
     <path fill="#E27022" d="M35.4388,63.9868c10.6007,0.3422,20.3386-5.9994,23.9335-15.1093l0.1108-0.2309 c1.1406-2.8575,1.9564-6.8912,1.9564-10.1612l-4.7467-32.735"/>
@@ -28,7 +25,5 @@ const EmojiSmilingCatWithHeartEyes = {
     <line x1="31.6375" x2="39.9575" y1="45.4657" y2="45.4657" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M25.3975,48.5857c0,0,7.8,4.16,10.4-3.12c2.6,7.28,10.805,3.0701,10.805,3.0701s-2.6936,4.3812-3.4875,5.2337 c-4.0173,4.3139-9.4006,4.0538-13.6716,0.1167C28.5082,53.0241,25.3975,48.5857,25.3975,48.5857z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmilingCatWithHeartEyes

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bathtub" (black) [1F6C1]. */
-const EmojiBathtubBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBathtubBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M11.0074,34.2178v9.4286c0,6.9143,5.4,12.5714,12,12.5714h26c6.6,0,12-5.6571,12-12.5714v-9.4286 C61.0074,34.2178,38.0074,36.313,11.0074,34.2178z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M58.6681,34.2178V14.3617c0,0,0-6.9454-6.5006-1.4994"/>
@@ -14,7 +11,5 @@ const EmojiBathtubBlack = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.5342,59.5982 15.3913,63.128 18.9152,63.128 19.5818,61.0744"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M11.0074,34.2178v9.4286c0,6.9143,5.4,12.5714,12,12.5714h26c6.6,0,12-5.6571,12-12.5714v-9.4286 C61.0074,34.2178,38.0074,36.313,11.0074,34.2178z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBathtubBlack

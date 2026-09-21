@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "currency exchange" (color) [1F4B1]. */
-const EmojiCurrencyExchange = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCurrencyExchange = lynxIcon(`
   <g id="color">
     <rect x="11.5243" y="12.1019" rx="2" ry="2" width="30.7913" height="19.4368" fill="#fff"/>
     <rect x="14.689" y="14.8047" width="23.9038" height="14.051" fill="#ea5a47"/>
@@ -41,7 +38,5 @@ const EmojiCurrencyExchange = {
     <line x1="44.881" x2="44.881" y1="47.557" y2="46.5119" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     <line x1="44.881" x2="44.881" y1="52.9568" y2="51.9117" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCurrencyExchange

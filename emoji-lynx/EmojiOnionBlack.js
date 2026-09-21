@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "onion" (black) [1F9C5]. */
-const EmojiOnionBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOnionBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.4166,14.6311l4.3043-6.1339a20.0263,20.0263,0,0,0-1.22,2.2393c-2.7869,6.1037,2.1232,6.3747,2.1232,6.3747C51.1091,18.61,59.9359,27.59,59.9359,38.4438c0,11.9029-10.615,21.5522-23.7093,21.5522S12.5173,50.3467,12.5173,38.4438c0-8.2317,5.0767-15.3855,12.5394-19.0154a24.8313,24.8313,0,0,1,3.0884-1.2525q.1238-.0406.2481-.08.1619-.0515.3249-.1009a25.4857,25.4857,0,0,1,3.2831-.7619"/>
@@ -17,7 +14,5 @@ const EmojiOnionBlack = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39.2155,53.4552c2.33-2.343,3.9822-8.237,3.9822-15.1375,0-5.8044-1.1693-10.8967-2.9273-13.7624"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOnionBlack

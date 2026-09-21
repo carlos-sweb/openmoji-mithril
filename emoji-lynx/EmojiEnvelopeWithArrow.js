@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "envelope with arrow" (color) [1F4E9]. */
-const EmojiEnvelopeWithArrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEnvelopeWithArrow = lynxIcon(`
   <g id="color">
     <rect x="20.28" y="23.5625" width="31.72" height="3.125" fill="#d0cfce"/>
     <path fill="#d0cfce" d="m28.2272,40.7829l-3.2868,3.2264-2.2014-.9-11.3415,10.4474c-.35-.6201-.57-1.44-.57-2.32v-26.51l17.3997,16.0562Z"/>
@@ -24,7 +21,5 @@ const EmojiEnvelopeWithArrow = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m49.5942,23.5667h9.46c.59,0,1.16.35,1.57.91.05.06.1.13.14.2l-15.96,14.72-4.5,4.15c-.22.2-.46.4-.69.56-2.42,1.81-5.25,1.81-7.68.01-.24-.16-.48-.35-.72-.57l-4.47-4.13-15.92-14.69c.04-.06.09-.13.14-.2.42-.6.99-.96,1.61-.96h8.48"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m29.9493,23.5974h1.5889c.5519,0,.9994-.4474.9994-.9994v-4.4112c0-.5519.4474-.9994.9994-.9994h4.3313c.5519,0,.9994.4474.9994.9994v4.4112c0,.5519.4474.9994.9994.9994h1.5788c.8109,0,1.2842.4149.8157,1.0768l-5.7482,8.3708c-.3983.5627-1.2331.5627-1.6314,0l-5.7482-8.3708c-.4687-.6619.0046-1.0768.8155-1.0768Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEnvelopeWithArrow

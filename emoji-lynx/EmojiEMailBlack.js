@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "e-mail" (black) [1F4E7]. */
-const EmojiEMailBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEMailBlack = lynxIcon(`
   <g id="line-supplement">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="37.6982 22.0047 33.6982 22.0047 33.6982 27.7547 37.6982 27.7547"/>
     <line x1="33.6982" x2="36.6982" y1="24.2547" y2="24.2547" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -18,7 +15,5 @@ const EmojiEMailBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m49.4849,20.9h9.46c2.6184-.0539,1.3646,1.3217,1.4046,1.3917l-15.6546,14.4383-4.5,4.15c-.22.2-.46.4-.69.56-2.42,1.81-5.25,1.81-7.68.01-.24-.16-.48-.35-.72-.57l-4.47-4.13-15.92-14.69c.002-.8682.6193-1.16,1.75-1.16h8.48"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13.1875,52.11s-2.7511.14-2.4693-4.485"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEMailBlack

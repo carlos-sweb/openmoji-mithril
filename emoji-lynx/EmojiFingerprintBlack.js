@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fingerprint" (black) [1FAC6]. */
-const EmojiFingerprintBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFingerprintBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.501,31.501c1.3477,4.0511,3.5,6.9826,7,9"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.5317,40.1894c-1.606-1.9898-2.8563-4.3498-3.7748-7.1103-.8721-2.6201.5459-5.4512,3.166-6.3223,1.9636-.6548,4.0481-.0209,5.3351,1.4428"/>
@@ -15,7 +12,5 @@ const EmojiFingerprintBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.2879,21.529c3.886.3072,6.6155,3.2376,8.7015,6.8148,1.5538,2.6645,3.4549,2.9065,5.366,5.9631"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.6002,28.5828c3.5583,2.737,5.6179,6.8591,5.8426,11.1488M20.1747,22.9516c1.7844-2.5769,4.3882-4.6184,7.591-5.684,7.4598-2.4776,15.48,1.2177,18.5183,8.3116M31.1174,52.9619c-6.0953-3.7882-10.4161-9.4106-12.8497-16.7255-1.0961-3.2943-.9857-6.6998.091-9.7371"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFingerprintBlack

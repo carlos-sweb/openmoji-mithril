@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "postbox" (black) [1F4EE]. */
-const EmojiPostboxBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPostboxBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M53.7744,13.5015 v39.6213c0,1.4948-1.2156,2.7015-2.7015,2.7015H20.4564c-1.4948,0-2.7015-1.2066-2.7015-2.7015V13.5015 c0-1.4948,1.2067-2.7015,2.7015-2.7015h30.6165C52.5588,10.8,53.7744,12.0067,53.7744,13.5015z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M53.7744,13.5015v39.6213 c0,1.4948-1.2156,2.7015-2.7015,2.7015H20.4564c-1.4948,0-2.7015-1.2066-2.7015-2.7015V13.5015 c0-1.4948,1.2067-2.7015,2.7015-2.7015h30.6165C52.5588,10.8,53.7744,12.0067,53.7744,13.5015z"/>
@@ -16,7 +13,5 @@ const EmojiPostboxBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.9306,26.7304l-2.0816,2.2259c-0.1106,0.1194-0.2112,0.2388-0.2917,0.3581c-0.9155,1.2237-0.9155,2.6464,0.0101,3.8602 c0.0804,0.1194,0.1811,0.2388,0.2817,0.3482l2.1127,2.2584L42.4366,43.8h-13.491c-0.4427,0-0.845-0.0995-1.1569-0.2786 c-0.3924-0.2089-0.6439-0.5372-0.6439-0.8954L27,26.5938"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M43,26.8372v16.1072c0,0.2885-0.1811,0.577-0.4628,0.7859c-0.0301,0.0199-0.0704,0.0497-0.1006,0.0696l-7.4748-8.0188 l-2.1127-2.2584c-0.1006-0.1094-0.2012-0.2288-0.2817-0.3482c-0.9256-1.2138-0.9256-2.6365-0.0101-3.8602 c0.0805-0.1194,0.1811-0.2388,0.2917-0.3581l2.1026-2.2484l0.0414-0.0445"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPostboxBlack

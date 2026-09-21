@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Montserrat" (color) [1F1F2-1F1F8]. */
-const EmojiFlagMontserrat = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagMontserrat = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#1e50a0"/>
     <path fill="#92d3f5" stroke="#92d3f5" stroke-linecap="round" stroke-linejoin="round" d="M52.679,47s6.75-2.25,6.75-9V29h-13.5v9C45.929,44.75,52.679,47,52.679,47Z"/>
@@ -28,7 +25,5 @@ const EmojiFlagMontserrat = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagMontserrat

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "volcano ashes" (black) [E09A]. */
-const EmojiVolcanoAshesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVolcanoAshesBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" points="8.244 62.609 21.297 43.369 31.046 36.135 37.309 37.608 42.625 36.135 47.753 42.546 56.1 48.371 62.456 62.759"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="25.214 40.46 26.868 43.992 25.254 50.276 26.17 57.589"/>
@@ -32,7 +29,5 @@ const EmojiVolcanoAshesBlack = {
     <circle cx="48.1082" cy="60.3594" r="1.4802"/>
     <circle cx="41.5145" cy="40.1445" r="1.4802"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVolcanoAshesBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hairy creature" (color) [1FAC8]. */
-const EmojiHairyCreature = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHairyCreature = lynxIcon(`
   <g id="color" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
     <path transform="translate(.0001724)" fill="#a57939" stroke="#a57939" d="m46.202 39.731c-0.733 1.2757-1.3785 3.1904-0.9859 5.6868 0.6317 5.9857 6.8171 6.2189 6.7617 12.26-0.962 2.3707-5.7631 3.8879-7.8043 3.8796-2.1165-1.829-1.1868-4.6018 0-6.8829l-0.0357-0.0142c-1.0583-0.388-2.3156-0.6873-3.6882-2.0261-2.2724-2.2165-2.6069-4.6545-3.3351-6.5691l9.0874-6.3342z"/>
     <path transform="translate(.0001724)" fill="#a57939" stroke="#a57939" d="m21.926 36.1c-0.3936 0.6931-1.5171 1.6163-2.7899 2.1022-4.1518-7.7659 9.2727-16.218 9.2727-16.218l1.8008 9.4342c-3.8264 0.4649-6.8035 1.7961-7.189 6-0.3566-0.3356-0.7868-0.7528-1.0945-1.3179z"/>
@@ -29,7 +26,5 @@ const EmojiHairyCreature = {
     <path transform="translate(.0001724)" d="m28.626 53.158c-0.4284 4.5185-6.0247 2.8832-7.1035 9.8116"/>
     <path transform="translate(.0001724)" d="m33.718 47.111c-1.1446 4.8065 2.1305 7.5633-2.2892 15.097"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHairyCreature

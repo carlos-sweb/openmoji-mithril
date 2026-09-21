@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cockroach" (black) [1FAB3]. */
-const EmojiCockroachBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCockroachBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.1979,8.9656s7.37,5.9313,7.37,12.1743"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.9974,29.976c-.9718-.2711-1.3741-1.4613-2.272-1.9168a6.2247,6.2247,0,0,0-2.3835-.2443,20.604,20.604,0,0,1-2.8243-.7164,12.5,12.5,0,0,0-4.06.0038"/>
@@ -20,7 +17,5 @@ const EmojiCockroachBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.8836,32.5167a64.0546,64.0546,0,0,1,7.904,18.2016"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.1164,32.5167a55.1884,55.1884,0,0,0-3.55,6.3811"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCockroachBlack

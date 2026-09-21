@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rainbow hexagon" (color) [2B21-FE0F-200D-1F308]. */
-const EmojiRainbowHexagon = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRainbowHexagon = lynxIcon(`
   <g id="color">
     <path fill="#B399C8" fill-rule="evenodd" d="M33.7447 63L17.8143 53.8022H54.1857L38.2553 63H33.7447Z" clip-rule="evenodd"/>
     <path fill="#92D3F5" fill-rule="evenodd" d="M17.8142 53.8022L12.4655 50.714C11.8615 50.3656 11.4896 49.7215 11.4896 49.0237V44.9011H60.5103V49.0237C60.5103 49.7215 60.1385 50.3656 59.5344 50.714L54.1857 53.8022H17.8142Z" clip-rule="evenodd"/>
@@ -17,7 +14,5 @@ const EmojiRainbowHexagon = {
   <g id="line">
     <path fill="none" stroke="#000" stroke-width="2" d="M35.024 8.2613C35.6281 7.9129 36.3718 7.9129 36.9759 8.2613L59.5344 21.286C60.1385 21.6344 60.5103 22.2785 60.5103 22.9763V49.0237C60.5103 49.7215 60.1385 50.3656 59.5344 50.714L36.9759 63.7387C36.3718 64.0871 35.6281 64.0871 35.024 63.7387L12.4655 50.714C11.8615 50.3656 11.4896 49.7215 11.4896 49.0237V22.9763C11.4896 22.2785 11.8615 21.6344 12.4655 21.286L35.024 8.2613Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRainbowHexagon

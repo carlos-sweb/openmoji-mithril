@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "charge plug" (color) [E097]. */
-const EmojiChargePlug = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChargePlug = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m24.99,44.8007l.0872,14.4512,8.4355-.0796s6.446-.2387,8.6742-7.1622-.4775-7.6397-.4775-7.6397c0,0-13.7029-.7312-16.7194.4302Z"/>
     <path fill="#fff" d="m53.6682,17.2111v-4.7024c.0206-.3401-.2385-.6325-.5787-.6531-.0248-.0015-.0497-.0015-.0744,0H18.2045c-.3401-.0206-.6325.2385-.6531.5787-.0015.0248-.0015.0497,0,.0744v16.3277c-.0206.3401.2385.6325.5787.6531.0248.0015.0497.0015.0744,0h34.8106c.3401.0206.6325-.2385.6531-.5787.0015-.0248.0015-.0497,0-.0744v-4.3758h3.3309v-7.25l-3.3309.0005Z"/>
@@ -25,7 +22,5 @@ const EmojiChargePlug = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m53.6682,17.2111v-4.7024c.0206-.3401-.2385-.6325-.5787-.6531-.0248-.0015-.0497-.0015-.0744,0H18.2045c-.3401-.0206-.6325.2385-.6531.5787-.0015.0248-.0015.0497,0,.0744v16.3277c-.0206.3401.2385.6325.5787.6531.0248.0015.0497.0015.0744,0h34.8106c.3401.0206.6325-.2385.6531-.5787.0015-.0248.0015-.0497,0-.0744v-4.3758h3.3309v-7.25l-3.3309.0005Z"/>
     <rect x="21.4408" y="15.1572" width="5.5841" height="11.096" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChargePlug

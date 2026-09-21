@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fight cloud" (color) [1FAEF]. */
-const EmojiFightCloud = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFightCloud = lynxIcon(`
   <g id="line-supplement" transform="translate(-14.377 15.352)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
     <path transform="translate(14.333 -15.198)" d="m14.01 52.569-2.856 0.24768-1.4151 2.4931-1.1181-2.6396-2.8083-0.57539 2.1649-1.8791-0.32059-2.8487 2.4561 1.4783 2.6102-1.1852-0.64698 2.7927z"/>
     <path transform="matrix(.73396 -.67919 -.67919 -.73396 64.464 47.592)" d="m14.01 52.569-2.856 0.24768-1.4151 2.4931-1.1181-2.6396-2.8083-0.57539 2.1649-1.8791-0.32059-2.8487 2.4561 1.4783 2.6102-1.1852-0.64698 2.7927z"/>
@@ -41,7 +38,5 @@ const EmojiFightCloud = {
     <path d="m57.875 13.906-5.625 7.0625"/>
     <path d="m33.433 10.253c-0.63073 5.1411 3.8599 7.6914 6.9052 5.765 1.5565-0.98466 3.3006-4.097-0.02392-6.1974-0.57371-0.36248-3.1006-1.1954-4.3027 0.99754-0.0759 0.13846-0.80273 1.705 0.56798 3.0519 0.16754 0.16463 1.699 1.3713 3.1612-0.36933 0.39962-0.47571-0.0086-2.6368-1.6784-1.3805"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFightCloud

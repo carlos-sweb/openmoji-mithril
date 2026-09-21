@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "briefcase" (color) [1F4BC]. */
-const EmojiBriefcase = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBriefcase = lynxIcon(`
   <g id="color">
     <polygon fill="#fcea2b" points="41.8465 36.3544 33.3056 36.3172 31.3127 36.3172 31.3127 39.2746 31.322 42.3685 39.0268 42.4022 41.8465 42.4022 41.8465 36.3544"/>
     <path fill="#6a462f" d="m31.4162,41.6188l-.3429-3.7443c-.0066-.058-.0547-.1023-.113-.1044,0,0-18.948-1.9874-18.9454-1.8667l.259,7.6637,17.8099-1.608c.019,0,.0334.7369.0507.7291.14-.0634.9309-.6263,1.2009-.6934.0551-.0137.0872-.3197.0808-.3761Z"/>
@@ -19,7 +16,5 @@ const EmojiBriefcase = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.9512,38.6643h14.9225c1.6569,0,3-1.3431,3-3v-15.7434H12.0084v15.7434c0,1.6569,1.3431,3,3,3h15.6115"/>
     <rect x="31.167" y="36.3172" width="10.325" height="5.8279" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBriefcase

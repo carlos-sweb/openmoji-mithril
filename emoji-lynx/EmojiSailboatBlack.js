@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sailboat" (black) [26F5]. */
-const EmojiSailboatBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSailboatBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0358" points="38.5351 7.9458 38.5351 35.8514 55.2281 35.8514 38.5351 7.9458"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m52.0409,47.2948c2.68-2.68,4.3606-6.9768,4.3606-6.9768H17.9887s-1.0793,4.3214,2.494,7.0014"/>
@@ -13,7 +10,5 @@ const EmojiSailboatBlack = {
     <line x1="38.5351" x2="38.5351" y1="8.1584" y2="40.318" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0358"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.1621,44.7846c2.68,0,8.0399,2.68,13.3998,2.68s8.9332-2.68,14.2931-2.68,9.8265,2.68,14.2931,2.68,6.2533-2.68,13.3998-2.68"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSailboatBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man health worker: light skin tone" (color) [1F468-1F3FB-200D-2695-FE0F]. */
-const EmojiManHealthWorkerLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManHealthWorkerLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#FFFFFF" d="M16.6483,58.8573c0,0-2.1-14.9,9.9-14.9c3.1919,2.1279,6.0264,3.7984,9.1001,3.7921l0.2749,0.1 c3.0737,0.0063,5.9081-1.8642,9.1-3.9921c11.5646-0.0346,9.509,14.8999,9.74,15"/>
     <circle cx="24.6141" cy="54.7818" r="3" fill="#9B9B9A"/>
@@ -34,7 +31,5 @@ const EmojiManHealthWorkerLightSkinTone = {
     <line x1="29.9529" x2="35.6105" y1="46.7668" y2="57.8996" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="41.2681" x2="35.6105" y1="46.9968" y2="57.8996" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManHealthWorkerLightSkinTone

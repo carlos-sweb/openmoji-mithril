@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rescue worker’s helmet" (black) [26D1]. */
-const EmojiRescueWorkerSHelmetBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRescueWorkerSHelmetBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M43.29,9.1081V23.6554a15.278,15.278,0,0,1-14.8577,0V8.8881"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M16.825,30.71c0-8.3786,4.7-18.3651,11.4251-21.5167a17.8729,17.8729,0,0,1,7.6113-1.6984c10.5135,0,19.0364,9.1465,19.0364,20.4293,0,.4376.0252,2.3551,0,2.7858"/>
@@ -18,7 +15,5 @@ const EmojiRescueWorkerSHelmetBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" d="M28.4325,60.9222s7.4289,4.6751,14.8577,0"/>
     <path d="M28.9477,8.8881s8.354-3.3824,14.1341.166L43.29,23.7458s-7.4288,4.643-14.8577,0Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRescueWorkerSHelmetBlack

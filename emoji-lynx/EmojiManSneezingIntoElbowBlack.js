@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man sneezing into elbow" (black) [E0AD-200D-2642-FE0F]. */
-const EmojiManSneezingIntoElbowBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManSneezingIntoElbowBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.083,46.6973c3.85,1.1778,7.0674,4.5469,7.0674,8.5508l0,5.4227"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M55.0623,36.7481,40.6292,45.76a58.4644,58.4644,0,0,1-11.937,5.69c-2.4384.8392-4.6463,1.5968-4.6463,1.5968"/>
@@ -17,7 +14,5 @@ const EmojiManSneezingIntoElbowBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.09,50.7953q5.2653.735,10.5305-3.6527"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.05,29.6632c0-5-3-11-3-11-8,0-10,3-16,1a30.6019,30.6019,0,0,0-2.2629,10"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManSneezingIntoElbowBlack

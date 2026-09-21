@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "thumbs down: medium-dark skin tone" (color) [1F44E-1F3FE]. */
-const EmojiThumbsDownMediumDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiThumbsDownMediumDarkSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin">
@@ -21,7 +18,5 @@ const EmojiThumbsDownMediumDarkSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39.236,25.9801h15 c0.3099,0.0413,0.6238,0.0413,0.9337,0c1.933-0.2578,3.291-2.0339,3.0331-3.9669s-2.0339-3.291-3.9669-3.0331h-15 c-2.0658-0.1226-3.8473,1.4362-4,3.5C35.3887,24.5439,37.1702,26.1027,39.236,25.9801z"/>
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M27.355,12.315c-10.5,0-15.125,6.94-15.125,15.5 c0.0807,2.7175,0.73,5.3879,1.906,7.839"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiThumbsDownMediumDarkSkinTone

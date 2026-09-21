@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ear with hearing aid: light skin tone" (color) [1F9BB-1F3FB]. */
-const EmojiEarWithHearingAidLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEarWithHearingAidLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M46.0938,29.8141a8.0935,8.0935,0,0,0,1.231-5.1156c-.3322-8.5131-6.5889-10.9008-9.5933-13.4778,4.1911,5.4922,5.9607,10.7559,2.6157,20.8539C40.3472,32.0746,43.68,33.5811,46.0938,29.8141Z"/>
   </g>
@@ -31,7 +28,5 @@ const EmojiEarWithHearingAidLightSkinTone = {
   <g id="color-foreground">
     <circle cx="20.01" cy="35.494" r="3.0542" fill="#d0cfce"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEarWithHearingAidLightSkinTone

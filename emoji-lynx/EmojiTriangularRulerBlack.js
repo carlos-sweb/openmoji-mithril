@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "triangular ruler" (black) [1F4D0]. */
-const EmojiTriangularRulerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTriangularRulerBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="17.0652,56.0808 17.0652,16.0559 55.8444,16.081"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="22.5418,34.3726 22.5418,21.3336 35.175,21.3418"/>
@@ -18,7 +15,5 @@ const EmojiTriangularRulerBlack = {
     <line x1="26.7191" x2="24.5194" y1="40.4944" y2="38.3734" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="40.6012" x2="38.4013" y1="26.0969" y2="23.9758" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTriangularRulerBlack

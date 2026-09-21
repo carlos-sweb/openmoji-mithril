@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "moka pot" (black) [E152]. */
-const EmojiMokaPotBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMokaPotBlack = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.7565,17.5555l1.38,14.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.4666,41.0555l-.4314,1-1.1613,17.5"/>
@@ -22,7 +19,5 @@ const EmojiMokaPotBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="m42.7566,35.3055v4.75"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m16.8806,17.5083h4.2763l11.5-4.5h3.5l11.8569,4.2685c.3629.1307.5642.5186.462.8906l-4.4519,16.9471h-18.8303l-1.2987-6.2864-7.5179-10.3303c-.2996-.4117-.0055-.9895.5037-.9895Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMokaPotBlack

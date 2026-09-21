@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sanitizer spray" (color) [E0B1]. */
-const EmojiSanitizerSpray = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSanitizerSpray = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m32.088,60.1489H15.8129v-29.4533h7.9871c2.5995,3.0618,5.0217,6.2697,7.2549,9.6081,3.1125,4.9454,1.0331,19.8452,1.0331,19.8452Z"/>
     <polyline fill="#ea5a47" points="32.157 43.944 22.542 43.944 22.606 57.397 32.189 57.397"/>
@@ -31,7 +28,5 @@ const EmojiSanitizerSpray = {
     <circle cx="54.0426" cy="26.9555" r="2"/>
     <circle cx="40.8701" cy="17.7906" r="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSanitizerSpray

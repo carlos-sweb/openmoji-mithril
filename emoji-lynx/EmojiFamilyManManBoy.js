@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "family: man, man, boy" (color) [1F468-200D-1F468-200D-1F466]. */
-const EmojiFamilyManManBoy = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFamilyManManBoy = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M11.0003,61V44.9552c0-3.2895,3.2918-5.9566,6.5836-5.9566c3.9146,3.2895,7.8292,3.2895,11.8327,0h13.1673 c3.9146,3.2895,7.8292,3.2895,11.8327,0c3.2918,0,6.5836,2.6671,6.5836,5.9566V61"/>
     <path fill="#B1CC33" d="M26.5,61v-2.5333C26.5,56,29.0018,54,31.5036,54c2.9751,2.4667,5.9502,2.4667,8.9929,0 c2.5017,0,5.0035,2,5.0035,4.4667V61"/>
@@ -40,7 +37,5 @@ const EmojiFamilyManManBoy = {
     <path d="M49.75,26.5c0-0.7143,0.5357-1.25,1.25-1.25s1.25,0.5357,1.25,1.25s-0.5357,1.25-1.25,1.25S49.75,27.2143,49.75,26.5"/>
     <path d="M44.75,26.5c0-0.7143,0.5357-1.25,1.25-1.25s1.25,0.5357,1.25,1.25s-0.5357,1.25-1.25,1.25S44.75,27.2143,44.75,26.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFamilyManManBoy

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "puzzle piece" (color) [1F9E9]. */
-const EmojiPuzzlePiece = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPuzzlePiece = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M39.7792,57.8819H52.77V44.851c5.2976,0,11.6314,1.4,11.6314-6.1934,0-6.7613-6.3338-5.8535-11.6314-5.8535V19.5133H39.7792c1.8239-5.8157,1.8239-11.6314-4.9774-11.6314s-6.73,6.3338-6.73,11.6314H14.4016V33.5239c4.2433-1.5715,11.6314-4.4184,11.6314,5.1737s-8.48,6.5814-11.6314,5.1737V57.8819H26.3729c0-5.2976,0-12.383,7.213-12.3112C40.3686,45.6382,39.7792,52.5843,39.7792,57.8819Z"/>
     <path fill="#61b2e4" d="M39.0542,51.0992c1.7359,1.7359,1.11,4.1339,1.11,6.7827H52.77V43.8713c5.8157,1.0357,10.9968,3.6045,10.9968-5.2137,0-5.2976-4.9743-6.1934-10.2719-6.1934V19.8154H49.3788"/>
@@ -32,7 +29,5 @@ const EmojiPuzzlePiece = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.77,33.5239c2.6813-2.3413,11.6314-3.2873,11.6314,5.1737"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPuzzlePiece

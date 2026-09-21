@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "roller skate" (black) [1F6FC]. */
-const EmojiRollerSkateBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRollerSkateBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M58.4243,38.5883c-.468-2.7025-2.34-6.2155-8.8182-6.6811C33.9172,30.78,34.3869,14.4334,34.3869,14.4334H17.6646s-.47,13.2463-2.3486,17.6617a20.2037,20.2037,0,0,0-1.4092,6.494"/>
     <line x1="34.7952" x2="32.3735" y1="18.4532" y2="18.4532" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -24,7 +21,5 @@ const EmojiRollerSkateBlack = {
     <line x1="16.4865" x2="17.1995" y1="47.8204" y2="48.869" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="52.9173" x2="52.2042" y1="47.8204" y2="48.869" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRollerSkateBlack

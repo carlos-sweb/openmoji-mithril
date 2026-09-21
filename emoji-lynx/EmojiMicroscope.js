@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "microscope" (color) [1F52C]. */
-const EmojiMicroscope = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMicroscope = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m34.8755,39.625c-.1825.0002-.3616-.0498-.5176-.1445l-7.6992-4.6592c-.4708-.285-.623-.8967-.3408-1.3692l11.1172-18.5849c.2839-.4741.8983-.6283,1.3724-.3444.0012.0007.0024.0014.0035.0021l7.7,4.6592c.4722.2862.6234.9008.3379,1.3735,0,0-6.8455,11.3672-7.1267,11.8424l-3.9864,6.7349c-.1357.2299-.3581.3957-.6172.46-.0795.0201-.1611.0303-.2431.0301Z"/>
     <polygon fill="#3f3f3f" points="42.244 13.68 45.666 15.751 43.622 19.152 40.199 17.081 42.244 13.68"/>
@@ -26,7 +23,5 @@ const EmojiMicroscope = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.114,25.9524c4.3016,3.1934,11.1343,10.4529,7.1716,22.572l-.4532,1.3847"/>
     <circle cx="42.1378" cy="26.325" r="3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMicroscope

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "umbrella with rain drops" (color) [2614]. */
-const EmojiUmbrellaWithRainDrops = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiUmbrellaWithRainDrops = lynxIcon(`
   <g id="color">
     <path fill="#B399C8" stroke="none" d="M64.0961,50.6227c-1.8852-12.34-12.7795-21.7213-25.9371-21.7213 c-14.4842,0-26.226,11.4863-26.226,25.6553c0,0,3.2277-1.9877,5.3958-0.3054c0.2265,0.1757,0.5274,0.2026,0.7859,0.0822 c1.4239-0.6631,6.052-2.4253,10.7437,0.0664c0.1796,0.0954,0.384,0.123,0.5778,0.0633 c1.6652-0.5128,10.1406-2.859,17.6089-0.0364c0.2132,0.0806,0.4486,0.063,0.6507-0.0435 c4.6746-2.4639,9.2814-0.7163,10.7098-0.0525c0.2634,0.1224,0.5696,0.0924,0.7996-0.0875 c2.1483-1.6807,5.1795,0.1955,5.1795,0.1955"/>
     <path fill="#8967AA" stroke="none" d="M38.159,28.9014c0,0,17.9165,0.2034,20.2466,25.4293c0,0-5.7234-2.8546-11.03,0.144 C47.3756,54.4748,47.569,33.3901,38.159,28.9014z"/>
@@ -30,7 +27,5 @@ const EmojiUmbrellaWithRainDrops = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M63.9778,49.9166c-2.1853-11.99-12.9134-21.0151-25.8188-21.0151c-14.4842,0-26.226,11.4863-26.226,25.6553 c0,0,3.2277-1.9877,5.3958-0.3054c0.2265,0.1757,0.5274,0.2026,0.7859,0.0822c1.4239-0.6631,6.052-2.4253,10.7437,0.0664 c0.1796,0.0954,0.384,0.123,0.5778,0.0633c1.6652-0.5128,10.1406-2.859,17.6089-0.0364c0.2132,0.0806,0.4486,0.063,0.6507-0.0435 c4.6746-2.4639,9.2814-0.7163,10.7098-0.0525c0.2634,0.1224,0.5696,0.0924,0.7996-0.0875 c2.1483-1.6807,5.1795,0.1955,5.1795,0.1955"/>
     <line x1="38.159" x2="38.159" y1="28.9014" y2="26.9387" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiUmbrellaWithRainDrops

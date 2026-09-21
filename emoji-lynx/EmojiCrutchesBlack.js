@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "crutches" (black) [E326]. */
-const EmojiCrutchesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCrutchesBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="35.665 44.073 36.036 43.134 40.401 41.634 44.301 47.155 39.993 50.199 35.665 44.073"/>
     <rect x="27.7554" y="42.1382" width="7.7661" height="5.2754" transform="translate(-23.1873 44.6859) rotate(-54.6611)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiCrutchesBlack = {
     <line x1="39.5146" x2="49.0658" y1="24.6038" y2="31.6584" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="21.5103" x2="31.6384" y1="29.5498" y2="22.4866" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCrutchesBlack

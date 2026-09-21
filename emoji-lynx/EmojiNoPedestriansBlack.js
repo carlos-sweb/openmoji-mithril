@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no pedestrians" (black) [1F6B7]. */
-const EmojiNoPedestriansBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoPedestriansBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="30" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55.66 51.44a24.99 24.99 0 0 0-35.06-35.13z"/>
@@ -17,7 +14,5 @@ const EmojiNoPedestriansBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38.44 41.27 0.5608 1.735s1.485 3.892 2 5l2.407 4.539s0.5933 5.461-2.407 2.461c-1.538-2.353-3.531-5.014-4.635-7.323-0.5857-1.26-1.365-3.053-1.365-3.677"/>
     <circle cx="35" cy="17" r="2" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoPedestriansBlack

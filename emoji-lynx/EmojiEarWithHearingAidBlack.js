@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ear with hearing aid" (black) [1F9BB]. */
-const EmojiEarWithHearingAidBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEarWithHearingAidBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M50.45,18.001a20.3132,20.3132,0,0,1,1.2748,9.7546,13.6741,13.6741,0,0,1-.5124,2.2184"/>
@@ -18,7 +15,5 @@ const EmojiEarWithHearingAidBlack = {
       <circle cx="20.0281" cy="35.5516" r="4.0484" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEarWithHearingAidBlack

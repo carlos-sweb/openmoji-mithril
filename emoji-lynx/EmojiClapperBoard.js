@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clapper board" (color) [1F3AC]. */
-const EmojiClapperBoard = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClapperBoard = lynxIcon(`
   <g id="color">
     <circle cx="15.7986" cy="30.9666" r="1.5112" fill="#FFFFFF" stroke="none"/>
     <path fill="#3F3F3F" stroke="none" d="M16.5878,37.3974V54.97c0,1.1026,1.8975,3,3,3l33.6372,0.2321c1.1025,0,2.2763-2.1295,2.2763-3.2321 V37.3974H16.5878z"/>
@@ -41,7 +38,5 @@ const EmojiClapperBoard = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="40.7714,19.8114 36.399,21.4887 28.7464,17.5363 33.119,15.859"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="29.7098,24.0727 25.3257,25.7192 17.7011,21.7132 22.0853,20.0666"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClapperBoard

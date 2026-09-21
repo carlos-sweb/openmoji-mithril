@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ID button" (color) [1F194]. */
-const EmojiIDButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIDButton = lynxIcon(`
   <g id="line-supplement" transform="translate(-.0006922 -.01378)" fill="none" stroke="#000">
     <path transform="matrix(0 2.404 2.404 0 35.81 35.73)" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m-3.5-3.5h7" clip-rule="evenodd"/>
     <path transform="matrix(2.404 0 0 2.404 41.53 27.31)" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m0 6.974h-2.427v-6.974h2.427c1.148 0 2.08 0.931 2.08 2.079v2.815c0 1.149-0.932 2.08-2.08 2.08z" clip-rule="evenodd"/>
@@ -18,7 +15,5 @@ const EmojiIDButton = {
     <rect x="12" y="12.01" ry="5" width="48" height="47.83" fill="none" stroke-width="2"/>
   </g>
   <g id="line"/>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIDButton

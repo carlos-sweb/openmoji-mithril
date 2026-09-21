@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fearful face" (color) [1F628]. */
-const EmojiFearfulFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFearfulFace = lynxIcon(`
   <g id="line-supplement">
     <path d="M42.8472,45.6583c0-2.592-3.834-4.694-6.869-4.694s-6.869,2.101-6.869,4.694,3.659.9248,6.694.9248S42.8472,48.25,42.8472,45.6583Z"/>
   </g>
@@ -22,7 +19,5 @@ const EmojiFearfulFace = {
     <path d="M29.9772,32.9583a3,3,0,1,1-3-3,3.0011,3.0011,0,0,1,3,3"/>
     <path d="M47.9772,32.9583a3,3,0,1,1-3-3,3.0011,3.0011,0,0,1,3,3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFearfulFace

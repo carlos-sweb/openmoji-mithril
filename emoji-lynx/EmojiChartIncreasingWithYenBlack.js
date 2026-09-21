@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "chart increasing with yen" (black) [1F4B9]. */
-const EmojiChartIncreasingWithYenBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChartIncreasingWithYenBlack = lynxIcon(`
   <g id="line">
     <g id="_1F4B9-2">
       <g>
@@ -15,7 +12,5 @@ const EmojiChartIncreasingWithYenBlack = {
       <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="34.091 29.625 25.416 50.239 18.42 47.255 10.958 59.008 14.036 61.06 19.633 52.012 24.017 53.691 27.375 55.09 36.061 34.53 46.777 40.539 60.302 13.389 57.504 11.524 44.911 35.875 34.091 29.625"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChartIncreasingWithYenBlack

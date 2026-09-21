@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "gardener man" (color) [E340]. */
-const EmojiGardenerMan = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGardenerMan = lynxIcon(`
   <g id="color">
     <path fill="#b1cc33" d="M54.8639,62.72s2-14.0205-10-14.0205c-3.1918,2.1279-5.9264,3.5984-9,3.5921h.125c-3.0736.0063-5.8081-1.4642-9-3.5921-12,0-10,14.0205-10,14.0205"/>
     <rect x="44.5251" y="48.7399" width="4.2883" height="14.0273" fill="#61b2e4"/>
@@ -47,7 +44,5 @@ const EmojiGardenerMan = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.2038,34.1752s-4.6525-6.8512,2.5534-13.8906c0,0,9.4524-8.71,18.2133,0,7.2059,7.0394,2.5534,13.8906,2.5534,13.8906l-5.66-12.6244A5.7133,5.7133,0,0,1,36.21,25.0439s1.0646-4.7593-.2834-4.7593c0,0-5.1834,6.2171-11.0729,8.7249Z"/>
     <circle cx="58.7771" cy="44.8096" r="1.8896" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGardenerMan

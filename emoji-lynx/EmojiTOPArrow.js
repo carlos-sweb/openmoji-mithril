@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "TOP arrow" (color) [1F51D]. */
-const EmojiTOPArrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTOPArrow = lynxIcon(`
   <g id="color">
     <polyline fill="#3f3f3f" points="35.991 14 23 28.516 32.527 28.516 32.69 40 39.483 40 39.456 28.516 48.982 28.516 35.991 14"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiTOPArrow = {
     </g>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43.1422,55.47v-10h3.8132a2.49,2.49,0,0,1,2.4905,2.4907h0a2.49,2.49,0,0,1-2.4905,2.4906H43.1422"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTOPArrow

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "baby bottle" (color) [1F37C]. */
-const EmojiBabyBottle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBabyBottle = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" stroke="none" d="M51.5334,37.3844L35.2339,21.0847c6.2853-6.2853,8.5839,1.4216,15.9401-5.9347l1.5737-1.5734 c1.738-1.7383,4.5563-1.7383,6.2938,0c1.7383,1.7377,1.7383,4.5561,0.0005,6.2938l-1.5739,1.574 C50.112,28.8005,57.8188,31.0989,51.5334,37.3844z"/>
     <path fill="#F1B31C" stroke="none" d="M53.2398,16.9676l1.6272-1.5189c0.8839-0.8249,1.3516-1.9262,1.4039-3.0457 c1.1571,0.0258,2.303,0.4951,3.1547,1.4082c1.6774,1.7965,1.5802,4.6134-0.2165,6.29l-1.6272,1.5189 c-7.6054,7.098,0.0176,9.6608-6.4808,15.7258l-6.7713-7.1008C50.8282,24.18,45.6344,24.0656,53.2398,16.9676z"/>
@@ -22,7 +19,5 @@ const EmojiBabyBottle = {
     <line x1="29.5213" x2="22.5213" y1="39.5213" y2="32.5213" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="24.5213" x2="17.5213" y1="44.5213" y2="37.5213" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBabyBottle

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "trackball" (color) [1F5B2]. */
-const EmojiTrackball = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTrackball = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m38.32,16.2h-4.638c-6.9939.022-11.908,4.1861-11.93,11.18v23.34c.022,6.9939,4.9361,11.158,11.93,11.18h4.638c6.9939-.022,11.908-4.4361,11.93-11.43v-22.84c-.022-6.9939-4.9361-11.408-11.93-11.43Z"/>
     <path fill="#9b9b9a" d="m34.84,16.46c3.809,1.634,7.429,4.23,7.851,10.157.4884,6.864-2.052,19.72-2.868,26.25-.571,4.565-2.829,6.428-5.826,8.824,4.0006.0797,6.615-.021,8.4816-.3376,3.3065-.5608,6.7918-3.3895,7.1428-6.3991,1.2286-10.5343.5587-20.5754.4586-30.4102-.8459-5.23-6.6283-8.3678-10.78-8.106,0,0-1.3055-.5118-4.459.0303l-.001-.0083Z"/>
@@ -17,7 +14,5 @@ const EmojiTrackball = {
     <circle cx="36" cy="30.51" r="8.902" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36,15.1c.5005-13.15-19.03-4.582-21.79-9.568"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTrackball

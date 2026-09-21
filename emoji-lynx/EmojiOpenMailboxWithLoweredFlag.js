@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "open mailbox with lowered flag" (color) [1F4ED]. */
-const EmojiOpenMailboxWithLoweredFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOpenMailboxWithLoweredFlag = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="M58.7,27.6c0-5.4-2.9627-10.4219-7.3-11.6-3.4284-.9312-15.4-.6-15.4-.6l-11.8036-.0976c-.7,0,3.5036,6.2976,3.5036,12.2976V39.3a2.338,2.338,0,0,1-2.1226,2.3964L58.7,41.6Z"/>
     <path fill="#3f3f3f" d="M34.6,27.6V39.4a2.1631,2.1631,0,0,1-2.1,2.3H15.3a2.15,2.15,0,0,1-2-2.3V26.6a12.27,12.27,0,0,1,4.6-9.1A9.5025,9.5025,0,0,1,24,15.3a13.5523,13.5523,0,0,1,2,.2h0C30.9,16.6,34.6,21.6,34.6,27.6Z"/>
@@ -19,7 +16,5 @@ const EmojiOpenMailboxWithLoweredFlag = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M34.6,27.6V39.4a2.1631,2.1631,0,0,1-2.1,2.3H15.3a2.15,2.15,0,0,1-2-2.3V26.6a12.27,12.27,0,0,1,4.6-9.1A9.5025,9.5025,0,0,1,24,15.3a13.5523,13.5523,0,0,1,2,.2h0C30.9,16.6,34.6,21.6,34.6,27.6Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39.3,59.4V41.6533l-6.813.0082L32.5,46.4v13"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOpenMailboxWithLoweredFlag

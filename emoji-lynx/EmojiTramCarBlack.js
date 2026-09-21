@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tram car" (black) [1F68B]. */
-const EmojiTramCarBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTramCarBlack = lynxIcon(`
   <g id="line">
     <line x1="3" x2="67" y1="56" y2="56" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="21" x2="67" y1="16" y2="16" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiTramCarBlack = {
     <rect x="60.3785" y="32.3238" rx="1.0578" ry="1.0578" width="6.3408" height="10.6464" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.0737"/>
     <line x1="20.3843" x2="67.7524" y1="47.0306" y2="47.0306" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.9699"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTramCarBlack

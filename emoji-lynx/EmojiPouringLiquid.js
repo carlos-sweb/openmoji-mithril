@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pouring liquid" (color) [1FAD7]. */
-const EmojiPouringLiquid = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPouringLiquid = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m 52.22 43.35 a 2.05 2.05 0 1 1 -1.7 3.72 8.43 8.43 0 0 1 -3.03 -3.26 s -.36 -.52 .24 -.61 a 8.85 8.85 0 0 1 4.5 .15"/>
     <path fill="#61b2e4" d="m 47.6 44 a 5.62 5.62 0 0 1 3.79 -.25 1.7 1.7 0 0 1 1.07 2.32 s -1.22 -1.77 -4.86 -2.07"/>
@@ -23,7 +20,5 @@ const EmojiPouringLiquid = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m 52.22 43.35 a 2.05 2.05 0 1 1 -1.7 3.72 8.43 8.43 0 0 1 -3.03 -3.26 s -.36 -.52 .24 -.61 a 8.85 8.85 0 0 1 4.5 .15"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m 32.74 45.44 a 9.12 9.12 0 0 1 4.17 -2.03 c .6 -.18 .48 .47 .48 .47 a 8.7 8.7 0 0 1 -1.48 4.34 2.11 2.11 0 1 1 -3.17 -2.78"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPouringLiquid

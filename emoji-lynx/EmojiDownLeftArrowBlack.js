@@ -1,15 +1,10 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "down-left arrow" (black) [2199]. */
-const EmojiDownLeftArrowBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDownLeftArrowBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="14.5044,34.702 13.6073,58.9309 37.8362,58.0338 37.6303,52.4758 23.4704,53.0004 59.3629,17.1079 55.4303,13.1753 19.5378,49.0678 20.0624,34.9079"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDownLeftArrowBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "straight ruler" (color) [1F4CF]. */
-const EmojiStraightRuler = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStraightRuler = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M13.5626,18.7338l34.6292,42.2421l10.5838-8.1699L24.0535,10.1925L13.5626,18.7338z"/>
     <polygon fill="#9B9B9A" stroke="none" points="23.8877,10.4284 21.2868,12.4577 55.8483,55.137 58.2678,52.5901"/>
@@ -29,7 +26,5 @@ const EmojiStraightRuler = {
     <line x1="39.8121" x2="42.46" y1="45.8496" y2="43.6961" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="27.1926" x2="29.8405" y1="30.3335" y2="28.18" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStraightRuler

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "honeybee" (black) [1F41D]. */
-const EmojiHoneybeeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHoneybeeBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15.0017,22.1684c-.5-2.27-.41-3.76.11-4.66.65-1.06,1.87-1.35,3.52-1.12,5.45.88,15.1,7.92,19.94,11.67"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m57.67,30.66l.89-.14c.961-.2262,1.9581-.2535,2.93-.08l2.3.32,2.45.39"/>
@@ -18,7 +15,5 @@ const EmojiHoneybeeBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m54.28,38.52c.5049-.3297.9595-.7305,1.35-1.19l.08-.08.08-.08v-.08c1.2936-1.4287,2.0007-3.2928,1.98-5.22.0023-.4055-.0311-.8104-.1-1.21-.1986-1.3496-.7506-2.6226-1.6-3.69-.07-.1-.16-.2-.24-.3-1.2277-1.4268-2.928-2.364-4.79-2.64-.393-.0661-.7917-.0929-1.19-.08-2.2339.0053-4.3618.9531-5.86,2.61h-1.35c-1.4702.1097-2.8802.6294-4.07,1.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m40.4217,30.8384s-1.24-.55-3.26-1.49c-.0212-.0021-.0418-.0089-.06-.02-.56-.23-1.11-.55-1.74-.79-5.29-2.31-13.82-5.62-20.37-6.37-1.2037-.1517-2.4189-.1919-3.63-.12-3.01.24-5.15,1.42-5.54,4.12-.79,5.7,6.1,8.39,13.3,9.58,1.27.24,2.62.39,3.88.55,3.7635.3885,7.5471.5488,11.33.48"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHoneybeeBlack

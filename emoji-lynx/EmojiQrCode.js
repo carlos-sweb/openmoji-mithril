@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "qr code" (color) [E1D8]. */
-const EmojiQrCode = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiQrCode = lynxIcon(`
   <g id="line-supplement">
     <rect x="20" y="20" width="4" height="4" fill="#000"/>
     <rect x="20" y="48" width="4" height="4" fill="#000"/>
@@ -71,7 +68,5 @@ const EmojiQrCode = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54 52H56"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40 22V24"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiQrCode

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hibiscus" (black) [1F33A]. */
-const EmojiHibiscusBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHibiscusBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-width="2" d="M21.818,33.276c3.992,4.886 2.805,12.462 2.805,12.462c0,0 -7.66,-0.347 -11.653,-5.233c-3.993,-4.886 -2.805,-12.462 -2.805,-12.462c0,0 7.661,0.351 11.653,5.233Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-width="2" d="M32.993,41.831c-3.438,3.548 -7.676,10.246 -5.829,20.735"/>
@@ -21,7 +18,5 @@ const EmojiHibiscusBlack = {
     <circle cx="47.8246" cy="25.0419" r="1" fill="#000000" stroke="none"/>
     <circle cx="47.7311" cy="19.4434" r="1" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHibiscusBlack

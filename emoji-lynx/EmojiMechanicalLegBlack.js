@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mechanical leg" (black) [1F9BF]. */
-const EmojiMechanicalLegBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMechanicalLegBlack = lynxIcon(`
   <g id="line">
     <g id="Mechanical_Leg">
       <g>
@@ -16,7 +13,5 @@ const EmojiMechanicalLegBlack = {
       </g>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMechanicalLegBlack

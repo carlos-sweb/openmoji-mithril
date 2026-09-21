@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "united federation of planets flag (star trek)" (color) [1F3F3-FE0F-200D-1F7E6-200D-1F30C]. */
-const EmojiUnitedFederationOfPlanetsFlagStarTrek = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiUnitedFederationOfPlanetsFlagStarTrek = lynxIcon(`
   <g id="color">
     <path fill="#1E50A0" d="M67 17H5.31909V54.8044H67V17Z"/>
     <path fill="#fff" fill-rule="evenodd" d="M33 31C33 31.5523 32.5523 32 32 32C32.5523 32 33 32.4477 33 33C33 32.4477 33.4477 32 34 32C33.4477 32 33 31.5523 33 31Z" clip-rule="evenodd"/>
@@ -51,7 +48,5 @@ const EmojiUnitedFederationOfPlanetsFlagStarTrek = {
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M67 17H5V55H67V17Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiUnitedFederationOfPlanetsFlagStarTrek

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman gesturing NO: light skin tone" (color) [1F645-1F3FB-200D-2640-FE0F]. */
-const EmojiWomanGesturingNOLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanGesturingNOLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M17.0046,60.9583v-4c0-4.9941,2.7617-7.12,6.9844-9.4121,5.3633-2.458,16.5615-2.918,23.9482-.13,3.3184,1.4609,7.0674,4.5479,7.0674,9.542v4"/>
   </g>
@@ -36,7 +33,5 @@ const EmojiWomanGesturingNOLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.7108,46.6775c-2.6514-4.1711-1.8446-7.514-.5075-10.7705"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.8905,30.9529c0-5-2-8-6-12-4,4-16,9-16,11v1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanGesturingNOLightSkinTone

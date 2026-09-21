@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mechanical arm" (black) [1F9BE]. */
-const EmojiMechanicalArmBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMechanicalArmBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m44.04 46.24 0.6839-0.4559a2.55 2.55 0 0 1 3.218 0.3187l1.65 1.65a2.55 2.55 0 0 1 0.1854 3.399l-0.8328 1.038a2.55 2.55 0 0 1-2.126 0.95l-1.501-0.08121a2.55 2.55 0 0 1-2.412-2.546v-2.151a2.55 2.55 0 0 1 1.135-2.122z"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m23.59 46.21 0.7924-0.7046a2.55 2.55 0 0 1 1.694-0.6445h13.48a2.55 2.55 0 0 1 1.695 0.6445l0.7923 0.7046a2.55 2.55 0 0 1 0.8555 1.905v2.985a2.55 2.55 0 0 1-0.8555 1.905l-0.7923 0.7046a2.55 2.55 0 0 1-1.695 0.6445h-13.48a2.55 2.55 0 0 1-1.694-0.6445l-0.7924-0.7046a2.55 2.55 0 0 1-0.8554-1.905v-2.985a2.55 2.55 0 0 1 0.8551-1.905z"/>
@@ -14,7 +11,5 @@ const EmojiMechanicalArmBlack = {
     <path transform="translate(-8.565 -9.172) scale(1.275)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.569" d="m15.65 44.32-1.25 0.1"/>
     <path transform="translate(-8.565 -9.172) scale(1.275)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.569" d="m20.65 50.15c0.3858-3.8e-5 0.7633-0.1117 1.087-0.3215l2.447-1.586v-3.53l-1.629-3.167c-0.1011-0.1966-0.1689-0.4086-0.2007-0.6273l-0.7261-4.998c-0.268-0.8935-1.974-0.9759-2.502-0.092-0.2689 1.154-0.3842 2.339-0.3429 3.523 0.03806 1.08-0.7724 2.001-1.848 2.102l-2.45 0.1825c-1.7 0.1012-1.778 2.576-0.0882 2.785-1.721 0.6565-1.495 2.417-0.0775 2.694-1.519 0.3195-1.474 2.498 0.05605 2.763l1.741 0.2732z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMechanicalArmBlack

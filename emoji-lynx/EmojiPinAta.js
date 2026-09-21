@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "piñata" (color) [1FA85]. */
-const EmojiPinAta = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPinAta = lynxIcon(`
   <g id="color">
     <rect x="24.8004" y="56" rx="2.0196" width="8.2319" height="4.9583" fill="#8967aa"/>
     <rect x="40.4664" y="56" rx="2.0196" width="8.2319" height="4.9583" fill="#8967aa"/>
@@ -29,7 +26,5 @@ const EmojiPinAta = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M59.5244,44.5659a10.0043,10.0043,0,0,1-6.75-9.46"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M59.5245,50.4176a10.0171,10.0171,0,0,1-6.5469-7.4447"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPinAta

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "restroom" (color) [1F6BB]. */
-const EmojiRestroom = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRestroom = lynxIcon(`
   <g id="color">
     <rect x="12" y="12" width="48" height="47.83" fill="#92d3f5"/>
     <path fill="#fff" stroke-width="0.9439" d="m51.95 40.6-0.6049-14.45c-0.08655-1.736-1.292-3.532-2.991-3.548l-5.813-0.1022c-1.699 0.01652-3.481 1.809-3.568 3.545l-0.6146 14.55c-0.0044 0.09826 0.4023 0.7596 0.3628 0.8492l2.561-1.996-0.704 16.7c-0.02454 0.2379 0.1998 0.4921 0.345 0.6796 0.02869 0.03653 0.06957 0.06079 0.1148 0.06805 0.1616 0 0.4961-0.323 0.5558-0.8499l1.92-17.02 3.088 0.02492 2.189 16.99c0.05965 0.5277 0.3934 0.8499 0.555 0.8499 0.04521-0.0073 0.08608-0.03143 0.1148-0.06796 0.1453-0.1876 0.213-0.4257 0.1888-0.6637l-0.5389-16.72 2.343 1.912c-0.05475-0.1014 0.5042-0.6496 0.4989-0.7653z"/>
@@ -22,7 +19,5 @@ const EmojiRestroom = {
     <path stroke-linecap="round" stroke-linejoin="round" d="m20.05 40.6 0.5981-14.35c0.109-2.099 1.831-3.752 3.932-3.776h4.531c2.102 0.0235 3.824 1.676 3.932 3.776l0.5981 14.35"/>
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRestroom

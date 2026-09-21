@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "baguette bread" (color) [1F956]. */
-const EmojiBaguetteBread = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBaguetteBread = lynxIcon(`
   <g id="color">
     <path fill="#f4aa41" stroke="none" d="M11.9307,45.9297c-3.9043,3.9043-3.9063,10.2363,0,14.1416c3.9043,3.9053,10.2382,3.9053,14.1425,0.001 l33.9991-34.001c3.9043-3.9063,3.9043-10.2373,0-14.1416c-3.9063-3.9063-10.2373-3.9063-14.1426-0.001L11.9307,45.9297z"/>
   </g>
@@ -19,7 +16,5 @@ const EmojiBaguetteBread = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.9297,28.9287c-3.9033,3.9063-3.9033,10.2383,0,14.1426"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M20.4307,37.4297c-3.9043,3.9053-3.9043,10.2373,0,14.1426"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBaguetteBread

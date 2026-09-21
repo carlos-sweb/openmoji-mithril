@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tear-off calendar" (color) [1F4C6]. */
-const EmojiTearOffCalendar = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTearOffCalendar = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m11.997,27.9165v32.1753l31.6594-.0054,16.489-11.9v-20.0946l-48.1484-.1753Z"/>
     <path fill="#ea5a47" d="m19.2073,18.736c.0059-.6514-.7503-2.3148-.4458-2.8811-.1466-.5021,1.6993-3.5815,1.6993-3.5815h-8.4608l-.003,15,48.1484.305-.1454-15.305-6.6506-.375-1.9644,3.4982c.3652,1.0116.6716,1.8772.7819,2.139.3596.5433.7323,3.2262.7323,3.2264-.0197,1.9187-2.6538,2.2379-2.9272,2.2379-2.4384-.3664-2.7436-2.0798-2.7231-4.2859.0058-.6514-.3112-2.6719-.307-2.7145.0141-.1445,1.5385-3.7261,1.5385-3.7261h-22.9147l-2.2003,3.1232c.3652,1.0116,1.6155,4.6319,1.6155,4.6321-.0205,2.1914-1.2224,2.7459-3.0285,2.9712-1.8061.2253-2.7656-2.0578-2.7451-4.2639Z"/>
@@ -21,7 +18,5 @@ const EmojiTearOffCalendar = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="11.997 28.0918 11.997 60.0918 43.6564 60.0864 59.997 48.0382 59.997 28.0918"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="59.7462 48.0382 43.1384 48.0382 43.1384 53.5175"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTearOffCalendar

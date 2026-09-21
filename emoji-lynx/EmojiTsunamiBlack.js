@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tsunami" (black) [E09B]. */
-const EmojiTsunamiBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTsunamiBlack = lynxIcon(`
   <g id="line">
     <line x1="46.3397" x2="46.3397" y1="23.8968" y2="20.1387" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="42.6007" x2="42.6007" y1="34.9219" y2="26.9204" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -17,7 +14,5 @@ const EmojiTsunamiBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m31.476,34.1678c-.0836-1.5703-1.3913-2.7949-2.9637-2.7755-1.8624,0-3.3462,1.6622-3.3462,4.3419,0,3.6251,3.33,6.5652,7.5,6.5652,9.91,0,11.7853-3.7786,19.9164-3.7786,2.6848-.0274,5.211,1.2686,6.7549,3.4652"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.5042,32.7092c1.2426-10.4278,8.438-16.3214,16.12-16.3214,6.8194.0372,12.3686,5.4989,12.5143,12.3168.016,1.6725-.2232,3.3376-.7092,4.938"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTsunamiBlack

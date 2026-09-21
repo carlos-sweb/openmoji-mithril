@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ice hockey" (color) [1F3D2]. */
-const EmojiIceHockey = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIceHockey = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M65.4897,62.0277v3.6853c0,1.0376-4.2382,1.8788-9.4662,1.8788s-9.4662-0.8412-9.4662-1.8788v-3.6853"/>
     <ellipse cx="56.0235" cy="61.6358" rx="9.4662" ry="1.8788" fill="#D0CFCE" stroke="none"/>
@@ -20,7 +17,5 @@ const EmojiIceHockey = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9" d="M65.4897,61.6258v3.9515c0,1.1126-4.2382,2.0145-9.4662,2.0145s-9.4662-0.9019-9.4662-2.0145v-3.9515"/>
     <ellipse cx="56.0235" cy="61.6358" rx="9.4662" ry="1.8788" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIceHockey

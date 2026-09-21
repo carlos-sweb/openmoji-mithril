@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with monocle" (color) [1F9D0]. */
-const EmojiFaceWithMonocle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithMonocle = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="24" fill="#FCEA2B"/>
   </g>
@@ -22,7 +19,5 @@ const EmojiFaceWithMonocle = {
     <circle cx="43.9286" cy="30.8098" r="9.4209" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M53.6876,30.9567c0,0,2.2127,0.5511,1.9237,4.0128s-3.5691,7.9621-3.5691,7.9621s-2.0208,2.3624-1.4607,4.3219 c0.7165,2.5065,4.3147,6.4367,4.1809,8.6099"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithMonocle

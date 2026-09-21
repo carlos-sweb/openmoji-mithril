@@ -1,16 +1,11 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "file folder" (black) [1F4C1]. */
-const EmojiFileFolderBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFileFolderBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m57.0078,20.3044v-3.3562l-27.3383-.0025c-.198,0-.3586-.165-.3586-.3684l-.0687-1.5169c-.116-1.7878-1.3398-3.0033-2.9967-3.0033h-11.2866c-1.6569,0-3,1.3432-3,3v40.9429"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.9611,55.3694c-.1472,2.6185-2.4172,4.3009-4.3299,4.5924l44.4148.0108c1.6569,0,3-1.3431,3-3v-31.6575c0-.5523-.4477-1-1-1H17.9649c-.5523,0-1,.4477-1,1l-.0038,30.0543Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFileFolderBlack

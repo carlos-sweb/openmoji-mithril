@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "double tap" (color) [E101]. */
-const EmojiDoubleTap = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDoubleTap = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="m40.8423,37.3592c.081-1.9313,1.7123-3.4313,3.6436-3.3502s3.4313,1.7123,3.3502,3.6436"/>
     <path fill="#fcea2b" d="m26.8047,14.5086c0-1.933,1.567-3.5,3.5-3.5s3.5,1.567,3.5,3.5"/>
@@ -31,7 +28,5 @@ const EmojiDoubleTap = {
     <line x1="16.8357" x2="18.6571" y1="39.1198" y2="41.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m54.8315,50.7591c0,9.0883-7.3675,16.4558-16.4558,16.4558s-16.4557-7.3675-16.4557-16.4558"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDoubleTap

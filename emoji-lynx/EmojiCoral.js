@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "coral" (color) [1FAB8]. */
-const EmojiCoral = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCoral = lynxIcon(`
   <g id="color">
     <ellipse cx="48.0785" cy="28.9296" rx="3.7516" ry="2.0573" transform="translate(1.7146 60.5343) rotate(-65.3169)" fill="#fff"/>
     <ellipse cx="35.4119" cy="34.3351" rx="3.7516" ry="2.0573" transform="translate(-3.9632 64.0422) rotate(-81.1487)" fill="#fff"/>
@@ -29,7 +26,5 @@ const EmojiCoral = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m44.5447,55.7547s1.1946-.4209,2.6667-.4209c2.7993,0,5.0686,1.4085,5.0686,3.146s-2.2693,2.4334-5.0686,2.4334"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m26.0046,60.8236c-.5411.0619-1.0854.0919-1.63.09-2.7992,0-5.0685-.6959-5.0685-2.4334s2.2693-3.146,5.0685-3.146c1.0473-.0118,2.0848.2028,3.0414.6291"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCoral

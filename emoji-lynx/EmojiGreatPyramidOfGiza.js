@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "great pyramid of giza" (color) [E20F]. */
-const EmojiGreatPyramidOfGiza = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGreatPyramidOfGiza = lynxIcon(`
   <g id="color">
     <polygon fill="#f4aa41" points="50.846 56 41.046 45.443 41.398 43.464 43.821 40.572 46.119 39.39 50.363 34.326 57.431 56 50.846 56"/>
     <polygon fill="#e27022" points="51.957 55 25.968 26.963 35.078 56 40.384 56 51.957 55"/>
@@ -20,7 +17,5 @@ const EmojiGreatPyramidOfGiza = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="2.473 55 25.968 26.963 35.111 55 2.473 55"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="39.449 55 51.957 55 25.968 26.963"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGreatPyramidOfGiza

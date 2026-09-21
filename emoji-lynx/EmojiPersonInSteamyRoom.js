@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person in steamy room" (color) [1F9D6]. */
-const EmojiPersonInSteamyRoom = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonInSteamyRoom = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M29,58.2s-.9-3.6-.9-4.2V47.7c0-4.3-3.4-4.7-3.4-4.7l-3.4,2.9-.7,8.4.1,3.9Z"/>
     <path fill="#92d3f5" d="M39.7,58.2s.9-3.6.9-4.2V47.7C40.6,43.4,44,43,44,43l3.4,2.9.7,8.4L48,58.2Z"/>
@@ -33,7 +30,5 @@ const EmojiPersonInSteamyRoom = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.5,36.5a6.6712,6.6712,0,0,0,6,0"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonInSteamyRoom

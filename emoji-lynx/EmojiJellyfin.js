@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "jellyfin" (color) [E05F]. */
-const EmojiJellyfin = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJellyfin = lynxIcon(`
   <g id="color">
     <path id="path5249" fill="#92d3f5" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1" d="m 45.637642,23.372047 -2.769663,3.892039 c 3.889503,7.006505 11.866123,19.50371 9.352865,23.369449 -6.3016,5.416465 -26.758842,2.347207 -27.573128,2.234367 l -3.700348,5.128065 C 28.530828,59.758326 48.957038,59.903671 58.87258,56 61,49.660014 49.79702,29.491956 45.637642,23.372047 Z"/>
     <path id="path5321" fill="#92d3f5" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1" d="m 39.001223,32.697795 -7.169837,10.075336 c 3.179778,0.273899 8.89785,0.865183 11.314826,-0.722783 -1.004188,-3.757625 -2.297418,-6.366047 -4.144989,-9.352553 z"/>
@@ -16,7 +13,5 @@ const EmojiJellyfin = {
     <path id="inner-shape" fill="none" stroke="#000000" stroke-opacity="1" stroke-dasharray="none" stroke-width="2" d="m 36.000802,28.035864 c -2.106684,0 -8.888497,12.302051 -7.853708,14.37903 1.034797,2.076988 14.684993,2.054293 15.707416,0 1.022423,-2.054293 -5.747015,-14.378002 -7.853708,-14.37903 z"/>
     <path id="outer-shape" fill="none" stroke="#000000" stroke-opacity="1" stroke-dasharray="none" stroke-width="2" d="m 36.002756,12.002654 c -6.347896,0 -26.7819622,37.06703 -23.666241,43.326858 3.115713,6.25982 44.250781,6.187631 47.332489,0 3.0817,-6.187639 -17.319381,-43.326858 -23.666248,-43.326858 z m 15.509525,37.895144 c -2.019085,4.055998 -28.970075,4.10137 -31.012863,0 -2.042789,-4.101369 11.347677,-28.38887 15.506431,-28.38887 4.158754,0 17.525508,24.331845 15.506432,28.38887 z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJellyfin

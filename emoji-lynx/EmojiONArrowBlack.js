@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ON! arrow" (black) [1F51B]. */
-const EmojiONArrowBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiONArrowBlack = lynxIcon(`
   <g id="line">
     <g>
       <g>
@@ -24,7 +21,5 @@ const EmojiONArrowBlack = {
       <circle cx="46.3287" cy="53.5987" r="1.3712"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiONArrowBlack

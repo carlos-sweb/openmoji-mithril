@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "copyleft symbol" (color) [1F12F]. */
-const EmojiCopyleftSymbol = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCopyleftSymbol = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="26.68" fill="#fff" fill-rule="evenodd" paint-order="normal"/>
   </g>
@@ -13,7 +10,5 @@ const EmojiCopyleftSymbol = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="8.693" d="m28.98 48.48c1.917 1.7 4.442 2.734 7.212 2.734 5.999 0 10.87-4.865 10.87-10.87v-8.693 8.693-8.693c0-6.003-4.869-10.87-10.87-10.87-2.769 0-5.295 1.035-7.212 2.734" clip-rule="evenodd"/>
     <circle cx="36" cy="36" r="26.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.74" paint-order="normal"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCopyleftSymbol

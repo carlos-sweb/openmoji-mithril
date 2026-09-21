@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person tipping hand" (black) [1F481]. */
-const EmojiPersonTippingHandBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonTippingHandBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.9345,38.9851c-4,0-4-6-4-13s4-14,14-14,14,7,14,14,0,13-4,13"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.9345,59.9851v-3c0-4.9941,5.0078-9,10-9q9,7.5,18,0a10.2713,10.2713,0,0,1,4.0029.84"/>
@@ -15,7 +12,5 @@ const EmojiPersonTippingHandBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.9345,37.9851a6.5535,6.5535,0,0,0,6,0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.9345,59.9851,52.997,46.6794l.9375-1.25,6-2,5-6a1.4142,1.4142,0,0,0-2-2l-3,3c-1,1-4,0-7,1s-5,3.2325-5,5V59.9851"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonTippingHandBlack

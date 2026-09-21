@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "heart exclamation" (color) [2763]. */
-const EmojiHeartExclamation = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeartExclamation = lynxIcon(`
   <g id="color">
     <g id="line_2_">
       <path fill="#FFA7C0" d="M52,20.65c0-4.7003-3.8103-8.5106-8.5106-8.5106c-3.2363,0-6.0501,1.8067-7.4894,4.4662 c-1.4392-2.6595-4.2531-4.4662-7.4894-4.4662C23.8103,12.1394,20,15.9497,20,20.65c0,2.0221,0.7083,3.8769,1.8862,5.337 l-0.0029,0.0023L36,43.4855l14.1167-17.4962l-0.0029-0.0023C51.2917,24.5268,52,22.672,52,20.65z"/>
@@ -21,7 +18,5 @@ const EmojiHeartExclamation = {
       <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M52,20.65 c0-4.7003-3.8103-8.5106-8.5106-8.5106c-3.2363,0-6.0501,1.8067-7.4894,4.4662c-1.4392-2.6595-4.2531-4.4662-7.4894-4.4662 C23.8103,12.1394,20,15.9497,20,20.65c0,2.0221,0.7083,3.8769,1.8862,5.337l-0.0029,0.0023L36,43.4855l14.1167-17.4962 l-0.0029-0.0023C51.2917,24.5268,52,22.672,52,20.65z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeartExclamation

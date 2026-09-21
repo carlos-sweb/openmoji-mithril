@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "emergency exit" (color) [E201]. */
-const EmojiEmergencyExit = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEmergencyExit = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="49.6482 29.2093 49.6631 45.3662 41.7541 35.1885 49.6482 29.2093"/>
     <circle cx="48.1491" cy="21.0346" r="3.359" fill="#fcea2b"/>
@@ -23,7 +20,5 @@ const EmojiEmergencyExit = {
     <line x1="30.282" x2="34.0521" y1="20.3779" y2="24.148" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="30.282" x2="34.0521" y1="27.9487" y2="24.1786" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEmergencyExit

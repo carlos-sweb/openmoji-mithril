@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "garlic" (color) [1F9C4]. */
-const EmojiGarlic = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGarlic = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M23.3922,28.2316a14.9321,14.9321,0,0,0-1.4625.7992A15.273,15.273,0,0,0,14.6325,41.975c0,8.3124,8.3359,15.2821,16.9124,15.2821h9.2294c8.5765,0,17.3808-6.97,17.3808-15.2821a15.2738,15.2738,0,0,0-7.334-12.9666c-.1755-.0913-.5667-.3017-1.0809-.6-2.4494-1.42-7.57-5.2052-8.7459-9.1391H31.8268c-.5127,5.0859-9.1691,9.4064-9.8971,9.7612l-.0713.0347"/>
     <path fill="#9b9b9a" d="M50.9321,29.0655s-.0408-.0206-.111-.0571q-.5271-.3212-1.0809-.6c-.1156-.0579-.2275-.1221-.3448-.1771"/>
@@ -27,7 +24,5 @@ const EmojiGarlic = {
     <line x1="36.5842" x2="36.4618" y1="58.3781" y2="62.4288" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.9591"/>
     <line x1="40.5231" x2="42.3357" y1="57.9887" y2="62.7482" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.9591"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGarlic

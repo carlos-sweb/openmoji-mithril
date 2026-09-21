@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "electric plug" (color) [1F50C]. */
-const EmojiElectricPlug = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiElectricPlug = lynxIcon(`
   <g id="color">
     <path fill="#9b9b9a" stroke="none" d="M30.644,51.1065c0.5335-0.1424,1.0815,0.1746,1.224,0.708l1.455,5.449h8.387l1.455-5.426 c0.143-0.5334,0.6913-0.85,1.2248-0.7071c0.0001,0,0.0002,0,0.0002,0"/>
     <path fill="#3F3F3F" stroke="none" d="M33.013,24.1055c-0.5523,0-1-0.4477-1-1V8.2195c0-1.2744-1.0331-2.3075-2.3075-2.3075 c-1.2744,0-2.3075,1.0331-2.3075,2.3075v14.883c0,0.5523-0.4477,1-1,1"/>
@@ -24,7 +21,5 @@ const EmojiElectricPlug = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="31.011,51.8095 32.665,58.0005 42.586,58.0005 44.24,51.8335"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="33.618,66.0835 33.618,58.0005 41.681,58.0005 41.681,66.0835"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiElectricPlug

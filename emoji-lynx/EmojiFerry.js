@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ferry" (color) [26F4]. */
-const EmojiFerry = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFerry = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M39.5247,59.5143a16.3123,16.3123,0,0,0,3.7228-.2481,1.5488,1.5488,0,0,0,1.5-1.5,1.5292,1.5292,0,0,0-1.5-1.5,7.3831,7.3831,0,0,0-4.1107.9318c-1.6938.9277-.1817,3.5192,1.5142,2.59a4.5086,4.5086,0,0,1,2.5965-.5222v-3a16.3123,16.3123,0,0,1-3.7228.2481,1.51,1.51,0,0,0-1.5,1.5,1.5335,1.5335,0,0,0,1.5,1.5Z"/>
     <path fill="#92d3f5" stroke="#92d3f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M66.0159,55.0026s-8.541,2.02-11.44,1.9974c-2.6647-.02-7.8234-1.918-10.4871-1.9974S36.2642,56.9,33.6012,57c-2.71.1016-7.9688-1.9076-10.68-1.9974C20.3055,54.916,15.2444,56.9883,12.627,57,10.6616,57.0088,5,55.0026,5,55.0026V68l62-.5V55Z"/>
@@ -25,7 +22,5 @@ const EmojiFerry = {
     <polyline stroke-width="2" points="67 33 42 33 42 25 67 25"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m5 55.003c1.5483 0.386 4.9902 0.94992 6.9719 0.94992 1.9817 0 5.8272-2.0724 10.331-2.2042s7.0209 2.1243 10.207 2.4509c3.1857 0.32664 5.6912-1.2372 7.6966-1.2372"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFerry

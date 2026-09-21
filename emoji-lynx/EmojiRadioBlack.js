@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "radio" (black) [1F4FB]. */
-const EmojiRadioBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRadioBlack = lynxIcon(`
   <g id="line">
     <line x1="47.4338" x2="55.2191" y1="27.2143" y2="31.4279" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="24.0277" x2="34.665" y1="14.5462" y2="20.3035" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiRadioBlack = {
     <line x1="42.2935" x2="42.2935" y1="41.6974" y2="42.3642" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="46.2935" x2="46.2935" y1="41.6974" y2="42.3642" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRadioBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nest with eggs" (black) [1FABA]. */
-const EmojiNestWithEggsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNestWithEggsBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.3244,33.688c0,3.8911-7.3087,7.0454-16.3244,7.0454s-16.3244-3.1543-16.3244-7.0454"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.3015,42.5287c-1.5841,2.241-5.687,4.008-10.885,4.6863"/>
@@ -20,7 +17,5 @@ const EmojiNestWithEggsBlack = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.859,38.4898c2.7968-3.1646,4.144-8.2831,1.5891-10.8477-2.4097-2.4097-6.7066-1.5097-9.8518,.9484"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNestWithEggsBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "station" (color) [1F689]. */
-const EmojiStation = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStation = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="17.0034 20.119 16.8362 51.3866 53.4544 51.721 53.7749 18.7917 17.0034 20.119"/>
     <polyline fill="#d0cfce" points="53.7749 42.5833 53.7749 18.7917 60.7813 18.7917 60.7813 42.5833"/>
@@ -31,7 +28,5 @@ const EmojiStation = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55.2813,38.7689s-13.6875-1-23.75,5.625-16.25,11.625-16.25,11.625c0,0-1.7671,1.7819-1.875,3.875-.1563,3.0312,6.875,3.9375,6.875,3.9375l15.4187,1.0884c.3458.0244.6923.0366,1.0389.0366h32.4798s-.1874-26.1875,0-26.1875c0,0-13.9374,0-13.9374,0Z"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="30.4063 50.1439 33.4376 53.1751 65.1563 53.1751"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStation

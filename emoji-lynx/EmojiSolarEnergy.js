@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "solar energy" (color) [E2CD]. */
-const EmojiSolarEnergy = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSolarEnergy = lynxIcon(`
   <g id="color">
     <polygon fill="#92d3f5" points="16 36 35 36 51 56 31 56 16 36"/>
     <circle cx="48" cy="24" r="8" fill="#fcea2b"/>
@@ -17,7 +14,5 @@ const EmojiSolarEnergy = {
     <line x1="26" x2="42" y1="36" y2="56" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="48" cy="24" r="8" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSolarEnergy

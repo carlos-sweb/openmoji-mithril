@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "reusable bag" (black) [E2D2]. */
-const EmojiReusableBagBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiReusableBagBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.6447,38.0545c1.8065-2.92,5.8685-3.6166,5.8685-3.6166s1.1182,3.9957-.6706,6.8385-5.8685,3.6166-5.8685,3.6166S31.8382,40.9744,33.6447,38.0545Z"/>
@@ -16,7 +13,5 @@ const EmojiReusableBagBlack = {
       <rect x="19.6927" y="20.9411" rx="6.7831" width="32.6146" height="38.6125" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiReusableBagBlack

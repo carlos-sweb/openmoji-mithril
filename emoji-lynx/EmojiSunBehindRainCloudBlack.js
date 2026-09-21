@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sun behind rain cloud" (black) [1F326]. */
-const EmojiSunBehindRainCloudBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSunBehindRainCloudBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" points="14.5238 33.667 11.324 35.463 12.9899 27.4866 4.9255 26.3246 10.9614 20.8516 5.1201 15.1703 13.2238 14.2934 11.8304 6.2625 18.9028 10.3193 22.4979 3.0012 25.8335 10.4384 33.0422 6.634 31.3763 14.6103 39.4406 15.7723 36.5166 18.1549"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" d="m32.9118,19.9675c-.5423-5.4473-5.1387-9.7012-10.7287-9.7012-5.9549,0-10.7822,4.8274-10.7822,10.7822,0,4.2822,2.4963,7.9814,6.1131,9.7216"/>
@@ -16,7 +13,5 @@ const EmojiSunBehindRainCloudBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m35.7196,66.7944c-.7516,1.1632-2.1343,1.603-3.0902.9854-.9559-.6177-1.1216-2.0613-.37-3.2245,0,0,.8761-1.5078,4.0066-3.0385,0,0,.6168-.3534.5724.3205-.1915,3.5001-1.1188,4.9571-1.1188,4.9571"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m50.7719,66.7944c-.7516,1.1632-2.1343,1.603-3.0902.9854-.9559-.6177-1.1216-2.0613-.37-3.2245,0,0,.8761-1.5078,4.0066-3.0385,0,0,.6168-.3534.5724.3205-.1915,3.5001-1.1188,4.9571-1.1188,4.9571"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSunBehindRainCloudBlack

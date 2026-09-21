@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fire engine" (black) [1F692]. */
-const EmojiFireEngineBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFireEngineBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="24.7917,51.625 24.7917,52.7083 41.7917,52.7083"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.5833,52.7083h4l5.9167-2.625V35l-2.4583-2.4583H20.3333c0,0-7.9166,0-9.75,0.5C8.75,33.5417,6.0417,41.9583,7,51.625h5.9037"/>
@@ -25,7 +22,5 @@ const EmojiFireEngineBlack = {
     <line x1="44.25" x2="44.25" y1="32.5417" y2="27.5417" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M11.7454,46.4375v1.0938c0,0.5522-1.4477,1-2,1H9.7447"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFireEngineBlack

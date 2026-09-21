@@ -55,9 +55,9 @@ Both `openmoji-mithril/emoji/EmojiGrinningFace` (no extension) and `openmoji-mit
 
 ## mithril-lynx (Lynx)
 
-[mithril-lynx](https://www.npmjs.com/package/mithril-lynx) does not support `m.trust`. On Lynx, SVG markup is passed through the native `<svg>` `content` attribute instead.
+[mithril-lynx](https://www.npmjs.com/package/mithril-lynx) does not support `m.trust`. On Lynx, SVG must follow the [native `<svg>` contract](https://lynxjs.org/api/elements/built-in/svg): `content` is a **full** `<svg>...</svg>` document string, and display size is set on the outer element via a `style` **object** (`{ width: "Npx", height: "Npx" }`), not CSS text strings.
 
-Use the parallel `emoji-lynx/` components, which import `mithril-runtime` and set `content`:
+Use the parallel `emoji-lynx/` components (built with `lynxIcon` in `lynx_svg.js`):
 
 ```js
 import m from 'mithril-runtime'
@@ -79,7 +79,7 @@ bun install
 bun run build
 ```
 
-The build script reads SVGs and CLDR data directly from the official `openmoji` npm package in devDependencies (`node_modules/openmoji/`), so no manual cloning is needed. It regenerates `emoji/*.js`, `emoji/*.d.ts`, `emoji-lynx/*.js`, `emoji-lynx/*.d.ts`, `index.js`, `index.d.ts`, `default_attrs.js` and `default_attrs.d.ts` deterministically — identical inputs always produce byte-identical outputs.
+The build script reads SVGs and CLDR data directly from the official `openmoji` npm package in devDependencies (`node_modules/openmoji/`), so no manual cloning is needed. It regenerates `emoji/*.js`, `emoji/*.d.ts`, `emoji-lynx/*.js`, `emoji-lynx/*.d.ts`, `index.js`, `index.d.ts`, `default_attrs.js` and `default_attrs.d.ts` deterministically — identical inputs always produce byte-identical outputs. Lynx components use the shared `lynx_svg.js` helper (`lynxIcon`).
 
 ## Project structure
 
@@ -92,13 +92,15 @@ openmoji-mithril/
 │   ├── EmojiGrinningFace.d.ts
 │   ├── EmojiGrinningFaceBlack.js
 │   └── ...
-├── emoji-lynx/           # Generated mithril-lynx emoji components (content attr)
+├── emoji-lynx/           # Generated mithril-lynx emoji components (full SVG content + style size)
 │   ├── EmojiGrinningFace.js
 │   ├── EmojiGrinningFace.d.ts
 │   └── ...
 ├── test/                 # Manual browser demo
 ├── default_attrs.js      # Default SVG attributes (size, viewBox)
 ├── default_attrs.d.ts    # TypeScript declarations for default_attrs
+├── lynx_svg.js           # Lynx SVG helper (full content + style size)
+├── lynx_svg.d.ts
 ├── index.js              # Generated entry point (all exports)
 ├── index.d.ts            # Generated TypeScript declarations
 ├── LICENSE               # MIT (code)

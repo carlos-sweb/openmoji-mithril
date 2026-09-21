@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "eye in speech bubble" (color) [1F441-FE0F-200D-1F5E8-FE0F]. */
-const EmojiEyeInSpeechBubble = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEyeInSpeechBubble = lynxIcon(`
   <g id="color">
     <path fill="#FFFFFF" d="M7.6875,31.4375c7.1875,11.9375,20.4718,18.9653,29.5625,21.5c4.5378,1.2652,16.125,9.75,16.125,9.75 S50.4832,54.1918,50,51.25c-1.8349-11.1713,13.0625-12.5,14.5311-20.4657C56,10.9583,26-6.6875,7.6875,31.4375z"/>
     <circle cx="36" cy="30.5" r="14.2224" fill="#A57939"/>
@@ -19,7 +16,5 @@ const EmojiEyeInSpeechBubble = {
     <circle cx="36" cy="30.5" r="14.2224" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="36" cy="30.5" r="7.7815" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEyeInSpeechBubble

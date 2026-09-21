@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "megaphone" (color) [1F4E3]. */
-const EmojiMegaphone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMegaphone = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m19.64,44.13l17.5701,1.1537c2.2294.1147,11.5148,2.6342,13.5707,3.5041l8.8592,4.2342V17.582l-11.4626,5.4053c-4.2491,1.6889-11.7209,2.7518-16.2754,3.1557l-12.262.581v17.406Z"/>
     <path fill="#d0cfce" d="m19.64,44.0667v-3.1828s25.39-.507,40,8.546l-.171,3.5013c-15.21-10.43-39.829-8.8645-39.829-8.8645"/>
@@ -25,7 +22,5 @@ const EmojiMegaphone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.85,28.79h-2.485c-1.1046,0-2,.8954-2,2v8.922c0,1.1046.8954,2,2,2h2.485"/>
     <line x1="13.64" x2="16.64" y1="41" y2="41" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMegaphone

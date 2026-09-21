@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "disinfect surface" (color) [E0AE]. */
-const EmojiDisinfectSurface = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDisinfectSurface = lynxIcon(`
   <g id="color">
     <polygon fill="#d0cfce" points="11.888 33.851 49.753 9.409 64.019 31.776 26.256 56.404 11.888 33.851"/>
     <path fill="#92d3f5" d="M46.35,38.5154l-.1515-16.1778,0,.665c-.0005-3.0516,5.629-3.873,5.63.72l.0523,5.5746L51.98,39.9007l-.1142-12.1926c0-2.7491,4.8971-2.8421,4.8976.7032l.003,20.6909c.0007,4.6779-.1322,9.5924-3.468,11.8561-2.0455,1.3881-5.5544,1.1924-10.2128,1.063-10.4229-.2895-8.9278-3.0279-11.7523-8.452a43.66,43.66,0,0,1-2.4857-5.9813c-.7839-2.2764-2.59-5.1116-2.5909-9.8859,1.8834-1.8839,6.4834,1.0582,7.5227,3.52l1.1174,2.2832-.0029-19.9825c0-3.1749,5.7438-3.4111,5.7444.5l0-2.5311c-.0005-3.4183,5.56-4.61,5.5609,1.5109"/>
@@ -28,7 +25,5 @@ const EmojiDisinfectSurface = {
     <circle cx="19.1277" cy="10.9583" r="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="35.032 62.085 35.032 66.706 54.086 66.745 54.086 62.085"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDisinfectSurface

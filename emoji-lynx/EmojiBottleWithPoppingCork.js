@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bottle with popping cork" (color) [1F37E]. */
-const EmojiBottleWithPoppingCork = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBottleWithPoppingCork = lynxIcon(`
   <g id="color">
     <path fill="#b1cc33" d="m37.7394,28.9024l10.1983-10.1983,5.2468,5.2468-10.1982,10.1983c-1.1588,1.1588-1.8563,2.6718-1.9213,4.1683l-.1273,2.9232c-.1036,2.382-1.2137,4.7905-3.0584,6.6352l-17.2079,17.2079c-1.5429,1.5429-3.839,1.7482-5.1284.4588l-9.1968-9.1968c-1.2895-1.2895-1.084-3.5856.4588-5.1284l17.2079-17.2079c1.8446-1.8446,4.2531-2.9548,6.6352-3.0584l2.9232-.1273c1.4963-.0651,3.0093-.7626,4.1681-1.9214Z"/>
     <path fill="#5c9e31" d="m16.351,60.7845l6.1656-6.1656c6.8117-6.8117,9.1408-10.8955,9.8941-13.1276.6734-1.9952,1.8553-3.8628,3.4063-5.4138l14.7471-14.7471,2.6205,2.6205-10.1983,10.1983c-1.1588,1.1588-1.8563,2.6718-1.9213,4.1683l-.1272,2.9233c-.1036,2.382-1.2137,4.7905-3.0584,6.6352l-17.208,17.2079c-1.5429,1.5429-3.839,1.7482-5.1284.4588l-4.5954-4.5954c2.5116,2.5119,5.4034-.1628,5.4034-.1628h0Z"/>
@@ -26,7 +23,5 @@ const EmojiBottleWithPoppingCork = {
     <line x1="22" x2="35" y1="37" y2="50" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="8.5" x2="21.5" y1="50.5" y2="63.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBottleWithPoppingCork

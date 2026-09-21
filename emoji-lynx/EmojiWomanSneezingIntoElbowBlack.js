@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman sneezing into elbow" (black) [E0AD-200D-2640-FE0F]. */
-const EmojiWomanSneezingIntoElbowBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanSneezingIntoElbowBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.1813,46.9848c3.85,1.1778,7.0674,4.5469,7.0674,8.5508v5.4226"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M54.1605,37.0356l-14.433,9.0118a58.4589,58.4589,0,0,1-11.937,5.69c-2.4385.8393-4.6463,1.5969-4.6463,1.5969"/>
@@ -18,7 +15,5 @@ const EmojiWomanSneezingIntoElbowBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.2614,39.6368c-.3891-3.6368,1.748-7.3585,2.4415-9.14,1.6357-4.2-.209-6.4512,1.291-12.0342,1.48-5.5,7.2773-8.9658,13.709-8.9658,5.4,0,8,3,8,3a8.1323,8.1323,0,0,1,7.4052,8.0371,32.04,32.04,0,0,0,.7464,6.2436"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M45.9485,30.4886q.0172-.4016.0173-.81c0-5-2-8-6-12-4,4-16,9-16,11v1a17.8993,17.8993,0,0,0,.5738,4.55"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanSneezingIntoElbowBlack

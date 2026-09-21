@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "satellite" (color) [1F6F0]. */
-const EmojiSatellite = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSatellite = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M24.2814,24.4049c3.6326-3.6326,3.934-9.4125,0.8702-13.3997c-0.3699-0.4815-1.0826-0.53-1.512-0.1007L11.0003,23.5439 c-0.4196,0.4196-0.3828,1.1114,0.0737,1.4905C14.9386,28.2441,20.6405,28.0457,24.2814,24.4049z"/>
     <path fill="#3f3f3f" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M15.7278,67.7278L4.4142,56.4142c-0.3906-0.3906-0.3906-1.0237,0-1.4143l15.1005-15.1005c0.3905-0.3905,1.0236-0.3905,1.4142,0 l11.3137,11.3137c0.3905,0.3906,0.3905,1.0237,0,1.4142L17.1421,67.7278C16.7515,68.1184,16.1184,68.1184,15.7278,67.7278z"/>
@@ -31,7 +28,5 @@ const EmojiSatellite = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M53.3345,44.8492l-8.4853,8.4853c-0.3905,0.3905-1.0236,0.3905-1.4142,0l-2.1213-2.1213c-0.3905-0.3905-0.3905-1.0237,0-1.4142 l8.4853-8.4853c0.3905-0.3905,1.0237-0.3905,1.4142,0l2.1213,2.1213C53.725,43.8256,53.725,44.4587,53.3345,44.8492z"/>
     <ellipse cx="12.3223" cy="12.3223" rx="2" ry="2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.1041 12.3223)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSatellite

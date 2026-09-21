@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "palm tree" (color) [1F334]. */
-const EmojiPalmTree = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPalmTree = lynxIcon(`
   <g id="color">
     <path fill="#5c9e31" d="m36.2208,29.3157h0c-2.3045-4.2879-8.34-5.5242-13.4806-2.7614s-6.7397,8.181-4.4352,12.4689l1.1937-1.279c1.8116-1.9229,2.6256-2.3028,4.8485-3.7454.0001,0,6.0943-4.5336,11.8736-4.6831Z"/>
     <path fill="#b1cc33" d="m37.2849,28.2487c-2.3394-.8811-4.95-.1607-6.9233,1.6466-1.0336.9466-1.8924,2.1915-2.4457,3.6606-1.6096,4.2736-.0246,8.8265,3.5401,10.1691h0c.2136-5.5917,2.3006-11.1331,5.8289-15.4763h0Z"/>
@@ -22,7 +19,5 @@ const EmojiPalmTree = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m34.1871,19.0106c-.088-.085-.1776-.1693-.2689-.2527-1.7757-1.624-4.1607-2.9465-6.8817-3.6185-6.8529-1.6926-13.5043,1.9432-14.7576,7.6962h0c2.2915-.2474,4.6074-.2905,6.9127-.137"/>
     <line x1="56.4308" x2="55" y1="19.0312" y2="18.9064" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPalmTree

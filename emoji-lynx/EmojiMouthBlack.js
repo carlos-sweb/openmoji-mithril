@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mouth" (black) [1F444]. */
-const EmojiMouthBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMouthBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.434" d="m8.167 34.6c4.981 1.66 6.255 1.889 14.07 0.1774"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.434" d="m63.83 34.6c-4.981 1.66-6.255 1.889-14.07 0.1774"/>
@@ -15,7 +12,5 @@ const EmojiMouthBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.434" d="m63.83 34.6c-4.981 1.66-6.255 1.889-14.07 0.1774"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.434" d="m36 39.03c-7.608 0-9.715-4.867-13.76-4.259 6.711-5.057 10.4-0.6084 13.76-0.6084s7.053-4.449 13.76 0.6084c-4.049-0.6084-6.156 4.259-13.76 4.259z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMouthBlack

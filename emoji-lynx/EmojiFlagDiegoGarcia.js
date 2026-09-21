@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Diego Garcia" (color) [1F1E9-1F1EC]. */
-const EmojiFlagDiegoGarcia = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagDiegoGarcia = lynxIcon(`
   <g id="color">
     <rect x="5.1969" y="17.2454" width="61.6062" height="37.7586" fill="#fff"/>
     <path fill="#fff" d="m66.8031,44.0739c-2.0263.4824-4.0854.8145-6.1606.9936-1.5593-.0491-4.6014-1.0427-6.1606-.9936s-4.6014,1.0427-6.1606.9936-4.6013-1.0427-6.1606-.9936-4.6013,1.0427-6.1606.9936-4.6014-1.0425-6.1606-.9936-4.6014,1.0414-6.1606.9936-4.6012-1.0349-6.1606-.9936-4.6006.9936-6.1606.9936c-2.0721-.2039-4.1295-.5358-6.1606-.9936v-1.9873c2.0311.4579,4.0886.7897,6.1606.9936,1.56,0,4.6011-.9525,6.1606-.9936s4.6014.9459,6.1606.9936,4.6014-.9448,6.1606-.9936,4.6013.9446,6.1606.9936,4.6013-.9446,6.1606-.9936,4.6013.9446,6.1606.9936,4.6013-.9446,6.1606-.9936,4.6013.9446,6.1606.9936c2.0752-.1792,4.1343-.5113,6.1606-.9936v1.9873Z"/>
@@ -45,7 +42,5 @@ const EmojiFlagDiegoGarcia = {
   <g id="line">
     <rect x="5.1969" y="17.2454" width="61.6062" height="37.7586" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9873"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagDiegoGarcia

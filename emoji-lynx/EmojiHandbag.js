@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "handbag" (color) [1F45C]. */
-const EmojiHandbag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHandbag = lynxIcon(`
   <g id="color">
     <polygon fill="#6A462F" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="61,60.9583 11,60.9583 13,28.5 59,28.5"/>
     <rect x="21.9545" y="31.943" width="9.2099" height="9.2099" fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiHandbag = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M24.5192,25.1873c0-8.5667,1.31-15.5115,11.4851-15.5115s11.4851,6.9447,11.4851,15.5115"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="61,60.9583 11,60.9583 13,28.5 59,28.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHandbag

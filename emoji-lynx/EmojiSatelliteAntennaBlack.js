@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "satellite antenna" (black) [1F4E1]. */
-const EmojiSatelliteAntennaBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSatelliteAntennaBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.7378,45.9332c8.2843,0,15-6.7157,15-15s-6.7157-15-15-15v30Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m52.6418,27.9625c1.6565.0351,2.9709,1.4064,2.9358,3.0629-.0351,1.6565-1.4064,2.9709-3.0629,2.9358"/>
@@ -16,7 +13,5 @@ const EmojiSatelliteAntennaBlack = {
     <line x1="40.2378" x2="58.8314" y1="59.999" y2="59.999" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="48.8004 59.999 51.7041 38.197 54.9527 38.197 52.049 59.999"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSatelliteAntennaBlack

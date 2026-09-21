@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bikini" (color) [1F459]. */
-const EmojiBikini = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBikini = lynxIcon(`
   <g id="color">
     <path fill="#b399c8" d="m39.92,33.62c-.8273-.4052,6.7334,2.8814,14.27.5-.0457-8.429-6.999-12.9-6.999-12.9,0,0-7.227,3.975-7.273,12.4h.002Z"/>
     <path fill="#b399c8" d="m17.54,33.82s6.758,3.627,14.55,0c-.0466-8.591-7.133-13.15-7.133-13.15,0,0-7.366,4.561-7.413,13.15h-.004Z"/>
@@ -19,7 +16,5 @@ const EmojiBikini = {
     <line x1="46.77" x2="46.77" y1="12.01" y2="20.71" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35.76,42.86l-17.16.0003-.0004,2.445s7.12,2.194,11.2,6.873c4.082,4.679,5.957,8.172,5.957,8.172h.0643s1.332-3.312,5.414-7.991,12.17-7.054,12.17-7.054l-.0005-2.445-17.59-.0003"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBikini

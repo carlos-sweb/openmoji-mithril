@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man cook" (black) [1F468-200D-1F373]. */
-const EmojiManCookBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManCookBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M26.1996,20.8672c-1.0332,2.1368-1.6278,4.6421-1.6278,7.321c0,7.8276,5.0765,14.1732,11.3386,14.1732 S47.249,36.0158,47.249,28.1882c0-2.6789-0.5946-5.1842-1.6278-7.321"/>
     <path d="M54.9104,57.8273c-0.5523,0-1-0.4477-1-1v-3c0-4.4516-4.4961-7.8105-8.6519-7.9921c-6.205,5.0117-12.4912,5.0117-18.6963,0 c-4.1557,0.1816-8.6518,3.5405-8.6518,7.9921v3c0,0.5523-0.4478,1-1,1c-0.5523,0-1-0.4477-1-1v-3 c0-5.3247,5.1401-9.9975,10.9995-10h0.0005c0.2339,0,0.4604,0.0821,0.6401,0.232c5.625,4.6875,11.0947,4.6875,16.7197,0 c0.1797-0.1499,0.4063-0.232,0.6402-0.232h0.0005c5.8593,0.0025,10.9995,4.6753,10.9995,10v3 C55.9104,57.3796,55.4626,57.8273,54.9104,57.8273z"/>
@@ -20,7 +17,5 @@ const EmojiManCookBlack = {
     <line x1="26.2746" x2="26.2746" y1="14.8468" y2="20.9035" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M26.2746,20.9035h19.2715v-0.5621v-5.4946c2.209,0,4-1.7908,4-4c0-2.2091-1.791-4-4-4c-0.8757,0-1.6789,0.2894-2.3376,0.7666 c0.3247-0.5782,0.5254-1.2355,0.5254-1.9459c0-2.2091-1.7908-4-4-4c-1.8202,0-3.339,1.2234-3.8235,2.8873 c-0.4845-1.6639-2.0034-2.8873-3.8236-2.8873c-2.2091,0-4,1.7909-4,4c0,0.7103,0.2007,1.3677,0.5254,1.9459 c-0.6587-0.4773-1.4619-0.7666-2.3376-0.7666c-2.2092,0-4,1.7909-4,4c0,2.2092,1.7908,4,4,4"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManCookBlack

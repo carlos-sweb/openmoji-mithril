@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "helicopter" (color) [1F681]. */
-const EmojiHelicopter = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHelicopter = lynxIcon(`
   <g id="color">
     <line x1="55.7497" x2="59.0143" y1="52.259" y2="51.4595" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="#92d3f5" d="m60.6061,44.0399c-.1148.5893-.362,1.1122-.7238,1.5687h-20.0808c-.6443,0-1.1651-.4482-1.1651-.996v-13.404c1.474-.3485,3.0452-.5394,4.6428-.5394,8.6325,0,15.7998,5.3865,17.1768,12.4495.0618.3071.1147.6142.1501.9212Z"/>
@@ -22,7 +19,5 @@ const EmojiHelicopter = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.2121,55.2753h28.1212s5.2728,0,6.1515-2.6364"/>
     <line x1="12.2727" x2="65" y1="21.5884" y2="21.5884" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHelicopter

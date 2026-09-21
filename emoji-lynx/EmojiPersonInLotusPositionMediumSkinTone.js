@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person in lotus position: medium skin tone" (color) [1F9D8-1F3FD]. */
-const EmojiPersonInLotusPositionMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonInLotusPositionMediumSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin-shadow"/>
@@ -20,7 +17,5 @@ const EmojiPersonInLotusPositionMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M29,56.4541c0,0-0.6748,0.123-1.5,0.2725C26.6748,56.877,25.0996,57,24,57h-5c-1.0996,0-2-0.9004-2-2l0,0 c0-1.0996,0.79-2.4307,1.7559-2.958L22.5,50"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41,32l0.8467,11.0059C41.9307,44.1025,42.4502,45.4502,43,46s1.79,1.4307,2.7559,1.958l7.4882,4.084 C54.21,52.5693,55,53.9004,55,55l0,0c0,1.0996-0.9004,2-2,2h-5c-1.0996,0-2.8789-0.1953-3.9521-0.4336l-5.0958-1.1328 c-1.0732-0.2383-2.8203-0.6699-3.8818-0.96l-7.1406-1.9472c-1.0615-0.2901-1.7803-1.2012-1.5967-2.0264 c0.1836-0.8252,1.2324-1.459,2.3311-1.4092L48.666,50"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonInLotusPositionMediumSkinTone

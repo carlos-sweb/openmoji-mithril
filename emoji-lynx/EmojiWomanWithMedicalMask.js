@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman with medical mask" (color) [E0AC-200D-2640-FE0F]. */
-const EmojiWomanWithMedicalMask = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanWithMedicalMask = lynxIcon(`
   <g id="hair">
     <path fill="#f1b31c" d="M54.1935,32.719a23.7232,23.7232,0,0,1-1.1573-2.6329c-1.4726-3.2695-2.0234-4.4927-2.3486-10.5239.0273-3.6929-3.794-6.7842-7.4746-7.0928a1.001,1.001,0,0,1-.6885-.3433c-.0928-.0995-2.4082-2.6546-7.2432-2.6546-6.2,0-11.4412,3.3817-12.743,8.2259a18.5164,18.5164,0,0,0-.5645,6.1759,13.3167,13.3167,0,0,1-.7607,5.9608,38.8747,38.8747,0,0,1-3.12,4.7343l.1908,4.452a11.0715,11.0715,0,0,0,8.78,10.4461,3.8539,3.8539,0,0,0,.8576.0944c4.953,1.2891,10.8956,2.9162,18.7,0a8.3412,8.3412,0,0,1,4.209,1.5135c1.0534-.6931,2.0475-4.4725,2.972-5.33C54.99,45.03,56.9269,37.4621,54.1935,32.719ZM36,45.0186C25.0442,44.9686,25.8956,28.65,25.8956,28.65,28.2091,26.1108,41.39,17.86,41.39,17.86c6.0806,2.0743,6.3829,11.64,6.3829,11.64S45.5957,44.5685,36,45.0186Z"/>
   </g>
@@ -26,7 +23,5 @@ const EmojiWomanWithMedicalMask = {
     <line x1="25.6297" x2="22.3298" y1="35.1649" y2="32.117" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.576,44.2883c-1.333.0108-3.6243-1.8519-4.4967-3.071A14.7835,14.7835,0,0,1,25.6459,35.4l-.1394-.45,8.9093-2.2974a5.6024,5.6024,0,0,1,2.8793.0181L45.7032,34.95h.5438a14.4865,14.4865,0,0,1-1.8409,5.7961c-.8769,1.416-3.2795,3.4563-4.7421,3.4681Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanWithMedicalMask

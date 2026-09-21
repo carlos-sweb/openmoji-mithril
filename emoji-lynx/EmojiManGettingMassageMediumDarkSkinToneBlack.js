@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man getting massage: medium-dark skin tone" (black) [1F486-1F3FE-200D-2642-FE0F]. */
-const EmojiManGettingMassageMediumDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManGettingMassageMediumDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <path d="M41.8769,29.9686a2,2,0,1,1-2-2,2,2,0,0,1,2,2"/>
     <path d="M33.8769,29.9686a2,2,0,1,1-2-2,2,2,0,0,1,2,2"/>
@@ -22,7 +19,5 @@ const EmojiManGettingMassageMediumDarkSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.3374,36.5289c-1.78-1.3475-2.78-1.512-3.2673-5.939"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M50.1751,30.6282c-.4869,4.4269-1.4877,4.5914-3.2674,5.939"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManGettingMassageMediumDarkSkinToneBlack

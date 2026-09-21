@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "aerial tramway" (black) [1F6A1]. */
-const EmojiAerialTramwayBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAerialTramwayBlack = lynxIcon(`
   <g id="line">
     <rect x="30" y="20" rx="1.732" width="4" height="4" transform="translate(4.1507 -5.0632) rotate(9.6714)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="35" y="21" rx="1.732" width="4" height="4" transform="translate(4.3898 -5.889) rotate(9.6714)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -17,7 +14,5 @@ const EmojiAerialTramwayBlack = {
     <rect x="27" y="34" width="6" height="13" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
     <rect x="27" y="30" width="15" height="23" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAerialTramwayBlack

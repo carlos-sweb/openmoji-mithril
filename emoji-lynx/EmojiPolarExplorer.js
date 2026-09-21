@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "polar explorer" (color) [E2C8]. */
-const EmojiPolarExplorer = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPolarExplorer = lynxIcon(`
   <g id="color">
     <g id="color-2">
       <path fill="#ea5a47" d="M27.4429,49.0349a9.459,9.459,0,0,0-9.458,9.6571v4.2249H56.6131V58.692a9.796,9.796,0,0,0-9.8561-9.6571"/>
@@ -40,7 +37,5 @@ const EmojiPolarExplorer = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.4477,32.31c3.498.1944,1.0649,4.6633,5.7005,4.6965,5.0527.0361,6.3806-1.0689,6.8341-5.409.5385-5.1543-6.8625-5.4738-6.8625-5.4738H37.4477"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPolarExplorer

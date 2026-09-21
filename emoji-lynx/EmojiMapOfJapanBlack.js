@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "map of Japan" (black) [1F5FE]. */
-const EmojiMapOfJapanBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMapOfJapanBlack = lynxIcon(`
   <g id="line">
     <rect x="10.5" y="10.5" width="51" height="51" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" d="M25.06,50.7014c.2378.4745.6741.4215.85.85.1685.41-.0872.8106,0,.85.1671.0754.7026-1.5731,1.7-1.7.34-.0433.4736.1237.85,0a1.3842,1.3842,0,0,0,.85-.85c.054-.1549.2046-.5869,0-.85-.3079-.3959-1.2364-.1734-1.7,0-.8912.3334-1.0041.8366-1.7.85-.4182.0081-.6735-.168-.85,0C24.8793,50.0233,24.92,50.4231,25.06,50.7014Z"/>
@@ -14,7 +11,5 @@ const EmojiMapOfJapanBlack = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" d="M16.9847,51.1265a1.41,1.41,0,0,0,.85,1.7c.3625.1093.5133-.1133.85,0a1.6877,1.6877,0,0,1,.85,1.7c-.12,1.1373-1.4024,1.4564-1.2751,2.125.0978.5133.9686.9271,1.7.85,1.6614-.175,2.4016-2.8612,2.55-3.4.2509-.91.5153-1.87,0-2.55-.4292-.5667-1.1944-.6689-2.55-.85a6.7983,6.7983,0,0,0-1.7,0C17.5388,50.7906,17.1536,50.8383,16.9847,51.1265Z"/>
     <polygon fill="none" stroke="#000" stroke-linejoin="round" stroke-width="0.7934" points="52.014 52.744 54.5 47.429 56.91 52.744 54.5 57.5 52.014 52.744"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMapOfJapanBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "party popper" (color) [1F389]. */
-const EmojiPartyPopper = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPartyPopper = lynxIcon(`
   <g id="color">
     <polygon fill="#F1B31C" stroke="none" points="26.1808,20.1808 38.75,32.75 51.3192,45.3192 29.7894,54.2798 8.2597,63.2403 17.2202,41.7106"/>
     <polygon fill="#FCEA2B" stroke="none" points="40,35 25.6924,20.6692 16.3914,42.5394 7.0905,64.4095"/>
@@ -29,7 +26,5 @@ const EmojiPartyPopper = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M61.7928,26.7168c-0.0987,0.4967-0.2778,0.987-0.5425,1.4544c-1.372,2.4225-4.5229,3.309-7.0378,1.98"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.3745,30.2558c-0.4173-0.2868-0.8878-0.513-1.4036-0.663c-2.6733-0.7775-5.5486,0.7867-6.4223,3.4936"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPartyPopper

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "printer" (black) [1F5A8]. */
-const EmojiPrinterBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPrinterBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="16.5,12.5029 16.5,4.9923 56.5,4.9923 56.5,12.8751"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="51.5857,50.5871 51.5857,68 21.4143,68 21.4143,50.5871"/>
@@ -18,7 +15,5 @@ const EmojiPrinterBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M16.5,52.2851v-3.1353c0-2.6048,2.1116-4.7164,4.7164-4.7164h30.5672c2.6048,0,4.7164,2.1116,4.7164,4.7164v3.1353"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="56.5,56 68.5,56 68.5,15.9286 4.5,15.9286 4.5,56 16.4998,56"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPrinterBlack

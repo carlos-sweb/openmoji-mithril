@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "oil spill" (black) [E2CB]. */
-const EmojiOilSpillBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiOilSpillBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.92,38.551a20.2817,20.2817,0,0,1-.708-5.3692,18.1953,18.1953,0,0,1,2.8846-10.178,11.7367,11.7367,0,0,1,1.7055-1.9947"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.8292,38.551a20.2776,20.2776,0,0,1-.708-5.3692,18.1953,18.1953,0,0,1,2.8846-10.178,11.7367,11.7367,0,0,1,1.7055-1.9947"/>
@@ -14,7 +11,5 @@ const EmojiOilSpillBlack = {
     <ellipse cx="51.1515" cy="39.2424" rx="2.2727" ry="3.7879" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.9511,48.552C32.4023,50.6039,40.5,51.5,43.5,53.5s-8,1-10,4,14,3,19.1311,3.2944S56.5,58.5,62.5,57.5s5-3,0-4-11-2-11-5V43"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiOilSpillBlack

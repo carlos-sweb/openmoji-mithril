@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "squid" (black) [1F991]. */
-const EmojiSquidBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSquidBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M32.6875,49.6875C32.6875,49.6875,33,54,31,57"/>
     <line x1="42" x2="43.8125" y1="55" y2="62.5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -19,7 +16,5 @@ const EmojiSquidBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31.0625,37.3125c0,0-1.6875,4.0625-0.375,6.875C32,47,25,62,24,62"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M42,37.3125c0,0,1.6875,4.0625,0.375,6.875S48.0625,62,49.0625,62"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSquidBlack

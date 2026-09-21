@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man in manual wheelchair: medium-light skin tone, facing right" (color) [1F468-1F3FC-200D-1F9BD-200D-27A1-FE0F]. */
-const EmojiManInManualWheelchairMediumLightSkinToneFacingRight = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManInManualWheelchairMediumLightSkinToneFacingRight = lynxIcon(`
   <g id="color" transform="scale(-1, 1) translate(-72, 0)">
     <path fill="#d0cfce" d="M40.0416,59.4823A12.319,12.319,0,0,1,27.5644,47.3234h0a12.3191,12.3191,0,1,1,12.4772,12.159"/>
     <path fill="#9b9b9a" d="M39.8108,41.6212a5.5435,5.5435,0,1,1-5.4715,5.6147A5.5435,5.5435,0,0,1,39.8108,41.6212z"/>
@@ -26,7 +23,5 @@ const EmojiManInManualWheelchairMediumLightSkinToneFacingRight = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0071" d="M49.5027,39.5367a12.2851,12.2851,0,1,1-7.4935,-4.382"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManInManualWheelchairMediumLightSkinToneFacingRight

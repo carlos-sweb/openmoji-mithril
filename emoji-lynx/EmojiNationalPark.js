@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "national park" (color) [1F3DE]. */
-const EmojiNationalPark = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNationalPark = lynxIcon(`
   <g id="color">
     <line x1="45" x2="45" y1="56.4349" y2="52" fill="#FFFFFF" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="58" x2="58" y1="53.4349" y2="49" fill="#FFFFFF" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -27,7 +24,5 @@ const EmojiNationalPark = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.9" d="M52.898,42.9002 c0-1.586-1.6295-2.8743-3.6396-2.8743c-0.1679,0.0014-0.3356,0.012-0.5025,0.0318c-0.8512-1.6546-2.6995-2.8039-4.8488-2.8039 c-2.9556,0-5.3514,2.1685-5.3514,4.8432c0.0005,0.1768,0.0116,0.3535,0.0332,0.5288c-1.3211,0.4311-2.2509,1.4576-2.2509,2.6564 c0,1.5861,1.6295,2.8743,3.6396,2.8743c0.764,0.0066,1.5164-0.1926,2.1825-0.578c0.8599,0.7071,2.2359,1.1677,3.7918,1.1677 c2.6069,0,4.7201-1.2869,4.7201-2.8743c-0.0004-0.1049-0.0101-0.2096-0.029-0.3128C51.966,45.1274,52.898,44.1003,52.898,42.9002z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M6,53c3.091,0.5912,3.9469-3.523,8-4c3.6107-0.4249,4.0565,2.411,6.6667,3.5456C21.6964,52.9932,22.6139,52.9981,23,53 c3.6617,0.0176,4.9951-3.5954,8-4c1.3292-0.179,3.3015,0.2273,6,3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNationalPark

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shushing face" (color) [1F92B]. */
-const EmojiShushingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShushingFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="35.8" r="23" fill="none" stroke="#FCEA2B" stroke-miterlimit="10" stroke-width="1.8"/>
     <path fill="#FCEA2B" d="M46.8,56.3c11.3-6,15.7-20.2,9.7-31.5s-20-15.5-31.3-9.5s-15.5,20-9.5,31.3c2.3,4.2,5.8,7.7,10.1,9.8 c0,1.6,0.7,3.2,1.8,4.4c1.4,1.6,8.5,3.3,12.2-0.2C40.9,59.6,47.1,56.4,46.8,56.3z"/>
@@ -27,7 +24,5 @@ const EmojiShushingFace = {
     <path d="M48,27.8c0,1.7-1.3,3-3,3s-3-1.3-3-3s1.3-3,3-3l0,0c1.6,0,3,1.3,3,2.9C48,27.7,48,27.8,48,27.8"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36.2,51.8c-1.3,0-2,0.7-2.5,1.5c-0.6,0.9,0,2.2,1,2.2H39c0.7,0,1.2-0.6,1.2-1.4v-1.8v-0.1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShushingFace

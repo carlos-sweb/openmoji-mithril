@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pinching hand" (color) [1F90F]. */
-const EmojiPinchingHand = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPinchingHand = lynxIcon(`
   <g id="color"/>
   <g id="skin">
     <g id="Pinching_Hand">
@@ -24,7 +21,5 @@ const EmojiPinchingHand = {
       <line x1="39.6751" x2="43.1657" y1="28.0814" y2="33.5938" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPinchingHand

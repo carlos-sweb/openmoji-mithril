@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bowling" (black) [1F3B3]. */
-const EmojiBowlingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBowlingBlack = lynxIcon(`
   <g id="line">
     <circle cx="19.9983" cy="52.0915" r="15" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="16.197" cy="47.6524" r="2"/>
@@ -16,7 +13,5 @@ const EmojiBowlingBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3031" d="M49,67c-6.9436-14.4671-10.2867-30.298-1.0285-39.5561,6.8233-6.8233.445-11.226.336-16.1643l.0045.0261a6.3219,6.3219,0,0,1,6.3219-6.3219,6.4947,6.4947,0,0,1,6.3218,6.3219c-.1089,4.9383-6.4872,9.3409.3361,16.1642C70.55,36.7281,67.1192,52.5329,60.1756,67Z"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0967" points="32.321 65.557 32.703 66.902 42.547 66.902 43.784 63.329"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBowlingBlack

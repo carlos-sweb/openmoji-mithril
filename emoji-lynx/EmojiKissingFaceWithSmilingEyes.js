@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "kissing face with smiling eyes" (color) [1F619]. */
-const EmojiKissingFaceWithSmilingEyes = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiKissingFaceWithSmilingEyes = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="23" fill="#FCEA2B"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiKissingFaceWithSmilingEyes = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.6941,32.4036 c-1.0598-2.3854-3.8527-3.46-6.238-2.4002c-1.0697,0.4752-1.9249,1.3305-2.4002,2.4002"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M48.9441,32.4036 c-1.0598-2.3854-3.8527-3.46-6.238-2.4002c-1.0697,0.4752-1.9249,1.3305-2.4002,2.4002"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiKissingFaceWithSmilingEyes

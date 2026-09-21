@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "magic wand" (color) [1FA84]. */
-const EmojiMagicWand = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMagicWand = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="46.6845 24.0742 53.6399 17.146 54.8082 18.3958 47.9887 25.1339 46.6845 24.0742"/>
     <polygon fill="#fff" points="16.6168 54.2079 23.5722 47.2797 24.7404 48.5295 17.9209 55.2676 16.6168 54.2079"/>
@@ -26,7 +23,5 @@ const EmojiMagicWand = {
     <line x1="54" x2="52.3346" y1="28.3101" y2="28.3101" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="59.6654" x2="58" y1="28.3101" y2="28.3101" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMagicWand

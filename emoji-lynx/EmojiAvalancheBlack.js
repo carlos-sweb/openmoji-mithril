@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "avalanche" (black) [E09E]. */
-const EmojiAvalancheBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAvalancheBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m49.9619,47.224c-.162-2.8698-2.5874-5.0842-5.46-4.9852-2.8558-.178-5.3153,1.9928-5.4933,4.8486-.0028.0455-.0051.091-.0067.1366"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m48.8145,54.9534c.0107-3.3007,2.6951-5.9677,5.9957-5.957.0633.0002.1266.0014.1898.0036,3.8396-.1399,7.0657,2.8593,7.2056,6.699.0046.1275.0058.2551.0034.3826.1449,3.9884-2.9709,7.3391-6.9593,7.484-.1471.0053-.2943.0062-.4415.0025h-14.2488"/>
@@ -20,7 +17,5 @@ const EmojiAvalancheBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" points="60.464 31.724 53.512 27.496 53.727 35.666"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" points="62.328 20.056 55.16 23.998 62.328 27.939"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAvalancheBlack

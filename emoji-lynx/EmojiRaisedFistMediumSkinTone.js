@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "raised fist: medium skin tone" (color) [270A-1F3FD]. */
-const EmojiRaisedFistMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRaisedFistMediumSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin">
@@ -29,7 +26,5 @@ const EmojiRaisedFistMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.9324,24.4656V19.148 c-0.2578-1.933,1.1001-3.709,3.0331-3.9669c1.933-0.2578,3.709,1.1001,3.9669,3.0331c0.0413,0.3099,0.0413,0.6239,0,0.9337"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M37.9948,19.148 c-0.2578-1.933,1.1001-3.709,3.0331-3.9669c1.933-0.2578,3.709,1.1001,3.9669,3.0331c0.0413,0.3099,0.0413,0.6239,0,0.9337"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRaisedFistMediumSkinTone

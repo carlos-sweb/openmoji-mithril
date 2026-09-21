@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no smoking" (color) [1F6AD]. */
-const EmojiNoSmoking = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoSmoking = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="26" fill="#fff"/>
     <rect x="51" y="32.97" width="4.002" height="8.99" fill="#9b9b9a"/>
@@ -20,7 +17,5 @@ const EmojiNoSmoking = {
     <path stroke-width="2" d="m55.66 51.44a24.99 24.99 0 0 0-35.06-35.13z"/>
     <path stroke-width="2" d="m16.99 19.77a24.99 24.99 0 0 0 35.2 35.27z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoSmoking

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hyacinth" (color) [1FABB]. */
-const EmojiHyacinth = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHyacinth = lynxIcon(`
   <g id="color">
     <g>
       <g>
@@ -39,7 +36,5 @@ const EmojiHyacinth = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m54.2215,23.4046c-.1262-.1108-.2668-.1915-.401-.2862.0113-.0126.0252-.0212.0364-.0339,1.4848-1.6917,1.3171-4.2667-.3745-5.7515s-4.2667-1.3171-5.7515.3745c-.0197.0225-.0318.0485-.0509.0713-1.89-1.1185-4.3643-.7779-5.8659.9328-.4082.4651-.701.9904-.8928,1.541-1.6232.0778-3.2142.7845-4.3708,2.1023-1.1567,1.3178-1.6512,2.987-1.5178,4.6066-.5211.2615-1.0039.6199-1.4121,1.085-1.697,1.9333-1.5053,4.8762.428,6.5732,1.2191,1.0701,2.8387,1.3856,4.2952.9905-.2028,1.4954.32,3.0604,1.5391,4.1304,1.9333,1.697,4.8763,1.5053,6.5732-.428.4082-.4651.701-.9904.8928-1.541,1.6232-.0778,3.2142-.7845,4.3709-2.1023s1.6511-2.9871,1.5178-4.6066c.5211-.2615,1.0039-.6199,1.4122-1.085,1.6969-1.9333,1.5053-4.8762-.428-6.5732Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m35.26,39.1706c-3.438,3.548-7.676,10.246-5.829,20.735"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHyacinth

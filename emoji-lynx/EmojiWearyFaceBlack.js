@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "weary face" (black) [1F629]. */
-const EmojiWearyFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWearyFaceBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m22.88 23.92c5.102-0.06134 7.273-1.882 8.383-3.346"/>
@@ -14,7 +11,5 @@ const EmojiWearyFaceBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m48.24 30.51c-6.199 1.47-7.079 1.059-8.868-1.961"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m23.76 30.51c6.199 1.47 7.079 1.059 8.868-1.961"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWearyFaceBlack

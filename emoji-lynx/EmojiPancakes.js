@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pancakes" (color) [1F95E]. */
-const EmojiPancakes = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPancakes = lynxIcon(`
   <g id="color">
     <ellipse cx="35.7188" cy="41.8594" rx="24.2813" ry="10.9844" fill="#d0cfce"/>
     <ellipse cx="35.7188" cy="29.7187" rx="19.6563" ry="8.0938" fill="#fcea2b"/>
@@ -24,7 +21,5 @@ const EmojiPancakes = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M58.8438,43.0156C58.8438,49.0821,48.49,54,35.7188,54S12.5937,49.0821,12.5937,43.0156"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38.6094,25.0937c-4.1508,0-7.5156,1.8119-7.5156,4.0469,0,1.6833,1.9094,3.1258,4.625,3.7357v4.3581a1.7344,1.7344,0,0,0,3.4687,0v2.3125a1.7344,1.7344,0,0,0,3.4687,0V36.0781a1.7344,1.7344,0,0,0,3.4688,0V29.1406C46.125,26.9056,42.76,25.0937,38.6094,25.0937Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPancakes

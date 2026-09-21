@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "dna" (black) [1F9EC]. */
-const EmojiDnaBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDnaBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M23.1932,40.1518c-.7944-3.9626-.3766-8.4301,4.076-12.8827,6.8508-6.8508,13.7371-4.1505,18.7646-2.1779,4.9843,1.9542,7.7305,2.8277,10.8738-.3156l4.4401-4.4401c1.0738-1.0738,2.8153-1.0738,3.8891,0s1.0738,2.8153,0,3.8891l-4.4401,4.4401c-5.835,5.835-11.8986,3.4575-16.7703,1.5468-5.469-2.1448-8.7629-3.1585-12.8681,.9467-3.684,3.684-3.2459,6.7149-1.5669,11.2503"/>
@@ -23,7 +20,5 @@ const EmojiDnaBlack = {
     <line x1="17.735" x2="26.5463" y1="45.4536" y2="54.2649" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="13.0033" x2="22.6867" y1="49.3132" y2="58.9966" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDnaBlack

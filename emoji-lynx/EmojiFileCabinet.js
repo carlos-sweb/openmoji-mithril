@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "file cabinet" (color) [1F5C4]. */
-const EmojiFileCabinet = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFileCabinet = lynxIcon(`
   <g id="color">
     <path fill="#3f3f3f" stroke="none" d="M18,55h36V13H18V55z"/>
     <path fill="#d0cfce" stroke="none" d="M22.2695,17.0112v14.0005h27.4991V17.0112H22.2695z"/>
@@ -27,7 +24,5 @@ const EmojiFileCabinet = {
     <rect x="29.7349" y="19.8953" width="12.3988" height="4.116" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="42.1337" x2="29.7349" y1="28.0113" y2="28.0113" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFileCabinet

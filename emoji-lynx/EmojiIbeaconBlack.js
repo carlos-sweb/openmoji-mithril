@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ibeacon" (black) [E1D0]. */
-const EmojiIbeaconBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIbeaconBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="32" r="5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="35,38 33,63 39,63 37,38"/>
@@ -13,7 +10,5 @@ const EmojiIbeaconBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M41.5884,45.9128C47.1024,43.6956,51,38.3073,51,32c0-8.2843-6.7157-15-15-15s-15,6.7157-15,15 c0,6.3073,3.8976,11.6956,9.4116,13.9128"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.8953,40.7148C43.9401,39.0007,46,35.743,46,32c0-5.5229-4.4772-10-10-10s-10,4.4771-10,10c0,3.743,2.0599,7.0007,5.1047,8.7148"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIbeaconBlack

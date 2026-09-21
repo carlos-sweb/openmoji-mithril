@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hammer and wrench" (black) [1F6E0]. */
-const EmojiHammerAndWrenchBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHammerAndWrenchBlack = lynxIcon(`
   <g id="line">
     <line x1="41.7188" x2="46.7811" y1="38.5092" y2="32.0332" fill="#000000" stroke="none"/>
     <line x1="43.3629" x2="38.7032" y1="29.3197" y2="35.08" fill="#000000" stroke="none"/>
@@ -17,7 +14,5 @@ const EmojiHammerAndWrenchBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M46.3516,32.0332c3.2442,2.5754,8.6578,1.1565,12.0916-3.169s3.5876-9.9199,0.3434-12.4953l-5.1471,6.4838l-2.8327-0.0507 l-0.6772-2.7661l5.1323-6.4651c-3.2442-2.5754-8.6578-1.1565-12.0916,3.169c-3.4338,4.3256-3.5876,9.9199-0.3434,12.4953"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="30.818,44.3856 19,58.9064 23,61.9064 32.9587,49.1665"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHammerAndWrenchBlack

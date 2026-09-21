@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "long drum" (black) [1FA98]. */
-const EmojiLongDrumBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLongDrumBlack = lynxIcon(`
   <g id="line-supplement">
     <path d="M29.625,35.9453a1,1,0,0,1-.8408-1.54l4.5527-7.1006L30.042,23.2236a1,1,0,0,1,1.5566-1.2558l3.7471,4.6416a1,1,0,0,1,.0635,1.1679l-4.9414,7.7081A.9986.9986,0,0,1,29.625,35.9453Z"/>
     <path d="M25.6152,35.84a1,1,0,0,1-.7578-.3476L19.8037,29.623a1.001,1.001,0,0,1-.0225-1.2783L24.959,21.89a1,1,0,0,1,1.5605,1.252l-4.6582,5.8066,4.5117,5.2393a1,1,0,0,1-.7578,1.6523Z"/>
@@ -26,7 +23,5 @@ const EmojiLongDrumBlack = {
     <line x1="25.9808" x2="43.3369" y1="56.5235" y2="56.5235" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="38.4342" y="35.1812" rx="1.3284" width="6" height="3" transform="matrix(-1 0 0 -1 82.868 73.362)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLongDrumBlack

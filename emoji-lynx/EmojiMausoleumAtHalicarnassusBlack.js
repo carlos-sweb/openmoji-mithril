@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mausoleum at halicarnassus" (black) [E213]. */
-const EmojiMausoleumAtHalicarnassusBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMausoleumAtHalicarnassusBlack = lynxIcon(`
   <g id="line">
     <rect x="20.6868" y="24.1421" width="30.6265" height="3.1025" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="49.443 24.142 40.051 14.751 31.922 14.751 22.557 24.115 49.443 24.142"/>
@@ -23,7 +20,5 @@ const EmojiMausoleumAtHalicarnassusBlack = {
     <line x1="34.0115" x2="34.0115" y1="12.7481" y2="9.9988" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="37.9885" x2="37.9885" y1="9.9988" y2="12.7481" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMausoleumAtHalicarnassusBlack

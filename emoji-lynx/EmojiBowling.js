@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bowling" (color) [1F3B3]. */
-const EmojiBowling = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBowling = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M24.239,20H17.0281a7.1536,7.1536,0,0,1,.0252,2h7.1534A7.18,7.18,0,0,1,24.239,20Z"/>
     <path fill="#d0cfce" d="M26.9557,11.3057a6.4946,6.4946,0,0,0-6.3218-6.3219,6.3219,6.3219,0,0,0-6.3219,6.3219l-.0044-.026c.05,2.2573,1.4038,4.4042,2.2124,6.72h8.2325C25.562,15.6937,26.9061,13.5545,26.9557,11.3057Z"/>
@@ -53,7 +50,5 @@ const EmojiBowling = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3031" d="M49,67c-6.9436-14.4671-10.2867-30.298-1.0285-39.5561,6.8233-6.8233.445-11.226.336-16.1643l.0045.0261a6.3219,6.3219,0,0,1,6.3219-6.3219,6.4947,6.4947,0,0,1,6.3218,6.3219c-.1089,4.9383-6.4872,9.3409.3361,16.1642C70.55,36.7281,67.1192,52.5329,60.1756,67Z"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0967" points="32.321 65.557 32.703 66.902 42.547 66.902 43.784 63.329"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBowling

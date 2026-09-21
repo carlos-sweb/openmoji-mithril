@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "input latin uppercase" (color) [1F520]. */
-const EmojiInputLatinUppercase = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiInputLatinUppercase = lynxIcon(`
   <g id="line-supplement" transform="translate(-.005724 -.00219)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" clip-rule="evenodd">
     <path stroke-width="3.868" d="m49.1 24.55h-5.162v-6.744h5.162c1.863 0 3.373 1.511 3.373 3.373 0 1.863-1.511 3.371-3.373 3.371z"/>
     <path stroke-width="3.868" d="m49.1 31.3h-5.162v-6.744h5.162c1.863 0 3.373 1.509 3.373 3.371s-1.511 3.373-3.373 3.373z"/>
@@ -28,7 +25,5 @@ const EmojiInputLatinUppercase = {
   <g id="line" fill="none">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiInputLatinUppercase

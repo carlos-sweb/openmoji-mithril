@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "downcast face with sweat" (color) [1F613]. */
-const EmojiDowncastFaceWithSweat = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDowncastFaceWithSweat = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36,12c-13.2337,0-24,10.7663-24,24c0,13.2336,10.7663,24,24,24c13.2336,0,24-10.7664,24-24 C60,22.7663,49.2336,12,36,12z"/>
     <path fill="#92D3F5" d="M24.8117,10.5867c0.1789,0.1789,4.3858,4.4369,4.3857,8.8871c0,2.7193-2.2652,4.9237-5.0594,4.9237 s-5.0594-2.2044-5.0594-4.9237c-0.0001-4.4502,4.2068-8.7082,4.3857-8.8871c0.3722-0.3722,0.975-0.372,1.347,0H24.8117z"/>
@@ -20,7 +17,5 @@ const EmojiDowncastFaceWithSweat = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M32.0757,13.3335 C33.3509,13.1142,34.6621,13,36,13c12.7025,0,23,10.2975,23,23S48.7025,59,36,59S13,48.7025,13,36 c0-4.2618,1.1591-8.2528,3.1793-11.675"/>
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M24.8117,10.5867 c0.1789,0.1789,4.3858,4.4369,4.3857,8.8871c0,2.7193-2.2652,4.9237-5.0594,4.9237s-5.0594-2.2044-5.0594-4.9237 c-0.0001-4.4502,4.2068-8.7082,4.3857-8.8871c0.3722-0.3722,0.975-0.372,1.347,0H24.8117z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDowncastFaceWithSweat

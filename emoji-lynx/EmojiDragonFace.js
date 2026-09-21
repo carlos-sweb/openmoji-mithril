@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "dragon face" (color) [1F432]. */
-const EmojiDragonFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDragonFace = lynxIcon(`
   <g id="color">
     <path fill="#5C9E31" stroke="#5C9E31" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M51,33c8-4,8-9,8-9l-7,3c4-5,2-11,2-11c-2,4-5,5-5,5c-4-6-10-6-10-6l-3-4l-3,4c-6,0-10,6-10,6c-4-1-5-5-5-5c-1,9,3,11,3,11l-7-2 c2,4,7,7,7,7c-3,2-6,1-6,1c3,5,7,5,7,5h28c7,0,8-5,8-5C53,34,51,33,51,33z"/>
     <path fill="#B1CC33" stroke="#B1CC33" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M26,38c0,0,0-1,4.0537-0.9286c0,0,5.9468-3.9646,11.8937,0c0,0,4.0527,0.9463,4.0527,2.9286c0,0,4,3,1.8942,5.9916 c0,0,0,3.9646-5.9468,7.9291c0,0-3.9646,1.9823-11.8937,0c0,0-7.2664-6.07-6.0537-10.9207C25,39,26,38,26,38z"/>
@@ -31,7 +28,5 @@ const EmojiDragonFace = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.1888,40.7828C49.1888,40.7828,49,51,42,54"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M31,46v4c-3-3-3-7-3-7s8,7,16,0c0,0,1,5-3,7v-4"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDragonFace

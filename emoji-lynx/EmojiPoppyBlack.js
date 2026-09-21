@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "poppy" (black) [E002]. */
-const EmojiPoppyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPoppyBlack = lynxIcon(`
   <g id="line">
     <ellipse cx="17.99" cy="47.92" rx="3.383" ry="3.384" transform="rotate(-24.119)"/>
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36 53.88v10.11"/>
@@ -13,7 +10,5 @@ const EmojiPoppyBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m35.11 23.08c-8.409-3.817-18.04 6.391-15.28 17.42 2.729 10.89 11.99 10.59 15.47 9.446"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m38.84 25.43c6.852-3.328 15.7 4.769 13.45 14.38-2.224 9.497-9.767 9.231-12.61 8.241"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPoppyBlack

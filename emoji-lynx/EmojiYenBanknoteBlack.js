@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "yen banknote" (black) [1F4B4]. */
-const EmojiYenBanknoteBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiYenBanknoteBlack = lynxIcon(`
   <g id="line">
     <circle cx="46.3017" cy="34.5781" r="5.9328" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m37.4939,21.9515v29.097c0,.1047-.02.1998-.05.295-.13.3806-.51.6565-.95.6565h-15.34c-.44,0-.82-.276-.95-.6565-.03-.0952-.05-.1903-.05-.295v-29.097c0-.1047.02-.1998.05-.295.13-.3806.51-.6565.95-.6565h15.34c.44,0,.82.2759.95.6565.03.0952.05.1904.05.295Z"/>
@@ -16,7 +13,5 @@ const EmojiYenBanknoteBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="42 25.1562 55.8166 25.1562 55.8166 47.83 42 47.83"/>
     <line x1="15.7058" x2="15.7058" y1="48" y2="25.1562" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiYenBanknoteBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "earache" (color) [E31E]. */
-const EmojiEarache = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEarache = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M29.3074,22.94C33.9324,5.3988,65.2,10.1921,53.9116,38.8571,39.32,74.6488,21.12,63.5342,24.1824,51.8571"/>
     <path fill="#9b9b9a" d="M49.8878,38.8065C53.5515,16.929,35.3253,21.5671,33.8822,27.13,37.8565,11.2546,57.9737,17.5372,49.8878,38.8065Z"/>
@@ -24,7 +21,5 @@ const EmojiEarache = {
     <polyline fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="11.788 42.093 16.166 41.063 15.789 43.995 21.289 42.701"/>
     <polyline fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="21.656 32.511 17.325 31.302 17.58 34.247 12.138 32.727"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEarache

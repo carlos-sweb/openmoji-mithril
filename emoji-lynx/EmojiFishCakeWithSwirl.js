@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fish cake with swirl" (color) [1F365]. */
-const EmojiFishCakeWithSwirl = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFishCakeWithSwirl = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#d0cfce" d="M57.8085,36.4045a6.5742,6.5742,0,0,1,5.2295,2.4493,7.2824,7.2824,0,0,1,1.2049,2.853,7.9835,7.9835,0,0,1-.2836,3.4,6.8735,6.8735,0,0,1-4.4379,4.5085,6.1343,6.1343,0,0,1-2.9006.14,7.341,7.341,0,0,1-2.7486-1.223l-.458.6094"/>
@@ -43,7 +40,5 @@ const EmojiFishCakeWithSwirl = {
   <g id="color-foreground">
     <path fill="none" stroke="#d22f27" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.4358,34.2412s0,.0357.0036.1a3.3149,3.3149,0,0,0,5.4116,2.3211c1.758-1.3983,3.4263-5.7264-1.851-8.6582-2.3367-1.2982-8.91.891-9.8015,6.2373a7.6046,7.6046,0,0,0,.8606,4.8834A10.1785,10.1785,0,0,0,34.94,44.3014c2.9885.3511,8.0552-.4055,9.97-4.7139,3.5642-8.0194-2.6732-11.5836-2.6732-11.5836"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFishCakeWithSwirl

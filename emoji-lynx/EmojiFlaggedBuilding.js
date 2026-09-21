@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flagged building" (color) [E092]. */
-const EmojiFlaggedBuilding = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlaggedBuilding = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="13.0651 34.0436 9.635 40.3698 61.6867 40.2055 58.4281 33.9615 13.0651 34.0436"/>
     <path fill="#fff" d="m28.1285,9.9293l-.2112,8.8107s4.9278-2.1539,6.9327-1.8172,10.2426,6.4103,10.9407,6.4103,4.9566.0698,5.3057-.0698.5225-.0105.5225-.0105l-.11-11.6902s-.9352.4401-2.3931.3576-6.7116-1.3753-7.3992-1.8704-4.8136-1.9805-5.1987-1.9805-2.3242-.7635-8.3894,1.86Z"/>
@@ -30,7 +27,5 @@ const EmojiFlaggedBuilding = {
     <rect x="35.927" y="44.8695" width="6.4666" height="12.5623" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <rect x="47.0129" y="44.8695" width="6.4666" height="12.5623" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlaggedBuilding

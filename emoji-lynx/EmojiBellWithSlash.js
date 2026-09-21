@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bell with slash" (color) [1F515]. */
-const EmojiBellWithSlash = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBellWithSlash = lynxIcon(`
   <g id="color">
     <circle cx="35.6102" cy="57.7716" r="5" fill="#f1b31c" stroke="#f1b31c" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="#fcea2b" stroke="#fcea2b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M56.1048,56.7825c0,0-2.0587-3.7664-3.254-9.5855c-1.3523-6.5836-1.8795-15.5146-2.246-19.4145c-0.7752-8.2479-6.7157-15-15-15 h-0.5c-8.2843,0-14.2248,6.7521-15,15c-0.3665,3.8999-0.8937,12.8309-2.246,19.4145c-1.1953,5.8191-3.254,9.5855-3.254,9.5855 H56.1048z"/>
@@ -20,7 +17,5 @@ const EmojiBellWithSlash = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M20.2584,26.5641c-0.0638,0.402-0.1151,0.8084-0.1536,1.2184c-0.3665,3.8999-0.8937,12.8309-2.246,19.4145 c-1.1953,5.8191-3.254,9.5855-3.254,9.5855h35.5"/>
     <line x1="11.6048" x2="59.1048" y1="12.7825" y2="60.2825" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBellWithSlash

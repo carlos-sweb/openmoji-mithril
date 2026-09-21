@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "film frames" (color) [1F39E]. */
-const EmojiFilmFrames = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFilmFrames = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M42.3923,24.6798L60,24.9369l0.1694-7.6202L12,16.8286v8.1083l20.3445-0.2571 c0.5527,0,1.6146,0.5054,1.6146,1.0576l-0.2315,20.9094c0,0.5527-2.9051,0.3328-3.4578,0.3328L12,46.6875V55l48-0.258v-7.7624 H39.8702c-0.5528,0-1.6399-0.4474-1.6399-1.0001l0.4195-20.7302C38.6498,24.6971,41.8395,24.6798,42.3923,24.6798z"/>
     <rect x="38.244" y="24.9369" width="21.7425" height="22.0427" fill="#FFFFFF" stroke="none"/>
@@ -33,7 +30,5 @@ const EmojiFilmFrames = {
     <circle cx="48.0778" cy="51.0255" r="1.0794" fill="#000000" stroke="none"/>
     <circle cx="54.0778" cy="51.0255" r="1.0794" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFilmFrames

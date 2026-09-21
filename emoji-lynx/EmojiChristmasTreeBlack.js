@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Christmas tree" (black) [1F384]. */
-const EmojiChristmasTreeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChristmasTreeBlack = lynxIcon(`
   <g id="line-supplement">
     <circle cx="36.0808" cy="25.7442" r="2"/>
     <circle cx="43.6806" cy="49.953" r="2"/>
@@ -20,7 +17,5 @@ const EmojiChristmasTreeBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.45,62.4235v3.0417a1.4565,1.4565,0,0,1-1.2931,1.57H32.8436a1.4565,1.4565,0,0,1-1.2931-1.57V62.4235"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36 4.758 37.87 8.548 42.052 9.155 39.026 12.105 39.74 16.27 36 14.304 32.26 16.27 32.974 12.105 29.948 9.155 34.13 8.548 36 4.758"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChristmasTreeBlack

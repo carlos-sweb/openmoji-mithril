@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fax machine" (color) [1F4E0]. */
-const EmojiFaxMachine = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaxMachine = lynxIcon(`
   <g id="color">
     <rect x="13" y="32" width="46" height="26" fill="#9B9B9A" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M21,55h-1c-1.6569,0-3-1.3431-3-3V38c0-1.6569,1.3431-3,3-3h1c1.6569,0,3,1.3431,3,3v14C24,53.6569,22.6569,55,21,55z"/>
@@ -32,7 +29,5 @@ const EmojiFaxMachine = {
     <circle cx="41" cy="51" r="2" fill="#000000" stroke="none"/>
     <rect x="46" y="37" width="9" height="8" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaxMachine

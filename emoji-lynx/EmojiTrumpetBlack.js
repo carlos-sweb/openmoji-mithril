@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "trumpet" (black) [1F3BA]. */
-const EmojiTrumpetBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTrumpetBlack = lynxIcon(`
   <g id="line">
     <line x1="57.8383" x2="54.3057" y1="30.2283" y2="30.2283" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="63.8098 35.4331 65.2754 35.4331 65.2754 26.5952 63.8137 26.5952"/>
@@ -24,7 +21,5 @@ const EmojiTrumpetBlack = {
     <line x1="36.5614" x2="36.5614" y1="55.0749" y2="54.5288" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="42.4021" x2="42.4021" y1="55.0749" y2="54.5288" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTrumpetBlack

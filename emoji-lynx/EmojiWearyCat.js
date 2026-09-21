@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "weary cat" (color) [1F640]. */
-const EmojiWearyCat = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWearyCat = lynxIcon(`
   <g id="color">
     <path fill="#F4AA41" d="M58.3627,49.2828c-3.5496,8.9951-12.4626,14.8105-22.8972,14.8105 c-8.9955,0-18.9987-5.6278-22.5483-14.6229l-0.1245-0.3085c-1.1262-2.8215-0.9311-6.2749-0.9311-9.5037l3.6179-31.9254 l10.0781,9.9318c2.8836-1.231,6.055-1.9129,9.3833-1.9129h1.0493c3.3283,0,6.4997,0.6818,9.3833,1.9129L56.4516,6.7328 l3.6726,33.4233c0,3.2288-0.6199,6.3115-1.7471,9.1329"/>
     <path fill="#E27022" d="M35.4655,64.0933c10.4671,0.3379,20.0822-5.782,23.6318-14.7771l0.1094-0.2279 c1.1262-2.8215,0.9317-6.8043,0.9317-10.0331L56.4516,6.7328"/>
@@ -31,7 +28,5 @@ const EmojiWearyCat = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M15.2952,65h9.0343c0,0,1.3738-13.3688,0-15.8101c-0.9984-1.7742-2.5479-5.2709-6.8527-5.1379 c-1.5576,0.0481-6.0111,1.347-4.7097,5.2514c1.8131,5.4394,3.4222,4.5051,4.2929,6.1777C18.2042,57.6789,15.2952,65,15.2952,65z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M56.3242,65h-9.0343c0,0-1.3738-13.3688,0-15.8101c0.9984-1.7742,2.5479-5.2709,6.8527-5.1379 c1.5577,0.0481,6.0111,1.347,4.7097,5.2514c-1.8131,5.4394-3.4222,4.5051-4.2929,6.1777C53.4152,57.6789,56.3242,65,56.3242,65z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWearyCat

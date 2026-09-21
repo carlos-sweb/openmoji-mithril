@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "zany face" (black) [1F92A]. */
-const EmojiZanyFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiZanyFaceBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m31.96 31.29c0 2.464-2 4.463-4.463 4.463s-4.463-1.998-4.463-4.463c0-2.462 2-4.463 4.463-4.463s4.463 2 4.463 4.463"/>
@@ -17,7 +14,5 @@ const EmojiZanyFaceBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m40.46 49.13c0.01-0.01 0.01-0.02 0.01-0.02 1.4-1.62 2.02-3.37 2.18-3.512l-15.65-3.349c0.2275 0.472-0.5225 6.682 4.108 8.862"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m41.5 45.68c-1.293 5.936-4.618 10.25-7.426 9.64s-4.037-5.92-2.744-11.86"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiZanyFaceBlack

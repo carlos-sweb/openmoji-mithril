@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "csharp" (black) [E064]. */
-const EmojiCsharpBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCsharpBlack = lynxIcon(`
   <g id="line-supplement" stroke="#000">
     <g transform="matrix(.4643 0 0 .4643 28.34 19.3)">
       <g stroke="#000">
@@ -24,7 +21,5 @@ const EmojiCsharpBlack = {
   <g id="line">
     <path fill="none" stroke="#000" stroke-width="2" d="m35.02 8.261c0.6041-0.3484 1.348-0.3484 1.952 0l22.56 13.02c0.6041 0.3484 0.9759 0.9925 0.9759 1.69v26.05c0 0.6978-0.3718 1.342-0.9759 1.69l-22.56 13.02c-0.6041 0.3484-1.348 0.3484-1.952 0l-22.56-13.02c-0.604-0.3484-0.9759-0.9925-0.9759-1.69v-26.05c0-0.6978 0.3719-1.342 0.9759-1.69z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCsharpBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rolling on the floor laughing" (color) [1F923]. */
-const EmojiRollingOnTheFloorLaughing = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRollingOnTheFloorLaughing = lynxIcon(`
   <g id="color">
     <circle cx="35.9997" cy="35.9989" r="24" fill="#fcea2b"/>
     <path fill="#fff" d="M51.58,34.554a11.5549,11.5549,0,0,1,1.2192,4.408C42.9625,47.2342,30.1775,50.5842,28.1236,51.08a11.4345,11.4345,0,0,1-2.6837-3.535l.0985-.0489S40.39,44.1243,51.4407,34.7013Z"/>
@@ -26,7 +23,5 @@ const EmojiRollingOnTheFloorLaughing = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="22.478 33.13 30.163 33.793 25.928 40.072"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="41.878 23.488 37.766 30.014 45.328 30.43"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRollingOnTheFloorLaughing

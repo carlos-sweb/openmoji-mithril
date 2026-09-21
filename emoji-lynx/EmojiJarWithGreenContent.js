@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "jar with green content" (color) [1FAD9-200D-1F7E9]. */
-const EmojiJarWithGreenContent = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJarWithGreenContent = lynxIcon(`
   <g id="line-supplement">
     <rect x="19" y="30" rx="5" width="34" height="26" fill="none" stroke="#000" stroke-width="2"/>
   </g>
@@ -21,7 +18,5 @@ const EmojiJarWithGreenContent = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36 60H24C19.0294 60 15 55.9706 15 51C15 51 15 37 15 32.5C15 28 19 28.5 19 22.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54 12H18C17.4477 12 17 12.4477 17 13V19C17 19.5523 17.4477 20 18 20H53.5H54C54.5523 20 55 19.5523 55 19V13C55 12.4477 54.5523 12 54 12Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJarWithGreenContent

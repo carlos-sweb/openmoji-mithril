@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "barber pole" (black) [1F488]. */
-const EmojiBarberPoleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBarberPoleBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48.5,16h-23c-1.1046,0-2-0.8954-2-2l0,0c0-1.1046,0.8954-2,2-2h23c1.1046,0,2,0.8954,2,2l0,0C50.5,15.1046,49.6046,16,48.5,16z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48.5,60h-23c-1.1046,0-2-0.8954-2-2l0,0c0-1.1046,0.8954-2,2-2h23c1.1046,0,2,0.8954,2,2l0,0C50.5,59.1046,49.6046,60,48.5,60z"/>
@@ -17,7 +14,5 @@ const EmojiBarberPoleBlack = {
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="48,16 41.8225,16 26,25 26,33 48,20"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="48,44 27.6922,56 26,56 26,49 48,36"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBarberPoleBlack

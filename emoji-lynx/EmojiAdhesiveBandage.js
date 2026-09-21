@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "adhesive bandage" (color) [1FA79]. */
-const EmojiAdhesiveBandage = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAdhesiveBandage = lynxIcon(`
   <g id="color">
     <rect x="25" y="27" width="22" height="19" transform="rotate(-45 36 36.5)" fill="#e67a94"/>
     <rect x="19.0557" y="38.5157" width="10.8571" height="19" transform="rotate(-45 24.484 48.016)" fill="#ffa7c0"/>
@@ -53,7 +50,5 @@ const EmojiAdhesiveBandage = {
     <circle cx="49.3391" cy="25.848" r="0.6786"/>
     <circle cx="52.0261" cy="28.535" r="0.6786"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAdhesiveBandage

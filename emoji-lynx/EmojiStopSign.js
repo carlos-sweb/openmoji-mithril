@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stop sign" (color) [1F6D1]. */
-const EmojiStopSign = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStopSign = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.3878,14.7292H27.6122c-0.2652,0-0.5196,0.1054-0.7071,0.2929L15.0429,26.8843c-0.1875,0.1875-0.2929,0.4419-0.2929,0.7071 V44.367c0,0.2652,0.1054,0.5196,0.2929,0.7071l11.8622,11.8622c0.1875,0.1875,0.4419,0.2929,0.7071,0.2929h16.7756 c0.2652,0,0.5196-0.1054,0.7071-0.2929l11.8622-11.8622c0.1875-0.1875,0.2929-0.4419,0.2929-0.7071V27.5914 c0-0.2652-0.1054-0.5196-0.2929-0.7071L45.0949,15.0221C44.9074,14.8346,44.653,14.7292,44.3878,14.7292z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M39.323,39.5L39.323,39.5c-1.3807,0-2.5-1.1193-2.5-2.5v-2c0-1.3807,1.1193-2.5,2.5-2.5l0,0c1.3807,0,2.5,1.1193,2.5,2.5v2 C41.823,38.3807,40.7037,39.5,39.323,39.5z"/>
@@ -29,7 +26,5 @@ const EmojiStopSign = {
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.9411,10.9792H26.0589c-0.2652,0-0.5196,0.1054-0.7071,0.2929L11.2929,25.331C11.1054,25.5185,11,25.7729,11,26.0381v19.8822 c0,0.2652,0.1054,0.5196,0.2929,0.7071l14.0589,14.0589c0.1875,0.1875,0.4419,0.2929,0.7071,0.2929h19.8822 c0.2652,0,0.5196-0.1054,0.7071-0.2929l14.0589-14.0589C60.8946,46.4399,61,46.1855,61,45.9203V26.0381 c0-0.2652-0.1054-0.5196-0.2929-0.7071L46.6482,11.2721C46.4607,11.0846,46.2063,10.9792,45.9411,10.9792z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStopSign

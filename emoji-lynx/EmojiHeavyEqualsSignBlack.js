@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "heavy equals sign" (black) [1F7F0]. */
-const EmojiHeavyEqualsSignBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeavyEqualsSignBlack = lynxIcon(`
   <g id="line">
     <g id="line-2-2">
       <rect x="17.0608" y="22.3522" width="37.8783" height="10.2956" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiHeavyEqualsSignBlack = {
       <rect x="17.0608" y="39.3522" width="37.8783" height="10.2956" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeavyEqualsSignBlack

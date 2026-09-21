@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "genie" (color) [1F9DE]. */
-const EmojiGenie = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGenie = lynxIcon(`
   <g id="color">
     <path fill="#b1cc33" d="M45.5218,50.5618l.797,2.48-1.1339,4.9948-5.1813,5.6743a23.9672,23.9672,0,0,0,14.9375-4.1124s2-13-10-13c-3.1918,2.1279-5.9264,3.5984-9,3.5921h.125c-3.0736.0063-5.8081-1.4642-9-3.5921-12,0-10,13-10,13,9.9776,6.0208,14.368,3.708,28.1188-1.5619l.6171-3.5208-24.0677,1.35,5.3094-.9076"/>
     <path fill="#b1cc33" d="M54.9259,59.5988s2-13-10-13c-3.1919,2.1279-5.9264,3.5984-9,3.5921h.125c-3.0736.0063-5.8081-1.4642-9-3.5921-12,0-10,13-10,13"/>
@@ -29,7 +26,5 @@ const EmojiGenie = {
     <line x1="40.7729" x2="40.7729" y1="54.9161" y2="59.6645" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.7429,28.2805a17.8611,17.8611,0,0,0-.0948,1.8417c0,7.8276,5.0765,14.1732,11.3386,14.1732S47.3253,37.95,47.3253,30.1222a17.8264,17.8264,0,0,0-.101-1.9"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGenie

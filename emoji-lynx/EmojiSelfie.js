@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "selfie" (color) [1F933]. */
-const EmojiSelfie = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSelfie = lynxIcon(`
   <g id="color">
     <path fill="#B399C8" d="M4,70.6667v-17.5L26.75,52.25l16.6667-17.9167c1.0833,2.2917,7.6667,6.25,10.0833,6.5L38.5,65.75 C37.4583,67.625,23.0693,70.6667,4,70.6667z"/>
     <polyline fill="#92D3F5" points="64.2079,27.8958 64.2498,4.9708 49.6758,5.0494 49.6368,26.3997"/>
@@ -34,7 +31,5 @@ const EmojiSelfie = {
     <line x1="50.5846" x2="63.28" y1="4" y2="4" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="50.5846" x2="50.5846" y1="4" y2="14.5552" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSelfie

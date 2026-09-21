@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "amphora" (black) [1F3FA]. */
-const EmojiAmphoraBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAmphoraBlack = lynxIcon(`
   <g id="line">
     <line x1="21.0351" x2="50.9652" y1="45.2086" y2="45.2086" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="19.202" x2="52.798" y1="40.2707" y2="40.2707" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -16,7 +13,5 @@ const EmojiAmphoraBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" points="18.547 37.338 23.843 37.338 23.843 35.381 21.799 35.381 21.799 33.424 25.713 33.424 25.713 37.338 29.627 37.338 29.627 35.294 27.67 35.294 27.67 33.424 31.671 33.424 31.671 37.338 35.585 37.338 35.585 35.381 33.541 35.381 33.541 33.424 37.455 33.424 37.455 37.338 41.369 37.338 41.369 35.381 39.412 35.381 39.412 33.424 43.413 33.424 43.413 37.338 47.327 37.338 47.327 35.381 45.283 35.381 45.283 33.424 49.197 33.424 49.197 37.338 53.453 37.338"/>
     <line x1="32.7231" x2="42.9054" y1="14.6487" y2="14.6487" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAmphoraBlack

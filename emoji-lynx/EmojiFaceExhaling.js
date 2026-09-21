@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face exhaling" (color) [1F62E-200D-1F4A8]. */
-const EmojiFaceExhaling = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceExhaling = lynxIcon(`
   <g id="color">
     <path transform="translate(0 0)" fill="#fcea2b" d="M22.729,51.4623a23.8831,23.8831,0,1,1,27.72-.5986s-6.6507,4.6412-14.279,4.6412A24.4594,24.4594,0,0,1,22.729,51.4623Z"/>
     <path transform="translate(0 0)" fill="#d0cfce" d="M40.452,59.156a3.1437,3.1437,0,0,0-.0224-.3616,2.6344,2.6344,0,0,0,2.17-2.4056,2.1583,2.1583,0,0,0-.3752-1.2049,3.9224,3.9224,0,0,0,3.136-3.5746c-.0006-2.0838-2.062-3.7726-4.6044-3.7721a5.6077,5.6077,0,0,0-.6185.0381l-2.3021-5.29H33.6321L31.2693,47.84l-.0271-.0011c-2.5424,0-4.6029,1.69-4.6024,3.7737a3.8021,3.8021,0,0,0,2.6453,3.41,2.19,2.19,0,0,0-.4957,1.3686,2.7049,2.7049,0,0,0,2.4742,2.4667c-.0095.0992-.0184.1985-.0184.3.0006,2.0837,2.062,3.7726,4.6044,3.7721S40.4525,61.24,40.452,59.156Z"/>
@@ -19,7 +16,5 @@ const EmojiFaceExhaling = {
     <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M23.2259,26.3119a4.7262,4.7262,0,0,0,8.6382,0"/>
     <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.1048,42.6884a1.5162,1.5162,0,0,1-.8222-1.3939c0-2.198,3.4938-3.4248,5.6918-3.4248s5.52,1.2268,5.52,3.4248A1.6853,1.6853,0,0,1,40.1185,42.95"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceExhaling

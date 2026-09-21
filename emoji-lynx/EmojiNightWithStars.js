@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "night with stars" (color) [1F303]. */
-const EmojiNightWithStars = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNightWithStars = lynxIcon(`
   <g id="color">
     <rect x="4" y="3.9853" width="64" height="64" fill="#8967aa"/>
     <polyline fill="#9b9b9a" points="9.923 45.944 9.923 28.944 19.923 28.944 19.923 45.944"/>
@@ -54,7 +51,5 @@ const EmojiNightWithStars = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34,27.8424a2,2,0,0,1,0-4"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M56,25.8424c-.4838.5267-9.016-2.3975-9-9,.0107-4.4,3.813-8.5541,9-9a22.1374,22.1374,0,0,0-2.0783,2.0869A10.4512,10.4512,0,0,0,51,16.8424c.0634,2.8883,1.7575,5.2225,3.1609,6.7968C55.262,24.8744,56.1843,25.6419,56,25.8424Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNightWithStars

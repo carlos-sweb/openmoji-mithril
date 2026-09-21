@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "speaking head" (color) [1F5E3]. */
-const EmojiSpeakingHead = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpeakingHead = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="none" d="M58,60.8857c0,0,0-3-1-7c-1.2109-4.8457-4-8-10-8c-5,0-15,0-22,0c-6,0-8.7891,3.1543-10,8c-1,4-1,7-1,7"/>
     <path fill="#D0CFCE" stroke="none" d="M49,30.5967c-1-3,3-3,2-5s-3-2.7642-3-5c0-3-1-11-9-11c-12.0039,0-15,7.3437-15,12 c0,4.1094,2.5908,7.1806,4,10c2,4,5.1533,7.3955,7,8.0107c4.2422,1.4141,13,2.3467,13-1.0107c0-2,1-3.0137,1-4l-3-2L49,30.5967z"/>
@@ -20,7 +17,5 @@ const EmojiSpeakingHead = {
     <line x1="54" x2="56" y1="34" y2="36" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M58,59.8857c0,0,0-2-1-6 c-1.2109-4.8457-6-8-12-8c-5,0-10,0-17,0c-6,0-11.7891,3.1543-13,8c-1,4-1,6-1,6"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpeakingHead

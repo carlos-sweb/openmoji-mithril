@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "spiral calendar" (color) [1F5D3]. */
-const EmojiSpiralCalendar = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpiralCalendar = lynxIcon(`
   <g id="color">
     <path fill="#FFFFFF" stroke="none" d="M11.9726,28.2042l0.123,31.8059l31.6009-0.082L59.9274,47.55l0.1229-19.4688L11.9726,28.2042z"/>
     <path fill="#ea5a47" stroke="none" d="M12.1421,28.1401h47.71V12.2523h-47.71V28.1401z M49.9972,16.7595c0.0107,0,0.0207,0,0.0307,0 c0.841,0.0081,1.6281,0.3433,2.2169,0.9435c0.5897,0.6004,0.9094,1.3941,0.901,2.2351c-0.0162,1.7261-1.426,3.1186-3.1479,3.1186 c-0.0099,0-0.0207,0-0.0307,0c-1.7357-0.017-3.134-1.4429-3.1179-3.1786C46.8655,18.152,48.2753,16.7595,49.9972,16.7595z M19.7269,17.6075c0.6109-0.5985,1.4156-0.9273,2.2694-0.9273c0.0103,0,0.0206,0,0.0317,0 c1.7866,0.0174,3.2267,1.4852,3.2101,3.2719c-0.0166,1.7768-1.4678,3.2102-3.2403,3.2102c-0.0102,0-0.0213,0-0.0316,0 c-1.7867-0.0175-3.2267-1.4852-3.2101-3.2719C18.7639,19.0248,19.1089,18.2141,19.7269,17.6075z"/>
@@ -30,7 +27,5 @@ const EmojiSpiralCalendar = {
     <ellipse cx="18.2166" cy="45.6726" rx="2" ry="2" transform="matrix(0.0096 -1 1 0.0096 -27.6279 63.4522)" fill="#000000" stroke="none"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="59.8694,48.0382 43.1384,48.0382 43.1384,53.5175"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpiralCalendar

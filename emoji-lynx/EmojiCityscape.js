@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cityscape" (color) [1F3D9]. */
-const EmojiCityscape = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCityscape = lynxIcon(`
   <g id="color">
     <rect x="5.6907" y="53.327" rx="0.9683" ry="0.9683" width="60.4284" height="1.9367" fill="#fff"/>
     <polyline fill="#9b9b9a" points="10.6667 33.8141 10.6667 17.25 20.4103 17.25 20.4103 33.8141"/>
@@ -40,7 +37,5 @@ const EmojiCityscape = {
     <line x1="38.9231" x2="38.9231" y1="24.0705" y2="30.891" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9487"/>
     <line x1="42.8205" x2="42.8205" y1="24.0705" y2="54.2756" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9487"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCityscape

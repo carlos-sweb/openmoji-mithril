@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "motor scooter" (color) [1F6F5]. */
-const EmojiMotorScooter = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMotorScooter = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" stroke="none" d="M39.222,36.977c0,0-5.9629,17.859-15.6839-4.1085c-1.2636-2.8555-1.6273-7.5414-1.5838-6.9559 L16.0542,38.049c-0.3763,0.782-1.2391,1.4836-0.4093,1.747c9.8168,3.1162,10.5619,9.6178,10.5214,11.7569 c-0.0074,0.394,15.7484,0.3425,15.7974,0c0.4531-3.1672,3.4645-17.5662,19.8563-6.2237 c0.9994,0.6916-2.5161-11.2087-3.9506-11.2087c0,0-17.6354,0.4864-17.6354,1.1235L39.222,36.977"/>
     <ellipse cx="16.1562" cy="50.8929" rx="5.4763" ry="5.4764" transform="matrix(0.9997 -0.0233 0.0233 0.9997 -1.1828 0.3907)" fill="#d0cfce" stroke="none" stroke-miterlimit="10" stroke-width="2"/>
@@ -26,7 +23,5 @@ const EmojiMotorScooter = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.4364,35.1851c0,0-5.6696,21.2609-17.0087,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M58.8625,35.1851c0,0,4.2521,7.0871,2.8347,15.5914"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMotorScooter

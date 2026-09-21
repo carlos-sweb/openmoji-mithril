@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "toilet" (color) [1F6BD]. */
-const EmojiToilet = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiToilet = lynxIcon(`
   <g id="color">
     <line x1="34.6169" x2="43.91" y1="59.3493" y2="59.3493" fill="#d0cfce" stroke="#d0cfce" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="35.9912" x2="41.8941" y1="30.0551" y2="30.0551" fill="none" stroke="#9b9b9a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiToilet = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.0698,59.2955h6.9469c-2.6901-9.2639-1.7826-17.3885-1.7826-17.3885,0,0,.1739-4.8033,3.4783-5.8033,0,0,3.7391-1.087,5-1.8261v-17.3846h-13.6041v14.1367"/>
     <line x1="42" x2="55.9655" y1="12.875" y2="12.875" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiToilet

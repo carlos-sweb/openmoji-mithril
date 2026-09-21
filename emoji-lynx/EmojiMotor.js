@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "motor" (color) [E1C8]. */
-const EmojiMotor = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMotor = lynxIcon(`
   <g id="color">
     <polygon fill="#9B9B9A" points="16.5637,17.0645 54.2492,17.0645 57.3744,27.9106 60.1319,27.9106 60.1319,41.9967 56.9608,41.9967 50.3888,56.979 19.2293,56.979 13.2547,42.7701 11.0487,42.7701 11.0487,26.5319 13.2547,26.5319"/>
     <circle cx="25.3876" cy="29.2749" r="5.8826" fill="#D0CFCE"/>
@@ -31,7 +28,5 @@ const EmojiMotor = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36.5,15.9438c0-1.5947,1.1753-2.8875,2.625-2.8875s2.625,1.2928,2.625,2.8875"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.375,15.9438c0-1.5947,1.1753-2.8875,2.625-2.8875s2.625,1.2928,2.625,2.8875"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMotor

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "x-ray" (color) [1FA7B]. */
-const EmojiXRay = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiXRay = lynxIcon(`
   <g id="color">
     <rect x="11" y="11" rx="1.9231" ry="1.9231" width="50" height="50" fill="#1e50a0"/>
     <path fill="#92d3f5" d="M36.0525,61c5.6087,.0814,11.9733,.1739,17.0982-3.9839,7.0824-5.7459,6.9269-15.6579,6.8054-23.4084-.083-5.2918-.2408-10.416-4.087-13.6901-2.4247-1.8931-5.449-2.8517-8.5215-2.701-4.0244,2.683-7.4723,4.537-11.3476,4.5292h.0438c-3.8753,.0078-7.3233-1.8462-11.3476-4.5292-3.0725-.1507-6.0968,.8079-8.5215,2.701-3.8462,3.2741-4.004,8.3983-4.087,13.6901-.1215,7.7505-.277,17.6625,6.8054,23.4084,5.1249,4.1578,11.4895,4.0654,17.0982,3.9839h.0612Z"/>
@@ -54,7 +51,5 @@ const EmojiXRay = {
     <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.8328,41.6875s-9.8151,23.2474-12.3186,10.486"/>
     <polygon fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.5393 24.8263 35.8153 43.9888 34.9406 24.8263 36.5393 24.8263"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiXRay

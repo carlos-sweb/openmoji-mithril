@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lentils with spaetzle" (color) [E0C2]. */
-const EmojiLentilsWithSpaetzle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLentilsWithSpaetzle = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="28" fill="#d0cfce"/>
     <path fill="#a57939" d="M55.256,34.5474a10,10,0,0,0-6.0391-9.1812,9.0264,9.0264,0,1,0-14.1812,6.5013,30.6026,30.6026,0,0,0-1.78,10.68c0,9.3889,3.5817,17,8,17,4.2314,0,7.6866-6.9862,7.972-15.8241A9.9992,9.9992,0,0,0,55.256,34.5474Z"/>
@@ -59,7 +56,5 @@ const EmojiLentilsWithSpaetzle = {
     <circle cx="36.0001" cy="43.0001" r="1" fill="#6a462f"/>
     <circle cx="40.0001" cy="45.0001" r="1" fill="#6a462f"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLentilsWithSpaetzle

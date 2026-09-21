@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "drunk person" (color) [E181]. */
-const EmojiDrunkPerson = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDrunkPerson = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m21.5776,37.3105s7.2483-7.4772,8.6216-10.9869-1.6786,16.0225-1.6786,16.0225c0,0,0,4.1201-1.2208,3.8149s-6.1038-5.7223-6.2564-6.6379.5341-2.2126.5341-2.2126Z"/>
     <path fill="#a57939" d="m19.0928,39.1045s.625,1,1,2v3l4.125,6,2.875-2-2.8008-5.8545s-.9258-1.0312-1.459-1.2705c-1.209-.542-2.001-.501-2.042-.542-.7441-.7441-.8232-.8955-1.0732-1.2705s-.2813-1.125-.9688-.4688"/>
@@ -20,7 +17,5 @@ const EmojiDrunkPerson = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18,36s.6748-.4502,1.5-1,2.6406-2.9395,4.0352-5.3096l4.9296-8.3808c1.3946-2.3701,4.335-4.7598,6.5352-5.3096s5.7998-1,8-1,4.3184,2.2275,4.707,4.9497l.586,4.1006c.3886,2.7222,1.3252,7.1128,2.081,9.7573l2.626,9.1924"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19,39s.625,1,1,2v3l4.125,6,2.875-2-3.333-4.999"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDrunkPerson

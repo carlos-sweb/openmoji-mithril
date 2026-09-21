@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "locked with key" (color) [1F510]. */
-const EmojiLockedWithKey = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLockedWithKey = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" stroke="#D0CFCE" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M14.1961,35.6519c-0.2003-7.666,5.5788-16.3843,12.4516-16.6004c6.9307-0.218,14.4147,10.2522,12.4099,17.1736H35.875 c0,0,0.7894-7.1326-2.2339-10.144c-0.5425-1.5365-4.5505-4.3006-7.4804-3.869c-1.9766,0.2912-6.3916,2.8073-7.3105,4.5813 c-1.0274,1.9835-1.1693,8.8584-1.1693,8.8584H14.1961z"/>
     <polygon fill="#FCEA2B" stroke="none" points="41.6978,36.3614 43.3283,36.3614 43.3283,59.7325 10.2827,59.7325 10.2827,36.3614 11.9132,36.3614"/>
@@ -26,7 +23,5 @@ const EmojiLockedWithKey = {
     <ellipse cx="51.5355" cy="18.1091" rx="3.5206" ry="3.5206" transform="matrix(0.7071 -0.7071 0.7071 0.7071 2.2893 41.7451)" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M56.0171,31.6362c3.5704-1.7692,6.0267-5.5901,5.9932-10c-0.0461-6.0573-4.7723-10.9321-10.5563-10.8882 c-5.784,0.044-10.4355,4.9901-10.3894,11.0475c0.0372,4.8974,3.1337,9.0217,7.3751,10.3985"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLockedWithKey

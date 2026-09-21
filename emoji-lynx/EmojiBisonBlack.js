@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bison" (black) [1F9AC]. */
-const EmojiBisonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBisonBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.7288,33.3849a8.5288,8.5288,0,0,0,.634,1.4,8.9671,8.9671,0,0,1,.4782,7.6845,4.5549,4.5549,0,0,0,0,4.485V54.5A1.5005,1.5005,0,0,0,15.3415,56h3.116s.1438-3.7251-2.0851-3.7251V47.3138s5.1768-3.3074,5.1768-7.4057a10.6935,10.6935,0,0,0,6.9744,2.8041A8.92,8.92,0,0,0,32.79,41.4837"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.4154,48.73a4.78,4.78,0,0,0,.8825,1.36C21.57,51.3621,22.2166,56,22.2166,56h4.2128s.4348-3.7412-2.3784-3.7412l-1.9585-4.63S25.234,44.88,25.234,42.1253"/>
@@ -15,7 +12,5 @@ const EmojiBisonBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51.8065,25.5027a4.6449,4.6449,0,0,1-4.3549-2.731s-1.1809,5.5021,2.51,7.2536"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44.9647,56.0923h3.1778c0-5.6393-3.1159-5.3716-3.1159-5.3716l-1.2792-5.6851"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBisonBlack

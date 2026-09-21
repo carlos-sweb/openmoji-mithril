@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "running shirt" (color) [1F3BD]. */
-const EmojiRunningShirt = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRunningShirt = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#92d3f5" d="M49.9661,4.9838v6s-.41,13,5,13v43h-38v-43c5.3228-.1787,4.9687-13.0312,4.9687-13.0312l.0313-5.9688h3.8363a10,10,0,0,0,20,0Z"/>
@@ -22,7 +19,5 @@ const EmojiRunningShirt = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.9583,52.0078V47.0331C30.7508,47.0331,45.7971,28.1679,45.7971,5H50C50,30.9117,33.4936,52.0078,14.9583,52.0078Z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRunningShirt

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ship" (color) [1F6A2]. */
-const EmojiShip = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShip = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" d="m68,26.0871h-35.0378c-.5314,0-.9622.391-.9622.8733v2.4004h36v-3.2737Z"/>
     <path fill="#fff" d="m68,25.0871h-21.2584l6.1518-13.0284c.1277-.31.4055-.5086.7113-.5086h14.3953"/>
@@ -32,7 +29,5 @@ const EmojiShip = {
     <line x1="51.5349" x2="64.3773" y1="20.4474" y2="20.4474" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5,47c3,0,9,3,15,3s10-3,16-3,11,3,16,3,7-3,15-3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShip

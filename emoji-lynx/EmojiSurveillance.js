@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "surveillance" (color) [E1C4]. */
-const EmojiSurveillance = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSurveillance = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" d="M33.1,58h-3c-0.6,0-1-0.4-1-1V37c0-0.6,0.4-1,1-1h3c0.6,0,1,0.4,1,1v20C34.1,57.6,33.6,58,33.1,58z"/>
     <path fill="#9B9B9A" d="M38.4,35.4c1.7-2.9,0.7-6.5-2.2-8.2s-6.5-0.7-8.2,2.2s-0.7,6.5,2.2,8.2S36.7,38.3,38.4,35.4"/>
@@ -27,7 +24,5 @@ const EmojiSurveillance = {
   <g id="color-foreground">
     <path id="xx" fill="#D22F27" d="M54.2,37.1c0,1.7-1.4,3-3,3c-0.2,0-0.4,0-0.6-0.1l2.9-5C53.9,35.6,54.2,36.3,54.2,37.1z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSurveillance

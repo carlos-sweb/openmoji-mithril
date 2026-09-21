@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "seat" (color) [1F4BA]. */
-const EmojiSeat = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSeat = lynxIcon(`
   <g id="color">
     <path fill="#D0CFCE" d="M49.2446,52.5931H29.9128c-0.5523,0-1,0.4477-1,1V57.5c0,1.3807,1.1193,2.5,2.5,2.5h17.8318 c0.5523,0,1-0.4477,1-1v-5.4069C50.2446,53.0408,49.7969,52.5931,49.2446,52.5931z"/>
     <path fill="#9B9B9A" d="M50.5779,46.6676H28.5796c-0.5523,0-1,0.4477-1,1v3.4069c0,1.6569,1.3431,3,3,3h17.9983 c1.6568,0,3-1.3431,3-3v-3.4069C51.5779,47.1153,51.1301,46.6676,50.5779,46.6676z"/>
@@ -24,7 +21,5 @@ const EmojiSeat = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M52.91,43.2198v3.93c0,0.55-0.45,1-1,1H27.25c-0.56,0-1-0.45-1-1v-3.66l-8.64-27.51c-0.16-0.53,0.13-1.09,0.66-1.2599l5.16-1.62 c0.15-0.05,0.3-0.05,0.45-0.03c0.06,0.01,0.11,0.03,0.16,0.05c0.11,0.03,0.2,0.09,0.29,0.16l-0.49,0.16 c-0.53,0.16-0.82,0.73-0.66,1.25l3.34,10.63c0.16,0.52,0.73,0.82,1.25,0.65l0.68-0.21l2.38,7.58h-1.87c-0.53,0-0.96,0.42-0.96,0.95 v2.53c0,0.53,0.43,0.96,0.96,0.96h3.27l1.39,4.44h18.29C52.46,42.2198,52.91,42.6697,52.91,43.2198z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9136" d="M46.99,34.2897v2.53c0,0.53-0.43,0.96-0.96,0.96H28.96c-0.53,0-0.96-0.43-0.96-0.96v-2.53c0-0.53,0.43-0.95,0.96-0.95h17.07 C46.56,33.3398,46.99,33.7598,46.99,34.2897z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSeat

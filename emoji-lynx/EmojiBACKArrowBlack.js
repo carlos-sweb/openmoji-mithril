@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "BACK arrow" (black) [1F519]. */
-const EmojiBACKArrowBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBACKArrowBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m56.25 31.99h-27.84v8.067l-12.66-11 12.66-11v8.066h27.84v5.867"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m34.99 53.94-4.1-10s-4.09 10-4.09 10"/>
@@ -17,7 +14,5 @@ const EmojiBACKArrowBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.43 49.1h-3.645v-4.761h3.645c1.315-1.159e-7 2.38 1.065 2.381 2.38v0c2.654e-4 0.6316-0.2505 1.237-0.6971 1.684s-1.052 0.6974-1.684 0.6971v0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.43 53.86h-3.645v-4.761h3.645c1.314 5.518e-4 2.379 1.066 2.38 2.38v-2.9e-9c1.175e-7 1.315-1.065 2.38-2.38 2.381v0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBACKArrowBlack

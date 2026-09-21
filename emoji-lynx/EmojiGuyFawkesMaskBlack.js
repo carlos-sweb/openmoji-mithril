@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "guy fawkes mask" (black) [E145]. */
-const EmojiGuyFawkesMaskBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGuyFawkesMaskBlack = lynxIcon(`
   <g id="line" transform="matrix(1.579 .4213 -.4231 1.572 4.013 -9.525)">
     <path transform="matrix(.5908 -.1583 .159 .5934 -.8562 6.288)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32.02 36.1c-2.187 2.411-1.531 2.89-1.409 3.732 1.997-0.3199 3.52 1.314 5.322 1.664"/>
     <path transform="matrix(.5908 -.1583 .159 .5934 -.8562 6.288)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m39.85 36.1c2.187 2.411 1.531 2.89 1.409 3.732-1.997-0.3199-3.52 1.314-5.322 1.664"/>
@@ -21,7 +18,5 @@ const EmojiGuyFawkesMaskBlack = {
     <path transform="matrix(.5909 -.1584 .159 .5935 -.8564 6.289)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="0.9998" d="m32.02 36.09 1.35-10.91"/>
     <path transform="matrix(.5909 -.1584 .159 .5935 -.8564 6.289)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="0.9998" d="m39.84 36.09-1.01-10.98"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGuyFawkesMaskBlack

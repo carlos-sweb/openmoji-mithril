@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Rwanda" (color) [1F1F7-1F1FC]. */
-const EmojiFlagRwanda = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagRwanda = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#61b2e4"/>
     <rect x="5" y="36" width="62" height="9" fill="#fcea2b"/>
@@ -15,7 +12,5 @@ const EmojiFlagRwanda = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagRwanda

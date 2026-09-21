@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "unamused face" (color) [1F612]. */
-const EmojiUnamusedFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiUnamusedFace = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36,13c-12.6823,0-23,10.3177-23,23c0,12.6822,10.3177,23,23,23c12.6822,0,23-10.3178,23-23 C59,23.3177,48.6822,13,36,13z"/>
   </g>
@@ -20,7 +17,5 @@ const EmojiUnamusedFace = {
     <path d="M32,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C30.6552,28,32,29.3448,32,31"/>
     <path d="M50,31c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S50,29.3448,50,31"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiUnamusedFace

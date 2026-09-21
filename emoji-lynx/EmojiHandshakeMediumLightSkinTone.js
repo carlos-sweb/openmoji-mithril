@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "handshake: medium-light skin tone" (color) [1F91D-1F3FC]. */
-const EmojiHandshakeMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHandshakeMediumLightSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="skin">
     <g id="skin-a">
@@ -31,7 +28,5 @@ const EmojiHandshakeMediumLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.18,47.82a3.0218,3.0218,0,0,1,4.144-.9c1.405.8125,2.439,2.362,1.478,4.063l-1.774,3.101a3.27,3.27,0,0,1-5.658-3.1713l1.81-3.094Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.53,44.65a3.0218,3.0218,0,0,1,4.144-.9c1.405.8125,2.439,2.362,1.478,4.063l-1.774,3.101a3.27,3.27,0,0,1-5.658-3.1713l1.81-3.094Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHandshakeMediumLightSkinTone

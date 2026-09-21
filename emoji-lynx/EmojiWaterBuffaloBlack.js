@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "water buffalo" (black) [1F403]. */
-const EmojiWaterBuffaloBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWaterBuffaloBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.9109,17.5549s-3.968,3.5483-1.7036,5.0512c.9172.6087,2.9356-.4136,3.4998-1.0225.8495-.9168,3.7525-3.6489,8.2239-.3394,1.174.8689,2.6347,2.5625,5.0689,1.3867,1.5162-.7324,3.6398-3.5863.2605-5.5297"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.1534,26.5124s2.3202-.7013,4.6678,1.5608c0,0,.0058,3.0133-4.5349,3.029"/>
@@ -16,7 +13,5 @@ const EmojiWaterBuffaloBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m50.2325,30.1022s5.3842,11.0864,5.9989,13.0624c.487,1.5655.4278,7.9893.4355,10.4924.0093,3.0265,4.3664,2.6583,4.4853.2332.0937-1.9102.3043-5.6929.9117-8.5278.1792-.8364.2995-1.6849-.1053-2.4384-.94-1.7497-1.8987-5.1703-.9868-9.6829.8332-4.1227.7776-5.066.7776-5.066"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m39.3137,41.1544s-1.3498,10.3292-1.4115,12.7244c-.0191.7432-.9928,1.3614-1.7362,1.3614h-1.1477"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWaterBuffaloBlack

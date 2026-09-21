@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "military helmet" (black) [1FA96]. */
-const EmojiMilitaryHelmetBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMilitaryHelmetBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10.2884,34.9887v-7.7148s.3826-20.225,23.3254-20.225c17.9306,0,21.0732,11.6225,21.5906,16.7008.0722.7709.5551,1.4426,1.2628,1.7566,1.1892.5224,3.4722,1.5061,4.4474,2.9856"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.2792,10.6242c.0298.205.0398.4123.03.6192-.0331.4673-.2644.8981-.6356,1.1838-1.09.8681-2.5035,1.4612-3.1,2.7568-.6021,1.2174-.5677,3.1808-2.1123,3.6421-1.8331.3038-2.68-1.4424-3.0156-3.0674-.4465-2.16-3.4168-1.92-4.501-3.4988-.7386-1.4873-.7633-3.2291-.0672-4.7367"/>
@@ -18,7 +15,5 @@ const EmojiMilitaryHelmetBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.2984,47.6513c3.4467.1251,6.6276,1.885,8.5647,4.7387,0,0,2.2657,3.1164,5.7239,2.1147s3.013,2.0587,3.013,2.0587c0,0-.7791,4.4825-5.7319,2.09,0,0-5.4314-3.01-7.739-5.3173-1.1249-1.3048-2.4574-2.4152-3.9437-3.2863"/>
     <rect x="31.2805" y="46.335" rx="1.6793" ry="1.6793" width="5.0137" height="5.0137" transform="translate(-17.9465 78.0091) rotate(-84.7397)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMilitaryHelmetBlack

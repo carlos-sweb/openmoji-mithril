@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stick figure with dress and arms raised" (black) [1FBC6-200D-1F457]. */
-const EmojiStickFigureWithDressAndArmsRaisedBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStickFigureWithDressAndArmsRaisedBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.5,63.5l3-28.5"/>
     <path fill="none" stroke="#000" stroke-width="2" d="m29.5,63.5h11.5"/>
@@ -17,7 +14,5 @@ const EmojiStickFigureWithDressAndArmsRaisedBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m47,5l1,10.5-8,4"/>
     <path fill="none" stroke="#000" stroke-width="2" d="m30,19.5h10.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStickFigureWithDressAndArmsRaisedBlack

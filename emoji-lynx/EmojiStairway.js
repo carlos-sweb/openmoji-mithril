@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stairway" (color) [E202]. */
-const EmojiStairway = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStairway = lynxIcon(`
   <g id="color">
     <polygon fill="#9B9B9A" stroke="none" points="62,27 62,60 21,60 21,51 31,51 31,43 40.565,43.0684 42,35 51,35 52,27"/>
   </g>
@@ -28,7 +25,5 @@ const EmojiStairway = {
     <line x1="16.3969" x2="16.3969" y1="31.1443" y2="39.6295" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="24.8822" x2="16.3969" y1="39.6295" y2="39.6295" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStairway

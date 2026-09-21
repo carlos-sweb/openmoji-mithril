@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "left luggage" (color) [1F6C5]. */
-const EmojiLeftLuggage = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLeftLuggage = lynxIcon(`
   <g id="color">
     <rect x="7.0816" y="7.0051" width="57.7939" height="58.0758" fill="#fff"/>
     <rect x="41.1907" y="37.2562" width="14.8992" height="24.7438" fill="#61b2e4"/>
@@ -34,7 +31,5 @@ const EmojiLeftLuggage = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42,37v-3s0-3-3.5357-3h-4.7143"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLeftLuggage

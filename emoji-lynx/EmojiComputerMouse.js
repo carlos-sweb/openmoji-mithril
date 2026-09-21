@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "computer mouse" (color) [1F5B1]. */
-const EmojiComputerMouse = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiComputerMouse = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m38.41,11.95h-4.821c-7.25,0-13.18,4.932-13.18,12.18v23.74c0,7.25,5.932,12.18,13.18,12.18h4.821c7.25,0,13.18-4.932,13.18-12.18v-23.74c-.0001-7.25-5.932-12.18-13.18-12.18Z"/>
     <path fill="#3f3f3f" d="m36.15,17.93h-.3082c-1.407,0-2.558,1.151-2.558,2.558v7.94c0,1.407,1.151,2.558,2.558,2.558h.3082c1.407,0,2.558-1.151,2.558-2.558v-7.94c0-1.407-1.151-2.558-2.558-2.558Z"/>
@@ -15,7 +12,5 @@ const EmojiComputerMouse = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.26,31.12h-.5181c-1.37,0-2.49-1.115-2.49-2.478v-8.126c0-1.363,1.121-2.478,2.49-2.478h.5181c1.37,0,2.49,1.115,2.49,2.478v8.126c0,1.363-1.121,2.478-2.49,2.478Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m39.61,60.05h-7.215c-6.475,0-11.77-5.263-11.77-11.7v-24.71c0-6.432,5.298-11.7,11.77-11.7h7.215c6.475,0,11.77,5.263,11.77,11.7v24.71c0,6.432-5.298,11.7-11.77,11.7Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiComputerMouse

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person in suit levitating: dark skin tone" (black) [1F574-1F3FF]. */
-const EmojiPersonInSuitLevitatingDarkSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonInSuitLevitatingDarkSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.28" d="M34.3181,19.3794v9.4444"/>
     <circle cx="34.3187" cy="10.4116" r="3" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -13,7 +10,5 @@ const EmojiPersonInSuitLevitatingDarkSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.6619,36.26l.6617-15.8743a4.4057,4.4057,0,0,1,4.3512-4.1775h5.0129a4.4064,4.4064,0,0,1,4.3513,4.1775l.9365,16.1935"/>
     <ellipse cx="34.3192" cy="59.4107" rx="8.2561" ry="1.2942" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.56"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonInSuitLevitatingDarkSkinToneBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sunglasses" (color) [1F576]. */
-const EmojiSunglasses = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSunglasses = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" stroke="#3F3F3F" stroke-miterlimit="10" d="M36.1871,33.1543c1.0309-0.1557,2.3936-0.355,3.1719,3.5553 c0.5088,2.5561,2.4518,2.3815,3.5921,4.0059c2.3054,3.2843,7.0505,5.5111,11.3652,5.5111c6.9036,0,12.5-5.5964,12.5-12.5 l0.105-4.9141l1.895,0.0501v-4.1273c0,0-18.9318-16.1788-29.4804,5.3212h-2.9812h-0.4615H32.912 c-10.5486-21.5-29.4804-5.3212-29.4804-5.3212v4.1273l1.895-0.0501l0.105,4.9141c0,6.9036,5.5964,12.5,12.5,12.5 c4.3147,0,9.1189-2.1861,11.3652-5.5111"/>
     <path fill="#3F3F3F" stroke="#3F3F3F" stroke-miterlimit="10" d="M36.1871,33.1543c1.0309-0.1557,2.3936-0.355,3.1719,3.5553 c0.5088,2.5561,2.4518,2.3815,3.5921,4.0059c2.3054,3.2843,7.0505,5.5111,11.3652,5.5111"/>
@@ -20,7 +17,5 @@ const EmojiSunglasses = {
     <circle cx="18.3644" cy="32.5611" r="9.5798" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="53.8836" cy="32.5611" r="9.5798" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSunglasses

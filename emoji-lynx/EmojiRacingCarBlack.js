@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "racing car" (black) [1F3CE]. */
-const EmojiRacingCarBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRacingCarBlack = lynxIcon(`
   <g id="line">
     <circle cx="22" cy="52" r="3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="39" cy="42" r="3"/>
@@ -15,7 +12,5 @@ const EmojiRacingCarBlack = {
     <line x1="29" x2="53" y1="54" y2="54" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41,43v-4s10,0,14,5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRacingCarBlack

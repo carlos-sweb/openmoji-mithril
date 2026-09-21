@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "madrid autonomous community flag" (color) [1F3F4-E0065-E0073-E006D-E0064-E007F]. */
-const EmojiMadridAutonomousCommunityFlag = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMadridAutonomousCommunityFlag = lynxIcon(`
   <g id="line-supplement" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03">
     <path transform="matrix(.8291 0 0 .8291 16.47 12.14)" d="m36 31.25 1.234 3.551 3.759 0.07667-2.996 2.271 1.089 3.598-3.085-2.148-3.085 2.147 1.089-3.598-2.996-2.272 3.758-0.07657z"/>
     <path transform="matrix(.8291 0 0 .8291 6.147 12.13)" d="m36 31.25 1.234 3.551 3.759 0.07667-2.996 2.271 1.089 3.598-3.085-2.148-3.085 2.147 1.089-3.598-2.996-2.272 3.758-0.07657z"/>
@@ -28,7 +25,5 @@ const EmojiMadridAutonomousCommunityFlag = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMadridAutonomousCommunityFlag

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "timer" (black) [E0AB]. */
-const EmojiTimerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTimerBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M55.1092,25.38a21.8626,21.8626,0,1,1-8.0938-8.2451"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M62.9392,35.9973a27.0463,27.0463,0,1,1-5.265-16.0382"/>
@@ -18,7 +15,5 @@ const EmojiTimerBlack = {
     <circle cx="23.0873" cy="24.7172" r="1.4802"/>
     <circle cx="23.0873" cy="47.9371" r="1.4802"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTimerBlack

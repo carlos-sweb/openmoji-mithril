@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mountain cableway" (black) [1F6A0]. */
-const EmojiMountainCablewayBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMountainCablewayBlack = lynxIcon(`
   <g id="line">
     <line x1="36" x2="36" y1="26.4063" y2="12.875" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M51.62,33.1998c0-1.14,1.06-2.07,2.35-2.07H61v-1.21c0-1.29-1.05-2.34-2.34-2.34H13.34c-1.29,0-2.34,1.05-2.34,2.34v1.21h7.03 c1.29,0,2.35,0.93,2.35,2.07v13.14c0,1.14-1.06,2.08-2.35,2.08H11v3.33h50v-3.33h-7.03c-1.29,0-2.35-0.94-2.35-2.08V33.1998z M33.66,44.4598c0,1.23-1.05,2.23-2.35,2.23h-4.69c-1.29,0-2.34-1-2.34-2.23v-11.11c0-1.23,1.05-2.22,2.34-2.22h4.69 c1.3,0,2.35,0.99,2.35,2.22V44.4598z M47.72,44.4598c0,1.23-1.05,2.23-2.34,2.23h-4.69c-1.3,0-2.35-1-2.35-2.23v-11.11 c0-1.23,1.05-2.22,2.35-2.22h4.69c1.29,0,2.34,0.99,2.34,2.22V44.4598z"/>
@@ -31,7 +28,5 @@ const EmojiMountainCablewayBlack = {
     <line x1="32.02" x2="4" y1="11.4398" y2="3.9998" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M35.95,11.9598c0,0.18-0.02,0.35-0.07,0.51 c-0.22,0.86-1,1.49-1.93,1.49c-1.1,0-2-0.9-2-2c0-0.18,0.02-0.36,0.07-0.52c0.23-0.86,1.01-1.48,1.93-1.48 C35.06,9.9598,35.95,10.8498,35.95,11.9598z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMountainCablewayBlack

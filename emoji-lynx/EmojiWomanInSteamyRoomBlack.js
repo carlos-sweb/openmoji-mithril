@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman in steamy room" (black) [1F9D6-200D-2640-FE0F]. */
-const EmojiWomanInSteamyRoomBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanInSteamyRoomBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.6347,57.2294l-.08-8.2906c0-.9552.0782-2.6339.713-3.1639a5.2776,5.2776,0,0,1,1.5729-.5015c.9009-.3145,1.3842-2.7635,2.0982-2.8683.5786-.0849,2.9208,2.7635,3.0638,2.9a6.0315,6.0315,0,0,1,.1153,2.1678,28.1171,28.1171,0,0,0-.2259,6.0561c.1.8789.837,3.7006.837,3.7006"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.0149,57.2294l.08-8.2906c0-.9552-.0781-2.6339-.713-3.1639a5.2776,5.2776,0,0,0-1.5729-.5015c-.9008-.3145-1.3841-2.7635-2.0982-2.8683-.5786-.0849-2.9208,2.7635-3.0638,2.9a6.0315,6.0315,0,0,0-.1153,2.1678,28.1171,28.1171,0,0,1,.2259,6.0561c-.1.8789-.8369,3.7006-.8369,3.7006"/>
@@ -18,7 +15,5 @@ const EmojiWomanInSteamyRoomBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.9694,44.5518c-3.5271-5.6243-.572-9.628,1.1439-14.0131,1.5253-4.0037-.1906-6.1962,1.2393-11.4392s6.9589-8.5794,13.06-8.5794c5.1477,0,7.6262,2.86,7.6262,2.86a7.7436,7.7436,0,0,1,7.0542,7.6261c.3813,6.8636.9532,6.8636,3.2411,12.2019a11.1874,11.1874,0,0,1-1.3346,11.1533"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.4525,57.23v-2.86a8.921,8.921,0,0,0-.5752-2.7366C51.43,50.3061,50.7705,49.3658,48.7056,48"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanInSteamyRoomBlack

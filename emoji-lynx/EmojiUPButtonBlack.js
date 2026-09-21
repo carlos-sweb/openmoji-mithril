@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "UP! button" (black) [1F199]. */
-const EmojiUPButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiUPButtonBlack = lynxIcon(`
   <g id="line-supplement" transform="translate(-.005724 -.00219)" clip-rule="evenodd">
     <path transform="matrix(0 1.995 1.995 0 31.96 41.11)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m-6-1h4.5c1.381 0 2.5-1.119 2.5-2.5 0-1.38-1.119-2.5-2.5-2.5h-4.5"/>
     <path transform="matrix(0 -1.995 -1.995 0 53.7 41.11)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m-1 8.251h7v-2.669c0-0.963-0.781-1.744-1.744-1.744s-1.743 0.781-1.743 1.744v2.669"/>
@@ -15,7 +12,5 @@ const EmojiUPButtonBlack = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiUPButtonBlack

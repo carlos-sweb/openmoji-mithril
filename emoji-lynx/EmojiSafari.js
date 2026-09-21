@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Safari" (color) [E051]. */
-const EmojiSafari = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSafari = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="28" fill="#92d3f5"/>
     <path fill="#61b2e4" d="m15.5122,55.0858L55.0854,15.5126c.2429.2264.4828.458.7195.6947,10.9347,10.9347,10.9347,28.6633,0,39.598s-28.6633,10.9347-39.598,0c-.2367-.2367-.4683-.4766-.6947-.7195Z"/>
@@ -43,7 +40,5 @@ const EmojiSafari = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.2,33.2l-9.2,14.8,14.8-9.2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m33.2,33.2l14.8-9.2-9.2,14.8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSafari

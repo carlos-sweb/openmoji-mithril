@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cockroach" (color) [1FAB3]. */
-const EmojiCockroach = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCockroach = lynxIcon(`
   <g id="color">
     <path fill="#6a462f" d="M36.0054,29.976a5.03,5.03,0,1,1,5.1533-5.0286A5.0974,5.0974,0,0,1,36.0054,29.976Z"/>
     <path fill="#781e32" d="M36.0064,61.26c-4.3064,0-7.68-7.7576-7.68-17.6608,0-6.71,1.5589-12.7273,4.0682-15.702a.8628.8628,0,0,1,.9806-.2441,7.9026,7.9026,0,0,0,5.2627,0,.862.862,0,0,1,.9806.2441c2.5093,2.9747,4.0682,8.9916,4.0682,15.702C43.6866,53.5024,40.3128,61.26,36.0064,61.26Z"/>
@@ -25,7 +22,5 @@ const EmojiCockroach = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.8836,32.5167a64.0546,64.0546,0,0,1,7.904,18.2016"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.1164,32.5167a55.1884,55.1884,0,0,0-3.55,6.3811"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCockroach

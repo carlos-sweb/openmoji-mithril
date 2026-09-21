@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “vacancy” button" (color) [1F233]. */
-const EmojiJapaneseVacancyButton = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapaneseVacancyButton = lynxIcon(`
   <g id="color" transform="matrix(.2603 0 0 .2601 -90.88 -2.991)">
     <rect x="12" y="12" width="48" height="47.83" transform="matrix(3.842 0 0 3.845 349.1 11.5)" fill="#92d3f5"/>
   </g>
@@ -19,7 +16,5 @@ const EmojiJapaneseVacancyButton = {
     <path transform="matrix(.2558 0 0 .2556 -2.456 -174.4)" stroke-linecap="round" stroke-miterlimit="1.5" stroke-width="9.777" d="m82.67 885.8 135.7 0.074" clip-rule="evenodd"/>
     <rect x="12" y="12" width="48" height="48" transform="translate(0 -.002396)" stroke-linecap="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapaneseVacancyButton

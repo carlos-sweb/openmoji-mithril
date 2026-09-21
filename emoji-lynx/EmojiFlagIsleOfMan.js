@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Isle of Man" (color) [1F1EE-1F1F2]. */
-const EmojiFlagIsleOfMan = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagIsleOfMan = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#d22f27"/>
     <path fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="m42.34 34.23 3.988-6.744 2.792-0.6478-2.484 1.423-3.372 7.467-6.186 0.3526-5.546 2.496 3.527 6.996-0.9624 2.697 0.1428-2.857-4.468-6.868 3.191-4.973 0.2343-5.676-7.834 0.3142-2.06-1.992 2.545 1.312 8.106-1.223 3.471 4.805z"/>
@@ -18,7 +15,5 @@ const EmojiFlagIsleOfMan = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagIsleOfMan

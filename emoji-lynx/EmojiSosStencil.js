@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sos stencil" (color) [E0A2]. */
-const EmojiSosStencil = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSosStencil = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M58.9991,59.9991h-46c-0.5518-0.0012-0.9988-0.4482-1-1v-46c0.0012-0.5518,0.4482-0.9988,1-1h46 c0.5518,0.0012,0.9988,0.4482,1,1v46c0.0314,0.5209-0.3653,0.9686-0.8862,1C59.0751,60.0014,59.037,60.0014,58.9991,59.9991z"/>
   </g>
@@ -26,7 +23,5 @@ const EmojiSosStencil = {
       <path d="M36.8501,30.6134v2.0981c0.789,0.284,1.316,1.0314,1.3185,1.87v2.3937c-0.0025,0.8386-0.5295,1.586-1.3185,1.87v2.0981 c1.936-0.3289,3.3541-2.0039,3.359-3.9677v-2.3937C40.2046,32.6179,38.7865,30.9424,36.8501,30.6134z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSosStencil

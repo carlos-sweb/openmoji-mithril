@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "high-speed train" (color) [1F684]. */
-const EmojiHighSpeedTrain = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHighSpeedTrain = lynxIcon(`
   <g id="color">
     d
     <path fill="#fff" d="m68 48-61.78-0.5026-1.131-3.958 31.76-21.02 31.15-0.5784z"/>
@@ -21,7 +18,5 @@ const EmojiHighSpeedTrain = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m67 53.5h-54.35a1.004 1.004 0 0 1-0.5031-1.873l6.264-3.627"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="m66.93 44h-48.29a0.5714 0.5714 0 0 1-0.3068-1.054l3.227-2.053a5.714 5.714 0 0 1 3.068-0.8934h42.3"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHighSpeedTrain

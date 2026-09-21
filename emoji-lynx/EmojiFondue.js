@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fondue" (color) [1FAD5]. */
-const EmojiFondue = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFondue = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m43.8729,12.1456l-15.5715,3.7549c-1.1638-.367-2.3957-.4649-3.6028-.2864"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m25.4278,18.8249s2.4881-1.0812,2.8736-2.9244"/>
@@ -30,7 +27,5 @@ const EmojiFondue = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15.67,58.9909h0c0,1.0566.8566,1.9132,1.9132,1.9132h25.003c1.0566,0,1.9132-.8566,1.9132-1.9132h0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.0846,60.9041s-5.3988.0728-5.3988-4.8855c1.1961.0261,2.3788.2571,3.4967.6831,0,0,1.077-3.0067,1.9021-3.381.8976.8855,1.4261,2.0784,1.4789,3.3382,1.2098-.6303,2.5903-.8547,3.9374-.64,0,0-.9539,4.8852-5.4163,4.8852Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFondue

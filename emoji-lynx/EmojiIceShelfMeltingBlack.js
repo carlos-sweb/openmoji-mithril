@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ice shelf melting" (black) [E2C7]. */
-const EmojiIceShelfMeltingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIceShelfMeltingBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="44.021 57 46.208 43.635 45.25 31.733 43.75 28.827 45.25 23.608 43.75 17.65 54.583 18.969 60.482 18.614 64.083 19.469 68.083 20.219"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="54.333 57 53.083 54.344 54.333 48.969 54.583 44.844 53.083 40.094 53.083 35.219 58.333 33.552 68.708 34.729"/>
@@ -18,7 +15,5 @@ const EmojiIceShelfMeltingBlack = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" points="11.708 43 11.708 48.333 15.125 43.5 11.708 43"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" points="7.708 53.583 6.125 56.333 8.458 60.5 13.417 60 7.708 53.583"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIceShelfMeltingBlack

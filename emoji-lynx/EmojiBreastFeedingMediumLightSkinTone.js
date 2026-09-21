@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "breast-feeding: medium-light skin tone" (color) [1F931-1F3FC]. */
-const EmojiBreastFeedingMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBreastFeedingMediumLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M35.0359,50.9573c-3.3514,0.6469-6.5323,2.0356-9.4541,4.5483c-3.542-1.1069-5.5639-2.594-4.8048-7.7038 c0.4237-2.8517,2.3245-8.1187,3.8385-11.9767l4.5164-1.1455C28.7706,42.8019,30.3749,48.6487,35.0359,50.9573z"/>
     <path fill="#92D3F5" d="M54.7363,47.1351c0,0-1.4193-4.8441-1.8906-6.4043c-0.4712-1.5602-1.641-3.9508-4.1093-5.8043h0.1166 c-1.0415,2.842-2.2128,5.288-3.5408,7.2562"/>
@@ -34,7 +31,5 @@ const EmojiBreastFeedingMediumLightSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.4658,64.9149c8.909-2.032,13.9866-5.5255,13.9866-5.5255"/>
     <circle cx="22.7132" cy="59.3311" r="1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBreastFeedingMediumLightSkinTone

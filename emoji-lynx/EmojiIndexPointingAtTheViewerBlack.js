@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "index pointing at the viewer" (black) [1FAF5]. */
-const EmojiIndexPointingAtTheViewerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIndexPointingAtTheViewerBlack = lynxIcon(`
   <g id="line">
     <g>
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.6,42.9c2.4,5.6,7,10.2,13.2,12.4,6.4,2.3,13.2,1.5,18.7-1.5"/>
@@ -19,7 +16,5 @@ const EmojiIndexPointingAtTheViewerBlack = {
       </g>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIndexPointingAtTheViewerBlack

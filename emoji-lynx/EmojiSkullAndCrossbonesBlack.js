@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "skull and crossbones" (black) [2620]. */
-const EmojiSkullAndCrossbonesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSkullAndCrossbonesBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.2551,52.4733 l-0.0578-4.1409c0-1.2145,1.3811-2.542,2.1609-3.434c2.8766-3.3062,4.4518-7.5462,4.4316-11.9286 c0-9.7158-7.4493-17.594-16.6307-17.5747c-1.1042,0.0035-2.2052,0.1177-3.2866,0.3409 c-6.6084,1.3552-11.8742,7.0833-13.0225,14.1063c-0.9438,5.4162,0.6083,10.9689,4.2239,15.1106 c0.768,0.8686,1.9951,2.1944,1.9951,3.3838l-0.0184,4.1736"/>
     <line x1="29.3706" x2="29.3706" y1="51.0812" y2="55.0848" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiSkullAndCrossbonesBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.1125,20.7917 c-1.3428-1.3339-2.2498-2.2319-2.5429-2.5161c0,0-1.9438,1.8393-3.2697,1.4425c-1.3739-0.4111-2.157-1.8078-2.036-2.9537 c0.1677-1.5889,2.11-3.0402,4.4383-2.5565c-0.4057-1.5126-0.0682-3.0622,0.9332-3.9948c1.6539-1.5404,4.078-0.4787,4.9897,0.9177 c1.2203,1.8691-1.5735,3.6629-1.5735,3.6629c0.2863,0.2776,1.1575,1.14,2.4478,2.4216"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52.4968,47.0821 c1.4533,1.4439,2.4367,2.4179,2.7444,2.7162c0.6553-1.3027,2.133-1.943,3.4588-1.5463c1.3739,0.4111,2.157,1.8078,2.036,2.9537 c-0.1677,1.5889-2.11,3.0402-4.4383,2.5565c0.4057,1.5126,0.0682,3.0622-0.9331,3.9948c-1.6539,1.5404-4.3294,0.6137-4.9897-0.9177 c-0.469-1.0879-0.1927-2.2976,1.4383-3.5051c-0.2579-0.25-0.9912-0.9755-2.0786-2.055"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSkullAndCrossbonesBlack

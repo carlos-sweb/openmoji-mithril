@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hold" (color) [E25A]. */
-const EmojiHold = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHold = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="m55.6239,48.0593c0,11.975-7.1616,18.3072-16.2494,18.3906-5.7703.0529-18.4055-.8495-16.6172-31.1527"/>
     <path fill="#fcea2b" d="m48.8393,37.5921c.081-1.9313,1.7123-3.4313,3.6436-3.3502s3.4313,1.7123,3.3502,3.6436"/>
@@ -36,7 +33,5 @@ const EmojiHold = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.6034,41.4395c1.9526,2.1439,3.3734,5.1677,3.3013,9.5218"/>
     <line x1="17.8357" x2="19.6571" y1="39.1198" y2="41.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHold

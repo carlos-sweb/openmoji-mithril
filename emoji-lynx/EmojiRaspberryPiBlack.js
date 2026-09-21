@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "raspberry pi" (black) [E1C9]. */
-const EmojiRaspberryPiBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRaspberryPiBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M55.7803,11.2616C51.51,31.1894,38.4049,24.395,36.6244,20.8907C34.844,17.3864,36.5642,3.4328,55.7803,11.2616z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.5723,15.2944c-3.1311,1.2014-7.1389,3.1342-8.9149,5.6542"/>
@@ -27,7 +24,5 @@ const EmojiRaspberryPiBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M46.3732,29.4392c0,3.0961,2.4819,5.6059,5.5436,5.6059"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.2512,42.6717c0,2.26,1.5157,4.1856,3.6392,4.9194"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRaspberryPiBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hamburger" (black) [1F354]. */
-const EmojiHamburgerBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHamburgerBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m32.88 49.3h-16.88c-1.104 0-2-0.8955-2-2v-6.75c0-1.104 0.8955-2 2-2h40c1.104 0 2 0.8955 2 2v6.75c0 1.104-0.8955 2-2 2h-16.79z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m32.88 49.47h-17.88c-1.104 0-2 0.7013-2 1.566v4.699c0 0.865 0.8955 1.566 2 1.566h42c1.104 0 2-0.7013 2-1.566v-4.699c0-0.865-0.8955-1.566-2-1.566h-17.79z"/>
@@ -13,7 +10,5 @@ const EmojiHamburgerBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m43.24 38.93h-14.48l7.242 7.164z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m59.19 34.1c-0.7619 0.3964-1.358 0.8199-2.487 1.002-1.368 0.3587-3.178 0.2195-4.602 0-1.928-0.3112-2.302-1.326-4.602-1.708-1.424-0.2195-3.178-0.2195-4.602 0-2.299 0.3815-2.673 1.396-4.602 1.708-1.424 0.2195-3.178 0.2195-4.602 0-1.928-0.3112-2.302-1.326-4.602-1.708-1.424-0.2195-3.178-0.2195-4.602 0-2.299 0.3815-2.673 1.396-4.602 1.708-1.424 0.2195-3.178 0.2195-4.602 0-1.129-0.1823-1.725-0.6058-2.487-1.002" paint-order="stroke fill markers"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHamburgerBlack

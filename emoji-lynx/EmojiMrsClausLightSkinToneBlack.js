@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Mrs. Claus: light skin tone" (black) [1F936-1F3FB]. */
-const EmojiMrsClausLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMrsClausLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M25.66,17.7698c1.03-4.76,5.26-8.32,10.32-8.32s9.29,3.56,10.32,8.32"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.8549,60.0051c0,0,2-13-10-13c-3.1919,2.128-5.9264,3.5985-9,3.5922h0.125c-3.0736,0.0063-5.8081-1.4642-9-3.5922 c-12,0-10,13-10,13"/>
@@ -20,7 +17,5 @@ const EmojiMrsClausLightSkinToneBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.9799,31.4051c0,1.6569,1.3431,3,3,3c1.6569,0,3-1.3431,3-3h2c0,1.6569,1.3431,3,3,3s3-1.3431,3-3"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.099,17.545c-0.8798,0-1.6738,0.3416-2.2798,0.8875c-0.606-0.5459-1.3999-0.8875-2.2798-0.8875 c-0.8798,0-1.6737,0.3416-2.2797,0.8875c-0.606-0.5459-1.4-0.8875-2.2798-0.8875s-1.6738,0.3416-2.2798,0.8875 c-0.606-0.5459-1.3999-0.8875-2.2797-0.8875c-0.8799,0-1.6738,0.3416-2.2798,0.8875c-0.606-0.5459-1.4-0.8875-2.2798-0.8875 c-1.8886,0-3.4196,1.5311-3.4196,3.4197s1.531,3.4196,3.4196,3.4196c0.8798,0,1.6738-0.3416,2.2798-0.8874 c0.606,0.5458,1.3999,0.8874,2.2798,0.8874c0.8798,0,1.6737-0.3416,2.2797-0.8874c0.606,0.5458,1.4,0.8874,2.2798,0.8874 s1.6738-0.3416,2.2798-0.8874c0.606,0.5458,1.3999,0.8874,2.2797,0.8874c0.8799,0,1.6738-0.3416,2.2798-0.8874 c0.606,0.5458,1.4,0.8874,2.2798,0.8874c1.8886,0,3.4196-1.531,3.4196-3.4196C48.5186,19.0761,46.9876,17.545,45.099,17.545z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMrsClausLightSkinToneBlack

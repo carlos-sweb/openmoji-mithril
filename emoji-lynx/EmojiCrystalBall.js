@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "crystal ball" (color) [1F52E]. */
-const EmojiCrystalBall = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCrystalBall = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" d="M50.1,55.5l-2.8-2.8c-0.2-0.2-0.5-0.3-0.8-0.3l-23.4-1.9c-0.3,0-1.5,1.3-1.7,1.5l-2.5,2.4"/>
     <path fill="#3F3F3F" d="M19.9,53.4l-5.7,5.3c-0.7,0.7,0.5,2.6,1.5,2.6h39.5c1,0,1.5-1.2,0.8-1.9l-8.6-8.2"/>
@@ -24,7 +21,5 @@ const EmojiCrystalBall = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M18,56.6l-3,2.8 c-0.7,0.7-0.3,1.9,0.8,1.9h39.5c1,0,1.5-1.2,0.8-1.9l-2.8-2.8"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M53.2,56.6l2.8,2.8c0.7,0.7,0.2,1.9-0.8,1.9"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCrystalBall

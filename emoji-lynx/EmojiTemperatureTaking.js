@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "temperature taking" (color) [E0B3]. */
-const EmojiTemperatureTaking = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTemperatureTaking = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="M28.77,17.5957h0a3.8637,3.8637,0,0,0-3.8637,3.8637V37.8876h7.7273V21.4594A3.8636,3.8636,0,0,0,28.77,17.5957Z"/>
     <path fill="#ea5a47" d="M32.3923,48.9127a7.8209,7.8209,0,1,1-7.1763-.014V35.461s6.3086,1.1094,7.163-.7251Z"/>
@@ -26,7 +23,5 @@ const EmojiTemperatureTaking = {
     </g>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M37.2661,22.206a2.4562,2.4562,0,0,0-2.217,2.628l-.52,6.7082-2.32,3.5085a.2268.2268,0,0,0,.1471.3411s5.9633-2.6739,6.0742-2.6739H53.783A2.4562,2.4562,0,0,0,56,30.09V24.834a2.4562,2.4562,0,0,0-2.217-2.628Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTemperatureTaking

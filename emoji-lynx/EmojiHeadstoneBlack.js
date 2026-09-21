@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "headstone" (black) [1FAA6]. */
-const EmojiHeadstoneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeadstoneBlack = lynxIcon(`
   <g id="line-supplement" transform="matrix(1.165 0 0 1.165 -5.868 -5.359)">
     <polygon fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" points="52.11 48.61 51.44 56 47.58 52.3 50.12 56 54.5 56 57.29 49.9 53.38 56"/>
     <polygon fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" points="19.77 48.62 20.44 56.01 24.31 52.32 21.76 56.01 17.38 56.01 14.59 49.91 18.51 56.01"/>
@@ -16,7 +13,5 @@ const EmojiHeadstoneBlack = {
     <line x1="25.99" x2="46.01" y1="35.57" y2="35.57" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.33"/>
     <line x1="30.75" x2="41.25" y1="44.39" y2="44.39" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.33"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeadstoneBlack

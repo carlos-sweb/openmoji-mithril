@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "reminder ribbon" (black) [1F397]. */
-const EmojiReminderRibbonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiReminderRibbonBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8125" d="M21.8,62.4L33,66l20-42.7c2.9-6,0-13.4-5.7-15.3L21.8,62.4z"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8125" points="38.9,62.4 40.2,65 51.4,61.5 45.4,49.3"/>
@@ -13,7 +10,5 @@ const EmojiReminderRibbonBlack = {
     <line x1="33.7" x2="38.3" y1="19.1" y2="19.1" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8125"/>
     <line x1="43.7" x2="28.6" y1="8.1" y2="8.1" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8125"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiReminderRibbonBlack

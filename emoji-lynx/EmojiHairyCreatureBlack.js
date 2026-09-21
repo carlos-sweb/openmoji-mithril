@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hairy creature" (black) [1FAC8]. */
-const EmojiHairyCreatureBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHairyCreatureBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
     <path transform="translate(.0001724)" d="m48.771 25.866c0.3006 4.9729 1.7614 7.6453 6.8899 10.552"/>
     <path transform="translate(.0001724)" d="m35.351 15.201c2.4701 1.2133 6.9423 0.4342 9.8025 3.6215 2.1118 2.3533 2.2168 8.2633 6.5071 8.5956"/>
@@ -24,7 +21,5 @@ const EmojiHairyCreatureBlack = {
     <path transform="translate(.0001724)" d="m28.626 53.158c-0.4284 4.5185-6.0247 2.8832-7.1035 9.8116"/>
     <path transform="translate(.0001724)" d="m33.718 47.111c-1.1446 4.8065 2.1305 7.5633-2.2892 15.097"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHairyCreatureBlack

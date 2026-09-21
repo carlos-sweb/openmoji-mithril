@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tulip" (black) [1F337]. */
-const EmojiTulipBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTulipBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.6968,59.4302 c0,0-8.7685-5.362-9.193-14.6985c-0.4359-9.5866,9.2144-26.9468,9.2144-26.9468S18.9979,38.4911,23.6968,59.4302z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.0878,41.2889 c-3.438,3.548-7.676,10.246-5.829,20.735"/>
@@ -15,7 +12,5 @@ const EmojiTulipBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.5658,35.9276 c-2.1322-1.8631-1.8894-4.8477-0.7613-7.4448c2.7067-6.2313,13.5127-8.9826,15.645-7.1195"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49.3038,21.1954 c0.506,0.5262,0.7973,1.5901,0.8465,3.1014"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTulipBlack

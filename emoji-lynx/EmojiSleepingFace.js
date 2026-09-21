@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sleeping face" (color) [1F634]. */
-const EmojiSleepingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSleepingFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="24" fill="#FCEA2B"/>
     <circle cx="36" cy="48.1435" r="3.4042" fill="#FFFFFF"/>
@@ -27,7 +24,5 @@ const EmojiSleepingFace = {
     <path fill="#61B2E4" stroke="#61B2E4" stroke-miterlimit="10" stroke-width="0.1" d="M51.0184,20.0258h-3.7598 c-0.3564,0-0.6855-0.1899-0.8652-0.498c-0.1787-0.3086-0.1797-0.6885-0.0029-0.998l2.9043-5.082h-2.0361c-0.5527,0-1-0.4478-1-1 s0.4473-1,1-1h3.7598c0.3564,0,0.6855,0.1899,0.8652,0.498c0.1787,0.3086,0.1797,0.6885,0.0029,0.998l-2.9044,5.082h2.0361 c0.5527,0,1,0.4478,1,1S51.5711,20.0258,51.0184,20.0258z"/>
     <path fill="#61B2E4" stroke="#61B2E4" stroke-miterlimit="10" stroke-width="0.1" d="M59.1609,25.0258h-4.9023 c-0.3564,0-0.6855-0.1899-0.8652-0.498c-0.1787-0.3086-0.1797-0.6885-0.0029-0.998l4.0469-7.082h-3.1787c-0.5527,0-1-0.4478-1-1 s0.4473-1,1-1h4.9023c0.3564,0,0.6855,0.1899,0.8652,0.498c0.1787,0.3086,0.1797,0.6885,0.0029,0.998l-4.0469,7.082h3.1787 c0.5527,0,1,0.4478,1,1S59.7137,25.0258,59.1609,25.0258z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSleepingFace

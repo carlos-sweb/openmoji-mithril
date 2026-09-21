@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wire" (color) [E1D4]. */
-const EmojiWire = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWire = lynxIcon(`
   <g id="color">
     <line x1="16" x2="11" y1="36" y2="36" fill="none" stroke="#E27022" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="61" x2="56" y1="36" y2="36" fill="none" stroke="#E27022" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -24,7 +21,5 @@ const EmojiWire = {
     <path fill="#E27022" d="M15,37.0498h-4c-0.5801,0-1.0498-0.4697-1.0498-1.0498S10.4199,34.9502,11,34.9502h4"/>
     <path fill="#E27022" d="M57,34.9502h4c0.5801,0,1.0498,0.4697,1.0498,1.0498S61.5801,37.0498,61,37.0498h-4"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWire

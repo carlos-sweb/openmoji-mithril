@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pleading face" (black) [1F97A]. */
-const EmojiPleadingFaceBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPleadingFaceBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="36" r="23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.02,46.68c1.379-1.678,4.279-2.713,7.347-2.628,2.817.079,5.358,1.091,6.612,2.628"/>
@@ -16,7 +13,5 @@ const EmojiPleadingFaceBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.31,18.02c1.185,2.421,3,5,9,4"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.96,18.02c-1.185,2.421-3,5-9,4"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPleadingFaceBlack

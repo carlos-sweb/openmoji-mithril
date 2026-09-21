@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "meat consumption" (black) [E2CE]. */
-const EmojiMeatConsumptionBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMeatConsumptionBlack = lynxIcon(`
   <g id="line">
     <g id="line-2">
       <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.7786,33.8967 c0.7345-1.0522,1.2688-2.2308,1.5759-3.4767c1.0033-3.399,2.3861-6.4832,5.59-8.2272c5.2732-2.889,11.8901-0.9562,14.7791,4.317 c2.889,5.2732,0.9562,11.8901-4.317,14.7791c-0.017,0.0093-0.034,0.0186-0.051,0.0278L30.8686,51.3809 c-3.5147,1.9276-7.9265,0.641-9.854-2.8737c-1.9276-3.5147-0.641-7.9265,2.8737-9.854c0.0132-0.0072,0.0264-0.0144,0.0397-0.0216"/>
@@ -17,7 +14,5 @@ const EmojiMeatConsumptionBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M32.58,45.2638 c0,0-2.2178-2.102-4.2685-4.1527c-1.538-1.538-2.0367-2.971-1.7578-4.0236"/>
     <line x1="34.4782" x2="29.4993" y1="43.3652" y2="38.3863" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMeatConsumptionBlack

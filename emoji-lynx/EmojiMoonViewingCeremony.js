@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "moon viewing ceremony" (color) [1F391]. */
-const EmojiMoonViewingCeremony = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMoonViewingCeremony = lynxIcon(`
   <g id="line-supplement">
     <g>
       <circle cx="36" cy="21" r="9" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
@@ -93,7 +90,5 @@ const EmojiMoonViewingCeremony = {
       <circle cx="36" cy="36" r="28" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMoonViewingCeremony

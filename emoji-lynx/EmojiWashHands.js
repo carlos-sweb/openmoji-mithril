@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wash hands" (color) [E0B2]. */
-const EmojiWashHands = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWashHands = lynxIcon(`
   <g id="color">
     <ellipse cx="32.2442" cy="29.3592" rx="4.2321" ry="4.0631" fill="#fff"/>
     <path fill="#92d3f5" d="m35.2742,43.5463l-15.1657-.1792,4.2215-10.6842-.8418-1.6218s2.691-2.5672,5.8842-1.6706,5.07,2.8526,5.1005,5.681c.0567,1.614-.6189,3.1673-1.8382,4.2263,1.8592.3753,3.0621,2.1868,2.6868,4.046-.0137.068-.0295.1355-.0473.2025Z"/>
@@ -40,7 +37,5 @@ const EmojiWashHands = {
     <circle cx="38.7404" cy="26.4445" r="2.1972" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <circle cx="29.7967" cy="22.2945" r="2.8655" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWashHands

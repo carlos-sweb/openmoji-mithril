@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clown face" (color) [1F921]. */
-const EmojiClownFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClownFace = lynxIcon(`
   <g id="color">
     <path fill="#D22F27" d="M13.8451,27.9329c0,0-2.047-1.4682-0.6019-3.1236c0,0-2.2788-2.0129-0.4281-3.9039 c0,0-1.2382-4.0732,2.1382-4.309c0,0-0.3899-4.0721,4.079-3.5985c0,0,2.5018-1.8015,4.3561,0.2489c0,0,2.5324-1.6079,3.8427,0.4026"/>
     <path fill="#D22F27" d="M58.1549,27.9329c0,0,2.047-1.4682,0.6019-3.1236c0,0,2.2788-2.0129,0.4281-3.9039 c0,0,1.2382-4.0732-2.1382-4.309c0,0,0.3899-4.0721-4.079-3.5985c0,0-2.5018-1.8015-4.3561,0.2489c0,0-2.5324-1.6079-3.8427,0.4026"/>
@@ -34,7 +31,5 @@ const EmojiClownFace = {
     <path d="M46.7276,30.8261c0,3.03-1.32,5.3-2.5,5.3s-2.5-2.27-2.5-5.3c0-3.04,1.32-5.31,2.5-5.31S46.7276,27.7861,46.7276,30.8261z"/>
     <circle cx="36.0563" cy="38.9779" r="2.7351" fill="#D22F27"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClownFace

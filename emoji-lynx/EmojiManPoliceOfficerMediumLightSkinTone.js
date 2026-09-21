@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man police officer: medium-light skin tone" (color) [1F46E-1F3FC-200D-2642-FE0F]. */
-const EmojiManPoliceOfficerMediumLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManPoliceOfficerMediumLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M16.9208,59.496S15.1563,45.87,26.92,45.87c3.1288,2.0859,5.81,3.5274,8.8225,3.5213H35.62c3.013.0061,6.1836-1.5334,9.3126-3.6193,11.3366-.034,9.42,13.6258,9.6459,13.7239"/>
     <path fill="#61b2e4" d="M45.0648,44.7917c-3.1074,2.0716-4.9749,3.2349-8.9573,3.8119,12.8049.4033,12.8049,6.9712,13.552,10.8923h5.0121S56.8282,44.7917,45.0648,44.7917Z"/>
@@ -49,7 +46,5 @@ const EmojiManPoliceOfficerMediumLightSkinTone = {
       <path d="M47.0908,32.0781a1.0009,1.0009,0,0,1-.9472-.6787c-1.004-2.96-3.26-7.4038-4.9131-7.5415a1,1,0,0,1,.166-1.9932c2.6748.2227,4.8086,4.3306,5.9082,6.9629a4.5658,4.5658,0,0,0,.3721-2.5131,6.6757,6.6757,0,0,0-2.5674-3.9151,1,1,0,0,1,1.1367-1.6455,8.6259,8.6259,0,0,1,3.4062,5.2495,7.2857,7.2857,0,0,1-1.7773,5.6948A1,1,0,0,1,47.0908,32.0781Z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManPoliceOfficerMediumLightSkinTone

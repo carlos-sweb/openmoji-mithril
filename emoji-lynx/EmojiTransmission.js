@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "transmission" (color) [E0A1]. */
-const EmojiTransmission = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTransmission = lynxIcon(`
   <g id="color">
     <circle cx="35.9393" cy="29.2806" r="3.15" fill="#3f3f3f"/>
     <polyline fill="#d0cfce" points="46.439 64.56 36.838 32.3 35.041 32.3 25.439 64.56"/>
@@ -21,7 +18,5 @@ const EmojiTransmission = {
     <line x1="35.0407" x2="25.4393" y1="32.2999" y2="64.5596" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="46.4393" x2="36.838" y1="64.5596" y2="32.3001" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTransmission

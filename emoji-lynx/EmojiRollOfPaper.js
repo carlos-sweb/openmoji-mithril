@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "roll of paper" (color) [1F9FB]. */
-const EmojiRollOfPaper = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRollOfPaper = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m11.41 56.6c8.303 12.49 32.7 6.093 39.05 3.446l0.7008-44.25c-0.9537-3.003-22.19-15.83-39.75-0.3751z"/>
     <path fill="#d0cfce" d="m47.37 61.41c4.514-3.053 13.23-9.667 13.23-9.667v-38.44c-2.321 2.072-9.972 5.775-13.23 6.769"/>
@@ -19,7 +16,5 @@ const EmojiRollOfPaper = {
     <line x1="31.23" x2="31.23" y1="60.72" y2="64.05" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <ellipse cx="30.79" cy="15.31" rx="4.739" ry="2.16" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRollOfPaper

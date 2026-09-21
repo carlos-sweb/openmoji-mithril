@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "baby angel: medium skin tone" (color) [1F47C-1F3FD]. */
-const EmojiBabyAngelMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBabyAngelMediumSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M18.7,52.9H9s1.8,8,6.2,8.8,11.5,0,11.5,0Z"/>
     <path fill="#d0cfce" d="M53.2,52.9H63s-1.8,8-6.2,8.8-11.5,0-11.5,0Z"/>
@@ -28,7 +25,5 @@ const EmojiBabyAngelMediumSkinTone = {
     <path d="M45.5,41.8A2.8,2.8,0,1,1,42.7,39h0a2.7951,2.7951,0,0,1,2.8,2.8"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.4,52.7s5,2.8,9.6,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBabyAngelMediumSkinTone

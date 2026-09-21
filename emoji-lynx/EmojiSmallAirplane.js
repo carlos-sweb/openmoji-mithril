@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "small airplane" (color) [1F6E9]. */
-const EmojiSmallAirplane = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmallAirplane = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="M48.8668,30.3783s-24,23-27,20,20-27,20-27,4-5,8-1S48.8668,30.3783,48.8668,30.3783Z"/>
     <path fill="#e27022" d="M31.8468,55.2083l-2.17,3.25a.7511.7511,0,0,1-1.17.09l-7.45-8.12-8.25-7.56a.7511.7511,0,0,1,.09-1.17l3.25-2.17a.7529.7529,0,0,1,.86.03l8.52,6.41,6.29,8.38A.7529.7529,0,0,1,31.8468,55.2083Z"/>
@@ -25,7 +22,5 @@ const EmojiSmallAirplane = {
     <line x1="45.0855" x2="58.8981" y1="13.5345" y2="27.347" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7979"/>
     <line x1="53.2105" x2="50.5543" y1="19.222" y2="21.8783" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7979"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmallAirplane

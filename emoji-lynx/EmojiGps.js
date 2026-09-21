@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "gps" (color) [E1CD]. */
-const EmojiGps = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGps = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M36.0216,12.9316c-12.6956,0-22.9874,10.2918-22.9874,22.9874S23.326,58.9065,36.0216,58.9065 S59.009,48.6147,59.009,35.9191S48.7172,12.9316,36.0216,12.9316z M36.0216,50.8832c-8.2645,0-14.9642-6.6997-14.9642-14.9642 s6.6997-14.9642,14.9642-14.9642s14.9642,6.6997,14.9642,14.9642S44.2861,50.8832,36.0216,50.8832z"/>
     <rect x="31.5295" y="7.661" width="8.9825" height="11.1898" fill="#9B9B9A" stroke="none"/>
@@ -31,7 +28,5 @@ const EmojiGps = {
     <line x1="8.6786" x2="13.1201" y1="31.433" y2="31.433" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="8.6786" x2="13.1201" y1="40.3929" y2="40.3929" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGps

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cupcake" (black) [1F9C1]. */
-const EmojiCupcakeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCupcakeBlack = lynxIcon(`
   <g id="line-supplement">
     <line x1="34.134" x2="35.866" y1="16.5" y2="15.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="27.866" x2="26.134" y1="25.5" y2="24.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -30,7 +27,5 @@ const EmojiCupcakeBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.99,40.1646a2.1507,2.1507,0,0,0-2.732.732,2.1509,2.1509,0,0,0,.732,2.7321"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53,31s3,1,3,4-2,7-6,7"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCupcakeBlack

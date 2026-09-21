@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "circled dollar sign with overlaid backslash" (color) [1F10F]. */
-const EmojiCircledDollarSignWithOverlaidBackslash = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCircledDollarSignWithOverlaidBackslash = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="26.68" fill="#fff" fill-rule="evenodd" paint-order="normal"/>
   </g>
@@ -16,7 +13,5 @@ const EmojiCircledDollarSignWithOverlaidBackslash = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.3" d="m36.00,17.6 v5.28"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.3" d="m36.00,54.4 v-5.28"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCircledDollarSignWithOverlaidBackslash

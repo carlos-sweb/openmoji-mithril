@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "rocket" (black) [1F680]. */
-const EmojiRocketBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRocketBlack = lynxIcon(`
   <g id="line">
     <path d="m48.405,29.49c-3.2761,0-5.941-2.6641-5.941-5.9392s2.6649-5.9392,5.941-5.9392,5.941,2.6641,5.941,5.9392-2.6649,5.9392-5.941,5.9392Zm0-9.8987c-2.1839,0-3.9607,1.7757-3.9607,3.9595s1.7768,3.9595,3.9607,3.9595,3.9607-1.7758,3.9607-3.9595-1.7769-3.9595-3.9607-3.9595Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.949" d="m20.653,45.063c-1.678.7083-3.2222,1.7475-4.5331,3.0508-3.1581,3.1631-4.6517,7.5594-3.9703,11.687,4.128.6762,8.5221-.8196,11.683-3.9769,1.3043-1.3104,2.3446-2.8541,3.0537-4.5318"/>
@@ -14,7 +11,5 @@ const EmojiRocketBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.949" d="m31.83,43.345c.2696.8863.2506,1.6919.1371,2.5245,7.0759-.3611,13.993-3.5031,19.243-8.7412,6.7106-6.7215,9.8836-16.063,8.4351-24.834-8.7712-1.4365-18.108,1.742-24.823,8.4508-5.2322,5.2509-8.3679,12.164-8.7242,19.234.9413-.1907,1.8984-.0942,2.7693.2387"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.949" d="m37.072,34.196h-.0002c-2.4156,1.2183-4.6724,2.7626-6.6996,4.5844-2.0849,1.8911-3.9,4.0556-5.3844,6.4211-.5039.8031-.9684,1.6273-1.3917,2.4694"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRocketBlack

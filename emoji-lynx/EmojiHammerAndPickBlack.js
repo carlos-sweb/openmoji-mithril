@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hammer and pick" (black) [2692]. */
-const EmojiHammerAndPickBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHammerAndPickBlack = lynxIcon(`
   <g id="line">
     <g id="_2692-2">
       <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="37.893 41.736 40.302 43.594 47.787 55.511 46.88 56.089 44.159 57.822 43.252 58.4 37.507 49.384 35.958 46.952"/>
@@ -15,7 +12,5 @@ const EmojiHammerAndPickBlack = {
       <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="35.908 38.834 44.801 24.743 47.522 26.476 36.926 43.268 36.175 46.616 28.538 58.436 27.631 57.858 24.91 56.124 24.003 55.547 31.564 43.678 34.204 41.535 35.908 38.834"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHammerAndPickBlack

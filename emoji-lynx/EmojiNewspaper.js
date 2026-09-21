@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "newspaper" (color) [1F4F0]. */
-const EmojiNewspaper = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNewspaper = lynxIcon(`
   <g id="color">
     <path fill="#9B9B9A" stroke="none" d="M58.9041,56h2.4417C63.0344,56,64,54.9933,64,53.3365v-0.3782v-42H13.0408v13.2772"/>
     <path fill="#9B9B9A" stroke="none" d="M59,56h2.3957C63.0526,56,64,54.9933,64,53.3365v-0.3782v-42H14v16.1541"/>
@@ -25,7 +22,5 @@ const EmojiNewspaper = {
     <line x1="39.5684" x2="54" y1="40.8459" y2="40.8459" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="39.5684" x2="54" y1="47.2126" y2="47.2126" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNewspaper

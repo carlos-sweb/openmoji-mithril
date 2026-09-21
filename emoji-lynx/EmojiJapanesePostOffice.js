@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese post office" (color) [1F3E3]. */
-const EmojiJapanesePostOffice = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapanesePostOffice = lynxIcon(`
   <g id="line-supplement">
     <rect x="17" y="17" width="18" height="4" fill="#000000"/>
     <rect x="17" y="23" width="18" height="4" fill="#000000"/>
@@ -46,7 +43,5 @@ const EmojiJapanesePostOffice = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="46,45 44,45 44,40"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="46,55 44,55 44,50"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapanesePostOffice

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "money-mouth face" (color) [1F911]. */
-const EmojiMoneyMouthFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMoneyMouthFace = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="24" fill="#fcea2b"/>
     <path fill="#fff" d="M30.498,53.374c-4.296-1.49-6.4614-4.8011-6.4614-8.6835h.0939s12.1375,3.0627,23.683.066l.1606-.066a8.881,8.881,0,0,1-6.4152,8.6842"/>
@@ -32,7 +29,5 @@ const EmojiMoneyMouthFace = {
     <line x1="35.9264" x2="35.9264" y1="51.8801" y2="50.3686" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="35.9264" x2="35.9264" y1="59.739" y2="58.2276" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMoneyMouthFace

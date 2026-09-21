@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "police car light" (color) [1F6A8]. */
-const EmojiPoliceCarLight = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPoliceCarLight = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" d="M21.4,51V36A14.9585,14.9585,0,0,1,36.3,21h0A15.0887,15.0887,0,0,1,51.2,36V51"/>
     <path fill="#d0cfce" d="M21.4,51h30a4.9514,4.9514,0,0,1,5,5h0a4.9514,4.9514,0,0,1-5,5h-30a4.9514,4.9514,0,0,1-5-5h0A4.9514,4.9514,0,0,1,21.4,51Z"/>
@@ -18,7 +15,5 @@ const EmojiPoliceCarLight = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.4,51V36A14.9585,14.9585,0,0,1,36.3,21h0A15.0887,15.0887,0,0,1,51.2,36V51"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.1,51H51.6a4.8011,4.8011,0,0,1,4.8,4.8h0a4.8011,4.8011,0,0,1-4.8,4.8H21.1a4.8011,4.8011,0,0,1-4.8-4.8h0A4.9353,4.9353,0,0,1,21.1,51Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPoliceCarLight

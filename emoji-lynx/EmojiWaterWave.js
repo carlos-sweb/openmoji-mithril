@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "water wave" (color) [1F30A]. */
-const EmojiWaterWave = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWaterWave = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M4,28.1891C4,14.817,14.2855,3.9774,27.8365,3.9774l0,0C15,19.3437,26.25,43.7216,56.4,41.5631 c4.2563-0.3047,8.9466-1.7777,12.5933-3.7244v30.0865c0,0.5583-0.4525,1.0108-1.0108,1.0109L4,68.9578V28.1891"/>
     <path fill="#61B2E4" d="M21.7843,10.0119c-3.8217,7.178-5.9507,21.1275,6.5553,33.3435c0,0,10.2391,12.649,40.6537,4.8847V37.3494 c0,0-11.1064,7.5922-27.5251,2.3384c-15.3849-4.923-19.4254-16.5267-18.9093-20.7668c0.1825-1.4994,0.7878-6.0417,0.7878-6.0417 s0.8388-3.0147,0.5454-3.801C23.5525,8.1679,22.058,9.4979,21.7843,10.0119z"/>
@@ -22,7 +19,5 @@ const EmojiWaterWave = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.9" d="M44.857,9.7223c1.6744,1.9066,1.5785,4.7217-0.2101,6.2925s-4.5959,1.2984-6.2703-0.6082c0,0-2.0702-2.2858-3.0178-8.8759 c0,0-0.2509-1.3199,0.9788-0.9606C42.7502,7.3608,44.857,9.7223,44.857,9.7223"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M63.875,63.2775c-3.4238,0-3.4238-2.055-6.8475-2.055c-3.4219,0-3.4219,2.055-6.8438,2.055c-3.4249,0-3.4249-2.055-6.8498-2.055 c-3.4272,0-3.4272,2.055-6.8545,2.055s-3.4272-2.055-6.8545-2.055"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWaterWave

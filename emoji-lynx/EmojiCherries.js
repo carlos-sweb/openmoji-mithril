@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cherries" (color) [1F352]. */
-const EmojiCherries = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCherries = lynxIcon(`
   <g id="color">
     <path fill="#EA5A47" stroke="#EA5A47" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34.4,46.5c0.9-1.7,2.3-3.1,4.2-4c4.9-2.5,10.8-0.5,13.3,4.4s0.5,10.8-4.4,13.3s-10.8,0.5-13.3-4.4"/>
     <path fill="#D22F27" d="M47.5,60.2c-1.3,0.7-2.7,1-4,1c11.3-9.3,1.8-18.3,0.1-19.7c3.4,0.2,6.6,2.2,8.3,5.4 C54.3,51.8,52.3,57.7,47.5,60.2z"/>
@@ -25,7 +22,5 @@ const EmojiCherries = {
     <circle cx="28.5" cy="51.4" r="9.9" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M39,42.3c0,0-19.5-10.1-19.5-31.6"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCherries

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "eight-pointed star" (color) [2734]. */
-const EmojiEightPointedStar = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEightPointedStar = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M42.976,39.0753,48.8618,48.37a.4945.4945,0,0,1-.6956.6737l-8.9076-6.0479a.4946.4946,0,0,0-.7636.3165L36.4868,53.841a.4946.4946,0,0,1-.9716,0l-2.01-10.5287a.4946.4946,0,0,0-.7637-.3164l-8.9056,6.0479A.4946.4946,0,0,1,23.14,48.37l5.884-9.2948a.4946.4946,0,0,0-.33-.7512L18.5486,36.4877a.4946.4946,0,0,1,0-.9733L28.6946,33.676a.4946.4946,0,0,0,.33-.7511L23.14,23.63a.4946.4946,0,0,1,.6957-.6737l8.9056,6.0479a.4946.4946,0,0,0,.7637-.3164l2.01-10.5287a.4946.4946,0,0,1,.9716,0L38.495,28.6876a.4946.4946,0,0,0,.7636.3165l8.9076-6.0479a.4945.4945,0,0,1,.6956.6737l-5.8859,9.2949a.4945.4945,0,0,0,.33.7512l10.1459,1.8384a.4946.4946,0,0,1,0,.9733L43.3057,38.3241A.4945.4945,0,0,0,42.976,39.0753Z"/>
   </g>
@@ -16,7 +13,5 @@ const EmojiEightPointedStar = {
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M60,60.9583H12a.9448.9448,0,0,1-1-1v-48a.9448.9448,0,0,1,1-1H60a.9448.9448,0,0,1,1,1v48A.9448.9448,0,0,1,60,60.9583Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEightPointedStar

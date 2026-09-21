@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "medication" (color) [E307]. */
-const EmojiMedication = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMedication = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" stroke-width="1.553" d="m53.87 20.06h-35.74l-2.692 4.478c-0.8037 1.337-1.228 2.867-1.228 4.427v25.94c1.55e-4 2.84 2.302 5.142 5.143 5.142h33.3c2.84 0 5.142-2.302 5.143-5.142v-25.94c0-1.56-0.4247-3.09-1.228-4.427z"/>
     <rect x="18.16" y="11.95" width="35.64" height="7.917" fill="#d0cfce" stroke-width="1.553"/>
@@ -21,7 +18,5 @@ const EmojiMedication = {
     <line x1="41.97" x2="41.97" y1="11.91" y2="19.84" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.766"/>
     <line x1="47.94" x2="47.94" y1="11.91" y2="19.84" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.766"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMedication

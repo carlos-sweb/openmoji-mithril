@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "identification card" (color) [1FAAA]. */
-const EmojiIdentificationCard = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiIdentificationCard = lynxIcon(`
   <g id="line-supplement">
     <line x1="9.9148" x2="26.6131" y1="22.0022" y2="22.0022" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="34.8614" x2="62.0321" y1="22.0022" y2="22.0022" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -32,7 +29,5 @@ const EmojiIdentificationCard = {
     <line x1="34.9341" x2="54.1085" y1="33.5542" y2="33.5542" fill="none" stroke="#9b9b9a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="34.9341" x2="54.1085" y1="37.5523" y2="37.5523" fill="none" stroke="#9b9b9a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiIdentificationCard

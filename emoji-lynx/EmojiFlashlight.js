@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flashlight" (color) [1F526]. */
-const EmojiFlashlight = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlashlight = lynxIcon(`
   <g id="color">
     <line x1="13.1977" x2="9.3351" y1="46.2814" y2="47.2719" fill="none" stroke="#FCEA2B" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="19.1014" x2="15.1726" y1="53.1953" y2="57.0258" fill="none" stroke="#FCEA2B" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -30,7 +27,5 @@ const EmojiFlashlight = {
     <line x1="19.1014" x2="15.1726" y1="53.1953" y2="57.0258" fill="none" stroke="#FCEA2B" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.1"/>
     <line x1="26.2418" x2="25.1433" y1="59.4704" y2="63.136" fill="none" stroke="#FCEA2B" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.1"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlashlight

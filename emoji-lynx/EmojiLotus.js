@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lotus" (color) [1FAB7]. */
-const EmojiLotus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLotus = lynxIcon(`
   <g id="color">
     <g>
       <polygon fill="#b1cc33" points="8.661 40.827 14.498 37.601 17.032 37.14 28.092 41.211 37.462 42.286 46.447 40.596 56.508 36.833 63.42 40.135 58.736 43.284 52.438 44.974 55.279 48.737 56.172 53.633 48.214 53.192 42.991 51.809 39.919 56.878 36.527 59.301 31.471 54.958 29.321 51.656 24.866 53.499 17.109 54.344 16.391 49.466 18.722 46.279 11.733 43.284 8.661 40.827"/>
@@ -25,7 +22,5 @@ const EmojiLotus = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44.9926,24.9543c0-2.4512,5.7909-8.579,6.756-7.3534s3.86,7.3534,3.86,15.9324-19.3027,11.03-19.3027,11.03"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M43.3534,19.5336s-4.698-6.3166-7.047-6.3166-7.047,6.3166-7.047,6.3166"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLotus

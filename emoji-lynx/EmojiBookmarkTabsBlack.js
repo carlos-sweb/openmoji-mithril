@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bookmark tabs" (black) [1F4D1]. */
-const EmojiBookmarkTabsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBookmarkTabsBlack = lynxIcon(`
   <g id="line">
     <polyline transform="matrix(1.059 0 0 1.058 -8.462 -4.752)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.889" points="60 28.75 60 17 49.32 17"/>
     <line x1="55.06" x2="55.06" y1="45.53" y2="31.68" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiBookmarkTabsBlack = {
     <line x1="15.89" x2="43.41" y1="41.82" y2="41.82" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="15.89" x2="43.41" y1="50.29" y2="50.29" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBookmarkTabsBlack

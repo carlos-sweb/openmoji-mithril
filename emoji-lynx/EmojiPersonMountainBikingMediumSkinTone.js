@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person mountain biking: medium skin tone" (color) [1F6B5-1F3FD]. */
-const EmojiPersonMountainBikingMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonMountainBikingMediumSkinTone = lynxIcon(`
   <g id="color">
     <polygon fill="#d0cfce" points="40 26.095 56 16 68 29.46 68 69 4 69 4 29.46 18 21.048 28 27.778 40 26.095"/>
     <circle cx="19.1" cy="57" r="10.2" fill="#fff"/>
@@ -26,7 +23,5 @@ const EmojiPersonMountainBikingMediumSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M5,29.46l10.3624-7.2646a3.2617,3.2617,0,0,1,3.3291-.0809L25,26.0952"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M44,23.5714l10.3085-6.5042a2.3261,2.3261,0,0,1,2.9571.4814L67,29.46"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonMountainBikingMediumSkinTone

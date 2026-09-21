@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "collaboration" (color) [E249]. */
-const EmojiCollaboration = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCollaboration = lynxIcon(`
   <g id="color">
     <circle cx="21" cy="17" r="3" fill="#fcea2b"/>
     <circle cx="55.9917" cy="26.3237" r="3" fill="#fcea2b"/>
@@ -25,7 +22,5 @@ const EmojiCollaboration = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m39.4332,57.5731c8.2126-1.6036,14.8614-7.5774,17.4267-15.4016"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12.0868,32.9884c-.0575.6629-.0868,1.3338-.0868,2.0116,0,7.9743,4.0582,15.0008,10.2221,19.1268"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCollaboration

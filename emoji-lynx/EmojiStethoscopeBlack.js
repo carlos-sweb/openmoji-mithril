@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stethoscope" (black) [1FA7A]. */
-const EmojiStethoscopeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStethoscopeBlack = lynxIcon(`
   <g id="line">
     <path stroke="#000" stroke-linecap="round" stroke-miterlimit="10" d="M41.2027,9.9048c1.1555.6671,1.883,1.0871,1.279,2.1332s-1.3314.6261-2.4869-.041-2.0923-1.208-1.4883-2.2541S40.0472,9.2376,41.2027,9.9048Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M31.5,11.5c-2,1-5,2-3.8611,6.9565C28.5971,22.6263,31.1823,39.5,36.5,39.5c5.2511,0,8-18,8.86-21.0574C46.2141,15.4047,43.5,12.5,41.5,11.5"/>
@@ -13,7 +10,5 @@ const EmojiStethoscopeBlack = {
     <circle cx="49.5" cy="51.5" r="3" fill="none" stroke="#000" stroke-miterlimit="10"/>
     <path stroke="#000" stroke-linecap="round" stroke-miterlimit="10" d="M32.3312,9.967c1.11-.4041,1.8091-.6585,2.1749.3466s-.3331,1.26-1.4433,1.6635-2.01.7317-2.376-.2734S31.221,10.371,32.3312,9.967Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStethoscopeBlack

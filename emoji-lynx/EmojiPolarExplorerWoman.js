@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "polar explorer woman" (color) [E2CA]. */
-const EmojiPolarExplorerWoman = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPolarExplorerWoman = lynxIcon(`
   <g id="color">
     <path fill="#d22f27" d="M43.3128,23a4.29,4.29,0,0,0-4.4286-3.9164H32.76a4.3473,4.3473,0,0,0-4.2963,4.1314l-.8085,19.4393a1,1,0,0,1-.1234.4369l2.9945-2.0943L29.7976,63.13a1.2142,1.2142,0,0,0,.2552.8789.2474.2474,0,0,0,.1551.09c.2185,0,1.29-.3847,1.37-1.0835l2.5781-22.5781a4.2613,4.2613,0,0,1,.1716-1.1593l.74-.8052h1.6587l.6489.7458a4.3877,4.3877,0,0,1,.4218,1.25l2.625,22.5468a1.33,1.33,0,0,0,1.014,1.0815.248.248,0,0,0,.1552-.09c.1962-.2483.5-.585.4663-.9l-.9516-22.11,3.572,2.43Z"/>
     <path fill="#fcea2b" d="M38.9326,12.58a3.0322,3.0322,0,0,1-6.0632,0,2.9474,2.9474,0,0,1,.2041-1.08h5.5631a.2881.2881,0,0,0,.0919-.01A3,3,0,0,1,38.9326,12.58Z"/>
@@ -32,7 +29,5 @@ const EmojiPolarExplorerWoman = {
       </g>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPolarExplorerWoman

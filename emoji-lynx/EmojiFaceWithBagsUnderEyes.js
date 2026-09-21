@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with bags under eyes" (color) [1FAE9]. */
-const EmojiFaceWithBagsUnderEyes = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithBagsUnderEyes = lynxIcon(`
   <g id="line-supplement">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M50.8109,39.0003c-.6662,1.7251-3.0153,2.9997-5.8109,2.9997s-5.1447-1.2746-5.8109-2.9997"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.8109,39.0002c-.6662,1.7251-3.0152,2.9998-5.8109,2.9998s-5.1447-1.2747-5.8109-2.9998"/>
@@ -25,7 +22,5 @@ const EmojiFaceWithBagsUnderEyes = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40,25c3.4042-.8814,7.7072.0736,10,2"/>
     <path d="M24.1839,33c-.1119.3143-.184.6476-.184,1,0,1.6567,1.3447,3,3,3s3-1.3432,3-3c0-.3524-.0721-.6857-.184-1h-5.632Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithBagsUnderEyes

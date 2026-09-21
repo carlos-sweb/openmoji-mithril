@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman walking: medium skin tone, facing right" (color) [1F6B6-1F3FD-200D-2640-FE0F-200D-27A1-FE0F]. */
-const EmojiWomanWalkingMediumSkinToneFacingRight = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanWalkingMediumSkinToneFacingRight = lynxIcon(`
   <g id="color" transform="scale(-1, 1) translate(-72, 0)"/>
   <g id="skin" transform="scale(-1, 1) translate(-72, 0)">
     <circle cx="34.37" cy="10.73" r="3" fill="#c19a65"/>
@@ -18,7 +15,5 @@ const EmojiWomanWalkingMediumSkinToneFacingRight = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m34.62 21.46 0.04927 5.664c0.0087 0.9969-0.1768 2.604-0.4117 3.573l-2.562 10.55"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m37.86 8.885s0.5706-0.3283 0.9522-0.0639c0.4492 0.31 0.8462 1.582 1.39 2.1a3.363 3.363 0 0 0 1.958 0.94"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanWalkingMediumSkinToneFacingRight

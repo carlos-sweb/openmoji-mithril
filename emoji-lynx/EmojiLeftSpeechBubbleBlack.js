@@ -1,15 +1,10 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "left speech bubble" (black) [1F5E8]. */
-const EmojiLeftSpeechBubbleBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLeftSpeechBubbleBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.8808,49.1283C57.4746,45.405,59,40.8818,59,36c0-12.7026-10.2974-23-23-23S13,23.2974,13,36c0,12.7025,10.2974,23,23,23 c3.7581,0,7.3021-0.9071,10.4348-2.5054l4.8138,2.0528l5.7283,2.4428l-1.0836-6.1324L54.8808,49.1283z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLeftSpeechBubbleBlack

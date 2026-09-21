@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "peertube" (color) [E05B]. */
-const EmojiPeertube = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPeertube = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="33.6685 42.4354 27.5636 39.0824 21.4588 35.7294 27.415 32.119 33.3712 28.5085 33.5199 35.472 33.6685 42.4354"/>
     <polygon fill="#3f3f3f" points="16.757 11.706 35.867 23.499 17.273 34.948 16.757 11.706"/>
@@ -17,7 +14,5 @@ const EmojiPeertube = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="55.743 35.736 36.263 23.347 36.263 48.125 55.743 35.736"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.263 48.125 16.783 35.736 16.783 60.514 36.263 48.125"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPeertube

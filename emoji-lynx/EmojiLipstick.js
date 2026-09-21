@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lipstick" (color) [1F484]. */
-const EmojiLipstick = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLipstick = lynxIcon(`
   <g id="color">
     <rect x="22.7104" y="47.8069" width="27.2896" height="19.1931" fill="#d0cfce"/>
     <polygon fill="#9b9b9a" points="41 42.609 41 67 50 67 50 43 41 42.609"/>
@@ -21,7 +18,5 @@ const EmojiLipstick = {
     <line x1="23.3285" x2="50" y1="48.3267" y2="48.3267" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32,11c2.3074,2.6871,5.4995,4.4605,9,5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLipstick

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "waning gibbous moon" (black) [1F316]. */
-const EmojiWaningGibbousMoonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWaningGibbousMoonBlack = lynxIcon(`
   <g id="line-supplement">
     <path fill="#000000" d="M55,35A28.001,28.001,0,0,1,28.4535,62.9626,27.9995,27.9995,0,1,0,36,8q-.7312,0-1.4535.0374A28.0059,28.0059,0,0,1,55,35Z"/>
   </g>
@@ -13,7 +10,5 @@ const EmojiWaningGibbousMoonBlack = {
     <circle cx="36" cy="36" r="28" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M55,35A28.001,28.001,0,0,1,28.4535,62.9626,27.9995,27.9995,0,1,0,36,8q-.7312,0-1.4535.0374A28.0059,28.0059,0,0,1,55,35Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWaningGibbousMoonBlack

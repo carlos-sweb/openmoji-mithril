@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "schwäbisch gmünd ratshaus" (black) [E209]. */
-const EmojiSchwaBischGmuNdRatshausBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSchwaBischGmuNdRatshausBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="39 26 39 18 38 18 38 15 37 15 37 13 35 13 35 15 34 15 34 18 33 18 33 26"/>
     <rect x="34" y="52" rx="1.4085" width="5" height="8" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -36,7 +33,5 @@ const EmojiSchwaBischGmuNdRatshausBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.6663,26.6857H31.3705l-9.2572,5.1429a13.3413,13.3413,0,0,1-1.0285,3.0856,4.99,4.99,0,0,1-3.0857,2.0572H18V38h2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M52,38h2V36.9714a4.99,4.99,0,0,1-3.0857-2.0572,13.3441,13.3441,0,0,1-1.0286-3.0856l-9.2571-5.1429H38.3337"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSchwaBischGmuNdRatshausBlack

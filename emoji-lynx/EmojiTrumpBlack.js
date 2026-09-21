@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "trump" (black) [E183]. */
-const EmojiTrumpBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTrumpBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47.54,38.1889 c1.8096,0.6235,6.2091,2.3107,8.3564,4.6279c2.9678,3.2048,3.4785,13.0241,3.5335,14.3202"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.0886,57.1368 c0.3035-1.1772,3.4064-13.0738,5.4818-15.478c1.938-2.246,10.925-5.9,10.925-5.9l1.5259,0.1812"/>
@@ -24,7 +21,5 @@ const EmojiTrumpBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M50.0354,15.5568c-3.029-1.269-6.474-3.82-10.58-4.834c-2.849-0.7-6.005-0.811-8.979,1.267c-2.518,1.754-5.229,8.09-4.641,13.479 c0,0,0.948-2.771,2.891-0.291l0.6,2.725c-0.161-1.025-0.237-2.062-0.229-3.1c0.138-0.815,0.387-0.869,1.16-2.545 c1.122-2.431,0.958-3.65,0.313-4.268c0.2,0.052,0.376,0.1,0.51,0.146c2.969,0.974,3.671,1.442,4.53,1.734 c3.088,1.047,11.113,1.707,14.641,0.277c2.639-1.068,3.971-4.854,3.971-4.854C52.9314,15.9908,51.4014,16.0868,50.0354,15.5568z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M39.7204,33.1368 L39.7204,33.1368c0.85,0.181,1.391,1.015,1.21,1.863l-0.253,1.189c-0.181,0.849-1.015,1.391-1.863,1.209h-0.001 c-0.849-0.18-1.391-1.015-1.21-1.863l0.253-1.189C38.0374,33.4978,38.8724,32.9558,39.7204,33.1368z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTrumpBlack

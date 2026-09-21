@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "authority building" (black) [E093]. */
-const EmojiAuthorityBuildingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAuthorityBuildingBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m27.3106,10.34c2.0697-1.3392,4.4684-2.0822,6.9327-2.1474,4.5418,0,8.4376,3.9373,14.3338,3.9373.8692,0,1.3042-.3912,2.1814-.3912.7275,0,1.0179.52,1.0179,1.4384v13.6052c0,.7168-.783,1.531-3.0816,1.531-6.91,0-10.8055-3.9084-14.8143-3.9084-2.3906.0452-4.7105.8194-6.6491,2.219v-4.2672"/>
     <line x1="23.9719" x2="23.9719" y1="8.3472" y2="39.0334" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -19,7 +16,5 @@ const EmojiAuthorityBuildingBlack = {
     <rect x="48.8273" y="46.6626" width="5.4289" height="12.1644" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="55.161 43.15 35.82 33.04 16.478 43.15 55.161 43.15"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAuthorityBuildingBlack

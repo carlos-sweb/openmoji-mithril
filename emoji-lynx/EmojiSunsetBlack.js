@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sunset" (black) [1F307]. */
-const EmojiSunsetBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSunsetBlack = lynxIcon(`
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="51.013 66.981 51.013 36.981 67.013 36.981 67.013 66.981"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="5.013 66.981 5.013 45.981 39.013 45.981 39.013 66.981"/>
@@ -27,7 +24,5 @@ const EmojiSunsetBlack = {
     <line x1="43.0131" x2="43.0131" y1="35.9814" y2="66.9814" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M23.8748,42.982a15.002,15.002,0,1,1,28.0916-9.0372"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSunsetBlack

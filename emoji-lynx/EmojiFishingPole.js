@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fishing pole" (color) [1F3A3]. */
-const EmojiFishingPole = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFishingPole = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m46.8612,65.5371l-1.6868.8404c-.7318.3646-1.579-.3197-1.2981-1.065,1.1586-3.0731,5.3156-4.8418,5.3156-4.8418-6.0185-6.5137-5.6827-14.7094-5.6827-14.7094-.3442-12.4753,7.5746-12.7613,7.5746-12.7613,0,0,8.6088,0,9.6976,12.9822,0,0,.0474,6.5397-7.5845,14.4886,0,0,4.139,1.7874,5.1468,4.8905.2414.7433-.5889,1.3958-1.3077,1.0377l-1.7297-.8618c-2.648-1.3195-5.7971-1.3195-8.4451,0Z"/>
     <path fill="#92d3f5" d="m43.7957,52.5248c-.5335,0-4.821.0934-5.5082.1939v-3.9962s.8311-3.9527,5.5082-4.8481"/>
@@ -24,7 +21,5 @@ const EmojiFishingPole = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15.1732,49.142l-4.2894,17.4836c-3.5506-.0794-5.7337-1.4067-5.7337-1.4067l4.2894-17.4836s2.6145,1.4067,5.7337,1.4067Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6.0532,61.5291s2.6145,1.4067,5.7337,1.4067"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFishingPole

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "smiling face with sunglasses" (black) [1F60E]. */
-const EmojiSmilingFaceWithSunglassesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSmilingFaceWithSunglassesBlack = lynxIcon(`
   <g id="line">
     <circle cx="35.8871" cy="36.0565" r="23" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M45.7019,44.862c-6.574,3.5248-14.0454,3.6576-19.6295,0"/>
@@ -17,7 +14,5 @@ const EmojiSmilingFaceWithSunglassesBlack = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="52.6639,29.9332 53.097,26.5619 49.2641,26.0342"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M33.9549,30.0271c0,0,1.7954-3.7509,3.6988,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSmilingFaceWithSunglassesBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man gesturing OK: medium skin tone" (color) [1F646-1F3FD-200D-2642-FE0F]. */
-const EmojiManGesturingOKMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManGesturingOKMediumSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M56.5094,60.9261l4-17-10.9375-4.375-3.3966-.7953c-2.4082,3.0312.4884,1.516-1.0917,2.5687-6.6572,8.6026-13.8242,6.1338-19.0742.05-.1789-1.3857.502.1162-.3457-1.916l-3.1543.4678-10,3,4,18"/>
   </g>
@@ -28,7 +25,5 @@ const EmojiManGesturingOKMediumSkinTone = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="46.574 38.756 60.009 43.958 56.009 59.958"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M24.9022,33.0685c-.1015,7.999,4.9365,14,11,14,5.9365,0,11.0635-6,11.0635-14,0-5-3-11-3-11-8,0-10,3-16,1C27.9657,23.0685,24.9657,28.0685,24.9022,33.0685Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManGesturingOKMediumSkinTone

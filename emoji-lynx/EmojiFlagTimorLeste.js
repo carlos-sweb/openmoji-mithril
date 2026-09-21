@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Timor-Leste" (color) [1F1F9-1F1F1]. */
-const EmojiFlagTimorLeste = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagTimorLeste = lynxIcon(`
   <g id="color">
     <path fill="#d22f27" d="m5.4907,17h61.5093v38H5V17.4906c0-.271.2197-.4907.4907-.4907Z"/>
     <path fill="#f1b31c" d="m38,36L6.6524,54.0486c-.7349.4231-1.6524-.1073-1.6524-.9553V18.8964c0-.8434.9125-1.371,1.6435-.9502l31.3565,18.0538Z"/>
@@ -15,7 +12,5 @@ const EmojiFlagTimorLeste = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagTimorLeste

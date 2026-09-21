@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "biting lip" (black) [1FAE6]. */
-const EmojiBitingLipBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBitingLipBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M64 37C64 42.5 61 55 50.5 55C31.7819 55 18.3025 46.0195 12 40.745"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M64 37C61.5 39 54.9 42.6 48.5 43C44.0945 43.2753 41.0537 41.5795 38.5425 40"/>
@@ -17,7 +14,5 @@ const EmojiBitingLipBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M44 36C44 36.5 44.3 37.5 45.5 37.5C46.7 37.5 48.6667 37.5 50.5 37.5"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" d="M28 36C28 36.5 27.7 37.5 26.5 37.5C25.3 37.5 24.8333 37.5 23 37.5"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBitingLipBlack

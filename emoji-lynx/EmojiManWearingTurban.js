@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man wearing turban" (color) [1F473-200D-2642-FE0F]. */
-const EmojiManWearingTurban = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManWearingTurban = lynxIcon(`
   <g id="color">
     <path fill="#b1cc33" d="M54.8642,59.1073s2-13.7973-10-13.7973c-3.1918,2.1192-5.9264,3.5837-9,3.5775h.125c-3.0736.0062-5.8081-1.4583-9-3.5775-12,0-10,13.7973-10,13.7973"/>
     <path fill="#5c9e31" d="M45.2573,44.1632c-3.1127,2.0751-4.9833,3.24-8.9725,3.8184,12.8266.404,12.8266,7.1793,13.575,11.1071h5.02S57.0405,44.1632,45.2573,44.1632Z"/>
@@ -42,7 +39,5 @@ const EmojiManWearingTurban = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.0184,35.1225a18.5724,18.5724,0,0,1,6.73-3.72c3.8-1.09,8.67-.82,13.08,4.48"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44.9084,45.1125a.9322.9322,0,0,0-.11.07c-.37.21-1.64.96-3.33,2a.01.01,0,0,1-.01.01c-5.09,3.14-14.05,8.95-14.05,10.92"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManWearingTurban

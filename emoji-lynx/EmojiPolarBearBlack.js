@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "polar bear" (black) [1F43B-200D-2744-FE0F]. */
-const EmojiPolarBearBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPolarBearBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m38.7948,49.3248s1.3527.2556,2.8951.4089c.6907,5.1227-4.3352,3.666-5.16,3.01s-9.8459-12.5737-12.8626-15.5156c-.0063-.006-.0102-.0141-.011-.0228-4.6079-4.4978-6.4753-4.7023-6.7737-4.7023h-.0442c-8.4827,3.328-9.4763.3022-10.5546-1.31-1.0129-1.5145,6.3159-5.7589,10.4-6.9135,1.5767-.4458,2.0188.319,4.3654.3568,0,0,16.5855.6882,17.6021.5973.9171-.0909,4.7625-1.1017,5.4808-1.2835.0663-.0228.1105-.0341.1105-.0341,1.5765-.5159,3.2253-.7766,4.8841-.7724,7.4588,0,16.4107,7.6182,16.8734,9.3746v.7731c.0131.5341-.4093.9777-.9435.9908-.1877.0046-.3726-.0455-.5323-.1443l-2.8521-1.809"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m23.6673,37.2281c.1326.5339,3.2727,12.0447-.011,12.5056s-3.79,1.1586-3.7018,3.4757h8.7517l4.1658-3.8394"/>
@@ -14,7 +11,5 @@ const EmojiPolarBearBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55.8671,50.631s-6.6033.4392-5.0148,4.2254h9.3464s2.3113-.1064,1.3994-5.8564c0,0,3.5266-9.125,1.3985-15.8437"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17.1768,26.1842s2.3021-.38,1.3813,3.0754"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPolarBearBlack

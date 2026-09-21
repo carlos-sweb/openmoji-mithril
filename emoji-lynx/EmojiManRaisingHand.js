@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man raising hand" (color) [1F64B-200D-2642-FE0F]. */
-const EmojiManRaisingHand = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManRaisingHand = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M22.4944,65l-.2186-2.8134A23.4263,23.4263,0,0,1,17.94,58.6693L21.9169,48.6c1.0234-2.5912,1.6347-3.5607,3.0234-2.5912,3.0068,2.0987,6.3457,2.9219,7.625,3.85,4.3281,3.6926,12.34,4.625,19.3405,1.46,3,0,9.5687,3.8215,9.5687,9.09v4.5458Z"/>
   </g>
@@ -29,7 +26,5 @@ const EmojiManRaisingHand = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.4993,41.0039c-3,0-4-7-4-14,0-6,5-12,14-12s14,6,14,12c0,7-1,14-4,14"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M31.4358,34.0039c-.1015,7.999,4.9365,14,11,14,5.9365,0,11.0635-6,11.0635-14,0-5-3-11-3-11-8,0-10,3-16,1C34.4993,24.0039,31.4993,29.0039,31.4358,34.0039Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManRaisingHand

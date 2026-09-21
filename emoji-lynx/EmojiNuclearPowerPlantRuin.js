@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nuclear power plant ruin" (color) [E2D5]. */
-const EmojiNuclearPowerPlantRuin = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNuclearPowerPlantRuin = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" d="m20,32l3,5-2,3,1,3-5.0352,2.0141c-.7075,8.4799-2.9789,17.3004-5.9648,20.9859h22V30.1429l-13,1.8571Z"/>
     <path fill="#9b9b9a" d="m45,47c-2.3974-.0021-4.6689,1.0734-6.1866,2.9292-1.1117-7.2961-1.1712-15.1315.3836-19.9292h-5.197l-1,.1429v35.8571h14v-17l-1.3018-1.9526c-.2312-.0216-.4612-.0474-.6982-.0474Z"/>
@@ -17,7 +14,5 @@ const EmojiNuclearPowerPlantRuin = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="53 66 57 66 57 42.5 54 41 53 37 51 36.6 51 50.721"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m44.197,66h8.803v-.75l-1-1.25,1-3-3-2,2.9449-4.9082c-.0094-.0831-.0256-.164-.0376-.2463l-2.9073-4.8455h-3l-1.31-1.9651c-.228-.0196-.4571-.0349-.69-.0349-2.3974-.0021-4.6689,1.0734-6.1866,2.9292"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNuclearPowerPlantRuin

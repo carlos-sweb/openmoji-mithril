@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "gem stone" (black) [1F48E]. */
-const EmojiGemStoneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGemStoneBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="56.3771,11.9798 16.3771,11.9798 4,23.3481 36,64.0837 68,23.3481"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="55.7486,23.8595 36,64.0837 36,24.3482 36,11.9798 16.2556,23.3482"/>
@@ -14,7 +11,5 @@ const EmojiGemStoneBlack = {
     <line x1="36" x2="55.7486" y1="11.9798" y2="23.3482" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="56.3771,11.9798 16.3771,11.9798 4,23.3481 36,64.0837 68,23.3481"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGemStoneBlack

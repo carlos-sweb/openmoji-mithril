@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "chart decreasing" (color) [1F4C9]. */
-const EmojiChartDecreasing = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiChartDecreasing = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m12.05 59.91h47.9v-47.9h-47.9z"/>
     <path fill="#92d3f5" stroke="none" d="M31.2379,28.4166l-6.8898-8.6812l-2.8384,2.5491l8.7131,11.7972l6.5938-3.5617 c0.1425-0.0713,11.2762,21.2218,11.2762,21.2218l3.397-1.4527L39.0546,25.2048C39.0546,25.2048,31.5269,28.8004,31.2379,28.4166z"/>
@@ -29,7 +26,5 @@ const EmojiChartDecreasing = {
     <line x1="43.2552" x2="59.2261" y1="24.1772" y2="24.1772" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="12.2635" x2="17.5519" y1="24.1772" y2="24.1772" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiChartDecreasing

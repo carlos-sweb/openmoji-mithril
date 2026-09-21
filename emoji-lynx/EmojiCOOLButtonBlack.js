@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "COOL button" (black) [1F192]. */
-const EmojiCOOLButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCOOLButtonBlack = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000">
     <rect x="12" y="12" width="48" height="48" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill-rule="evenodd" stroke-width="1.963" d="m11.92 30.64 48.1-10.98v21.7l-48.1 11.34z" clip-rule="evenodd"/>
@@ -16,7 +13,5 @@ const EmojiCOOLButtonBlack = {
     <path transform="matrix(.8993 0 0 .8993 3.396 3.24)" d="m21.94 44.83c-0.7399 0.8728-1.715 1.522-2.785 1.763-2.321 0.5222-4.207-1.08-4.207-3.58v-3.621 3.621-3.621c0-2.501 1.886-4.943 4.207-5.456 1.07-0.2364 2.045-0.02173 2.785 0.5211"/>
     <path transform="matrix(.8993 0 0 .8993 3.396 3.24)" d="m43.28 41.17c-2.284 0.514-4.141-1.078-4.141-3.559v-3.593c0-2.481 1.856-4.901 4.141-5.406 2.283-0.5042 4.129 1.093 4.129 3.567v3.583c0 2.474-1.847 4.894-4.129 5.408z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCOOLButtonBlack

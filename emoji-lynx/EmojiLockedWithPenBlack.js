@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "locked with pen" (black) [1F50F]. */
-const EmojiLockedWithPenBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLockedWithPenBlack = lynxIcon(`
   <g id="line">
     <g id="_1F50F-2">
       <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M13.6972,34.3068c0-7.5322,2.9241-15.2583,10.1189-15.2583,6.899,0,10.2745,6.0553,10.5858,15.2583"/>
@@ -16,7 +13,5 @@ const EmojiLockedWithPenBlack = {
       <line x1="43.2083" x2="50.6132" y1="29.6433" y2="34.3014" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLockedWithPenBlack

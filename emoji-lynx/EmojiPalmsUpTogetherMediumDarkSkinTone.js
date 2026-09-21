@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "palms up together: medium-dark skin tone" (color) [1F932-1F3FE]. */
-const EmojiPalmsUpTogetherMediumDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPalmsUpTogetherMediumDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" stroke="none" d="M27.1667,68H4V56.3333l15-7.5c-2.6034,8.5367,7.4551,14.557,12.5,11.6667L27.1667,68z"/>
     <path fill="#92d3f5" stroke="none" d="M46.2917,68h23.1667V56.3333l-15-7.5c2.6034,8.5367-7.4551,14.557-12.5,11.6667L46.2917,68z"/>
@@ -28,7 +25,5 @@ const EmojiPalmsUpTogetherMediumDarkSkinTone = {
     <line x1="50.9243" x2="49.9568" y1="15.4036" y2="9.0474" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="53.5294" x2="56.8646" y1="17.2572" y2="13.5321" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPalmsUpTogetherMediumDarkSkinTone

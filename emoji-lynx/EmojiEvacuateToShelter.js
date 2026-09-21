@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "evacuate to shelter" (color) [E088]. */
-const EmojiEvacuateToShelter = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEvacuateToShelter = lynxIcon(`
   <g id="color">
     <polygon fill="#92d3f5" points="52.501 10.564 42.173 18.423 42.173 31.876 46.953 31.876 46.953 22.645 52.536 18.334 58.133 22.645 58.133 31.876 62.914 31.876 62.914 18.435 52.501 10.564"/>
   </g>
@@ -26,7 +23,5 @@ const EmojiEvacuateToShelter = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.2665,39.4412v2.2139l4.1608,5.1243a6.6219,6.6219,0,0,1,.7557,2.7049l.4056,9.1511c.0862,1.78-.8241,2.72-1.7359,2.72-.97,0-1.72-.9124-1.8839-2.6317l-1.053-8.6589L19,44.1708a3.216,3.216,0,0,1-1.1132-2.3657,5.4174,5.4174,0,0,1,.7648-2.5813l3.2935-5.9464c1.1409-2.2818,2.2558-3.0919,3.7618-3.0919a2.7143,2.7143,0,0,1,2.681,2.7675"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28.1172,26.1165a3.2656,3.2656,0,1,1,3.2656,3.2656"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEvacuateToShelter

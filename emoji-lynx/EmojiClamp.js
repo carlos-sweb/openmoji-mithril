@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clamp" (color) [1F5DC]. */
-const EmojiClamp = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClamp = lynxIcon(`
   <g id="color">
     <rect x="43.0002" y="36.1661" width="3.0001" height="3.3833" fill="#9B9B9A" stroke="none"/>
     <rect x="43.0013" y="46.1665" width="3.0001" height="12" fill="#9B9B9A" stroke="none"/>
@@ -23,7 +20,5 @@ const EmojiClamp = {
     <line x1="41" x2="37" y1="52.1661" y2="52.1661" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="52" x2="48" y1="52.1661" y2="52.1661" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClamp

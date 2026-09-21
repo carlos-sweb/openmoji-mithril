@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "love-you gesture: dark skin tone" (color) [1F91F-1F3FF]. */
-const EmojiLoveYouGestureDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLoveYouGestureDarkSkinTone = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin">
@@ -17,7 +14,5 @@ const EmojiLoveYouGestureDarkSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.0394,27.604 c0.2371-2.1519,1.7598-3.4091,3.8076-3.4552c1.9138-0.043,3.9409,0.9576,3.9591,3.2774c0,0,0.1972,6.9598,0.1592,7.3048 c-0.2371,2.1519-2.1736,3.7041-4.3255,3.467c-2.1518-0.237-3.3818-2.198-3.467-4.3254L30.0394,27.604z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.1086,27.604 c0.2371-2.1519,1.7598-3.4091,3.8076-3.4552c1.9138-0.043,3.9409,0.9576,3.9591,3.2774c0,0,0.1972,6.9598,0.1592,7.3048 c-0.2371,2.1519-2.1736,3.7041-4.3255,3.467c-2.1518-0.237-3.3818-2.198-3.467-4.3254L22.1086,27.604z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLoveYouGestureDarkSkinTone

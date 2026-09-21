@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fleur-de-lis" (color) [269C]. */
-const EmojiFleurDeLis = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFleurDeLis = lynxIcon(`
   <g id="color">
     <rect x="26.5892" y="46.4526" width="19.0828" height="3.5434" fill="#fcea2b" stroke="#fcea2b" stroke-miterlimit="10" stroke-width="0.9541"/>
     <path fill="#fcea2b" d="M38.3593,53.3015c.7194,2.8877,1.9365,3.03,1.9365,6.2157,0,4.5215-4.2132,6.9738-4.2132,6.9738l-.0154.009-.0153-.009s-4.2132-2.4523-4.2132-6.9738c0-3.1847,1.2166-3.3279,1.936-6.2137"/>
@@ -31,7 +28,5 @@ const EmojiFleurDeLis = {
     <line x1="45.672" x2="26.5892" y1="49.996" y2="49.996" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9083"/>
     <line x1="26.5892" x2="45.672" y1="46.4526" y2="46.4526" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9083"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFleurDeLis

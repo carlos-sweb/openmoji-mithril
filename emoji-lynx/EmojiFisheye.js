@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fisheye" (color) [25C9]. */
-const EmojiFisheye = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFisheye = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="28" fill="#61B2E4"/>
     <circle r="18" transform="matrix(-1 0 0 1 36 36)" fill="#92D3F5"/>
@@ -15,7 +12,5 @@ const EmojiFisheye = {
     <circle cx="36" cy="36" r="7.25" fill="#000"/>
     <circle cx="36" cy="36" r="28" fill="none" stroke="#000" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFisheye

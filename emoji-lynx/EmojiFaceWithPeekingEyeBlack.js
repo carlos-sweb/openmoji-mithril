@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with peeking eye" (black) [1FAE3]. */
-const EmojiFaceWithPeekingEyeBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithPeekingEyeBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42.2391,58.1437c-1.984,.5579-4.0767,.8563-6.2391,.8563-2.2389,0-4.4031-.3199-6.4494-.9165"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.8745,47.1427c-1.8315-3.301-2.8745-7.1-2.8745-11.1427,0-12.7025,10.2975-23,23-23s23,10.2975,23,23c0,4.0427-1.043,7.8418-2.8747,11.1429"/>
@@ -18,7 +15,5 @@ const EmojiFaceWithPeekingEyeBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.2,57.58c-.13-1.48-.68-3.04-.68-3.04,0,0-5.41-6.26-7.85-16.35-.43-1.78,1.14-3.18,2.53-1.79-1.55-2.92-1.78-4.25-.33-4.76,.12-.04,.23-.06,.37-.06,.68-.01,1.57,.58,2.44,2.45,.63,1.35,1.35,2.8,2.52,4.77,.41,.7,.89,1.47,1.43,2.33,.2-.92,.33-1.84,.41-2.74,.38-3.96-.1-7.53,.39-9.33,.22-.83,.65-1.29,1.46-1.24,.89,.06,1.56,.91,1.4,2.18,0,0,.75-1.49,2.21-.72,1.22,.65,.74,1.89,.41,9.7,.27-2.22,1.09-3.4,2.39-3.4,.46,.01,.91,.23,1.2,.6,.6,.7,.7,1.8,.5,3.8-.6,6.7-1,7.9-1.2,8.3-.4,.8-.8,1.7-1.2,2.5,.2,.9,.7,3.1,1.3,6.1"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M40.24,31.58c.43-.97,1.13-1.79,2.02-2.34,.8-.5,1.74-.79,2.74-.79,.88,0,1.7,.22,2.43,.61"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithPeekingEyeBlack

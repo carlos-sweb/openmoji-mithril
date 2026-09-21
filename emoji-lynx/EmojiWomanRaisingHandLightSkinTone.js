@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman raising hand: light skin tone" (color) [1F64B-1F3FB-200D-2640-FE0F]. */
-const EmojiWomanRaisingHandLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanRaisingHandLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M22.4944,65l-.2186-2.8134A23.4263,23.4263,0,0,1,17.94,58.6693L21.9169,48.6c1.0234-2.5912,1.6347-3.5607,3.0234-2.5912,3.0068,2.0987,6.3457,2.9219,7.625,3.85,4.3281,3.6926,12.34,4.625,19.3405,1.46,3,0,9.5687,3.8215,9.5687,9.09v4.5458Z"/>
   </g>
@@ -29,7 +26,5 @@ const EmojiWomanRaisingHandLightSkinTone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24.1413,40.2425c.6148-1.774,1.4978-3.4939,2.1913-5.2759,1.6357-4.2-.209-6.4512,1.291-12.0342,1.48-5.5,7.2773-8.9658,13.709-8.9658,5.4,0,8,3,8,3a8.1321,8.1321,0,0,1,7.4052,8.0371c.3867,7.18,1.0244,7.1523,3.4287,12.8222A11.5986,11.5986,0,0,1,58.72,49.489"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M31.3326,33.9666c0,8,5,14,11,14s11-6,11-14c0-5-2-8-6-12-4,4-16,9-16,11Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanRaisingHandLightSkinTone

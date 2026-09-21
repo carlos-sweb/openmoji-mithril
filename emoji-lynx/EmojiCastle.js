@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "castle" (color) [1F3F0]. */
-const EmojiCastle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCastle = lynxIcon(`
   <g id="color">
     <rect x="30" y="27" width="12" height="14" fill="#9B9B9A" stroke="none"/>
     <polygon fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="52,55 20,55 20,41 20,39 20,39 27,39 27,41 32,41 31.9998,39 40,39 40,41 45,41 45,39 52,39 52,41 52,39"/>
@@ -39,7 +36,5 @@ const EmojiCastle = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M16,40h-2v-3c0-0.5523,0.4477-1,1-1l0,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M58,40h-2v-3c0-0.5523,0.4477-1,1-1l0,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCastle

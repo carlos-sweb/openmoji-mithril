@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "no stencil" (black) [E0A4]. */
-const EmojiNoStencilBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNoStencilBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M58.9991,59.9991h-46 c-0.5518-0.0012-0.9988-0.4482-1-1v-46c0.0012-0.5518,0.4482-0.9988,1-1h46c0.5518,0.0012,0.9988,0.4482,1,1v46 c0.0314,0.5209-0.3653,0.9686-0.8862,1C59.0751,60.0014,59.037,60.0014,58.9991,59.9991z"/>
     <g>
@@ -17,7 +14,5 @@ const EmojiNoStencilBlack = {
       <path d="M42.9715,30.0554v2.0313c1.0566,0.2784,1.7895,1.2385,1.7793,2.3312v2.74c-0.0303,1.0763-0.7477,2.0117-1.7793,2.32v2.04 c2.1516-0.3418,3.746-2.181,3.7793-4.3593v-2.74C46.7724,32.219,45.1518,30.3479,42.9715,30.0554z"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNoStencilBlack

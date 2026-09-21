@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ct scan" (color) [E329]. */
-const EmojiCtScan = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCtScan = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="M11.7973,32.1459H24.7654a1.6942,1.6942,0,0,1,1.2068.502,14.3889,14.3889,0,0,1,2.5537,3.0972l.0151.0527a1.6913,1.6913,0,0,1-1.6555,2.1059l-15.0669-.008a1.7012,1.7012,0,0,1-1.7-1.6852l-.0222-2.3473A1.7012,1.7012,0,0,1,11.7973,32.1459Z"/>
   </g>
@@ -16,7 +13,5 @@ const EmojiCtScan = {
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M11.7973,32.1459H24.7654a1.6942,1.6942,0,0,1,1.2068.502,14.3889,14.3889,0,0,1,2.5537,3.0972l.0151.0527a1.6913,1.6913,0,0,1-1.6555,2.1059l-15.0669-.008a1.7012,1.7012,0,0,1-1.7-1.6852l-.0222-2.3473A1.7012,1.7012,0,0,1,11.7973,32.1459Z"/>
     <ellipse cx="32.7995" cy="34.8192" rx="3.2175" ry="3.1989"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCtScan

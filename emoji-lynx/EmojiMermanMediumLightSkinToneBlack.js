@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "merman: medium-light skin tone" (black) [1F9DC-1F3FC-200D-2642-FE0F]. */
-const EmojiMermanMediumLightSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMermanMediumLightSkinToneBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M15.2369,34.3591C22.563,31.79,21.5494,25.363,26.12,25.363H36.09c4.5713,0,5.7744,7.5483,7.4062,15.2461"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M24.7388,31.15l-.3877,9.8672A21.6657,21.6657,0,0,0,33.9146,58.822s7.6973,6.6094,19.4375-5.5029"/>
@@ -21,7 +18,5 @@ const EmojiMermanMediumLightSkinToneBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M39.5327,40.86c0,1.4443-4.0068,2.624-8.5947,2.624-4.5918,0-6.5859-1.0635-6.5859-2.5078"/>
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M36.1942,16.6437a4.6655,4.6655,0,1,1-4.6659-4.6651h.0009A4.6657,4.6657,0,0,1,36.1942,16.6437Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMermanMediumLightSkinToneBlack

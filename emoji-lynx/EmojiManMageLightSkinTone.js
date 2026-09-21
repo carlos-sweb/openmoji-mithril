@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man mage: light skin tone" (color) [1F9D9-1F3FB-200D-2642-FE0F]. */
-const EmojiManMageLightSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManMageLightSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#92D3F5" d="M58,25.7l-11.9-4.8c-0.2-4.3-1.9-11.3-10.6-11.6c-12,0-14.6,11-14.6,11l-1,2l-0.6,1.2L14,25.7"/>
     <path fill="#61B2E4" d="M19.0858,25.7L16.8,31.4c-0.3115,0.5831-0.3832,1.2648-0.2,1.9L19.5,44 c0.0564,0.1933,0.2588,0.3043,0.4521,0.2479C20.0717,44.213,20.1651,44.1195,20.2,44l0.2-7.7l0.6-0.6l1-1.3l8-8.8"/>
@@ -33,7 +30,5 @@ const EmojiManMageLightSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33,38.1c1.9,1,4.1,1,6,0"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.7577,54.3964 c13.4215-9.6934,13.0943-22.1473,11.7-27.5827h-1.7c0,0,1.5809,7.897-9.7577,7.897s-9.496-7.897-9.496-7.897h-1.7463 C23.1558,31.5588,22.3608,42.4881,35.7577,54.3964z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManMageLightSkinTone

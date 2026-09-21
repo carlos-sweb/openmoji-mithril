@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "AB button (blood type)" (color) [1F18E]. */
-const EmojiABButtonBloodType = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiABButtonBloodType = lynxIcon(`
   <g id="line-supplement" transform="translate(-.005724 -.00219)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4.754" clip-rule="evenodd">
     <path transform="translate(1.885 -.5999)" d="m32.59 45.02-7.131-16.64-7.131 16.64"/>
     <path transform="translate(1.885 -.5999)" d="m20.7 41.02h9.508"/>
@@ -22,7 +19,5 @@ const EmojiABButtonBloodType = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiABButtonBloodType

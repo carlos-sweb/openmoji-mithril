@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pager" (color) [1F4DF]. */
-const EmojiPager = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPager = lynxIcon(`
   <g id="color">
     <rect x="11" y="22" width="50" height="28" fill="#d0cfce"/>
     <polygon fill="#9b9b9a" points="61 50 50.685 50 36.512 22 61 22 61 50"/>
@@ -25,7 +22,5 @@ const EmojiPager = {
     <circle cx="28.6383" cy="44.1" r="2"/>
     <circle cx="36.6383" cy="44.1" r="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPager

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "safety vest" (color) [1F9BA]. */
-const EmojiSafetyVest = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSafetyVest = lynxIcon(`
   <g id="color">
     <path fill="#e27022" d="M15.52,11.4V60.6a7.4,7.4,0,0,0,7.4,7.4H48.8a7.4,7.4,0,0,0,7.4-7.4V11.4A7.4,7.4,0,0,0,48.8,4h0L36.2773,5.47q-.2772.01-.5546,0L23.2,4h-.28A7.4,7.4,0,0,0,15.52,11.4Z"/>
     <line x1="51.36" x2="43.076" y1="4.0377" y2="48.8" fill="none" stroke="#fcea2b" stroke-miterlimit="10" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiSafetyVest = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M32,67s3.2571.1077,4.38.1c1.06-.0073,4.12-.1,4.12-.1"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28.4475,68H23.51A7.51,7.51,0,0,1,16,60.49V9.5156C16,5,20.28,4,21.56,4h1.4106a1.28,1.28,0,0,1,1.0854.6016l9.81,16.2647a4.2317,4.2317,0,0,1,.5984,1.8988l.0062.0915q.01.1434.01.2871V61.9675A6.0326,6.0326,0,0,1,28.4475,68Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSafetyVest

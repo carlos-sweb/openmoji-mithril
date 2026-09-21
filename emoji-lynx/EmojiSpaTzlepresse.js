@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "spätzlepresse" (color) [E146]. */
-const EmojiSpaTzlepresse = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpaTzlepresse = lynxIcon(`
   <g id="color">
     <g>
       <path fill="#fcea2b" d="M18.92,47.8533a.8.8,0,0,1-.6973-.4053c-.2339-.4131-1.3652-2.5478-.6709-4.01A8.51,8.51,0,0,0,18.12,40.85a.8236.8236,0,0,1,.8428-.7548.8.8,0,0,1,.7548.8418,9.9993,9.9993,0,0,1-.7207,3.1875,3.93,3.93,0,0,0,.6182,2.5341.8.8,0,0,1-.6953,1.1944Z"/>
@@ -33,7 +30,5 @@ const EmojiSpaTzlepresse = {
     <path fill="none" d="M23.7608,52.3945a.7981.7981,0,0,1-.5864-.2559,2.5593,2.5593,0,0,1-.7188-1.9453,1.6885,1.6885,0,0,1,.9165-1.23c.9385-.5215,1.4683-1.0527,1.4541-1.458-.0181-.501-.8467-1.1162-1.4009-1.374a.8.8,0,0,1,.669-1.4541c.2319.1064,2.2666,1.0879,2.3305,2.7656.0415,1.0752-.7246,2.0576-2.2758,2.9189a.3476.3476,0,0,0-.1158.0879,1.23,1.23,0,0,0,.314.6006.8.8,0,0,1-.5864,1.3438Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M20.3892,40.83a9.2588,9.2588,0,0,1-.6445,2.887c-.5514,1.1608.6445,3.2722.6445,3.2722"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpaTzlepresse

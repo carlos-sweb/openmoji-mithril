@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "heart on fire" (black) [2764-FE0F-200D-1F525]. */
-const EmojiHeartOnFireBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHeartOnFireBlack = lynxIcon(`
   <g id="line" fill="none" stroke="#000" stroke-width="2">
     <path transform="translate(0)" stroke-linecap="round" stroke-linejoin="round" d="m51.06 38.55a8.001 8.001 0 0 0-15.04-3.802 7.999 7.999 0 1 0-13.27 8.818l-0.0028 0.0022 2.946 3.651"/>
     <path transform="translate(0)" stroke-linecap="round" stroke-linejoin="round" d="m34.46 58.09 1.554 1.926 6.285-7.79"/>
@@ -13,7 +10,5 @@ const EmojiHeartOnFireBlack = {
     <path transform="translate(0)" stroke-miterlimit="10" d="m32.46 54.23a4.458 4.458 0 0 0 0.9262-3.814c-0.2438-1.92-1.758-4.839-3.725-5.268-0.4856-0.1059 0.71 2.374-0.3283 4.153-1.126 1.93-2.058 2.9-1.534 4.881 0.5386 2.035 3.744 3.784 3.874 3.218a1.534 1.534 0 0 0-0.0495-0.5452 3.469 3.469 0 0 1 0.836-2.625z"/>
     <path transform="translate(0)" stroke-miterlimit="10" d="m46.22 36.27c0.5993-0.225-0.5392 2.822 1.047 4.593 1.721 1.921 3.049 2.808 2.686 5.147-0.3733 2.403-4.171 5.068-4.422 4.46a1.557 1.557 0 0 1-0.02-0.6231 3.504 3.504 0 0 0-1.458-2.765 4.513 4.513 0 0 1-1.754-4.081c0.0172-2.209 1.492-5.818 3.921-6.73z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHeartOnFireBlack

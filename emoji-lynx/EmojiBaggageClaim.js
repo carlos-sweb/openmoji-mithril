@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "baggage claim" (color) [1F6C4]. */
-const EmojiBaggageClaim = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBaggageClaim = lynxIcon(`
   <g id="color">
     <rect x="43" y="21" width="18" height="33" fill="#61b2e4"/>
     <rect x="11" y="21" width="32" height="33" fill="#92d3f5"/>
@@ -30,7 +27,5 @@ const EmojiBaggageClaim = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44,21V17s0-4-4.7143-4H33"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBaggageClaim

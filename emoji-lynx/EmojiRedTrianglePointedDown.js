@@ -1,18 +1,13 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "red triangle pointed down" (color) [1F53B]. */
-const EmojiRedTrianglePointedDown = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRedTrianglePointedDown = lynxIcon(`
   <g id="color">
     <path fill="#d22f27" d="m38.45 57.15 22.23-38.5c1.091-1.89-0.2728-4.252-2.455-4.252h-44.45c-2.182 0-3.546 2.362-2.455 4.252l22.23 38.5c1.091 1.89 3.819 1.89 4.91 0z"/>
   </g>
   <g id="line">
     <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="m38.45 57.15 22.23-38.5c1.091-1.89-0.2728-4.252-2.455-4.252h-44.45c-2.182 0-3.546 2.362-2.455 4.252l22.23 38.5c1.091 1.89 3.819 1.89 4.91 0z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRedTrianglePointedDown

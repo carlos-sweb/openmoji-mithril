@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "curling stone" (color) [1F94C]. */
-const EmojiCurlingStone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCurlingStone = lynxIcon(`
   <g id="color">
     <rect x="30" y="17" width="16" height="3" fill="#d22f27"/>
     <path fill="#d22f27" d="M28,17h2a0,0,0,0,1,0,0v6a0,0,0,0,1,0,0H26a0,0,0,0,1,0,0V19A2,2,0,0,1,28,17Z"/>
@@ -22,7 +19,5 @@ const EmojiCurlingStone = {
     <rect x="23" y="25" rx="2" width="26" height="4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M44.5,20H30V17H44.5a1.5,1.5,0,0,1,0,3Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCurlingStone

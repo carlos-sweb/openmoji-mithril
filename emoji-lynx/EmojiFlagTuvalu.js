@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Tuvalu" (color) [1F1F9-1F1FB]. */
-const EmojiFlagTuvalu = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagTuvalu = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#92d3f5"/>
     <polygon fill="#f1b31c" stroke="#f1b31c" stroke-linecap="round" stroke-linejoin="round" points="58.707 25 60.035 21 61.18 24.939 58 22.565 62 22.467 58.707 25"/>
@@ -34,7 +31,5 @@ const EmojiFlagTuvalu = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagTuvalu

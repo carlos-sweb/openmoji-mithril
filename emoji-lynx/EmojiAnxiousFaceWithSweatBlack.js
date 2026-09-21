@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "anxious face with sweat" (black) [1F630]. */
-const EmojiAnxiousFaceWithSweatBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAnxiousFaceWithSweatBlack = lynxIcon(`
   <g id="line">
     <path d="M30,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,28,30,29.3448,30,31"/>
     <path d="M48,31c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,29.3448,48,31"/>
@@ -15,7 +12,5 @@ const EmojiAnxiousFaceWithSweatBlack = {
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M9.2458,27.724 c-0.2538-1.041-0.087-2.1185,0.4698-3.0339c1.8322-3.0136,6.4342-4.1651,6.629-4.2126c0.4053-0.0988,0.8134,0.1495,0.9122,0.5546 c0.0476,0.1952,1.1432,4.8107-0.6888,7.8253l0.0001,0.0004c-1.1491,1.888-3.6208,2.4902-5.5094,1.3416 C10.1434,29.6445,9.4996,28.765,9.2458,27.724z"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M21.9967,17.7451 c3.8787-2.9798,8.7341-4.7512,14.0033-4.7512c12.7059,0,23.0061,10.3002,23.0061,23.0061S48.7059,59.0061,36,59.0061 S12.9939,48.7059,12.9939,36c0-0.396,0.01-0.7896,0.0298-1.1807"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAnxiousFaceWithSweatBlack

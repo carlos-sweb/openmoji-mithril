@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pickup truck" (color) [1F6FB]. */
-const EmojiPickupTruck = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPickupTruck = lynxIcon(`
   <g id="color">
     <path fill="#d22f27" d="M6.7469,52a.9994.9994,0,0,1-1-1V41.8889A3.2209,3.2209,0,0,1,8.4891,38.69l11.3713-2,6.3535-7.8a7.3957,7.3957,0,0,1,5.7529-2.7334H43.2041a2.173,2.173,0,0,1,2.1709,2.1709v8.5273H65.0229a1,1,0,0,1,1,1L66.0259,52Z"/>
     <path fill="#92d3f5" d="M41.2232,38.3284H37.3023a1,1,0,0,1-1-1V30.221a.9994.9994,0,0,1,1-1H40.74a1.5441,1.5441,0,0,1,1.4834,1.5957v6.5117A.9994.9994,0,0,1,41.2232,38.3284Z"/>
@@ -29,7 +26,5 @@ const EmojiPickupTruck = {
     <circle cx="52.9331" cy="51" r="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="23.6505" x2="44.8615" y1="51" y2="51" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPickupTruck

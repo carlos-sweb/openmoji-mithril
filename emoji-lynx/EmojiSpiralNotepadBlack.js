@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "spiral notepad" (black) [1F5D2]. */
-const EmojiSpiralNotepadBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSpiralNotepadBlack = lynxIcon(`
   <g id="line">
     <line x1="45.4806" x2="45.4806" y1="13.9548" y2="19.5906" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="40.7203" x2="40.7203" y1="13.9548" y2="19.5906" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiSpiralNotepadBlack = {
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="54.3253,16.9734 59.96,16.9734 59.997,48.0382 43.6564,60.0864 11.997,60.0918 11.96,16.9734 17.5992,16.9734"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="59.7462,48.0382 43.1384,48.0382 43.1384,53.5175"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSpiralNotepadBlack

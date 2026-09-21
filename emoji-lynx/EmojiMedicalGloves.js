@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "medical gloves" (color) [E0B4]. */
-const EmojiMedicalGloves = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMedicalGloves = lynxIcon(`
   <g id="color">
     <polygon fill="#92d3f5" points="55.822 48.103 41.891 48.103 40.26 41.833 39.393 38.532 39.393 21.809 42.218 20.734 43.404 18.081 46.316 18.081 47.607 16.706 51.553 17.282 51.745 18.617 54.736 19.255 54.735 34.511 56.468 29.149 60.553 27.879 61 30.424 55.822 48.103"/>
     <polygon fill="#92d3f5" points="17.468 47.912 29.404 48.103 31.715 41.537 32.513 38.283 32.356 21.96 30.889 20.734 29.726 20.734 28.434 17.789 25.711 17.789 23.094 16.007 20.596 18.234 17.654 18.292 17.468 20.734 17.468 28.805 13.652 36.681 13.652 39.809 16.122 47.912 17.468 47.912"/>
@@ -24,7 +21,5 @@ const EmojiMedicalGloves = {
     <line x1="29.7258" x2="16.122" y1="47.9118" y2="47.9118" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="55.8215" x2="42.2177" y1="48.1033" y2="48.1033" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMedicalGloves

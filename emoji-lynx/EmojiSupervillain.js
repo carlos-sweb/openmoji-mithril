@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "supervillain" (color) [1F9B9]. */
-const EmojiSupervillain = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSupervillain = lynxIcon(`
   <g id="hair">
     <path fill="#F1B31C" d="M26,39c-4,0-4-6-4-13s4-14,14-14s14,7,14,14s0,13-4,13"/>
   </g>
@@ -38,7 +35,5 @@ const EmojiSupervillain = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.2142,26.5153 C46.0914,26.1923,46,25.9995,46,25.9995c-3-2.9995-7-8-7-8c-4,3-7,6-13,7.0005c0,0-0.351,0.3353-0.6498,1.5657"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.0826,33.465 C25.9066,40.9007,30.4542,45,35.9365,45c5.3525,0,10.0335-4.0765,10.9053-11.4729"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSupervillain

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cactus" (black) [1F335]. */
-const EmojiCactusBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCactusBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42.0535,63.1477V14.198c0-3.9562-2.94-7.1634-6.5664-7.1634s-6.5664,3.2072-6.5664,7.1634v48.95"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.0615,44.0454H18.6972a6.7684,6.7684,0,0,1-6.7685-6.7686V26.137a4.7765,4.7765,0,0,1,5.2447-4.7531A4.9143,4.9143,0,0,1,21.48,26.3423V31.11a3.3843,3.3843,0,0,0,3.3842,3.3842h.1975"/>
@@ -20,7 +17,5 @@ const EmojiCactusBlack = {
     <line x1="36.1743" x2="33.2368" y1="25.5782" y2="21.3614" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="14.6936" x2="11.7561" y1="25.9619" y2="20.712" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCactusBlack

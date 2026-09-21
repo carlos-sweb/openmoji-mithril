@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "watch" (black) [231A]. */
-const EmojiWatchBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWatchBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M25,21V9c0-0.5523,0.4477-1,1-1h20 c0.5523,0,1,0.4477,1,1v12"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="35.8442,26.1875 35.8442,36.1875 44.1558,36.1875"/>
@@ -15,7 +12,5 @@ const EmojiWatchBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M48,51H24c-1.1,0-2-0.9-2-2V23c0-1.1,0.9-2,2-2h24c1.1,0,2,0.9,2,2v26C50,50.1,49.1,51,48,51z"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="35.8442,26.1875 35.8442,36.1875 44.1558,36.1875"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWatchBlack

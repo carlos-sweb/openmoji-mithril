@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bubble tea" (color) [1F9CB]. */
-const EmojiBubbleTea = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBubbleTea = lynxIcon(`
   <g id="color">
     <path fill="#f4aa41" d="M42.9778,61.958H27.1451A4.0845,4.0845,0,0,1,23.21,58.3763L19.0916,31.1494A1,1,0,0,1,20.08,30H50.0642a.9994.9994,0,0,1,.9883,1.15L46.8773,58.6067A3.9444,3.9444,0,0,1,42.9778,61.958Z"/>
     <path fill="#b399c8" d="M39.0727,32.0166,37.6941,47.1833a1,1,0,0,1-.9756.7851.5574.5574,0,0,1-.1564,0l-4.546-.0926a1.11,1.11,0,0,1-.7631-.4643.998.998,0,0,1-.1338-.7588L32.1,32.0166ZM33.822,25.3945l.2588-1.1523c1.336-5.9443,3.0879-8.4473,8.1514-11.6426l7.4844-4.77a.9983.9983,0,0,1,1.3721.293l2.6142,3.9687a.9987.9987,0,0,1-.293,1.39l-8.0156,5.1709A10.5358,10.5358,0,0,0,40.8,25.2373l-.043.195Z"/>
@@ -28,7 +25,5 @@ const EmojiBubbleTea = {
     <line x1="32.9397" x2="32.0967" y1="34.1934" y2="46.8749" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="37.8713" x2="36.7104" y1="34.1934" y2="46.9802" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBubbleTea

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Hong Kong SAR China" (color) [1F1ED-1F1F0]. */
-const EmojiFlagHongKongSARChina = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagHongKongSARChina = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#d22f27"/>
     <path fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="m36.7 31.62c0.9815-0.658 1.256-2.365 0.7196-3.238-0.5361-0.8724-0.3786-2.135-0.1436-2.686-5.763 1.337-5.569 7.762-2.637 9.448-0.3602-2.147 1.079-2.866 2.061-3.524z"/>
@@ -22,7 +19,5 @@ const EmojiFlagHongKongSARChina = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagHongKongSARChina

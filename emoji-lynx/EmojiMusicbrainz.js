@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "musicbrainz" (color) [E048]. */
-const EmojiMusicbrainz = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMusicbrainz = lynxIcon(`
   <g id="color">
     <path fill="#8967AA" d="M34 9.14584L12 21.75V49.25L34 61.8542V9.14584Z"/>
     <path fill="#F4AA41" d="M38 9.14584L60 21.75V49.25L38 61.8542V9.14584Z"/>
@@ -30,7 +27,5 @@ const EmojiMusicbrainz = {
     <path fill="none" stroke="#000" stroke-width="2" d="M47 22V26"/>
     <path fill="none" stroke="#000" stroke-width="2" d="M47 44V48"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMusicbrainz

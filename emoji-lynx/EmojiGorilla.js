@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "gorilla" (color) [1F98D]. */
-const EmojiGorilla = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGorilla = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" stroke="none" d="M31.9627,21.0855c-0.125-0.375-2.375-4-2.375-4l-7.625-4.625l-5.75,2.25l-0.625,2.5l-1.75,3.125 l0.375,2.625l-1.125,3.75c0,0-0.75,3.875,3.75,5c0,0-3.875,6.75-0.625,11c0,0-7,7.75-1.375,18.875l5.5,1l4.625,0.75l3.375-1.5l1-2 l-1.375-3.75c0,0,1.625-3,0.25-8.25l0.375-4.5l4.625,4l5,0.875l4.25-0.25c0,0,6.875-2.25,7.125-5l2.125,1.25 c0,0-3.4597,13.4852,0.875,16.375c0.375,0.25,5.25,2,6.125,0s2.25-9.375,1-12.125s0.25-5.125,0.25-5.125s5.5-9.5-1.5-14.875 s-9.125-3.375-9.125-3.375s-5.125,5-12.625,0.75L31.9627,21.0855z"/>
     <path fill="#9B9B9A" stroke="none" d="M33.421,21.9188l-1.5,8.5c0,0,0,5.75-5.1666,10.5c1.4591,2.5674,3.5905,4.7194,6.4583,6.4167l9.25,0.625 l7.125-5c0,0,4.5-7.0417-1.5-16.875l-6.8333,1.1667l-4.5417-1.4167L33.421,21.9188z"/>
@@ -18,7 +15,5 @@ const EmojiGorilla = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.7351,17.6895l-1.5253-1.6666c-6.9167-7.5417-11.2917-0.7083-11.2917-0.7083l-0.5,2.3333c-3.2083,3-0.8333,5.75-0.8333,5.75 s-4.4167,4.1667,0.8333,8.1667h2.0833"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M27.8139,48.5435c0,0,2.25,3.375,0,7.375l1.5088,3.0176c0.5453,1.0906,0.0936,2.4164-1.0041,2.9472l-3.3276,0.5397"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGorilla

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cheese wedge" (color) [1F9C0]. */
-const EmojiCheeseWedge = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCheeseWedge = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" stroke="none" d="M57,11.9961c5.5225,0,10,4.4775,10,10v31c0,1.1045-0.8955,2-2,2H7c-1.1045,0-2-0.8955-2-2v-31 c0-1.1045,0.8955-2,2-2l13-2.0801L57,11.9961z"/>
     <circle cx="16" cy="43.9961" r="5" fill="#f1b31c" stroke="none"/>
@@ -28,7 +25,5 @@ const EmojiCheeseWedge = {
     <circle cx="32" cy="40.9961" r="3" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <circle cx="21" cy="28.9961" r="3" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCheeseWedge

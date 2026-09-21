@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "ear of corn" (color) [1F33D]. */
-const EmojiEarOfCorn = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEarOfCorn = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" stroke="#FCEA2B" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M38.6406,52.917 L23.5191,37.7852c-8.8335-8.8335-12.0384-17.6975-8.58-21.1661c0.9229-0.9127,2.2211-1.3691,3.7931-1.3691 c0.5679,0,1.1663,0.0608,1.8052,0.1724c4.2596,0.7809,9.9188,4.1278,15.5678,9.7768l3.4584,3.4584 c-0.8316,1.3286-1.643,2.789-2.3225,4.3509C34.7056,38.7487,33.7523,45.9089,38.6406,52.917z"/>
     <path fill="#FCEA2B" d="M52.3017,53.9819c-3.4584,3.4685-9.4522,3.1338-13.3264-0.7302l-0.3346-0.3346 c-4.8884-7.0081-3.9351-14.1682-1.3996-19.9085c0.6795-1.5619,1.4908-3.0223,2.3225-4.3509l12.008,11.9979 C55.4356,44.5296,55.7703,50.5234,52.3017,53.9819z"/>
@@ -21,7 +18,5 @@ const EmojiEarOfCorn = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M37.4872,32.4593 c0.6253-1.3559,1.3429-2.6301,2.0763-3.8017c2.6065-4.148,5.5172-6.9573,6.075-7.4847c0.0305-0.0304,0.0913-0.0101,0.0913,0.0406 c0.0198,0.8707,0.2197,5.9457,2.8433,11.9158l0.2619,0.5604"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M36.1052,25.1992 c-5.649-5.649-11.3082-8.9958-15.5678-9.7768c-0.6389-0.1115-1.2373-0.1724-1.8052-0.1724c-1.572,0-2.8702,0.4564-3.7931,1.3691 c-3.4584,3.4686-0.2535,12.3326,8.58,21.1661"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEarOfCorn

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "beverage box" (black) [1F9C3]. */
-const EmojiBeverageBoxBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBeverageBoxBlack = lynxIcon(`
   <g id="line">
     <line x1="23" x2="49" y1="17" y2="17" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="19" x2="53" y1="28" y2="28" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiBeverageBoxBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40,14l2.7655-4.9779A7.82,7.82,0,0,1,49.6011,5H60"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M27.7162,49.891a2.1678,2.1678,0,0,1-.4029-2.4062c-1.6843-3.3029-.6629-8.0165,2.7517-11.4312s8.1282-4.436,11.4312-2.7518a2.1747,2.1747,0,0,1,2.8828,2.8828c1.688,3.3068.6629,8.0165-2.7518,11.4312s-8.1244,4.44-11.4312,2.7518a2.1681,2.1681,0,0,1-2.4434-.4394l-.0364-.0372"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBeverageBoxBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "desert island" (color) [1F3DD]. */
-const EmojiDesertIsland = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDesertIsland = lynxIcon(`
   <g id="color">
     <path fill="#F1B31C" stroke="#F1B31C" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M55,50c-1.5318-2.2976-6-6-11-6c-1,0-1.6479,0.1075-2.4739,0.2521L30.6883,45c-1.4621,0-2.8392,0-3.6883,0 c-4.1231,0-7.5181,3.0361-9,6c0,0-0.953,1.6965-0.7547,2.2304C17.3462,53.5021,18,53.4167,18,53.4167h37.8333 c0,0,1.75,0.5,0.9167-1C55.9167,50.9167,55,50,55,50z"/>
     <path fill="#92D3F5" stroke="#92D3F5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8" d="M66,55c-2-3-5.2153-4.2184-7-4c-3.4536,0.4226-5.6051,3.6469-8.5,3c-3.0688-0.6857-3.5667-3.3277-6-3 c-3.0049,0.4046-4.3383,4.0176-8,4c-0.3861-0.0019-1.3036-0.0068-2.3333-0.4544C31.5565,53.411,31.1107,50.5751,27.5,51 c-4.0531,0.477-5.909,4.5912-9,4c-2.6975-0.5159-3.112-3.5376-6-4c-2.6618-0.4262-5.2581,1.9705-7,4H66z"/>
@@ -47,7 +44,5 @@ const EmojiDesertIsland = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M42.2092,29.2998c0.3557-0.3753,0.9521-0.9066,1.8218-1.2966c0.5071-0.2274,0.9755-0.3478,1.3524-0.4136"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M44.1841,32.1912c0.3769-0.354,1.0033-0.8496,1.8942-1.1884c0.5195-0.1975,0.9941-0.2904,1.3741-0.3341"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDesertIsland

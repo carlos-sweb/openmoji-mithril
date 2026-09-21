@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flagged building" (black) [E092]. */
-const EmojiFlaggedBuildingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlaggedBuildingBlack = lynxIcon(`
   <g id="line">
     <line x1="13.0463" x2="13.0463" y1="61.4321" y2="45.3988" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="8.8314" x2="62.8671" y1="64.8515" y2="64.8515" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -20,7 +17,5 @@ const EmojiFlaggedBuildingBlack = {
     <rect x="35.927" y="44.8695" width="6.4666" height="12.5623" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <rect x="47.0129" y="44.8695" width="6.4666" height="12.5623" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlaggedBuildingBlack

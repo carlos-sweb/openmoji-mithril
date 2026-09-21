@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lotion bottle" (color) [1F9F4]. */
-const EmojiLotionBottle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLotionBottle = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="M48.0312,34.43V53.1413a5.2419,5.2419,0,0,1-5.2493,5.24H29.905a5.24,5.24,0,0,1-5.24-5.24V34.43a9.5463,9.5463,0,0,1,8.7611-9.5137c.2509-.0186.5111-.0279.7712-.0279h4.3016A9.542,9.542,0,0,1,48.0312,34.43Z"/>
     <path fill="#92d3f5" d="M42.1781,34.43V53.1413a5.24,5.24,0,0,1-5.24,5.24H29.905a5.24,5.24,0,0,1-5.24-5.24V34.43a9.5463,9.5463,0,0,1,8.7611-9.5137A9.5383,9.5383,0,0,1,42.1781,34.43Z"/>
@@ -19,7 +16,5 @@ const EmojiLotionBottle = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.0746,17.7765h0a3.7,3.7,0,0,1,3.7,3.7v3.1971a0,0,0,0,1,0,0h-7.4a0,0,0,0,1,0,0V21.4765A3.7,3.7,0,0,1,36.0746,17.7765Z"/>
     <ellipse cx="36.3481" cy="41.6347" rx="6.8339" ry="10.5612" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLotionBottle

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wind energy" (black) [E2D1]. */
-const EmojiWindEnergyBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWindEnergyBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M33.0155,38.7965 L31.08,63.9608h10.0322l-2.19-28.4641"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32.3667,24.4379 c0.0046,0.0633,0.0216,0.1251,0.05,0.1818c0.1174,0.184,0.3019,0.315,0.5144,0.3652c1.2434-1.0656,2.9447-1.4229,4.5117-0.9476 c0.4714-0.5217,0.7544-1.1862,0.8038-1.8876c0.0053-0.6874-0.1017-1.3711-0.3167-2.0241c-0.7951-3.0258-1.7545-6.006-2.8739-8.9274 c-0.3177-0.8908-0.7432-1.7393-1.2669-2.5268c-0.2908-0.4726-0.7342-0.8317-1.2569-1.018 c-0.5444-0.1711-1.1299,0.0976-1.3551,0.6219c-0.048,0.2033-0.0577,0.4138-0.0286,0.6206 C31.5546,14.0766,31.9607,19.2573,32.3667,24.4379z"/>
@@ -13,7 +10,5 @@ const EmojiWindEnergyBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42.4678,28.3546 c-0.0571-0.0277-0.1191-0.0439-0.1824-0.0476c-0.2181,0.0097-0.4238,0.104-0.5735,0.2629c0.3011,1.6096-0.2401,3.2616-1.4352,4.381 c0.2161,0.6691,0.6501,1.2465,1.2328,1.6399c0.5927,0.3483,1.2383,0.5975,1.9113,0.7378c3.018,0.8243,6.0786,1.4836,9.1683,1.9748 c0.9303,0.1702,1.8779,0.2261,2.8217,0.1662c0.5547-0.0155,1.0874-0.22,1.5101-0.5795c0.4204-0.3859,0.4804-1.0273,0.139-1.4845 c-0.1521-0.1432-0.3295-0.2569-0.5232-0.3351C51.847,32.8319,47.1574,30.5933,42.4678,28.3546z"/>
     <circle cx="36.2966" cy="29.2966" r="1.7034" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWindEnergyBlack

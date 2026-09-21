@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sort" (color) [E265]. */
-const EmojiSort = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSort = lynxIcon(`
   <g id="color">
     <rect x="16" y="33" width="31" height="6" fill="#FFFFFF"/>
     <rect x="16" y="21" width="39.9858" height="6" fill="#FFFFFF"/>
@@ -22,7 +19,5 @@ const EmojiSort = {
     <rect x="16" y="33" width="31" height="6" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="16.3333" y="45" width="26" height="6" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSort

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "wrapped gift" (black) [1F381]. */
-const EmojiWrappedGiftBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWrappedGiftBlack = lynxIcon(`
   <g id="line">
     <line x1="54.0913" x2="17.3557" y1="21.3571" y2="21.3571" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="17.3557,21.3571 14,21.3571 14,35.5 16.3571,35.5 16.3571,60.6429 55.6429,60.6429 55.6429,35.5 58,35.5 58,21.3571 54.0913,21.3571"/>
@@ -17,7 +14,5 @@ const EmojiWrappedGiftBlack = {
     <line x1="29.7143" x2="29.7143" y1="22" y2="35" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <polyline fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" points="42.2857,44.7071 42.2857,35.5 29.7143,35.5202 29.7143,42.8737"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWrappedGiftBlack

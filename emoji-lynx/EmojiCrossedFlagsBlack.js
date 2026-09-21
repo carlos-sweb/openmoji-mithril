@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "crossed flags" (black) [1F38C]. */
-const EmojiCrossedFlagsBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCrossedFlagsBlack = lynxIcon(`
   <g id="line">
     <g id="Flag">
       <line x1="46" x2="27" y1="56" y2="16" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiCrossedFlagsBlack = {
       <rect x="40.8409" y="20" width="22" height="15" transform="translate(86.7507 74.6703) rotate(-154.449)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCrossedFlagsBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "clapping hands: medium skin tone" (black) [1F44F-1F3FD]. */
-const EmojiClappingHandsMediumSkinToneBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiClappingHandsMediumSkinToneBlack = lynxIcon(`
   <g id="line">
     <line x1="20.3603" x2="20.6413" y1="18.3415" y2="20.1711" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="15.4078" x2="14.0603" y1="12.9103" y2="6.6237" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -38,7 +35,5 @@ const EmojiClappingHandsMediumSkinToneBlack = {
     <line x1="58.7358" x2="65.092" y1="19.1926" y2="20.1602" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="56.8822" x2="60.6073" y1="16.5876" y2="13.2524" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiClappingHandsMediumSkinToneBlack

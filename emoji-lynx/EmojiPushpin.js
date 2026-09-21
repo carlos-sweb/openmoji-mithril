@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pushpin" (color) [1F4CC]. */
-const EmojiPushpin = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPushpin = lynxIcon(`
   <g id="color">
     <path fill="#ea5a47" d="m46.288,34.3932c-.8205-1.4005-3.5756-2.5592-3.5756-2.5592l-1.0343-4.1975-2.2282-13.0482-9.1051-.6051-2.184,16.6293c-.0635.3545-1.4459,1.7772-1.7857,1.8963-2.8213.9893-3.0856,3.5212-3.57,4.5505l24.1657.0322c-.0304-.143.0226-1.494-.6828-2.6983Z"/>
     <polygon fill="#ea5a47" points="31.0083 8.5994 29.5845 14.5883 40.2816 14.1282 39.8274 8.7892 31.0083 8.5994"/>
@@ -19,7 +16,5 @@ const EmojiPushpin = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.3187,18.576l-2.3773,13.26c-5.2242,1.8318-5.4803,5.4953-5.4803,5.4953h25.4502s-.2561-3.6635-5.4803-5.4953l-2.3773-13.26"/>
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="40.8274 14.5883 29.5845 14.5883 30.5845 8.7892 39.8274 8.7892 40.8274 14.5883"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPushpin

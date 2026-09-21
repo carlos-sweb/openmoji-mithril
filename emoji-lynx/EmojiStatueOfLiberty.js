@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Statue of Liberty" (color) [1F5FD]. */
-const EmojiStatueOfLiberty = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStatueOfLiberty = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m16.5981,20.0261c.2385,1.888.5742,4.4455,1.0114,7.4916.3632,2.5311.55,3.6847.9446,3.7248.8178.0831,1.8815-4.52,2.0733-5.3493.4461-1.9284.7298-3.8909.848-5.8667"/>
     <rect x="13.7806" y="15.0562" width="9.6857" height="4.4081" fill="#61b2e4"/>
@@ -31,7 +28,5 @@ const EmojiStatueOfLiberty = {
     <line x1="34.2672" x2="30.6619" y1="43.4672" y2="43.4672" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="35.3554" x2="31.0415" y1="38.9639" y2="34.65" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStatueOfLiberty

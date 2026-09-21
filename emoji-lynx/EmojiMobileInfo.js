@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mobile info" (color) [E095]. */
-const EmojiMobileInfo = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMobileInfo = lynxIcon(`
   <g id="color">
     <rect x="14.1816" y="7.9787" rx="3.68" ry="3.68" width="34.0431" height="55.9423" fill="#9b9b9a"/>
     <path fill="#3f3f3f" d="M44.3929,54.9961H18.0135a.9747.9747,0,0,1-.9727-.9727V15.117a.9748.9748,0,0,1,.9727-.9727H44.3929a.9748.9748,0,0,1,.9727.9727V54.0234A.919.919,0,0,1,44.3929,54.9961Z"/>
@@ -21,7 +18,5 @@ const EmojiMobileInfo = {
     <circle cx="46.5887" cy="15.602" r="1.9093"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.2851,7.6752A13.0261,13.0261,0,0,0,37.2562,30.1l-2.6037,8.36,7.0766-5.5479a13.03,13.03,0,1,0,4.556-25.2361Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMobileInfo

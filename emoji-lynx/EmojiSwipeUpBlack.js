@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "swipe up" (black) [E109]. */
-const EmojiSwipeUpBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSwipeUpBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M57.855,39.5861c5.9803,5.018,6.7603,13.9339,1.7423,19.9141s-13.9339,6.7603-19.9141,1.7423"/>
     <line x1="57.2801" x2="49.3839" y1="39.1037" y2="32.478" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -25,7 +22,5 @@ const EmojiSwipeUpBlack = {
     <line x1="8.2932" x2="13.4943" y1="11.3372" y2="6.1355" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="18.6961" x2="13.4943" y1="11.3367" y2="6.1355" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSwipeUpBlack

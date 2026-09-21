@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "grimacing face" (color) [1F62C]. */
-const EmojiGrimacingFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGrimacingFace = lynxIcon(`
   <g id="color">
     <path fill="#FCEA2B" d="M36,13c-12.7025,0-23,10.2975-23,23s10.2975,23,23,23s23-10.2975,23-23 C58.9857,23.3034,48.6966,13.0143,36,13z"/>
     <path fill="#FFFFFF" d="M44.5,49.2708h-17c-2.2064-0.0065-3.9935-1.7936-4-4l0,0c0.0065-2.2064,1.7936-3.9935,4-4h17 c2.2064,0.0065,3.9935,1.7936,4,4l0,0C48.4935,47.4772,46.7064,49.2643,44.5,49.2708z"/>
@@ -20,7 +17,5 @@ const EmojiGrimacingFace = {
     <path d="M30,31c0,1.6568-1.3448,3-3,3c-1.6553,0-3-1.3433-3-3c0-1.6552,1.3447-3,3-3C28.6552,28,30,29.3448,30,31"/>
     <path d="M48,31c0,1.6568-1.3447,3-3,3s-3-1.3433-3-3c0-1.6552,1.3447-3,3-3S48,29.3448,48,31"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGrimacingFace

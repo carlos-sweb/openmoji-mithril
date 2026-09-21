@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man judge: dark skin tone" (color) [1F468-1F3FF-200D-2696-FE0F]. */
-const EmojiManJudgeDarkSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManJudgeDarkSkinTone = lynxIcon(`
   <g id="color">
     <path fill="#3F3F3F" d="M16.9628,58.9989c0,0-2.1669-14.8402,9.8331-14.8402c3.1918,2.128,5.7264,3.6985,8.8,3.6922h-0.125 c3.0736,0.0063,6.208-1.9642,9.3999-4.0922c12.3378-0.0001,10.109,15.1402,10.34,15.2402"/>
     <path fill="#FFFFFF" d="M44.7853,44.6077l-3.8861,5.9728l-2.5935,4.4989c-1.2071,2.0939-4.2282,2.0958-5.438,0.0035l-2.5994-4.4955 l-3.4576-5.9797C32.9523,49.8996,38.9435,49.8996,44.7853,44.6077z"/>
@@ -35,7 +32,5 @@ const EmojiManJudgeDarkSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M47.624,28.9754c0,0,3.9-2.89,2.79-7.44c-0.59-2.45-2.64-5.38-7.52-8.6c-5.48-3.95-13.73-2.8-16,0.09 c-0.44,0.6-0.65,1.31-0.65,2.03c0,0.42,0.08,0.85,0.24,1.26c0.31,0.81,0.73,1.88,1.7,2.9c2.07,2.16,6.6,4.14,17.81,3.14 c0.49-0.04,0.99-0.09,1.51-0.14"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M25.794,15.0654c-6.5,6.89-2.09,15.72-1.36,13.91c0.03-0.03,0.06-0.06,0.09-0.09c2.85-2.78,3.56-9.58,3.56-9.58"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManJudgeDarkSkinTone

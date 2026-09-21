@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "gardening gloves" (black) [E342]. */
-const EmojiGardeningGlovesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGardeningGlovesBlack = lynxIcon(`
   <g id="line" fill="none">
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m26.81 52.84 16.4-6.333 2.959 6.744c0.3185 0.7259-0.08601 1.57-0.825 1.854l-13.7 5.262c-0.9418 0.3618-1.998-0.1096-2.359-1.053z"/>
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m22.4 26.77c-1.102-3.313-2.039-8.034-4.299-9.815-0.771-0.6274-1.788-0.8635-2.756-0.6397-4.352 2.25 0.1619 9.156 1.219 12.29 0.8956 2.66 2.043 6.165 2.896 8.616 1.291 3.71 7.348 15.61 7.348 15.61"/>
@@ -18,7 +15,5 @@ const EmojiGardeningGlovesBlack = {
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m50.79 17.62s2.353-1.24 3.71-0.1185a2.769 2.774 0 0 1 0.7127 4.046c-0.9842 1.768-5.122 9.663-5.122 9.663"/>
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55.03 22.19c0.0095-0.03558 4.244-0.8609 3.749 2.792-0.2663 1.964-13.84 25.29-13.84 25.29"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGardeningGlovesBlack

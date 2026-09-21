@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "memo" (black) [1F4DD]. */
-const EmojiMemoBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMemoBlack = lynxIcon(`
   <g id="line">
     <polygon points="38.0702 47.191 40.4564 49.5772 36.9921 50.8566 38.0702 47.191"/>
     <line x1="22.3215" x2="49.3215" y1="19.875" y2="19.875" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiMemoBlack = {
     <line x1="51.3023" x2="57.1946" y1="30.1572" y2="36.0495" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0206" points="55.3215 44.228 55.3215 59.875 16.3215 59.875 16.3215 11.875 55.3215 11.875 55.3215 20.3309"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMemoBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "khanda" (black) [1FAAF]. */
-const EmojiKhandaBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiKhandaBlack = lynxIcon(`
   <g id="line-supplement" fill="none" stroke="#000" stroke-width="1.968">
     <path stroke-linecap="round" stroke-linejoin="round" d="m40.43 46.29c0.5904 1.181 2.263 4.527 2.952 5.904 4.527-3.838 9.546-9.152 9.546-14.17s-2.263-9.644-5.806-12.6c1.574 2.165 2.362 4.724 2.362 7.577v0.3936c-0.2952 4.133-4.527 8.758-8.266 11.91-0.2952 0.2952-0.5904 0.492-0.7873 0.6889l-4.035 3.149-0.1968 0.1968-4.035 3.248"/>
     <path stroke-linejoin="round" d="m38.17 30.25c-0.0984 3.74 0 6.692 0.3936 9.644 0.0984 0.492 0.0984 0.8857 0.1968 1.378 0.0984 0.6889 0.1968 1.378 0.2952 1.968-1.87 1.279-3.051 2.067-3.051 2.067s-1.181-0.7873-2.854-2.067c0.0984-0.6889 0.1968-1.378 0.2952-1.968 0.0984-0.3936 0.0984-0.8857 0.1968-1.279 0.2952-2.854 0.492-5.904 0.3936-9.644-0.0984-3.444-0.3936-5.216-0.7873-7.282-0.0984-0.2952-0.0984-0.6889-0.1968-0.9841-0.1968-0.6889-0.2952-1.378-0.492-2.165l3.543-2.362 3.543 2.362c-0.1968 0.7873-0.3936 1.574-0.492 2.165-0.0984 0.3936-0.1968 0.6889-0.1968 0.9841-0.492 1.87-0.6889 3.74-0.7873 7.184z"/>
@@ -16,7 +13,5 @@ const EmojiKhandaBlack = {
   <g id="line">
     <rect x="12.29" y="12.34" width="47.24" height="47.24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.968"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiKhandaBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hacker cat" (color) [1F431-200D-1F4BB]. */
-const EmojiHackerCat = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHackerCat = lynxIcon(`
   <g id="color">
     <path fill="#92d3f5" d="m17.1347,58.8989s-2-13.5,10-13.5c3.1918,2.1279,5.9264,3.5984,9,3.5922h-.1247c3.1016-.1525,5.4081-2.1643,8.6-4.2922,15.5705,0,10.8,14.2,10.8,14.2"/>
     <polygon fill="#61b2e4" points="49.297 58.861 49.297 45.986 44.806 45.202 44.806 52.447 26.929 52.447 26.931 45.202 22.265 45.986 22.265 58.861 49.297 58.861"/>
@@ -42,7 +39,5 @@ const EmojiHackerCat = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" points="46.998 18.284 22.652 17.7 22.165 22.428 47.005 20.926"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="m50.4972,19.6c0,1.1046-.8954,2-2,2s-2-.8954-2-2,.8954-2,2-2c1.1044.0004,1.9996.8956,2,2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHackerCat

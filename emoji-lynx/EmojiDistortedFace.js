@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "distorted face" (color) [1FAEA]. */
-const EmojiDistortedFace = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDistortedFace = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="m36 13c-12.68 0-23 10.32-23 23s10.32 23 23 23 23-10.32 23-23-10.32-23-23-23z"/>
     <path fill="#fff" stroke-miterlimit="10" d="m30.4 29.24c-0.6985 5.002-4.822 9.057-9.199 9.057s-7.368-4.055-6.67-9.057c0.6977-4.996 4.822-9.057 9.199-9.057s7.368 4.06 6.67 9.057"/>
@@ -19,7 +16,5 @@ const EmojiDistortedFace = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m41.63 29.24c0.6985 5.002 4.822 9.057 9.199 9.057s7.368-4.055 6.67-9.057c-0.6977-4.996-4.822-9.057-9.199-9.057s-7.368 4.06-6.67 9.057"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m42.5 52.1c-1.284 0.6376-11.83 0.5835-13 0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDistortedFace

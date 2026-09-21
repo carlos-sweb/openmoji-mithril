@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "warning strip" (color) [E0A5]. */
-const EmojiWarningStrip = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWarningStrip = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" d="M11.6022,27.0359a2.7339,2.7339,0,0,1,2.5041-1.9354h50.72a1.4722,1.4722,0,0,1,1.4959,1.9354L60.6105,48.9641A2.7341,2.7341,0,0,1,58.1063,50.9H7.3863a1.4721,1.4721,0,0,1-1.4958-1.9354Z"/>
     <path fill="#f1b31c" d="M60.4443,49.6138,63.939,36.1853A193.6507,193.6507,0,0,1,38.9863,45.14a218.0268,218.0268,0,0,1-28.8,5.76H58.7441A1.7112,1.7112,0,0,0,60.4443,49.6138Z"/>
@@ -20,7 +17,5 @@ const EmojiWarningStrip = {
     <line x1="54.0007" x2="47.2807" y1="25.1005" y2="50.8995" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="23.0104" x2="16.2904" y1="25.1005" y2="50.8995" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWarningStrip

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "bow and arrow" (color) [1F3F9]. */
-const EmojiBowAndArrow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBowAndArrow = lynxIcon(`
   <g id="color">
     <g id="_1F3F9">
       <path fill="none" stroke="#a57939" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" d="M51.88,55.5863A27.0167,27.0167,0,0,0,16.3837,20.09"/>
@@ -21,7 +18,5 @@ const EmojiBowAndArrow = {
       <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="52.596 14.064 57.966 14.064 57.966 19.153"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBowAndArrow

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "potable water" (color) [1F6B0]. */
-const EmojiPotableWater = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPotableWater = lynxIcon(`
   <g id="color">
     <rect x="12" y="12" width="48" height="47.83" fill="#92d3f5"/>
     <path transform="translate(-1.3 .2001)" fill="#fff" d="m26.45 45.4 2.137 10.32 9.624 0.0556 2.115-10.17s-7-4.375-14.08-0.2083"/>
@@ -17,7 +14,5 @@ const EmojiPotableWater = {
     <path transform="translate(-1.3 .2001)" stroke-miterlimit="10" d="m26.73 45.04s6.548-2.619 13.1 0"/>
     <path transform="translate(-1.3 .2001)" stroke-miterlimit="10" d="m58.5 24.68v4.87c0 0.56-0.45 1-1 1h-16.88c-2.84 0-3.51 2.46-3.66 3.83-0.06 0.5-0.48 0.88-0.99 0.88h-5.02c-0.55 0-0.99-0.43-1-0.9801-0.0101-2.8 0.82-10.6 10.63-10.6h5.17v-4.45h-4.75v-3.21h13.25v3.21h-4.75v4.45h8c0.55 0 1 0.45 1 1z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPotableWater

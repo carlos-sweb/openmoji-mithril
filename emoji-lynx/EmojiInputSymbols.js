@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "input symbols" (color) [1F523]. */
-const EmojiInputSymbols = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiInputSymbols = lynxIcon(`
   <g id="line-supplement" transform="translate(-.005724 -.00219)" stroke-linecap="round">
     <path fill="none" stroke="#000" stroke-width="2" d="m53.63 42.31-11.75 11.48"/>
     <circle cx="52.32" cy="52.66" r="2.491" stroke="#000" stroke-width="0"/>
@@ -32,7 +29,5 @@ const EmojiInputSymbols = {
   <g id="line">
     <rect x="12" y="12" width="48" height="48" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiInputSymbols

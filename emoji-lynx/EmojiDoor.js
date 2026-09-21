@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "door" (color) [1F6AA]. */
-const EmojiDoor = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiDoor = lynxIcon(`
   <g id="color">
     <rect x="18" y="9" width="36" height="54" fill="#A57939" stroke="none" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="24" y="14.0943" width="24" height="16.3019" fill="#6A462F" stroke="none" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -21,7 +18,5 @@ const EmojiDoor = {
     <rect x="24" y="14.0943" width="24" height="16.3019" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <rect x="24" y="45.6792" width="24" height="11.2075" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiDoor

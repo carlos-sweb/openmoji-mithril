@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "tornado" (black) [1F32A]. */
-const EmojiTornadoBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTornadoBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M36,15.5432c-17.6731,0-32-1.5881-32-3.5471"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M4,12.0067c0-1.959,14.3269-3.5471,32-3.5471s32,1.5881,32,3.5471v-0.0106"/>
@@ -20,7 +17,5 @@ const EmojiTornadoBlack = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40,59.3553c0,0.2449-1.7909,0.4434-4,0.4434s-4-0.1985-4-0.4434"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M38,63.7987c0,0.1224-0.8954,0.2217-2,0.2217s-2-0.0993-2-0.2217"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTornadoBlack

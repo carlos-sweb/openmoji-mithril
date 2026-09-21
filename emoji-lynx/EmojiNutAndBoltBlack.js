@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "nut and bolt" (black) [1F529]. */
-const EmojiNutAndBoltBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiNutAndBoltBlack = lynxIcon(`
   <g id="line">
     <g id="_1F529-2">
       <rect x="35.1711" y="18.7696" width="23.948" height="11.4993" transform="translate(31.1462 -26.1551) rotate(45)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -14,7 +11,5 @@ const EmojiNutAndBoltBlack = {
       <rect x="21.125" y="37.4189" width="20.0607" height="7.5228" transform="translate(38.2441 -9.9688) rotate(45)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiNutAndBoltBlack

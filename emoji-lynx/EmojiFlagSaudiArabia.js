@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Saudi Arabia" (color) [1F1F8-1F1E6]. */
-const EmojiFlagSaudiArabia = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagSaudiArabia = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#5c9e31"/>
     <line x1="49" x2="23" y1="45" y2="45" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -22,7 +19,5 @@ const EmojiFlagSaudiArabia = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagSaudiArabia

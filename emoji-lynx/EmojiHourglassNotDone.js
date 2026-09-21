@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hourglass not done" (color) [23F3]. */
-const EmojiHourglassNotDone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHourglassNotDone = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m35.498,37.967h1.0165c7.6245,0,13.8146,6.1901,13.8146,13.8146v6.4581h-28.3282v-6.7757c0-7.4492,6.0478-13.4971,13.4971-13.4971Z"/>
     <path transform="translate(71.98 47.7203) rotate(180)" fill="#fff" d="m35.323,13.7238h1.0165c7.6245,0,13.8146,6.1901,13.8146,13.8146v6.4581h-28.3282v-6.7757c0-7.4492,6.0478-13.4971,13.4971-13.4971Z"/>
@@ -28,7 +25,5 @@ const EmojiHourglassNotDone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m55,62c0,1.0996-.9004,2-2,2H19c-1.0996,0-2-.9004-2-2v-1c0-1.0996.9004-2,2-2h34c1.0996,0,2,.9004,2,2v1Z"/>
     <line x1="36" x2="36" y1="39" y2="44" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHourglassNotDone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "evacuate downstairs" (color) [E087]. */
-const EmojiEvacuateDownstairs = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiEvacuateDownstairs = lynxIcon(`
   <g id="color">
     <polygon fill="#fff" points="35.5071 28.9641 37.9324 32.7308 37.741 29.8312 35.5071 28.9641"/>
     <polygon fill="#fff" points="28.3832 43.7035 30.2992 41.2401 30.6641 39.324 31.6678 40.7839 31.4853 44.7984 28.3832 43.7035"/>
@@ -24,7 +21,5 @@ const EmojiEvacuateDownstairs = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m40.2627,28.2575l-6.9556-3.936-.0311-3.4815c-.1861-1.5978-.7752-3.0314-3.0842-3.0314-3.2685,0-7.3183,4.1-7.3183,5.8843v6.1942"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.8582,12.4667c0-1.8035,1.4621-3.2656,3.2656-3.2656s3.2656,1.4621,3.2656,3.2656-1.4621,3.2656-3.2656,3.2656h0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiEvacuateDownstairs

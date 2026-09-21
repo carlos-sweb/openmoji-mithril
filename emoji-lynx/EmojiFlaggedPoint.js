@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flagged point" (color) [E091]. */
-const EmojiFlaggedPoint = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlaggedPoint = lynxIcon(`
   <g id="color">
     <path fill="#fff" d="m30.879,13.5825l-.2243,10.403s5.901-2.9202,8.0942-1.114,13.0305,6.4507,15.2237,6.3217,1.0679-1.0078,1.0679-1.0078l.8673-13.5708s-4.5155,1.1611-8.515-1.0321-12.7725-6.0637-16.5139,0Z"/>
     <ellipse cx="27.5034" cy="53.4859" rx="11.6561" ry="7.8696" fill="#a57939"/>
@@ -16,7 +13,5 @@ const EmojiFlaggedPoint = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30.6547,12.48c2.1525-1.3927,4.6471-2.1654,7.21-2.2332,4.7236,0,8.7752,4.1079,14.9073,4.1079.9039,0,1.3564-.4069,2.2686-.4069.7566,0,1.0586.5411,1.0586,1.496v15.8654c0,.7455-.8143,1.5923-3.2048,1.5923-7.1861,0-11.2378-4.0647-15.4069-4.0647-2.4863.047-4.8989.8522-6.9151,2.3078v-4.438"/>
     <line x1="27.1824" x2="27.1824" y1="10.421" y2="52.3401" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlaggedPoint

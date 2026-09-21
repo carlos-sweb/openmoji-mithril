@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "sea level rise" (black) [E2D0]. */
-const EmojiSeaLevelRiseBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiSeaLevelRiseBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.8873,44.7744 c3,0,9,3,15,3s10-3,16-3s11,3,16,3s7-3,15-3"/>
     <line x1="18.9215" x2="18.9215" y1="39.5555" y2="26.4931" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -13,7 +10,5 @@ const EmojiSeaLevelRiseBlack = {
     <line x1="51.5379" x2="51.5379" y1="39.5555" y2="26.4931" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M46.5379,31.1065 l4.8786-5.1809c0.0397-0.0421,0.106-0.0441,0.1481-0.0044c0.0019,0.0018,0.0038,0.0037,0.0056,0.0056l4.9677,5.4432"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiSeaLevelRiseBlack

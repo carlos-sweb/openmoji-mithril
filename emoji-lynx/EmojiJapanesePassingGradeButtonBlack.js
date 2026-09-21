@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "Japanese “passing grade” button" (black) [1F234]. */
-const EmojiJapanesePassingGradeButtonBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiJapanesePassingGradeButtonBlack = lynxIcon(`
   <g id="line-supplement" transform="matrix(.2609 0 0 .2609 -91.17 -3.172)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="10.01" clip-rule="evenodd">
     <path fill="none" d="m456 134.7 65.4 0.2556"/>
     <path fill-opacity="0" d="m534.5 163.5v41.74c0 2.194-1.781 3.976-3.975 3.976h-83.89c-2.194 0-3.976-1.782-3.976-3.976v-41.74c0-2.194 1.782-3.975 3.976-3.975h83.89c2.194 0 3.975 1.781 3.975 3.975z"/>
@@ -14,7 +11,5 @@ const EmojiJapanesePassingGradeButtonBlack = {
   <g id="line" transform="matrix(.2593 0 0 .2593 -440 -90.09)">
     <rect x="1743" y="393.7" width="185.1" height="185.1" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.713"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiJapanesePassingGradeButtonBlack

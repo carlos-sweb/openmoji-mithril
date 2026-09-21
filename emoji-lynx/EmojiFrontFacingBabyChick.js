@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "front-facing baby chick" (color) [1F425]. */
-const EmojiFrontFacingBabyChick = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFrontFacingBabyChick = lynxIcon(`
   <g id="color">
     <path fill="#fcea2b" stroke="#fcea2b" stroke-miterlimit="10" stroke-width="1.8" d="m36,32c8.2843,0,12.8894,5.3033,15,11,1.5787,4.2609-5.4843,11.7165-15.0067,11.0122-9.3743-.6933-16.1286-5.0122-14.9933-11.0122,1.1294-5.9692,6.7157-11,15-11Z"/>
     <path fill="#fcea2b" d="m42.25,36c2,9,9,9,9,9,2-6-6-11-6-11,7-6,1-10,1-10,0-10-10.375-11-10.375-11-10.375,2-9.625,11-9.625,11-6,4,.625,9.75.625,9.75,0,0-7.625,4.25-5.625,11.25,0,0,8,0,8-9"/>
@@ -25,7 +22,5 @@ const EmojiFrontFacingBabyChick = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m36.3719,26.6032s5.9132-.2907,0,5.2324c0,0-5.9132-5.2324,0-5.2324Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42,36c2,9,9,9,9,9,2-6-6-11-6-11,7-6,1-10,1-10,0-10-10.375-11-10.375-11-10.375,2-9.625,11-9.625,11-6,4,.625,9.75.625,9.75,0,0-7.625,4.25-5.625,11.25,0,0,8,0,8-9"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFrontFacingBabyChick

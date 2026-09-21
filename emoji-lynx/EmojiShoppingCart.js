@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "shopping cart" (color) [1F6D2]. */
-const EmojiShoppingCart = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiShoppingCart = lynxIcon(`
   <g id="color">
     <polygon fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="51.9034,18.6019 51.9034,42.3566 15.0151,42.3566 11.3487,18.6019"/>
     <circle cx="50.1425" cy="58.4626" r="2.3751" fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -58,7 +55,5 @@ const EmojiShoppingCart = {
     <line x1="24.1606" x2="24.1606" y1="29.9992" y2="30.789" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="18.7848" x2="18.7848" y1="29.9992" y2="30.789" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiShoppingCart

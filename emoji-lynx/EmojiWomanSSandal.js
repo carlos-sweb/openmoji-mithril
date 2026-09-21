@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "woman’s sandal" (color) [1F461]. */
-const EmojiWomanSSandal = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiWomanSSandal = lynxIcon(`
   <g id="color">
     <polyline fill="#6a462f" points="11.0443 30.5333 10.7943 58.9583 19.672 58.9583 22.4255 36.7408"/>
     <polyline fill="#6a462f" points="11.2095 34.5333 11.7095 58.7083 18.7988 58.9583 20.7988 40.5333"/>
@@ -17,7 +14,5 @@ const EmojiWomanSSandal = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m59.497,53.1771c2.7511-.3643,5.4735-1.0558,8.0089-2.0383.7079,6.5249-.5933,8.2515-3.991,9.7438-5.6629,2.487-19.5676,1.2919-23.3356-1.4893-4.5676-3.3713-2.5607-3.9694-10.3496-14.656-6.1889-8.4912-18.7005-13.9286-18.7005-13.9286v-5.7697s20.7464,6.6699,25.0042,17.8349c.7983,2.0934,1.9924,3.8504,3.4823,5.2939"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="41.7515 56.773 45.3648 36.7408 58.0947 39.2711 55.4813 59.3034"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiWomanSSandal

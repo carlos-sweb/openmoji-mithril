@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "trolleybus" (color) [1F68E]. */
-const EmojiTrolleybus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTrolleybus = lynxIcon(`
   <g id="color">
     <rect x="31" y="21" width="14" height="3" fill="#3f3f3f"/>
     <path fill="#d0cfce" d="M18,48h-.0853A2.9232,2.9232,0,0,1,15,45.0853V26.9147A2.9232,2.9232,0,0,1,17.9147,24H58.0853A2.9232,2.9232,0,0,1,61,26.9147V45.0853A2.9232,2.9232,0,0,1,58.0853,48H58"/>
@@ -31,7 +28,5 @@ const EmojiTrolleybus = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18,48h-.0853A2.9232,2.9232,0,0,1,15,45.0853V26.9147A2.9232,2.9232,0,0,1,17.9147,24H58.0853A2.9232,2.9232,0,0,1,61,26.9147V45.0853A2.9232,2.9232,0,0,1,58.0853,48H58"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="17 41 21 41 21 39"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTrolleybus

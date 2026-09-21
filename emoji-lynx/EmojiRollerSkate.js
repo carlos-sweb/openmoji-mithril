@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "roller skate" (color) [1F6FC]. */
-const EmojiRollerSkate = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRollerSkate = lynxIcon(`
   <g id="color">
     <path fill="#61b2e4" d="M42.9146,32.98a1,1,0,0,1,.8169,1.5784l-5.8132,8.2129H58.4365a1,1,0,0,0,.9795-.7979,9.8383,9.8383,0,0,0-1.6006-7.3291c-1.6728-2.2109-4.41-3.4668-8.1377-3.7343C35.1484,29.8662,35.37,15.09,35.3867,14.4609a1.0006,1.0006,0,0,0-1-1.0273H17.6651a1,1,0,0,0-.9991.9648c-.0049.13-.4853,13.11-2.27,17.3047a21.4372,21.4372,0,0,0-1.4893,6.8858v3.1826a1,1,0,0,0,1,1h8.301l6.6307-9.3692a1,1,0,0,1,.8168-.4221h4.5049a1,1,0,0,1,.816,1.5784l-5.8124,8.2129H31l6.6315-9.3692a1,1,0,0,1,.8166-.4221Z"/>
     <path fill="#b399c8" d="M58.4434,46.4258H14.3574a2.8272,2.8272,0,0,1,0-5.6543h44.086a2.8272,2.8272,0,0,1,0,5.6543Z"/>
@@ -32,7 +29,5 @@ const EmojiRollerSkate = {
     <line x1="16.4865" x2="17.1995" y1="47.8204" y2="48.869" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="52.9173" x2="52.2042" y1="47.8204" y2="48.869" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRollerSkate

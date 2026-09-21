@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fireworks" (color) [1F386]. */
-const EmojiFireworks = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFireworks = lynxIcon(`
   <g id="line-supplement">
     <rect x="35" y="38.915" width="2" height="25" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <g>
@@ -57,7 +54,5 @@ const EmojiFireworks = {
   <g id="line">
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="35 58.915 35 38.915 37 38.915"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFireworks

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "graduation cap" (color) [1F393]. */
-const EmojiGraduationCap = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiGraduationCap = lynxIcon(`
   <g id="color">
     <polyline fill="#3f3f3f" stroke="#3f3f3f" stroke-miterlimit="10" stroke-width="2" points="56 27.9166 56 45.896 16 45.896 16 27.9166"/>
     <line x1="10.0432" x2="10.0432" y1="28.5" y2="36.9063" fill="none" stroke="#f1b31c" stroke-miterlimit="10" stroke-width="2"/>
@@ -19,7 +16,5 @@ const EmojiGraduationCap = {
     <rect x="4" y="22.875" width="64" height="5.0417" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.747" points="56 30.9166 56 45.896 16 45.896 16 30.9166"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiGraduationCap

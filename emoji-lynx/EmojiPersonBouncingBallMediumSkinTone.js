@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person bouncing ball: medium skin tone" (color) [26F9-1F3FD]. */
-const EmojiPersonBouncingBallMediumSkinTone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonBouncingBallMediumSkinTone = lynxIcon(`
   <g id="color">
     <circle cx="16.9688" cy="41.0938" r="5" fill="#EA5A47" stroke="none"/>
   </g>
@@ -25,7 +22,5 @@ const EmojiPersonBouncingBallMediumSkinTone = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M39,23c-2-4-4.3594-4.2329-6.0312-3.583c-1.1915,0.4629-1.9278,1.437-2.2227,2.5478"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M34,23l-3.0078,5.2637c-0.5459,0.9551-1.8701,1.9345-2.9434,2.1758L21.125,32"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonBouncingBallMediumSkinTone

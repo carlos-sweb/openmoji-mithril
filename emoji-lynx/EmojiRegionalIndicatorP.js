@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "regional indicator P" (color) [1F1F5]. */
-const EmojiRegionalIndicatorP = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiRegionalIndicatorP = lynxIcon(`
   <g id="color">
     <circle cx="36" cy="36" r="27.5" fill="#fff"/>
   </g>
@@ -15,7 +12,5 @@ const EmojiRegionalIndicatorP = {
     </g>
     <path stroke="#000" stroke-linejoin="round" stroke-width="2" d="m40.8496,21.0122h-10.6758c-.5527,0-1,.4478-1,1v28c0,.5522.4473,1,1,1s1-.4478,1-1v-13.0518h9.6758c4.3984,0,7.9766-3.5762,7.9766-7.9722s-3.5781-7.9761-7.9766-7.9761h0Zm0,13.9482h-9.6758v-11.9482h9.6758c3.2959,0,5.9766,2.6807,5.9766,5.9761,0,3.293-2.6807,5.9722-5.9766,5.9722h0Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiRegionalIndicatorP

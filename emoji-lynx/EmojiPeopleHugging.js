@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "people hugging" (color) [1FAC2]. */
-const EmojiPeopleHugging = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPeopleHugging = lynxIcon(`
   <g id="hair"/>
   <g id="skin">
     <circle cx="35.287" cy="7.9595" r="2.966" fill="#FCEA2B"/>
@@ -26,7 +23,5 @@ const EmojiPeopleHugging = {
     <line x1="22.1722" x2="22.3575" y1="39.7339" y2="32.7833" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M22.1722,39.7339l-1.0602,9.7592c-0.066,1.6999-0.6165,3.3668-1.0124,5.0214l-2.3812,9.9499 c-0.265,1.1074,0.5267,2.188,1.6625,2.2691l0,0c0.7861,0.0562,1.521-0.3933,1.8291-1.1187l4.8722-13.7563"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPeopleHugging

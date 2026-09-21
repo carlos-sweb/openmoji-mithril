@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "call me hand" (color) [1F919]. */
-const EmojiCallMeHand = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCallMeHand = lynxIcon(`
   <g id="color"/>
   <g id="hair"/>
   <g id="skin">
@@ -20,7 +17,5 @@ const EmojiCallMeHand = {
     <line x1="44.703" x2="39.6754" y1="45.5795" y2="44.1473" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="45.5271" x2="41.3935" y1="36.5453" y2="35.7015" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCallMeHand

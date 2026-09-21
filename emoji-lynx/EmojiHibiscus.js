@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "hibiscus" (color) [1F33A]. */
-const EmojiHibiscus = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiHibiscus = lynxIcon(`
   <g id="color">
     <path fill="#ffa7c0" stroke="#ffa7c0" stroke-width="1" d="M56.239,31.078c0.789,-2.398 -0.301,-8.807 -2.824,-8.894c3.467,-10.044 -11.017,-11.013 -11.385,-8.228c-3.083,-5.954 -15.552,2.894 -11.305,8.577c-1.836,0.408 -3.839,6.938 -2.046,9.081c1.619,1.937 6.814,3.985 6.814,3.985c0.087,2.523 3.752,5.271 6.275,5.184c2.364,-0.082 7.708,-1.107 7.42,-5.185c0,0 5.746,-0.559 7.051,-4.52Z"/>
     <path fill="#fcea2b" d="M40.82,28.398c-1.834,0 -3.32,-1.443 -3.32,-3.223c0,-1.369 0.769,-2.538 2.009,-3.006c0.235,-0.088 0.502,-0.02 0.693,0.144l3.437,2.853l3.273,2.769c0.369,0.312 0.566,0.809 0.44,1.276c-0.371,1.386 -1.669,2.41 -3.213,2.41c-1.833,0 -3.319,-1.443 -3.319,-3.223"/>
@@ -29,7 +26,5 @@ const EmojiHibiscus = {
     <circle cx="47.8246" cy="25.0419" r="1" fill="#000000" stroke="none"/>
     <circle cx="47.7311" cy="19.4434" r="1" fill="#000000" stroke="none"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiHibiscus

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lab coat" (color) [1F97C]. */
-const EmojiLabCoat = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLabCoat = lynxIcon(`
   <g id="color">
     <path fill="#fff" stroke-width="1.097" d="m23.28 13.06c-3.06 6.635-10.1 31.96-10.1 31.96s0.4394 0.04908 6.213 2.344l3.89-15.82-1.823 29.76c2.378 3.222 15.49 4.091 15.49 4.091s-0.6375-34.11-0.953-36.91c-0.6376-3.418-0.6166-8.474-1.833-11.73-1.103-3.086-0.9946-6.143-2.791-8.884 0 0-6.946 2.715-8.088 5.192z"/>
     <polyline fill="#fff" points="27.59 11.86 26.81 19.2 29.23 19.2 27.68 21.94 36.86 29.32"/>
@@ -26,7 +23,5 @@ const EmojiLabCoat = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.219" d="m28.38 9.504-1.748 7.753h3.177l-1.88 2.941 7.828 8.286"/>
     <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2.219" d="m36 28.48v37.04"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLabCoat

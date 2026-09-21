@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "cloud with snow" (color) [1F328]. */
-const EmojiCloudWithSnow = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiCloudWithSnow = lynxIcon(`
   <g id="color">
     <path fill="#d0cfce" stroke="none" d="M19.2787,22.4402c-0.031,0.3535-0.3174,0.6396-0.6721,0.6775C14.307,23.5783,11,27.8119,11,32.9652 c0,5.4608,3.7871,9.8877,8.4588,9.8877h32.248c5.1325,0,9.2932-4.6783,9.2932-10.4492c0-5.5305-3.8212-10.0575-8.6569-10.4251 c-0.37-0.0281-0.67-0.2871-0.7406-0.6494c-1.0803-5.5472-6.0636-9.7159-11.9553-9.7159c-3.829,0-7.2399,1.7335-9.4549,4.4912 c-0.2164,0.2695-0.5797,0.3929-0.8992,0.2589c-0.8523-0.3575-1.7525-0.5304-2.7597-0.5304 C22.7272,15.833,19.6031,18.7376,19.2787,22.4402z"/>
   </g>
@@ -27,7 +24,5 @@ const EmojiCloudWithSnow = {
     <line x1="37.5827" x2="47.8358" y1="57.0817" y2="51.077" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8"/>
     <line x1="47.8358" x2="37.5827" y1="57.0817" y2="51.077" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.8"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiCloudWithSnow

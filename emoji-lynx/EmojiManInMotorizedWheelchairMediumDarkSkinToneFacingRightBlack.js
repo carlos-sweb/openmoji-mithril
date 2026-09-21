@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "man in motorized wheelchair: medium-dark skin tone, facing right" (black) [1F468-1F3FE-200D-1F9BC-200D-27A1-FE0F]. */
-const EmojiManInMotorizedWheelchairMediumDarkSkinToneFacingRightBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiManInMotorizedWheelchairMediumDarkSkinToneFacingRightBlack = lynxIcon(`
   <g id="line" transform="scale(-1, 1) translate(-72, 0)">
     <circle cx="47.3368" cy="11.1445" r="2.5993" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.4329,33.7536l5.8364-.3724.0355-.0344,1.1978-8.6155.6513-4.3151a3.9744,3.9744,0,0,1,3.9785-3.2913h0a3.7838,3.7838,0,0,1,3.5809,3.6439L50.357,36.0951A2.5073,2.5073,0,0,1,47.85,38.5442H43.3288l-8.2679.0258-7.974,10.5633c-.3652.5478-1.283.6246-1.4912,0a4.2411,4.2411,0,0,1,.3532-2.0406l4.6732-10.0985a4.3656,4.3656,0,0,1,2.0179-2.3h0A6.715,6.715,0,0,1,35.4329,33.7536Z"/>
@@ -19,7 +16,5 @@ const EmojiManInMotorizedWheelchairMediumDarkSkinToneFacingRightBlack = {
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="22.108 46.682 29.508 29.182 32.508 29.182 34.808 29.282"/>
     <line x1="32.5081" x2="32.5081" y1="27.5818" y2="29.1818" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiManInMotorizedWheelchairMediumDarkSkinToneFacingRightBlack

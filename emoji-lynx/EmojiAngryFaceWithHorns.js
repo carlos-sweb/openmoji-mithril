@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "angry face with horns" (color) [1F47F]. */
-const EmojiAngryFaceWithHorns = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiAngryFaceWithHorns = lynxIcon(`
   <g id="color">
     <path fill="#D22F27" d="M48.8559,16c3-2,4-5,3-9c7,2,6,10,3,15"/>
     <path fill="#D22F27" d="M23.1441,16c-3-2-4-5-3-9c-7,2-6,10-3,15"/>
@@ -24,7 +21,5 @@ const EmojiAngryFaceWithHorns = {
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M23.1441,16c-3-2-4-5-3-9c-7,2-6,10-3,15"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M29.5,44c1.2841-0.6376,3.9847-1.0308,6.8421-0.9981c2.6235,0.03,4.9897,0.4146,6.1579,0.9981"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiAngryFaceWithHorns

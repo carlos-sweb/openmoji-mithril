@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mammoth" (black) [1F9A3]. */
-const EmojiMammothBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMammothBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.4372,33.219C25.4878,41.0712,16,42.2575,16,42.2575s-9.2673,1.5253-9.2673-7.0614,8.8126-8.1347,8.8126-8.1347"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.619,21.6929a2.78,2.78,0,0,1,1.87-.8014c1.122,0,3.511,2.3509,3.511,8.0144s-3.0912,2.5723-3.0912,2.5723-1.1827,3.75-4.1114.22H27.2327"/>
@@ -15,7 +12,5 @@ const EmojiMammothBlack = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.1923,48.4223S38.597,53.3417,38.597,56h4.6255"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M48.1713,47.1546s.5967,6.132.5967,8.8454h5.5066"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMammothBlack

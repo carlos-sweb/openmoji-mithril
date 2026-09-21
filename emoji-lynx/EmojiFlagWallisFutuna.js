@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "flag: Wallis & Futuna" (color) [1F1FC-1F1EB]. */
-const EmojiFlagWallisFutuna = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFlagWallisFutuna = lynxIcon(`
   <g id="color">
     <rect x="5" y="17" width="62" height="38" fill="#d22f27"/>
     <rect x="46.5" y="36.5" width="11" height="11" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
@@ -19,7 +16,5 @@ const EmojiFlagWallisFutuna = {
   <g id="line">
     <rect x="5" y="17" width="62" height="38" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFlagWallisFutuna

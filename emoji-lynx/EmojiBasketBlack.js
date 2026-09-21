@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "basket" (black) [1F9FA]. */
-const EmojiBasketBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBasketBlack = lynxIcon(`
   <g id="line">
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36 35.129 17.213 35.084 22.09 58.34 36 58.34 49.91 58.34 54.787 35.084 36 35.129"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.6746,32.2975,22.4853,17.56c-1.1159-1.79-.83-3.9827.638-4.8982h0c1.4682-.9156,3.5631-.207,4.6791,1.5827L38.9357,32.2975Z"/>
@@ -22,7 +19,5 @@ const EmojiBasketBlack = {
     <circle cx="33.8738" cy="29.8369" r="0.8858"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="36.383 27.427 57.357 27.427 57.357 35.092 14.643 35.092 14.643 27.427 27.849 27.427"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBasketBlack

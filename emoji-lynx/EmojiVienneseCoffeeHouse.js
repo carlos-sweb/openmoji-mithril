@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "viennese coffee house" (color) [E20C]. */
-const EmojiVienneseCoffeeHouse = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiVienneseCoffeeHouse = lynxIcon(`
   <g id="color">
     <rect x="12" y="13" width="48" height="47" fill="#d0cfce"/>
     <path fill="#d0cfce" stroke="#9b9b9a" stroke-linejoin="round" stroke-width="2" d="m44,27h10l-2,5h-6l-2-5Z"/>
@@ -63,7 +60,5 @@ const EmojiVienneseCoffeeHouse = {
       <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17.9862,18.357l2.3965,4.6466"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiVienneseCoffeeHouse

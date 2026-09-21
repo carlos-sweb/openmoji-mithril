@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "telephone" (color) [260E]. */
-const EmojiTelephone = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiTelephone = lynxIcon(`
   <g id="color">
     <rect x="30.815" y="21.0455" width="10.1877" height="3.8138" fill="#fff"/>
     <path fill="#ea5a47" d="m62.2981,16.4519c-8-6-43.5383-5.4488-51.5383.5512,0,0-3.4343,2.1604-2.2396,8.6384h12.2948l.483-4.1896c6-4,24-4,30,0v5h13c2-6-2-10-2-10Z"/>
@@ -28,7 +25,5 @@ const EmojiTelephone = {
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m26,24v5s-3.5.5-7,4-4,9.9999-4,9.9999v13.0003l3-.0002h39v-12.8748s-.5-6.6252-4-10.1252-7-4-7-4v-5h-3l-1.0003,3h-12.1864l-.8133-3h-3Z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m61.9839,16.4519c-8-6-44-6-52,0,0,0-4,4-2,10h13v-5c6-4,24-4,30,0v5h13c2-6-2-10-2-10Z"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiTelephone

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "level slider" (black) [1F39A]. */
-const EmojiLevelSliderBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLevelSliderBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M32.7332,23.0969v-9.1386c0-1.6568,1.3433-3,3-3h0.3395c1.6567,0,3,1.3432,3,3v9.1386"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M39.0727,33.4116v24.5467c0,1.6569-1.3433,3-3,3h-0.3395c-1.6567,0-3-1.3431-3-3V33.4116"/>
@@ -33,7 +30,5 @@ const EmojiLevelSliderBlack = {
     <line x1="21.2629" x2="23.9301" y1="54.1927" y2="54.1927" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="21.2773" x2="23.9301" y1="58.9086" y2="58.9086" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLevelSliderBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "face with spiral eyes" (black) [1F635-200D-1F4AB]. */
-const EmojiFaceWithSpiralEyesBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFaceWithSpiralEyesBlack = lynxIcon(`
   <g id="line">
     <circle cx="36" cy="35.9583" r="23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
     <path transform="translate(0 0)" stroke="#000" stroke-miterlimit="10" stroke-width="2.5104" d="M35.7778,43.6811a4.1686,4.1686,0,1,0,.0005,0Z"/>
@@ -26,7 +23,5 @@ const EmojiFaceWithSpiralEyesBlack = {
       <path transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M22.975,30.9367a3.66,3.66,0,1,0,7.3191.1148q.0009-.0573,0-.1148"/>
     </g>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFaceWithSpiralEyesBlack

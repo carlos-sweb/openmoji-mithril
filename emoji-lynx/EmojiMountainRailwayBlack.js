@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "mountain railway" (black) [1F69E]. */
-const EmojiMountainRailwayBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiMountainRailwayBlack = lynxIcon(`
   <g id="line">
     <line x1="4" x2="68" y1="56" y2="56" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="68 22 50 9 29 24 21 16 4 32"/>
@@ -19,7 +16,5 @@ const EmojiMountainRailwayBlack = {
     <rect x="60.9389" y="32.8587" rx="1.0578" ry="1.0578" width="6.3408" height="10.6464" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.0737"/>
     <line x1="20.9448" x2="68.3129" y1="47.5655" y2="47.5655" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.9699"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiMountainRailwayBlack

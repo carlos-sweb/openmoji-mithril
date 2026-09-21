@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "black chess king" (black) [265A]. */
-const EmojiBlackChessKingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBlackChessKingBlack = lynxIcon(`
   <g id="line-supplement">
     <path d="m30.93 24.36c-0.03998-2.609 1.496-4.379 5.065-5.065 2.575 0.1417 4.513 1.395 5.065 5.065 19.98 0 19.93 19.92 8.256 22.78v13.4l-26.56-0.06014-0.07355-13.34c-11.68-2.673-11.33-22.78 8.25-22.78z"/>
   </g>
@@ -18,7 +15,5 @@ const EmojiBlackChessKingBlack = {
     <path stroke-linecap="round" d="m30.93 24.36c-22.4 0-17.56 22.36-8.25 22.78"/>
     <path stroke-linecap="round" d="m41.07 24.36c22.4 0 17.56 22.36 8.25 22.78"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBlackChessKingBlack

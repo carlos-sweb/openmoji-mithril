@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "pine decoration" (color) [1F38D]. */
-const EmojiPineDecoration = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPineDecoration = lynxIcon(`
   <g id="line-supplement">
     <line x1="22.7071" x2="31.8995" y1="46.7071" y2="55.8995" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="29.0711" x2="29.0711" y1="48.8284" y2="53.0711" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -64,7 +61,5 @@ const EmojiPineDecoration = {
   <g id="line">
     <rect x="26" y="56" width="20" height="11" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPineDecoration

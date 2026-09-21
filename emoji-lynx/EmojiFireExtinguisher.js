@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "fire extinguisher" (color) [1F9EF]. */
-const EmojiFireExtinguisher = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiFireExtinguisher = lynxIcon(`
   <g id="color">
     <path fill="#d22f27" d="M44.75,28.1191V64H26.47V28.1191a8.9827,8.9827,0,0,1,5.93-8.7063,6.3683,6.3683,0,0,1,.65-.176h.01a7.4867,7.4867,0,0,1,1.66-.1868H36.5C41.06,19.05,44.75,23.1064,44.75,28.1191Z"/>
     <path fill="#ea5a47" d="M38.33,26.723V64H26.47V28.1191a8.9827,8.9827,0,0,1,5.93-8.7063,6.3683,6.3683,0,0,1,.65-.176h.01a7.4867,7.4867,0,0,1,1.66-.1868h.15A9.844,9.844,0,0,1,38.33,26.723Z"/>
@@ -23,7 +20,5 @@ const EmojiFireExtinguisher = {
     <polygon fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="44.751 12.412 44.751 14.243 44.751 14.415 44.751 16.245 56.844 18.864 56.844 14.415 56.844 14.243 56.844 9.793 44.751 12.412"/>
     <rect x="30.9133" y="29.2839" width="9.3953" height="5.6744" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiFireExtinguisher

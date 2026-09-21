@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "broken chain" (black) [26D3-FE0F-200D-1F4A5]. */
-const EmojiBrokenChainBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiBrokenChainBlack = lynxIcon(`
   <g id="line">
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M42.364,32.2678h0c3.5147,3.5147,3.5147,9.2132,0,12.7279l-11.3137,11.3137c-3.5147,3.5147-9.2132,3.5147-12.7279,0h0"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M18.3223,56.3094c-3.5147-3.5147-3.5147-9.2132,0-12.7279l4.6891-4.6891"/>
@@ -21,7 +18,5 @@ const EmojiBrokenChainBlack = {
     <line x1="38.1213" x2="38.1213" y1="16.7114" y2="11.0546" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <line x1="26.8076" x2="32.4645" y1="22.3683" y2="22.3683" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiBrokenChainBlack

@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "lady beetle" (color) [1F41E]. */
-const EmojiLadyBeetle = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiLadyBeetle = lynxIcon(`
   <g id="color">
     <ellipse cx="36.4596" cy="21.9147" rx="11.0195" ry="11.0971" fill="#3f3f3f"/>
     <ellipse cx="36.4865" cy="40.6831" rx="16.5287" ry="17.9871" fill="#d22f27"/>
@@ -29,7 +26,5 @@ const EmojiLadyBeetle = {
     <circle cx="26.8192" cy="46.9474" r="2"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.46,21.7237a10.004,10.004,0,0,1,20,0"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiLadyBeetle

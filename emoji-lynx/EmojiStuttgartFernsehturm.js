@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "stuttgart fernsehturm" (color) [E20A]. */
-const EmojiStuttgartFernsehturm = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiStuttgartFernsehturm = lynxIcon(`
   <g id="color">
     <polygon fill="#d0cfce" points="37.489 32.657 34.22 32.657 32.88 62.518 35.44 62.518 36.126 62.518 38.686 62.518 37.489 32.657"/>
     <g id="color-2">
@@ -34,7 +31,5 @@ const EmojiStuttgartFernsehturm = {
     <rect x="5.1354" y="62.5276" width="61.9618" height="4.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     <ellipse cx="35.8322" cy="18.9199" rx="6.777" ry="1.7045"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiStuttgartFernsehturm

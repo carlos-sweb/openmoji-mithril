@@ -1,11 +1,8 @@
 import _attrs from '../default_attrs.js'
-import m from 'mithril-runtime'
+import { lynxIcon } from '../lynx_svg.js'
 
 /** Mithril-lynx component for the OpenMoji "person fencing" (black) [1F93A]. */
-const EmojiPersonFencingBlack = {
-  view: (vnode) => m(
-    'svg',
-    { ..._attrs(vnode.attrs?.size), ...(vnode.attrs || {}), content: `
+const EmojiPersonFencingBlack = lynxIcon(`
   <g id="line">
     <circle cx="44.9688" cy="12.0938" r="3" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
     <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M60,19l-0.6133,7.0112c-0.1445,1.6441-0.9297,1.8155-1.7461,0.3819l-2.1562-3.7862c-0.8164-1.4336-2.8262-2.7558-4.4658-2.938 l-3.0372-0.3378c-1.6396-0.1822-4.2793,0.04-5.8662,0.4931l-1.2304,0.3516c-1.5869,0.4531-3.2871,2.1128-3.7793,3.6875 l-1.336,4.2734c-0.4922,1.5752-1.9912,2.4131-3.332,1.8633C31.0967,29.4502,30,29,30,29"/>
@@ -13,7 +10,5 @@ const EmojiPersonFencingBlack = {
     <line x1="28" x2="26" y1="25" y2="29" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="5" x2="27" y1="15" y2="27" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-` }
-  )
-}
+`, _attrs, 72)
 export default EmojiPersonFencingBlack
