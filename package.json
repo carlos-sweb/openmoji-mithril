@@ -1,6 +1,6 @@
 {
   "name": "openmoji-mithril",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "OpenMoji as Mithril.js components — thousands of emoji components generated from the official openmoji package.",
   "keywords": [
     "openmoji",
